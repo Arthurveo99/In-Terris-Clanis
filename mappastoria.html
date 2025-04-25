@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mappa – in terris Clanis</title>
+  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+    }
+
+    header {
+      background: #4b3b2a;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    #map {
+      height: 90vh;
+      width: 100%;
+    }
+
+    footer {
+      background: #f2f0ed;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mappa interattiva – in terris Clanis</h1>
+    <p>Luoghi significativi della Val di Chiana</p>
+  </header>
+
+  <div id="map"></div>
+
+  <footer>
+    © 2025 in terris Clanis
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([42.95, 11.9], 11);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+    }).addTo(map);
+
+    const places = [
+      {
+        name: "Museo Preistorico",
+        coords: [42.96295369108769, 11.900731178537487],
+        desc: "Museo Archeologico Preistorico di Cetona."
+      },
+      {
+        name: "Vetta del Monte Cetona",
+        coords: [42.92996182989206, 11.875765045748258],
+        desc: "1148m s.l.m."
+      },
+
+      {
+        name: "Parco Archeologico",
+        coords: [42.95217520100823, 11.886336107899636],
+        desc: "Parco Archeologico Naturalistico di Belverde, del Monte Cetona."
+      },
+      {
+        name: "Grotte Preistoriche",
+        coords: [42.95004830629163, 11.892351002961016],
+        desc: "Grotte preistoriche del Monte Cetona."
+      },
+
+      {
+        name: "Chiusi",
+        coords: [43.016, 11.948],
+        desc: "Antica città etrusca, famosa per le tombe e il labirinto di Porsenna."
+      },
+      {
+        name: "Castello di Sarteano",
+        coords: [42.99076877936307, 11.866976457783291],
+        desc: "Castello medievale iniziato nel 1083 d.C."
+      },
+      {
+        name: "Tomba Etrusca",
+        coords: [42.9853444135341, 11.885219677118902],
+        desc: "Tomba della Quadrigia Infernale"
+      },
+      {
+        name: "Necropoli Etrusca",
+        coords: [42.98560036007508, 11.884453521159244],
+        desc: "Necropoli delle Pianacce"
+      },
+      {
+        name: "Tombe Etrusche",
+        coords: [42.98780253783068, 11.839388863519208],
+        desc: "Tomba della Quadrigia Infernale"
+      },
+
+      {
+        name: "Rocca Medievale",
+        coords: [42.95339348954737, 12.005521572403081],
+        desc: "Rocca Medievale di Città della Pieve."
+      },
+       {
+        name: "Museo di Scienze Naturali",
+        coords: [42.9528030603159, 12.003699727356011],
+        desc: "Museo di Scienze Naturali di Città della Pieve."
+      }
+      {
+        name: "Museo Archeologico",
+        coords: [43.01686701965957, 11.947876480680742],
+        desc: "Museo Archeologico di Chiusi."
+      },
+
+    ];
+
+
+    places.forEach(place => {
+      L.marker(place.coords).addTo(map)
+        .bindPopup(`<strong>${place.name}</strong><br>${place.desc}`);
+    });
+  </script>
+
+</body>
+</html>
