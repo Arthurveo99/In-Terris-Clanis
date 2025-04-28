@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territori del Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   }
+
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Dove l’acqua scolpiva il tempo. Racconti di una valle antica.</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="storia.html">Storia</a></li>
+        <li><a href="natura.html">Natura</a></li>
+        <li><a href="interviste.html">Voci del territorio</a></li>
+        <li><a href="esplora.html">Esplora</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>La Val di Chiana</h1>
+
+<p>La Val di Chiana è una vasta e fertile valle situata nel cuore dell'Italia centrale, estendendosi tra Toscana e Umbria. Un tempo occupata da un grande lago, oggi la valle è   attraversata dal Canale Maestro della Chiana, risultato di secoli di opere di bonifica. Geograficamente, la Val di Chiana si apre tra le province di Arezzo, Siena, Perugia e Terni, abbracciando dolci colline, borghi storici e campagne coltivate.</p>
+  
+<p>La parte settentrionale della valle si sviluppa attorno alle città di Arezzo, Castiglion Fiorentino e Cortona, mentre la sezione meridionale, conosciuta come Val di Chiana Romana, comprende centri umbri come Fabro, Monteleone d'Orvieto e Città della Pieve, oltre a importanti borghi toscani come Chiusi, Cetona e Sarteano.</p>
+
+<p>La Val di Chiana rappresenta un crocevia naturale e culturale tra il Tirreno e l'Adriatico, caratterizzata da paesaggi armoniosi, un clima mite e una lunga storia di insediamenti umani che risale all'epoca etrusca e romana.</p>
+
+<p>Al centro della valle scorre il Canale Maestro della Chiana, che segue il percorso dell'antico fiume Clanis. Questo canale raccoglie le acque della pianura e le convoglia verso sud, in direzione del fiume Tevere.</p>
+
+<p>Il paesaggio della Val di Chiana è caratterizzato da ampie zone agricole, lievi ondulazioni collinari e numerosi corsi d'acqua minori. L'altitudine media della pianura si aggira tra i 200 e i 300 metri sul livello del mare.</p>
+
+<h2>Confini Geografici</h2>
+  
+<p>La Val di Chiana è delimitata a nord dalla conca aretina e dalle prime pendici dell'Appennino tosco-emiliano. A ovest, il confine è segnato dai rilievi del Chianti, della Montagnola Senese e delle colline che separano la valle dalla Val d'Orcia.</p>
+
+<p>A est, la valle è chiusa dall'Alpe di Catenaia, dalle colline che scendono verso l'Alta Valle del Tevere e dalla dorsale che separa la Val di Chiana dall'area di Perugia.</p>
+  
+<p>A sud, i confini si raccordano con l'alta Valle del Tevere umbro-laziale, attraverso una serie di rilievi più bassi che favoriscono il deflusso delle acque verso il fiume Tevere.</p>
+  
+<p>La Val di Chiana si estende tra i territori amministrativi delle province di Arezzo e Siena in Toscana, e di Perugia e Terni in Umbria, occupando una superficie complessiva di circa 2.300 chilometri quadrati.</p>
+
+<h2>Idrografia</h2>
+  
+<p>L'idrografia della Val di Chiana è dominata dal Canale Maestro della Chiana, che costituisce l'asse idraulico principale della valle. Il canale raccoglie le acque della pianura e delle colline circostanti, convogliandole verso sud, dove si immettono nel fiume Paglia e successivamente nel Tevere.</p>
+
+<p>Originariamente la valle era occupata da un grande lago, prosciugato nel corso dei secoli attraverso una serie di interventi di bonifica, culminati tra il XVII e il XIX secolo. Queste opere trasformarono radicalmente l'assetto idraulico, riducendo il rischio di inondazioni e rendendo il territorio adatto all'agricoltura.</p>
+
+<p>Oltre al Canale Maestro, la Val di Chiana è solcata da numerosi fossi, torrenti e piccoli corsi d'acqua, spesso regimentati da opere di canalizzazione e raccolta.</p>
+  
+<p>La rete idrografica secondaria alimenta il sistema idraulico principale, contribuendo al mantenimento del livello idrico e alla bonifica continua della pianura.</p>
+
+<h2>Clima</h2>
+
+<p>La Val di Chiana è caratterizzata da un clima temperato subcontinentale, con estati calde e secche e inverni relativamente miti, ma talvolta umidi e nebbiosi.</p>
+
+<p>Le temperature estive possono facilmente superare i 30 °C, mentre in inverno le minime possono scendere fino a valori prossimi o leggermente inferiori allo zero, soprattutto nelle aree pianeggianti.</p>
+
+<p>Le precipitazioni sono distribuite in modo abbastanza regolare durante l'anno, con picchi nei mesi autunnali e primaverili. La media annua si attesta tra i 700 e i 1.000 millimetri di pioggia, a seconda delle zone.</p>
+
+<p>La valle è soggetta, specialmente nei mesi invernali, a frequenti fenomeni di inversione termica, che favoriscono la formazione di nebbie persistenti nelle aree più basse.</p>
+
+<h2>Paesi della Val di Chiana</h2>
+  
+<p>La Val di Chiana comprende numerosi centri abitati, distribuiti tra Toscana e Umbria, lungo l'asse nord-sud della valle. I comuni elencati di seguito sono ordinati geograficamente da nord verso sud e suddivisi per provincia.</p>
+
+  <h3>Provincia di Arezzo (Toscana) – Val di Chiana Settentrionale</h3>
+
+  <ul>
+
+    <li>Arezzo (parte meridionale)</li>
+    <li>Civitella in Val di Chiana</li>
+    <li>Monte San Savino</li>
+    <li>Marciano della Chiana</li>
+    <li>Lucignano</li>
+    <li>Foiano della Chiana</li>
+    <li>Castiglion Fiorentino</li>
+    <li>Cortona</li>
+
+  </ul>
+
+  <h3>Provincia di Siena (Toscana) – Val di Chiana Senese</h3>
+
+  <ul>
+
+    <li>Sinalunga</li>
+    <li>Torrita di Siena</li>
+    <li>Montepulciano</li>
+    <li>Chianciano Terme</li>
+    <li>Chiusi</li>
+    <li>Cetona</li>
+    <li>Sarteano</li>
+    <li>San Casciano dei Bagni</li>
+  
+</ul>
+
+  <h3>Provincia di Perugia (Umbria) – Val di Chiana Romana (nord)</h3>
+
+  <ul>
+
+    <li>Città della Pieve (zona sud, località Salci)</li>
+    <li>Piegaro (area marginale sud-ovest)</li>
+
+  </ul>
+
+  <h3>Provincia di Terni (Umbria) – Val di Chiana Romana (sud)</h3>
+
+  <ul>
+    <li>Monteleone d'Orvieto</li>
+    <li>Montegabbione</li>
+    <li>Fabro</li>
+    <li>Ficulle</li>
+    <li>Parrano</li>
+    <li>Orvieto (frazioni settentrionali: Ciconia, Sferracavallo)</li>
+
+  </ul>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="index.html">Torna alla Home</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
