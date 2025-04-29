@@ -11,6 +11,11 @@
     body {
       margin: 0;
       font-family: Georgia, serif;
+
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
     }
 
     header {
@@ -34,7 +39,7 @@
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
 
   <header>
     <h1>Mappa interattiva – in terris Clanis</h1>
