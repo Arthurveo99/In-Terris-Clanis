@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mappa della Val di Chiana e Dintorni</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body { 
+           margin: 0; 
+           font-family: Arial, sans-serif; 
+
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
+}
+    #map { height: 100vh; }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([43.0, 11.9], 10);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const coreValdichiana = [
+    
+    { name: "Arezzo (AR)", coords: [43.4631868560711, 11.878181740879162], desc: "Città medievale, provincia toscana"},
+    { name: "Civitella in Val di Chiana (AR)", coords: [43.41819247856882, 11.723162934924522], desc: "Borgo medievale toscano"},
+    { name: "Cortona (AR)", coords: [43.27495033179426, 11.985459385435668], desc: "Città medievale toscana"},
+    { name: "Foiano della Chiana (AR)", coords: [43.25240172860694, 11.818795366074571], desc: "Storico centro agricolo della Val di Chiana"},
+    { name: "Lucignano (AR)", coords: [43.27465151460744, 11.746198308457542], desc: "Importante borgo sul lato nord della Val di Chiana"},
+    { name: "Monte San Savino (AR)", coords: [43.33112973604146, 11.725662160039963], desc: "Confine nord-ovest della Val di Chiana"},
+    { name: "Castiglion Fiorentino (AR)", coords: [43.34164524096736, 11.922784578105018], desc: "Limite nord-est della Val di Chiana"},
+    { name: "Marciano della Chiana (AR)", coords: [43.30514393693412, 11.786441096034775], desc: "Centro agricolo nel cuore della valle"},
+
+    { name: "Torrita di Siena (SI)", coords: [43.1675469297215, 11.773044031036214], desc: "Borgo a metà tra Val di Chiana e Val d'Orcia"},
+    { name: "Sinalunga (SI)", coords: [43.21304845563947, 11.737530105978914], desc: "Borgo a metà tra Val di Chiana e Val d'Orcia"},
+    { name: "Montepulciano (SI)", coords: [43.096306565548744, 11.785282915665626], desc: "Confine tra Val di Chiana e Val d'Orcia"},
+    { name: "Chianciano-Terme (SI)", coords: [43.05809593892403, 11.830547949630658], desc: "Confine tra Val di Chiana e Val d'Orcia"},
+    { name: "San Casciano dei Bagni (SI)", coords: [42.8709357038687, 11.875183601794296], desc: "Paese medievale sul confine sud-occidentale della Valle"},
+    { name: "Chiusi (SI)", coords: [43.01566489038277, 11.948729746880005], desc: "Centro storico della Val di Chiana"},
+    { name: "Sarteano (SI)", coords: [42.98985057890583, 11.866871740609811], desc: "Confine sud-occidentale della Val di Chiana"},
+    { name: "Cetona (SI)", coords: [42.96403113033334, 11.90028988038391], desc: "Ai margini della Val di Chiana, collegato al Monte Cetona"},
+
+    { name: "Tuoro sul Trasimeno (PG)", coords: [43.20853169487881, 12.071657337870484], desc: "Comune in provincia di Perugia"},
+    { name: "Castiglione del Lago (PG)", coords: [43.12697943460586, 12.051548865673427], desc: "Comune in provincia di Perugia"},
+    { name: "Paciano (PG)", coords: [43.02223014896302, 12.070611396666381], desc: "Comune in provincia di Perugia"},
+    { name: "Panicale (PG)", coords: [43.02906669559185, 12.098541797978685], desc: "Comune in provincia di Perugia"},
+    { name: "Città della Pieve (PG)", coords: [42.95273800708252, 12.004402115831526], desc: "Confine est della Val di Chiana, Città natale del Perugino"},
+
+    { name: "Monteleone d'Orvieto (TR)", coords: [42.91653876535466, 12.051546570296166], desc: "Paese medievale in provincia di Terni"},
+    { name: "Montegabbione (TR)", coords: [42.92140317445826, 12.09259673687387], desc: "Paese medievale in provincia di Terni"},
+    { name: "Fabro (TR)", coords: [42.87260188975708, 12.016521706494087], desc: "Borgo medievale in provincia di Terni"},
+    { name: "Parrano (TR)", coords: [42.863735651401235, 12.105820389809193], desc: "Borgo medievale in provincia di Terni"},
+    { name: "Ficulle (TR)", coords: [42.836115694892285, 12.066335561344136], desc: "Borgo medievale in provincia di Terni"},
+    { name: "Ciconia (TR)", coords: [42.731730062116725, 12.136687689598089], desc: "Frazione di Orvieto, confine sud della Val di Chiana (Romana)"},
+    { name: "Sferracavallo (TR)", coords: [42.72712984739708, 12.098198492595294], desc: "Frazione di Orvieto, confine sud della Val di Chiana (Romana)"}
+
+  ];
+
+  coreValdichiana.forEach(place => {
+    L.marker(place.coords, { title: place.name }).addTo(map)
+      .bindPopup(`<strong>${place.name}</strong><br>${place.desc}`);
+  });
+
+  borderTowns.forEach(place => {
+    L.circleMarker(place.coords, {
+      radius: 8,
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5
+    }).addTo(map)
+      .bindPopup(`<strong>${place.name}</strong><br>${place.desc}`);
+  });
+
+
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
