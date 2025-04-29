@@ -14,6 +14,9 @@
       background-image: url('sfondoclanis.jpg');
       background-size: auto;
       background-repeat: repeat;
+
+
+      
     }
 
     header {
@@ -218,7 +221,7 @@
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
   <header>
     <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
     <div class="logo"></div>
@@ -770,12 +773,26 @@
     &copy; Blog di Arthur Veo
   </footer>
 
-  <script>
+  <script>    
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.getElementById('menu');
     toggle.addEventListener('click', () => {
       menu.classList.toggle('show');
     });
+
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
   </script>
 </body>
 </html>
