@@ -14,6 +14,11 @@
       background-image: url('sfondo.jpg');
       color: #2c2c2c;
       line-height: 1.6;
+
+       user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
     }
 
     header {
@@ -94,7 +99,7 @@
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
 
   <header>
     <h1>Esplora</h1>
@@ -149,5 +154,19 @@
     <p>© 2025 in terris Clanis – Un viaggio tra storia, natura e cultura</p>
   </footer>
 
+    <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+  </script>
 </body>
 </html>
