@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+
+  <title>Esplora - in terris Clanis</title>
+  <style>
+    body {
+      background-image: url('sfondo.jpg');
+      background-repeat: repeat;
+      background-size: cover;
+      margin: 0;
+      font-family: 'Georgia', serif;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #4b3b2a;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      color: black;
+      border-bottom: 2px;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e6e1d9;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: #2c2c2c;
+      color: #ddd;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    a {
+      color: #4b3b2a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore</h1>
+    <p>Discover places inside the Valley of Clanis</p>
+  </header>
+
+  <section>
+    <h2>Tipologie di luoghi</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🏛️ <a href="mappastoria.html">Historical places and Museums</a></h3>
+        <p>Castles, ancient Etruscan tombs, medieval villages, and the valley’s museums.</p>
+      </div>
+      <div class="card">
+        <h3>🌿 <a href="mappanatura.html">Naturalistic Places</a></h3>
+        <p>Natural oases, ancient forests, fresh springs, and trails immersed in nature.</p>
+      </div>
+      <div class="card">
+        <h3>🚶‍♂️ <a href="mappasentieri.html">Nature trails</a></h3>
+        <p>Historic and scenic trails winding through villages and rolling hills.</p>
+      </div>
+      <div class="card">
+        <h3>🏘️ <a href="mappaclanis.html">Maps with cities and towns</a></h3>
+        <p>Maps of Val di Chiana</p>
+      </div>
+      <div class="card">
+        <h3>🌅 <a href="mappapanorami.html">Panoramic points</a></h3>
+        <p>Top spots to enjoy dawns, sunsets, and stunning panoramas.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 <a href="mappasponsor.html">Activities that support me</a></h3>
+        <p>Farmhouses, local producers, artisan shops, and all those who believe in the project.</p>
+      </div>
+    </div>
+  </section>
+<div style="text-align: center; margin-top: 3rem;">
+  <a href="index.html" style="
+    padding: 1rem 2rem;
+    background-color: #7a5742;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 0 8px #0003;
+    transition: background-color 0.3s ease;">
+    Come back to the Home
+  </a>
+</div>
+
+  <footer>
+    <p>© 2025 In Terris Clanis – A journey between history, nature e culture</p>
+  </footer>
+
+</body>
+</html>
