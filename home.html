@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In Terris Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url("sfondo.jpg");
+      background-repeat: repeat;
+      background-size: cover;
+
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
+    }
+
+ #map {
+      height: 90vh;
+      width: 100%;
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+     p {font-size: 1.2rem; line-height: 1.5; font-weight: bold;}
+     h2 {font-size: 2rem; text-align: center; font-weight: bold;}
+     a {color: brown;}
+
+   footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Where Water Carved Time: Tales from an Ancient Valley.<br>(Website under construction)
+    <nav>
+      <ul id="menu">
+        <li><a href="history.html">History</a></li>
+        <li><a href="nature.html">Nature</a></li>
+        <li><a href="lands.html">Lands</a></li>
+        <li><a href="interview.html">Interviews</a></li>
+        <li><a href="explore.html">Explore</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="intro" style="padding: 3rem 2rem; max-width: 800px; margin: auto; background-color: #dcb8a1;
+ color: #3b2f2f;">
+
+    <h2>Why “in terris Clanis”</h2>
+    <p style="font-size: 1.3rem; line-height: 1.7;">
+    Once, before the valley was drained and reclaimed, a sacred river flowed from Arezzo to Orvieto: the Clanis. It connected peoples, carried goods, and reflected the sky and the seasons.
+Today, its name survives among forgotten churches, ancient fields, and untold stories.</p>
+    
+<p style="font-size: 1.3rem; line-height: 1.7;">
+
+      <strong>“In terris Clanis”</strong> It is a journey — historical, natural, human — through the places once touched by those waters. It is a blog, but also a living archive, an invitation to explore and to remember.</p>
+
+  <h2 style="font-size: 1.7rem; text-align: center; margin-bottom: 2rem; line-height: 1.8;">What Awaits You on This Journey</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+    
+    <div>
+      <h3 style="font-size: 1.3rem; color: #3b2f2f;">📜 History </h3>
+      <p>Whispers of a lost river, of peoples and the timeless traces they left behind.</p>
+    </div>
+
+    <div>
+      <h3 style="font-size: 1.3rem; color: #3b2f2f;">🌿 Nature and Landscapes</h3>
+      <p>Across hills, lakes, and open fields where the Clanis once flowed, an ancient ecosystem lives on.</p>
+    </div>
+
+    <div>
+      <h3 style="font-size: 1.3rem; color: #3b2f2f;">🗣️ Voices from this Land</h3>
+      <p>Interviews, oral stories, and glimpses into the lives and memories of those who inhabit these lands.</p>
+    </div>
+
+    <div>
+      <h3 style="font-size: 1.3rem; color: #3b2f2f;">📖 Blog and insights</h3>
+      <p>Stories of the past, travel inspirations, footpaths to explore, and thoughts on culture.</p>
+    </div>
+
+  </div>
+<div style="text-align:center;">
+  <h2>For questions and/or collab:</h2>
+  <p>Phone:<a href="tel:+391234567890">+39 3661606016</a></p>
+  <p>E-mail:<a href="mailto:tuamail@example.com">arthurveo23@gmail.com</a></p>
+  <p>Facebook:<a href="https://www.facebook.com/Arthurveo99/" target="_blank">Arthur Veo</a></p>
+  <p>Instagram:<a href="https://www.instagram.com/in_terris_clanis/" target="_blank">in_terris_clanis</a></p>
+</div>
+  </section>
+
+
+
+
+
+
+
+ <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+  <script>
+
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+  </script>
+</body>
+</html>
