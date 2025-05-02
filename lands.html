@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territori del Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   }
+
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Where Water Carved Time: Tales from an Ancient Valley.</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="nature.html">Nature</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="explore.html">Explore</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>The Val di Chiana</h1>
+
+<p>The Val di Chiana is a vast and fertile valley located in the heart of central Italy, stretching between Tuscany and Umbria. Once occupied by a large lake, today the valley is crossed by the Canale Maestro della Chiana, the result of centuries of drainage work. Geographically, the Val di Chiana lies between the provinces of Arezzo, Siena, Perugia, and Terni, embracing gentle hills, historic villages, and cultivated countryside.</p>
+  
+<p>The northern part of the valley develops around the cities of Arezzo, Castiglion Fiorentino, and Cortona, while the southern section, known as the Val di Chiana Romana, includes Umbrian towns such as Fabro, Monteleone d'Orvieto, and Città della Pieve, as well as important Tuscan villages like Chiusi, Cetona, and Sarteano.</p>
+
+<p>The Val di Chiana represents a natural and cultural crossroads between the Tyrrhenian and Adriatic Seas, characterized by harmonious landscapes, a mild climate, and a long history of human settlements dating back to the Etruscan and Roman periods.</p>
+
+<p>At the center of the valley flows the Canale Maestro della Chiana, which follows the path of the ancient Clanis River. This canal collects the waters of the plain and channels them southward, towards the Tiber River.</p>
+
+<p>The landscape of the Val di Chiana is characterized by vast agricultural areas, gentle rolling hills, and numerous smaller streams. The average altitude of the plain is between 200 and 300 meters above sea level.</p>
+
+<h2>Geographical Boundaries</h2>
+  
+<p>The Val di Chiana is bordered to the north by the Arezzo basin and the first slopes of the Tusco-Emilian Apennines. To the west, the boundary is marked by the Chianti hills, the Montagnola Senese, and the hills that separate the valley from the Val d'Orcia.</p>
+
+<p>To the east, the valley is enclosed by the Alpe di Catenaia, the hills descending towards the Upper Tiber Valley, and the ridge that separates the Val di Chiana from the Perugia area.
+</p>
+  
+<p>To the south, the borders connect with the Upper Tiber Valley of Umbria and Lazio, through a series of lower hills that facilitate the flow of water towards the Tiber River.</p>
+  
+<p>The Val di Chiana stretches across the administrative territories of the provinces of Arezzo and Siena in Tuscany, and Perugia and Terni in Umbria, covering a total area of approximately 2,300 square kilometers.</p>
+
+<h2>Hydrography</h2>
+  
+<p>The hydrography of the Val di Chiana is dominated by the Canale Maestro della Chiana, which serves as the main hydraulic axis of the valley. The canal collects the waters of the plain and surrounding hills, channeling them southward, where they flow into the Paglia River and subsequently into the Tiber River.</p>
+
+<p>Originally, the valley was occupied by a large lake, which was drained over the centuries through a series of reclamation works, culminating between the 17th and 19th centuries. These efforts radically transformed the hydraulic system, reducing the risk of flooding and making the land suitable for agriculture.</p>
+
+<p>In addition to the Canale Maestro, the Val di Chiana is crossed by numerous ditches, streams, and small waterways, often regulated by canalization and collection works.</p>
+  
+<p>The secondary hydrographic network feeds into the main hydraulic system, contributing to the maintenance of the water level and the ongoing reclamation of the plain.</p>
+
+<h2>Climate</h2>
+
+<p>The Val di Chiana is characterized by a temperate subcontinental climate, with hot and dry summers and relatively mild winters, although sometimes humid and foggy.</p>
+
+<p>Summer temperatures can easily exceed 30°C, while in winter, the minimum temperatures can drop to values near or slightly below zero, especially in the flat areas.</p>
+
+<p>Precipitation is fairly evenly distributed throughout the year, with peaks in the autumn and spring months. The annual average ranges between 700 and 1,000 millimeters of rain, depending on the area.</p>
+
+<p>The valley is subject, especially in the winter months, to frequent thermal inversion phenomena, which promote the formation of persistent fog in the lower areas.</p>
+
+<h2>Towns of the Val di Chiana</h2>
+  
+<p>The Val di Chiana includes numerous inhabited centers, spread across Tuscany and Umbria, along the north-south axis of the valley. The municipalities listed below are organized geographically from north to south and divided by province.</p>
+
+  <h3>Province of Arezzo (Tuscany) – Northern Val di Chiana</h3>
+
+  <ul>
+
+    <li><a href="https://www.comune.arezzo.it/">Arezzo</a>, <a href="arezzo.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.civitella-in-val-di-chiana.ar.it/">Civitella in Val di Chiana</a>, <a href="civitella_vdc.html" class="appr">overview</a></li>
+    <li><a href="https://servizi.comune.montesansavino.ar.it/">Monte San Savino</a>, <a href="montesansavino.html" class="appr">overview</a></li>
+    <li><a href="https://comune.marcianodellachiana.ar.it/">Marciano della Chiana</a>, <a href="marciano.html" class="appr">overview</a></li>
+    <li><a href="https://comune.lucignano.ar.it/">Lucignano</a>, <a href="lucignano.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.foiano.ar.it/">Foiano della Chiana</a>, <a href="foiano.html" class="appr">overview</a></li>
+    <li><a href="https://comune.castiglionfiorentino.ar.it/it">Castiglion Fiorentino</a>, <a href="castiglionfiorentino.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.cortona.ar.it/">Cortona</a>, <a href="cortona.html" class="appr">overview</a></li>
+
+  </ul>
+
+  <h3>Provincia di Siena (Toscana) – Val di Chiana Senese</h3>
+
+  <ul>
+
+    <li><a href="https://www.comune.sinalunga.si.it/">Sinalunga</a>, <a href="sinalunga.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.torrita.siena.it/">Torrita di Siena</a>, <a href="torrita.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.montepulciano.si.it/">Montepulciano</a>, <a href="montepulciano" class="appr">overview</a></li>
+    <li><a href="https://www.comune.chianciano-terme.siena.it/">Chianciano Terme</a>, <a href="chianciano.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.chiusi.si.it/">Chiusi</a>, <a href="chiusi.html" class="appr">overview</a></li>
+    <li><a href="https://comune.cetona.si.it/">Cetona</a>, <a href="cetona.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.sarteano.si.it/">Sarteano</a>, <a href="sarteano.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.sancascianodeibagni.si.it/">San Casciano dei Bagni</a>, <a href="sancasciano.html" class="appr">overview</a></li>
+  
+</ul>
+
+  <h3>Provincia di Perugia (Umbria) – Val di Chiana Romana (nord)</h3>
+
+  <ul>
+
+    <li><a href="https://www.comune.cittadellapieve.pg.it/">Città della Pieve</a>, <a href="cittadellapieve.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.panicale.pg.it/hh/index.php">Panicale</a>, <a href="panicale.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.paciano.pg.it/">Paciano</a>, <a href="paciano.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.castiglione-del-lago.pg.it/it">Castiglione del Lago</a>, <a href="castiglionedellago.html" class="appr">overview</a></li>
+    <li><a href="https://comune.tuoro-sul-trasimeno.pg.it/">Tuoro sul Trasimeno</a>, <a href="tuoro.html" class="appr">overview</a></li>
+
+  </ul>
+
+  <h3>Provincia di Terni (Umbria) – Val di Chiana Romana (sud)</h3>
+
+  <ul>
+    <li><a href="https://comune.monteleone.tr.it/">Monteleone d'Orvieto</a>, <a href="monteleonedorvieto.html" class="appr">overview</a></li>
+    <li><a href="https://comune.montegabbione.tr.it/">Montegabbione</a>, <a href="montegabbione" class="appr">overview</a></li>
+    <li><a href="http://www.comune.fabro.tr.it/">Fabro</a>, <a href="fabro.html" class="appr">overview</a></li>
+    <li><a href="http://www.comune.ficulle.tr.it/">Ficulle</a>, <a href="ficulle.html" class="appr">overview</a></li>
+    <li><a href="https://comune.parrano.tr.it/">Parrano</a>, <a href="parrano.html" class="appr">overview</a></li>
+    <li><a href="https://www.comune.orvieto.tr.it/">Orvieto</a>, <a href="orvieto.html" class="appr">overview</a></li>
+
+  </ul>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="home.html">Come back to the Home</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
