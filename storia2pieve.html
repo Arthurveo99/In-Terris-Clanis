@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territori del Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Il Rinascimento a Città della Pieve (PG)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="cittadellapieve.html">Introduzione</a></li>
+        <li><a href="culturaetradizioni.html">Tradizioni</a></li>
+        <li><a href="luoghi.html">Luoghi da Visitare</a></li>
+        <li><a href="eventi.html">Eventi Locali</a></li>
+        <li><a href="intervistepievesi.html">Interviste</a></li>
+        <li><a href="galleria.html">Galleria e Archivi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Il Rinascimento Pievese</h1>
+
+<img src="pieverinascimento.jpg" 
+srcset="pieverinascimento.jpg 600w, pieverinascimento.jpg 1200w, pieverinascimento.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+
+
+<p>Il Rinascimento a Città della Pieve rappresenta un periodo cruciale di sviluppo artistico, culturale e sociale per la cittadina. Situata in una posizione strategica tra l’Umbria e la Toscana, la città visse un significativo fermento durante il Quattrocento e il Cinquecento, in gran parte grazie alla figura del Pietro Perugino (Pietro Vannucci), uno dei più illustri pittori del Rinascimento italiano, nato proprio a Città della Pieve nel 1446. Il suo impatto non solo artistico ma anche culturale definì gran parte dell'epoca, e la città ne conservò tracce tangibili nelle opere d'arte, nella tradizione religiosa e nell'urbanistica del tempo.</p>
+
+<p>Durante questo periodo, Città della Pieve, che inizialmente si era sviluppata come un piccolo centro fortificato nel Medioevo, divenne un'importante cittadina di confine per l'arte, la religione e la cultura. Il Rinascimento portò nuove influenze artistiche, architettoniche e politiche, segnando una transizione significativa da una società medievale a una più moderna, ispirata alla riscoperta dei valori classici e della centralità dell'uomo.</p>
+
+<p>Inoltre, Città della Pieve divenne un centro di attività culturale, in gran parte grazie all’opera di Pietro Perugino, ma anche per la crescita di una religiosità attiva, che trovava nelle confraternite e nelle scuole religiose un punto di riferimento. La città fu teatro di importanti cambiamenti economici e sociali, che rispecchiavano quelli in atto nel resto d'Italia, con l'incremento del commercio e l'espansione di nuove forme di produzione artigianale.</p>
+
+<p>In questa cornice, il Rinascimento a Città della Pieve non si limitò alla sola arte, ma fu una vera e propria fucina di innovazione, un periodo di crescita e di apertura che influenzò il destino della cittadina per i secoli a venire.</p>
+
+<h3>Personaggi importanti del Rinascimento Pievese</h3>
+
+<p>Ecco una panoramica dei personaggi più importanti di Città della Pieve durante questo periodo:</p>
+
+<ol>
+
+<li><b>Pietro Perugino (Pietro Vannucci):</b> Pietro Perugino, nato a Città della Pieve nel 1446, è senza dubbio il personaggio più famoso e significativo del Rinascimento pievese. Perugino è stato uno dei più grandi pittori dell'Italia rinascimentale, noto per il suo stile raffinato e l'uso della prospettiva. La sua arte ha influenzato in modo duraturo l'evoluzione della pittura, sia in Umbria che in tutta Italia. Opere a Città della Pieve:
+<ul>
+<li><b>Polittico di San Pietro:</b> Realizzato per la Chiesa di San Pietro, è uno degli esempi più celebri della sua arte. L'opera mostra il perfezionamento della tecnica rinascimentale con l'uso della prospettiva e la dolcezza dei colori.</li>
+<li><b>Affreschi nell'Oratorio dei Bianchi:</b> Questo ciclo di affreschi è tra le prime opere documentate del giovane Perugino, che si distinse per l'armonia e l'eleganza delle sue composizioni. L'Oratorio è una delle testimonianze artistiche più importanti della città.</li>
+</ul>
+<p>La sua fama si diffuse a livello europeo, e lavorò anche per importanti commissioni in Roma (come la Cappella Sistina), ma il suo legame con Città della Pieve è indissolubile, e la città celebra la sua figura con il Museo Perugino che conserva numerose opere e ricordi della sua vita.</p>
+</li>
+<br>
+<li><b>Giovanni Della Corgna:</b> La famiglia Della Corgna fu una delle dinastie più influenti a Città della Pieve durante il Rinascimento. Giovanni Della Corgna (fine XV – inizio XVI secolo) fu un importante signore locale, membro di una famiglia che ricoprì ruoli di governo e di comando per un lungo periodo. Giovanni Della Corgna contribuì in modo determinante alla costruzione di palazzi nobiliari, come il Palazzo Della Corgna, che rappresenta una delle testimonianze più imponenti dell'architettura rinascimentale a Città della Pieve. La sua figura è legata anche alla politica cittadina, poiché la famiglia Della Corgna ebbe un forte legame con lo Stato Pontificio e influenzò le vicende politiche locali. Il Palazzo Della Corgna è tuttora un simbolo della potenza politica ed economica della famiglia.</li>
+<br>
+<li><b>Ascanio Della Corgna:</b> Ascanio Della Corgna fu un altro membro di spicco della famiglia Della Corgna e una figura importante nella storia politica e culturale di Città della Pieve. Fu il governatore di Città della Pieve e rivestì un ruolo chiave durante il periodo della Rinascita della città, contribuendo alla ricostruzione e all’abbellimento di molte strutture pubbliche e private. È noto per il suo mecenatismo, supportando artisti, architetti e intellettuali locali. Durante il suo governo, Città della Pieve visse una fioritura culturale, anche grazie agli investimenti in progetti architettonici e nella promozione di opere d'arte. La sua influenza fu fondamentale per il consolidamento della città sotto il controllo papale e per la costruzione di alcuni dei principali edifici civili e religiosi.</li>
+<br>
+<li><b>Francesco di Giorgio Martini:</b> Francesco di Giorgio Martini (1430-1501), architetto e ingegnere militare, è un altro personaggio che ha avuto una certa influenza sulla Città della Pieve. Sebbene non fosse originario della città, è noto che Francesco di Giorgio Martini progettò parte della Rocca di Città della Pieve, una fortezza che simboleggiava il controllo del Stato Pontificio nella zona e che fu successivamente modificata e ampliata. Martini fu anche uno degli architetti di corte più importanti del Duché di Milano e il suo lavoro ha influenzato molti aspetti dell’architettura rinascimentale in Italia.La Rocca, che oggi è ancora visibile, fu uno degli elementi strategici di difesa e di consolidamento del potere papale sulla città. </li>
+<br>
+<li><b>Vincenzo Della Corgna:</b> Vincenzo Della Corgna, come il padre Giovanni, ebbe un ruolo nella politica locale e nello sviluppo della città. Fu un nobile e militare che cercò di modernizzare e rinforzare la città in un'epoca in cui il potere papale cercava di consolidare il proprio controllo su Città della Pieve. La sua figura si inserisce in un periodo di grande instabilità politica e conflitti tra le famiglie nobili e le forze esterne che cercavano di prevalere sulla città.Vincenzo Della Corgna fu anche un protettore di artisti e architetti, contribuendo indirettamente alla fioritura culturale della città.</li>
+<br>
+<li><b>Salvio Savini:</b>fu un pittore toscano attivo nel XVI secolo, legato alla corrente manierista. La sua importanza a Città della Pieve è strettamente connessa alla decorazione del prestigioso Palazzo della Corgna, residenza nobiliare voluta da Ascanio della Corgna, governatore e mecenate della città. Savini fu incaricato di affrescare le sale del palazzo con temi mitologici e allegorici, conferendo agli ambienti un tono raffinato e colto, tipico delle dimore rinascimentali di alto livello. Le sue opere resero il palazzo non solo un simbolo di potere, ma anche un importante punto di riferimento artistico per la città e il territorio circostante. Grazie a lui, Città della Pieve si arricchì di decorazioni artistiche che testimoniavano il gusto e le ambizioni culturali dell'epoca, proiettandola nella piena atmosfera del Rinascimento.</li>
+<br>
+<li><b>Galeazzo Alessi:</b>fu uno dei più importanti architetti del Rinascimento italiano, noto per il suo stile elegante e armonioso, capace di fondere la monumentalità con la raffinatezza. La sua influenza a Città della Pieve è legata in particolare alla progettazione del Palazzo della Corgna, commissionato da Ascanio della Corgna, potente figura politica e militare della città. Alessi, già celebre per opere prestigiose in Perugia e Genova, contribuì a definire l'aspetto rinascimentale del palazzo e, di riflesso, della stessa Città della Pieve. La sua visione architettonica trasformò il palazzo in un vero e proprio simbolo del potere e della cultura del tempo: elegante nelle proporzioni, dotato di logge, cortili e decorazioni che riflettevano il prestigio del committente. Grazie all’intervento di Alessi, Città della Pieve si arricchì di un’opera architettonica che la pose in dialogo con le grandi città d’arte dell’Italia centrale, segnando il passaggio da borgo medievale a centro rinascimentale aperto alle influenze culturali del suo tempo.</li>
+<br>
+<li><b>Il Pomarancio (Cristoforo Roncalli):</b> Tra i personaggi significativi della cultura artistica di Città della Pieve spicca anche Cristoforo Roncalli, noto come Il Pomarancio 
+(circa 1552–1626). Pittore tra il tardo Rinascimento e l’inizio del Barocco, Il Pomarancio ha lasciato un segno importante nella città umbra, contribuendo a mantenere viva la tradizione artistica dopo l’epoca di grandi maestri come il Perugino. Il suo stile, caratterizzato da forme più dinamiche e colori intensi, rifletteva le nuove tendenze della Controriforma e del manierismo. Le opere realizzate a Città della Pieve, visibili in alcune chiese e spazi sacri, arricchiscono ancora oggi il patrimonio artistico locale e rappresentano un importante collegamento tra la classicità rinascimentale e le espressioni artistiche più emotive e teatrali del Seicento. La presenza del Pomarancio nella storia della città conferma il ruolo di Città della Pieve come luogo aperto alle innovazioni e crocevia di artisti, mantenendo vivo il suo prestigio culturale anche nelle fasi successive al Rinascimento.</li>
+<br>
+<li><b>Altri Intellettuali e Mecenati:</b> Durante il Rinascimento, diversi intellettuali e mecenati della città contribuirono alla vita culturale. Molti membri delle famiglie nobili pievesi, come i Della Corgna, avevano legami con le corti di Roma, Siena e Firenze, che consentirono l’influenza di idee e opere rinascimentali. Questo flusso culturale arricchì non solo la vita religiosa ma anche le attività artistiche e il pensiero filosofico della cittadina.A partire dal XVI secolo, la città vide l’arrivo di diversi poeti, filosofi e teologi che si formarono nella scuola religiosa di Città della Pieve, la quale fu un importante centro per l’insegnamento della teologia e delle scienze.
+</li>
+</ol>
+
+<p>In sintesi, il Rinascimento a Città della Pieve fu un periodo di grandi cambiamenti e di sviluppo culturale, con personaggi di grande importanza che segnarono la storia della città, tra cui il geniale Pietro Perugino, che lasciò un’eredità indelebile nel panorama artistico, e le famiglie nobili come i Della Corgna, che influenzarono la politica, l’architettura e l'economia del tempo.</p>
+
+<h3>Architettura Rinascimentale</h3>
+
+<p>Durante il Rinascimento, Città della Pieve visse un periodo di grande fermento architettonico, con la costruzione e la ristrutturazione di edifici pubblici e privati che riflettevano le nuove idee estetiche e urbanistiche tipiche dell'epoca. Il Rinascimento portò una vera e propria rivoluzione nell'architettura, con l'adozione di principi ispirati all'antichità classica, come la simmetria, la proporzione e l'uso della prospettiva. Anche Città della Pieve si inserì in questo movimento, anche se in scala ridotta rispetto alle grandi città italiane come Firenze e Roma. Ecco gli aspetti principali dell'architettura rinascimentale che caratterizzano la cittadina:</p>
+
+<ol>
+<li><b>Palazzi Nobiliari e Residenze:</b>Il Rinascimento a Città della Pieve è strettamente legato alla figura della famiglia Della Corgna, che, come molte altre famiglie nobili italiane, volle dimostrare la propria ricchezza e potere attraverso la costruzione di palazzi signorili. Il Palazzo della Corgna è senza dubbio l’esempio più significativo di architettura rinascimentale a Città della Pieve. Questo palazzo, costruito tra il 1560 e il 1570, fu la residenza della famiglia Della Corgna, una delle più potenti dinastie locali. Il palazzo mostra chiaramente l'influenza delle linee classiche rinascimentali, con un impianto simmetrico, archi a tutto sesto e finestre con cornici in pietra. L'edificio ha un aspetto solido e imponente, che testimonia la volontà della famiglia di proiettare un’immagine di potere e di ricchezza. All'interno, il palazzo ospita affreschi che celebrano le gesta della famiglia, con opere che rispecchiano le tendenze artistiche del tempo. Non solo una residenza, il Palazzo della Corgna serviva anche da centro amministrativo e simbolo della potenza politica della famiglia.</li>
+<br>
+<li><b>Chiese e Edifici Religiosi:</b> L'architettura religiosa rinascimentale a Città della Pieve si riflette nell'adozione di forme più sobrie e proporzionate rispetto agli stili medievali precedenti, mantenendo però la centralità della funzione liturgica. Le chiese rimasero il cuore della vita sociale e religiosa della città.
+
+<ul>
+
+<li><b>Cattedrale dei Santi Gervasio e Protasio:</b> è un altro esempio di architettura rinascimentale a Città della Pieve. Sebbene la struttura originaria della cattedrale risalga all'epoca medievale, la chiesa fu rinnovata durante il Rinascimento, con l'introduzione di elementi rinascimentali come la proporzione e l'uso di materiali nobili, come il travertino, che impreziosirono la facciata. La pianta a croce latina, tipica delle chiese medievali, fu mantenuta, ma le linee e le proporzioni degli interni furono rielaborate in stile rinascimentale.
+Anche l’interno della cattedrale fu arricchito da affreschi di artisti rinascimentali, che contribuirono a donarle un aspetto maestoso, pur nel rispetto della tradizione religiosa.</li>
+<br>
+<li><b>Chiesa di San Francesco:</b> è un altro esempio di architettura religiosa rinascimentale. Risale al XIII secolo, ma subì modifiche significative durante il Rinascimento, con l’introduzione di elementi gotici e rinascimentali. In particolare, l'adozione di linee più semplici ed eleganti, l'uso di archi e colonne, riflette le tendenze dell'epoca, che vedevano nella proporzione e nell’equilibrio i valori fondamentali della bellezza architettonica.</li>
+
+</ul></li>
+
+<br>
+
+<li><b>Urbanistica e Spazi Pubblici:</b>  Il Rinascimento a Città della Pieve vide anche modifiche significative al tessuto urbano, sebbene in scala minore rispetto alle grandi città. La ristrutturazione delle piazze, l'allineamento delle strade e l’organizzazione degli spazi pubblici seguirono i principi di ordine e simmetria, che erano alla base delle teorie rinascimentali. La Piazza del Popolo di Città della Pieve, che è la piazza principale, è un esempio di come il Rinascimento influenzò l’urbanistica della città. Sebbene la sua configurazione risalga a periodi precedenti, la piazza fu riorganizzata durante il Rinascimento, con la costruzione di palazzi che ne definiscono lo spazio. La piazza è ancora oggi il cuore della città e mostra come l’architettura rinascimentale cercava di promuovere l’armonia tra l’uomo e lo spazio circostante, creando luoghi che favorivano la socialità e la riflessione.</li>
+
+<br>
+
+<li><b>Uso del Cotto e dei Materiali Locali:</b> Un aspetto distintivo dell'architettura rinascimentale a Città della Pieve è l’uso del cotto locale, che conferisce agli edifici un carattere unico. La pietra arenaria e il cotto furono utilizzati abbondantemente sia per la costruzione di palazzi che per chiese e fortificazioni. Questo non solo conferiva agli edifici un aspetto rustico ma anche un senso di permanenza e di solidità, in linea con il pensiero rinascimentale che celebrava la maestosità e la forza delle strutture.</li>
+
+<br>
+
+<li><b>La Rocca:</b> La Rocca di Città della Pieve è una delle fortificazioni più significative del Rinascimento. Sebbene la struttura originaria risalga a epoche precedenti, durante il Rinascimento la Rocca fu trasformata e ampliata, incorporando caratteristiche rinascimentali come torri cilindriche e ampi cortili, funzionali sia alla difesa che alla residenza della nobiltà. La Rocca rimase un simbolo del potere papale e della difesa delle terre sottoposte al controllo del Vaticano.</li>
+
+<p>In conclusione l'architettura rinascimentale a Città della Pieve è caratterizzata dalla ricerca di equilibrio, simmetria e proporzione, principi che vennero adottati tanto negli edifici religiosi quanto in quelli civili. Le famiglie nobili, come i Della Corgna, rivestirono un ruolo fondamentale nel dare forma alla città, costruendo palazzi e strutture che rispecchiavano le tendenze architettoniche rinascimentali, pur mantenendo una forte connessione con la tradizione locale. Anche se Città della Pieve non divenne una grande capitale rinascimentale, come Firenze o Roma, il suo contributo all'architettura del periodo fu significativo, e molti degli edifici costruiti o rinnovati durante il Rinascimento continuano a essere tra le testimonianze più importanti della città oggi.</p>
+
+<h3>Sviluppi culturali e religiosi</h3>
+
+<p>Nel Rinascimento, Città della Pieve, pur essendo un centro relativamente piccolo rispetto ad altre città italiane, divenne un polo culturale e religioso di grande importanza. Le innovazioni artistiche, scientifiche e filosofiche del periodo si mescolarono con la tradizione religiosa della città, creando un ambiente unico di sviluppo culturale. Vediamo più nel dettaglio gli sviluppi culturali e religiosi a Città della Pieve durante il Rinascimento:</p>
+
+<ol>
+<li><b>L'importanza della Religione</b>
+Nel Rinascimento, la religione rimase il perno della vita quotidiana e della cultura, anche nelle città più piccole come Città della Pieve. Sebbene l'umanesimo e la riscoperta delle arti classiche abbiano iniziato a influenzare la cultura, la Chiesa e le istituzioni religiose continuavano a essere fondamentali nel determinare il panorama culturale e sociale.
+
+<ul>
+<li><b>La Cattedrale dei Santi Gervasio e Protasio:</b>
+dedicata ai Santi Gervasio e Protasio, è una delle principali testimonianze della centralità della religione nella vita della città. Il Rinascimento influenzò la struttura della chiesa, che venne ampliata e rinnovata con elementi architettonici rinascimentali. L’interno della cattedrale, con la sua imponente navata e l’altare maggiore, continuava a servire come luogo di preghiera e riflessione spirituale per la comunità.</li>
+
+<li><b>Confraternite e Vite Religiose:</b>
+Le confraternite laicali ebbero un ruolo centrale nella vita religiosa di Città della Pieve. Durante il Rinascimento, le confraternite non solo svolgevano funzioni liturgiche e religiose, ma si occupavano anche di opere di carità come l’assistenza ai malati, ai poveri e ai condannati. La più importante tra queste fu la Confraternita dei Bianchi (o Disciplinati), che era dedita alla penitenza e all'assistenza spirituale. L'oratorio che essa possedeva, noto come Oratorio dei Bianchi, è uno degli esempi più significativi di come la religiosità e la cultura si intrecciassero in questo periodo.</li>
+</ul></li>
+
+<li><b>L'Accademia di San Luca e l'Umanesimo:</b>
+Sebbene Città della Pieve non fosse un centro principale dell'umanesimo, vi si sviluppò comunque una fiorente cultura umanista che ebbe un impatto significativo sulla formazione intellettuale e sulle attività religiose. Nel Quattrocento la città vide la nascita di una scuola di teologia che attirò studiosi e intellettuali da tutta l’Umbria. Alcuni di questi, influenzati dalle idee umaniste, contribuirono a diffondere il pensiero critico e la riscoperta dei testi classici. La presenza di umanisti a Città della Pieve, come Francesco Trento, uno dei primi promotori dell'umanesimo nella regione, favorì il nascere di discussioni filosofiche, scientifiche e artistiche che cercavano di integrare la spiritualità cristiana con i valori classici. Anche l’Accademia di San Luca, che fu fondata nel periodo rinascimentale, giocò un ruolo chiave nell'introduzione dei nuovi concetti dell'arte e della scienza, oltre a promuovere il pensiero filosofico ed estetico di stampo umanista. In un contesto come quello di Città della Pieve, dove le tradizioni religiose e culturali erano fortemente intrecciate, l’umanesimo si presentò come una riflessione su come conciliare l’antico e il cristiano, sviluppando una visione più razionale e razionale della spiritualità.</li>
+
+<li><b>L'Influenza di Pietro Perugino:</b>
+La figura di Pietro Perugino è il cuore di molti sviluppi culturali e religiosi a Città della Pieve. Il famoso pittore rinascimentale, che nacque proprio in questa città, rappresenta un elemento di unione tra la religiosità e l’arte del tempo. Le sue opere, che si sviluppano principalmente nel campo della pittura sacra, hanno profondamente influenzato non solo Città della Pieve, ma anche l’intera regione umbra. Perugino coniugava la religiosità cristiana con le nuove scoperte artistiche del Rinascimento, come l'uso della prospettiva lineare, la rappresentazione armoniosa delle figure umane e la composizione equilibrata delle scene. A Città della Pieve, l'influenza del Perugino non si limitò alle opere che realizzò per la chiesa locale, ma anche al suo mecenatismo. Infatti, i suoi legami con la Chiesa e con le istituzioni locali gli permisero di influenzare la decorazione di numerosi edifici religiosi, come l’Oratorio dei Bianchi, dove si trovano i suoi primi affreschi e dipinti. Il suo stile contribuì al dialogo tra le esigenze devozionali della Chiesa e le innovazioni stilistiche del Rinascimento.</li>
+
+<li><b>La Tradizione della Scuola Teologica:</b>
+Il Rinascimento a Città della Pieve non fu solo un periodo di sviluppo artistico e culturale, ma anche un periodo di crescita per la scuola teologica della città. Sebbene non ci siano prove documentate di una scuola rinascimentale di grande portata, l’influenza delle idee religiose e delle teorie filosofiche umaniste era evidente nel modo in cui le chiese locali favorivano l’insegnamento religioso. Le scuole religiose si trovavano sotto il controllo della Chiesa locale e contribuivano alla formazione di sacerdoti, teologi e filosofi che avrebbero in seguito diffuso le idee umanistiche e teologiche in altre parti d'Italia. Città della Pieve, pur non essendo una capitale culturale come Firenze o Roma, divenne quindi una città in cui pensatori e teologi si confrontavano sulle questioni dottrinali.</li>
+
+<li><b>Feste Religiose e Processioni:</b>
+Le feste religiose e le processioni erano eventi significativi nella vita della città. Ogni anno, Città della Pieve celebrava le principali festività cristiane come il Natale, la Pasqua, la festa di San Gervasio e San Protasio (i santi patroni della città) e altre ricorrenze liturgiche. Durante queste festività, la città era inondata di fedeli, e le chiese e le piazze si animavano di celebrazioni religiose che segnavano il ciclo dell'anno liturgico. In particolare, le processioni e le celebrazioni liturgiche erano accompagnate da rappresentazioni teatrali sacre e da momenti di preghiera collettiva, che coinvolgevano tutta la comunità, dai contadini ai nobili. L’importanza di questi eventi non era solo spirituale, ma anche sociale e culturale, fungendo da momenti di aggregazione collettiva per la popolazione.</li>
+
+<li><b>Istituzioni Educative e Formazione:</b>
+Le scuole religiose di Città della Pieve durante il Rinascimento svolgevano un ruolo importante nella formazione dei giovani. Queste scuole erano principalmente dedicate alla teologia, ma anche all’insegnamento delle lettere e della filosofia, seguendo le linee guida delle università pontificie. I giovani provenienti da famiglie nobili o da famiglie con legami religiosi si recavano a Città della Pieve per ricevere un’istruzione basata su principi cristiani.</li>
+</ol>
+
+<p>
+Il Rinascimento a Città della Pieve fu un periodo di grandi trasformazioni culturali e religiose. L'arte, la teologia e l'umanesimo si intrecciarono, arricchendo la città di un patrimonio artistico e intellettuale che ancora oggi è visibile nelle sue chiese, nelle opere di Perugino e nei luoghi di culto. Il rinnovamento culturale, pur radicato nelle tradizioni religiose, aprì anche alla riflessione filosofica e all'incontro con le nuove idee che segnarono il Rinascimento. Città della Pieve fu una cittadina di confine che visse il Rinascimento con una sua specificità, intrecciando l’eredità medievale con le influenze rinnovate dell'epoca.</p>
+
+<h3>Economia e società nel Cinquecento</h3>
+
+<p>Nel Cinquecento, Città della Pieve, come molte altre città italiane, visse un periodo di significativi cambiamenti economici e sociali. Sebbene la città fosse di dimensioni relativamente contenute rispetto ai grandi centri del Rinascimento come Firenze e Roma, il suo sviluppo fu influenzato dal contesto politico e culturale dell'epoca, soprattutto dalla centralità della Chiesa e dal predominio dello Stato Pontificio. La sua economia si basava su agricoltura, artigianato e commercio, mentre la sua società era caratterizzata da una netta divisione tra le classi nobili e i ceti popolari.</p>
+
+<ol>
+<li><b>Agricoltura e Produzione Rurale:</b>
+L’agricoltura rappresentava la base dell’economia di Città della Pieve nel Cinquecento, e come molte città umbre, la vita rurale giocava un ruolo cruciale nel sostentamento della popolazione. Principali coltivazioni:<br>
+<br>
+<ul>
+<li>Cereali: Il grano, l'orzo, e il farro erano coltivati principalmente per il consumo locale e il commercio, e servivano a garantire l'approvvigionamento alimentare.</li>
+<br>
+<li>Vite: La viticoltura era molto importante, come testimoniano le numerose coltivazioni di uva nella Val di Chiana e nella Val d'Orcia. Il vino era una merce di scambio e contribuiva all’economia locale, venendo consumato anche come prodotto da esportazione.</li>
+<br>
+<li>Olivo: Città della Pieve, come molte città della Toscana e dell’Umbria, produceva olio d'oliva di qualità. L'olio veniva utilizzato sia per l’alimentazione che per scopi religiosi (come l'uso nelle chiese per le candele).</li>
+<br>
+<li>Bestiame: l’allevamento di bestie da soma, ovini per la produzione di lana e carne, e suini per il consumo alimentare era altrettanto diffuso. I muli e buoi venivano utilizzati per il lavoro nei campi e nel trasporto di merci.</li>
+</ul></li>
+
+<br>
+
+<li><b>Artigianato e Lavorazione:</b>
+L'artigianato era un’altra componente fondamentale dell’economia pievese durante il Cinquecento. Le botteghe artigiane erano essenziali per il sostentamento della comunità e per la produzione di beni di consumo e di prestigio. I principali settori artigianali comprendevano:<br>
+<br>
+<ul>
+<li><b>Lavorazione del cotto e dei laterizi:</b>
+Città della Pieve era nota per la produzione di mattoni, tegole e altri materiali in terracotta. La fornace era una delle attività più fiorenti: il cotto locale veniva utilizzato per la costruzione di palazzi, case e chiese, ma anche per la realizzazione di vasi e oggetti decorativi.</li>
+<br>
+<li><b>Lavorazione del ferro e della seta:</b>
+Nel Cinquecento, i fabbri e i maniscalchi pievesi lavoravano il ferro per produrre utensili agricoli, armi e attrezzi per il quotidiano. C'era anche una piccola produzione di seta, che veniva lavorata in tessuti pregiati, ma questa industria era di dimensioni più ridotte rispetto a quella di altre zone come Lucca o Firenze.</li>
+<br>
+<li><b>Arte della ceramica e del cuoio:</b>
+La produzione di ceramiche e oggetti in cuoio era molto diffusa. Le ceramiche venivano usate per la produzione di vasi, piatti e stoviglie, mentre il cuoio era utilizzato per creare scarpe, cinture, borse e altri articoli di uso quotidiano.</li>
+</ul></li>
+<br>
+<li><b>Commercio e Artigianato:</b>
+Il commercio di Città della Pieve durante il Cinquecento non era a livello delle grandi città, ma la sua posizione geografica strategica tra l’Umbria, la Toscana e il Lazio la rendeva un crocevia di traffici e scambi.<br>
+<br>
+<ul>
+<li><b>I mercati:</b>
+Città della Pieve ospitava regolarmente mercati che attiravano commercianti locali e regionali. La piazza principale della città, Piazza del Popolo, diveniva il punto di riferimento per le fiere settimanali e annuali. Qui si vendevano prodotti agricoli come grano, vino, olio, e prodotti artigianali, ma anche beni di lusso provenienti da Firenze e Roma, come tessuti pregiati, gioielli e prodotti di alta moda.</li>
+<br>
+<li><b>Esportazioni e scambi:</b>
+L’economia cittadina aveva un carattere rurale e locale, ma la sua vicinanza a Perugia, Siena, e Roma la rendeva parte di un circuito di scambi commerciali che includevano spezie, lana, cotone e ceramiche, ma anche prodotti locali come il zafferano e il vino.</li>
+</ul></li>
+<br>
+
+<li><b>La Società Pievese nel Cinquecento:</b>
+La società di Città della Pieve durante il Cinquecento era divisa in classi, con una netta separazione tra nobili e popolani, che si rifletteva sia nelle strutture sociali che nelle dinamiche politiche.<br>
+<br>
+<ul>
+<li><b>La nobiltà e le famiglie di potere:</b>
+Le famiglie nobili, come i Della Corgna, Bandini, e Ciocchi, erano le protagoniste del panorama politico e sociale. Queste famiglie esercitavano un potere politico, economico e culturale, controllando ampie proprietà terriere, risorse e occupando posizioni di rilievo nell’amministrazione comunale e nella corte papale. I nobili vivevano in palazzi signorili e in ville, e spesso erano mecenati di artisti e letterati. La famiglia Della Corgna, in particolare, influenzò molto la vita culturale e amministrativa della città, come dimostra il Palazzo della Corgna, che divenne uno dei centri nevralgici del potere locale.</li>
+<br>
+<li><b>Le classi popolari:</b>
+La classe popolare era composta principalmente da contadini, artigiani e commercianti. I contadini vivevano nelle campagne circostanti e lavoravano le terre per conto delle famiglie nobili o della Chiesa, in un sistema di mezzadria o affitto. Gli artigiani, che lavoravano in botteghe, creavano prodotti per il consumo locale, ma anche per l’esportazione, come ceramiche, vesti, scarpe e utensili. Il ceto mercantile era più limitato, ma le botteghe e i negozi erano frequentati da persone che si occupavano di scambi commerciali e importazione di beni dalle città vicine, in particolare da Firenze, Perugia e Siena.</li>
+<br>
+<li><b>La Chiesa e la sua influenza:</b>
+La Chiesa aveva un ruolo centrale nella società pievese. La Cattedrale dei Santi Gervasio e Protasio e le altre chiese della città non erano solo luoghi di culto, ma anche centri di formazione religiosa e sociale. Molte famiglie nobili facevano parte di confraternite religiose che organizzavano opere di carità, ma anche eventi sociali e culturali.
+La Chiesa esercitava anche un enorme potere economico attraverso il patrimonio fondiario e le donazioni dei fedeli, con un’influenza che si estendeva a molteplici aspetti della vita cittadina, dalla giustizia alla moralità pubblica.</li>
+</ul></li>
+<br>
+
+<li><b>Le Relazioni con lo Stato Pontificio:</b>
+Nel Cinquecento, Città della Pieve era saldamente sotto il controllo del Papa e faceva parte dello Stato Pontificio. Questo dominio influenzò la politica e l’economia della città. La presenza papale assicurò la stabilità politica, ma impose anche tasse e dazi sul commercio, che gravavano sulla popolazione. Tuttavia, lo Stato Pontificio aveva anche un lato positivo: assicurava la protezione dalle invasioni straniere e contribuiva al mecenatismo che favoriva lo sviluppo delle arti e della cultura. La Chiesa era anche una grande proprietaria terriera, che esercitava una grande influenza economica sulla comunità locale.</li>
+</ol>
+<br>
+
+<p>Nel Cinquecento, Città della Pieve fu una città agricola e artigianale che prosperò grazie alla sua posizione strategica e alla dominazione papale. Sebbene non fosse una capitale commerciale o culturale, la città godeva di una certa prosperità grazie al commercio agricolo e all'artigianato. La sua società era divisa tra una nobiltà privilegiata che controllava la politica e l'economia, e una classe popolare di contadini, artigiani e mercanti. La Chiesa esercitava un forte controllo su tutti gli aspetti della vita cittadina, influenzando la vita sociale, economica e culturale.</p>
+
+<h3>Politica e amministrazione locale nel periodo</h3>
+
+<p>Nel Rinascimento, Città della Pieve, pur essendo un centro relativamente piccolo rispetto ad altre città italiane, divenne un polo culturale e religioso di grande importanza. Le innovazioni artistiche, scientifiche e filosofiche del periodo si mescolarono con la tradizione religiosa della città, creando un ambiente unico di sviluppo culturale. Vediamo più nel dettaglio gli sviluppi culturali e religiosi a Città della Pieve durante il Rinascimento:</p>
+<br>
+<ol>
+<li><b>L'importanza della Religione:</b>
+Nel Rinascimento, la religione rimase il perno della vita quotidiana e della cultura, anche nelle città più piccole come Città della Pieve. Sebbene l'umanesimo e la riscoperta delle arti classiche abbiano iniziato a influenzare la cultura, la Chiesa e le istituzioni religiose continuavano a essere fondamentali nel determinare il panorama culturale e sociale.<br>
+<br>
+<ul>
+<li><b>La Cattedrale dei Santi Gervasio e Protasio:</b>
+La Cattedrale di Città della Pieve, dedicata ai Santi Gervasio e Protasio, è una delle principali testimonianze della centralità della religione nella vita della città. Il Rinascimento influenzò la struttura della chiesa, che venne ampliata e rinnovata con elementi architettonici rinascimentali. L’interno della cattedrale, con la sua imponente navata e l’altare maggiore, continuava a servire come luogo di preghiera e riflessione spirituale per la comunità.</li>
+<br>
+<li><b>Confraternite e Vite Religiose:</b>
+Le confraternite laicali ebbero un ruolo centrale nella vita religiosa di Città della Pieve. Durante il Rinascimento, le confraternite non solo svolgevano funzioni liturgiche e religiose, ma si occupavano anche di opere di carità come l’assistenza ai malati, ai poveri e ai condannati. La più importante tra queste fu la Confraternita dei Bianchi (o Disciplinati), che era dedita alla penitenza e all'assistenza spirituale. L'oratorio che essa possedeva, noto come Oratorio dei Bianchi, è uno degli esempi più significativi di come la religiosità e la cultura si intrecciassero in questo periodo.</li>
+</ul></li>
+<br>
+<li><b>L'Accademia di San Luca e l'Umanesimo:</b>
+Sebbene Città della Pieve non fosse un centro principale dell'umanesimo, vi si sviluppò comunque una fiorente cultura umanista che ebbe un impatto significativo sulla formazione intellettuale e sulle attività religiose. Nel Quattrocento la città vide la nascita di una scuola di teologia che attirò studiosi e intellettuali da tutta l’Umbria. Alcuni di questi, influenzati dalle idee umaniste, contribuirono a diffondere il pensiero critico e la riscoperta dei testi classici. La presenza di umanisti a Città della Pieve, come Francesco Trento, uno dei primi promotori dell'umanesimo nella regione, favorì il nascere di discussioni filosofiche, scientifiche e artistiche che cercavano di integrare la spiritualità cristiana con i valori classici. Anche l’Accademia di San Luca, che fu fondata nel periodo rinascimentale, giocò un ruolo chiave nell'introduzione dei nuovi concetti dell'arte e della scienza, oltre a promuovere il pensiero filosofico ed estetico di stampo umanista. In un contesto come quello di Città della Pieve, dove le tradizioni religiose e culturali erano fortemente intrecciate, l’umanesimo si presentò come una riflessione su come conciliare l’antico e il cristiano, sviluppando una visione più razionale e razionale della spiritualità.</li>
+<br>
+<li><b>L'Influenza di Pietro Perugino:</b>
+La figura di Pietro Perugino è il cuore di molti sviluppi culturali e religiosi a Città della Pieve. Il famoso pittore rinascimentale, che nacque proprio in questa città, rappresenta un elemento di unione tra la religiosità e l’arte del tempo. Le sue opere, che si sviluppano principalmente nel campo della pittura sacra, hanno profondamente influenzato non solo Città della Pieve, ma anche l’intera regione umbra. Perugino coniugava la religiosità cristiana con le nuove scoperte artistiche del Rinascimento, come l'uso della prospettiva lineare, la rappresentazione armoniosa delle figure umane e la composizione equilibrata delle scene. A Città della Pieve, l'influenza del Perugino non si limitò alle opere che realizzò per la chiesa locale, ma anche al suo mecenatismo. Infatti, i suoi legami con la Chiesa e con le istituzioni locali gli permisero di influenzare la decorazione di numerosi edifici religiosi, come l’Oratorio dei Bianchi, dove si trovano i suoi primi affreschi e dipinti. Il suo stile contribuì al dialogo tra le esigenze devozionali della Chiesa e le innovazioni stilistiche del Rinascimento.</li>
+<br>
+<li><b>La Tradizione della Scuola Teologica:</b>
+Il Rinascimento a Città della Pieve non fu solo un periodo di sviluppo artistico e culturale, ma anche un periodo di crescita per la scuola teologica della città. Sebbene non ci siano prove documentate di una scuola rinascimentale di grande portata, l’influenza delle idee religiose e delle teorie filosofiche umaniste era evidente nel modo in cui le chiese locali favorivano l’insegnamento religioso. Le scuole religiose si trovavano sotto il controllo della Chiesa locale e contribuivano alla formazione di sacerdoti, teologi e filosofi che avrebbero in seguito diffuso le idee umanistiche e teologiche in altre parti d'Italia. Città della Pieve, pur non essendo una capitale culturale come Firenze o Roma, divenne quindi una città in cui pensatori e teologi si confrontavano sulle questioni dottrinali.</li>
+<br>
+<li><b>Feste Religiose e Processioni:</b>
+Le feste religiose e le processioni erano eventi significativi nella vita della città. Ogni anno, Città della Pieve celebrava le principali festività cristiane come il Natale, la Pasqua, la festa di San Gervasio e San Protasio (i santi patroni della città) e altre ricorrenze liturgiche. Durante queste festività, la città era inondata di fedeli, e le chiese e le piazze si animavano di celebrazioni religiose che segnavano il ciclo dell'anno liturgico. In particolare, le processioni e le celebrazioni liturgiche erano accompagnate da rappresentazioni teatrali sacre e da momenti di preghiera collettiva, che coinvolgevano tutta la comunità, dai contadini ai nobili. L’importanza di questi eventi non era solo spirituale, ma anche sociale e culturale, fungendo da momenti di aggregazione collettiva per la popolazione.</li>
+<br>
+<li><b>Istituzioni Educative e Formazione:</b>
+Le scuole religiose di Città della Pieve durante il Rinascimento svolgevano un ruolo importante nella formazione dei giovani. Queste scuole erano principalmente dedicate alla teologia, ma anche all’insegnamento delle lettere e della filosofia, seguendo le linee guida delle università pontificie. I giovani provenienti da famiglie nobili o da famiglie con legami religiosi si recavano a Città della Pieve per ricevere un’istruzione basata su principi cristiani.</li>
+</ol>
+<br>
+<p>Il Rinascimento a Città della Pieve fu un periodo di grandi trasformazioni culturali e religiose. L'arte, la teologia e l'umanesimo si intrecciarono, arricchendo la città di un patrimonio artistico e intellettuale che ancora oggi è visibile nelle sue chiese, nelle opere di Perugino e nei luoghi di culto. Il rinnovamento culturale, pur radicato nelle tradizioni religiose, aprì anche alla riflessione filosofica e all'incontro con le nuove idee che segnarono il Rinascimento. Città della Pieve fu una cittadina di confine che visse il Rinascimento con una sua specificità, intrecciando l’eredità medievale con le influenze rinnovate dell'epoca.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="cittadellapieve.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
