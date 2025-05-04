@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territori del Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Medioevo a Città della Pieve (PG)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="cittadellapieve.html">Introduzione</a></li>
+        <li><a href="culturaetradizioni.html">Tradizioni</a></li>
+        <li><a href="luoghi.html">Luoghi da Visitare</a></li>
+        <li><a href="eventi.html">Eventi Locali</a></li>
+        <li><a href="intervistepievesi.html">Interviste</a></li>
+        <li><a href="galleria.html">Galleria e Archivi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+
+<h1>Medioevo Pievese</h1>
+
+<img src="pievemedievale.jpg" 
+srcset="pievemedievale.jpg 600w, pievemedievale.jpg 1200w, pievemedievale.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+<h3>Contesto storico e fondazione medievale della città</h3>
+
+<p>Città della Pieve affonda le sue radici in epoche antiche, con probabili insediamenti etruschi legati alla vicina città di Chiusi. In epoca romana divenne un municipium, ma fu nel primo Medioevo che assunse un ruolo strategico: intorno al VII secolo d.C. i duchi longobardi di Chiusi vi stabilirono un avamposto fortificato per controllare il confine contro Perugia, allora in mano bizantina. All’esterno di questa prima fortificazione sorse, nell’VIII secolo, una pieve (chiesa battesimale) dedicata ai Santi Gervasio e Protasio. Con l’espansione dell’abitato nell’XI secolo, la pieve fu inglobata entro una nuova cinta muraria, dando origine al Castrum Plebis – il Castello della Pieve – da cui deriva il nome attuale della città. Documenti poco dopo l’anno Mille menzionano infatti il borgo fortificato come Castrum Plebis S. Gervasi, attestando la nascita della città medievale cinta da mura e torri attorno alla sua antica pieve.</p>
+
+<h3>Organizzazione politica e rapporti con poteri esterni</h3>
+
+<p>Nel pieno Medioevo Città della Pieve (all’epoca Castel della Pieve) si organizzò come libero comune. Intorno al 1228, approfittando delle lotte tra Impero e Papato, la città si pose sotto la protezione dell’imperatore Federico II di Svevia, schierandosi con la fazione ghibellina. Fu dunque Libero Comune dal 1228, con proprie istituzioni: il borgo era suddiviso in tre terzieri (Borgodentro, Castello e Casalino), ciascuno dei quali eleggeva un proprio priore e rappresentanti nel consiglio comunale. Questo assetto autonomo durò però poco: nel 1250, alla morte di Federico II, Castel della Pieve dovette sottomettersi alla potente città di Perugia, tradizionalmente guelfa e alleata del Papato</p>
+
+<p>Nonostante la formale sottomissione, gli abitanti di Città della Pieve mantennero a lungo uno spirito ribelle. La città, trovandosi in posizione di confine fra lo Stato Pontificio e i territori toscani, sfruttò la sua collocazione strategica cercando di difendere la propria autonomia. Fu spesso in conflitto con Perugia e con il Papato, e arrivò persino ad allearsi con la città toscana di Siena, anch’essa ghibellina, nelle lotte contro il potere papale. Tra il Trecento e il Cinquecento Castel della Pieve si ribellò ripetutamente al dominio perugino e pontificio, creando non pochi grattacapi ai suoi dominatori. Perugia dovette più volte ristabilire la propria autorità: nel 1326 decise di costruire una rocca fortificata dentro le mura pievesi, segno tangibile del suo controllo sul borgo ribelle. Nel tumultuoso periodo delle signorie umbre, la città passò sotto il controllo di vari potenti: tra i principali vi furono i capitani di ventura Biordo Michelotti (fine XIV secolo) e Braccio da Montone (inizi XV secolo), signori di Perugia. Infine, agli inizi del Quattrocento, Papa Martino V riportò stabilmente Città della Pieve sotto l’autorità dello Stato della Chiesa, ponendo termine alle autonomie comunali. Da allora la città rimase sotto influenza pontificia (salvo brevi occupazioni) fino all’Unità d’Italia nel 1860.</p>
+
+<h3>Struttura urbana e architettura</h3>
+
+<p>Il centro storico di Città della Pieve conserva tutt’oggi l’impronta urbanistica e architettonica medievale, caratterizzata dall’ampio uso del mattone a vista locale. Già nella seconda metà del Duecento la pianta urbana era definita e, secondo la tradizione, vista dall’alto disegnerebbe il profilo di un’aquila in volo verso Roma – un omaggio all’aquila imperiale di Federico II, a cui i pievesi ghibellini erano devoti. Le strade del borgo riflettono anche la società del tempo: le vie principali sono larghe e sinuose, adatte ai cavalieri a cavallo, mentre una fitta rete di vicoli stretti e tortuosi si dirama all’intorno, pensata per la difesa dei pedoni armati di archi e balestre. Emblematico è Vicolo Baciadonne, largo appena 80 cm, uno dei più stretti d’Italia. Un intero quartiere, detto tuttora Casalino, nacque in epoca comunale con lotti di case medioevali tutte uguali affiancate: case a due piani in laterizio, ciascuna con un ingresso abitativo e due aperture per botteghe artigiane al piano terra. Questa omogeneità architettonica in mattoni conferisce alla città il suo tipico colore rosso-rosato, tanto che Città della Pieve è annoverata tra le patrie storiche del cotto umbro.</p>
+
+<p>Sul fronte delle fortificazioni, Castel della Pieve era munita di robuste mura già dall’XI secolo, poi ampliate nel XIII secolo. Tratti delle antiche mura duecentesche sono ancora visibili, ad esempio tra l’odierna Porta Romana e la Rocca, e presso Porta Fiorentina in prossimità della cosiddetta Torre del Vescovo. Quest’ultimo torrione fu eretto nel 1326, quando Perugia fece costruire una poderosa Rocca all’angolo nord del borgo, dotata di torri angolari per tenere sotto controllo la città ribelle. La Rocca Perugina, a pianta triangolare e circondata un tempo da un fossato e palizzate, rappresenta un notevole esempio di architettura militare umbra. Aveva ben cinque torri di avvistamento collegate da camminamenti, che permettevano di inviare segnali di fuoco a Perugia in caso di bisogno di rinforzi. Oggi la rocca e alcuni torrioni superstiti (come la Torre del Prato presso Porta Perugina e la semidiruta Torre del Frontone) testimoniano visivamente il passato medievale della città e il dominio che Perugia vi esercitò.</p>
+
+<p>Tra gli edifici religiosi, fulcro della città era ed è la Cattedrale dei Santi Gervasio e Protasio, nata come pieve altomedievale. L’attuale duomo fu edificato in forme romanico-gotiche tra XI e XII secolo sulle rovine di una precedente chiesa del V secolo, e rimaneggiato alla fine del Duecento. La facciata in laterizio è semplice, mentre l’interno venne rifatto in epoca barocca. Nel corso del Duecento e Trecento sorsero anche importanti complessi monastici subito fuori le mura: la Chiesa di San Francesco (con annesso convento francescano) e la Chiesa di Sant’Agostino (con convento agostiniano), entrambe fondate intorno alla metà del XIII secolo in stile gotico semplice. Un’altra chiesa gotica, Santa Maria dei Servi, venne edificata dai Serviti presso Porta Romana, anch’essa fuori dalla cerchia muraria medievale. All’interno del centro abitato sorsero piccoli luoghi di culto legati alle confraternite laicali, come l’Oratorio di Santa Maria dei Bianchi (già oratorio dei Disciplinati) e l’Oratorio di San Bartolomeo, arricchiti da affreschi e opere d’arte nel tardo Medioevo. Complessivamente, l’assetto urbano e i monumenti di Città della Pieve offrono uno spaccato quasi intatto di una cittadina fortificata medievale dell’Italia centrale, armoniosamente sviluppatasi in laterizio entro la sua cornice di mura e torri.</p>
+
+<h3>Vita Quotidiana della Popolazione</h3>
+
+<p>Nel Medioevo la vita quotidiana a Città della Pieve era quella di un piccolo centro rurale fortificato, con una società divisa tra un’élite nobiliare e una maggioranza di popolani contadini e artigiani. La maggior parte della popolazione viveva di agricoltura nei terreni circostanti: si coltivavano cereali (grano, orzo, farro) per il pane quotidiano e la vite per il vino, prodotto già allora rinomato nella zona collinare di Pieve. Nelle campagne si allevavano ovini, suini e animali da cortile, che fornivano carne per i giorni di festa e lana per tessuti. I boschi circostanti offrivano legname, selvaggina e prodotti come funghi e castagne, integrando la dieta locale. L’alimentazione della gente comune era semplice: zuppe di legumi e verdure, pane scuro cotto nei forni comunitari, formaggi pecorini, olio d’oliva e vino annacquato sulla tavola di ogni giorno, mentre le carni erano consumate di rado, in genere durante le ricorrenze religiose o le fiere.</p>
+
+<p>All’interno delle mura, la città pullulava di mestieri e botteghe artigiane che animavano le strette vie del borgo. Già dal XIII secolo Città della Pieve era nota per la produzione di zafferano, spezia preziosa coltivata nei dintorni sia per uso alimentare che soprattutto come colorante tessile. Lo Statuto di Perugia del 1279 testimonia l’importanza di questa coltura proibendo ai forestieri di seminare il croco nel territorio pievese, segno che lo zafferano era considerato una risorsa economica da tutelare. Di pari passo si sviluppò l’arte tessile: il giallo dello zafferano serviva a tingere filati di lana, lino e seta, e per lungo tempo Città della Pieve fu un notevole centro di produzione di panni tinti e filati pregiati. Oltre ai tintori e tessitori, erano presenti numerosi altri artigiani: falegnami, fabbri, calzolai, muratori, fornaciai specializzati nella cottura dei mattoni e delle terrecotte (vasi, laterizi, ecc.), attività favorita dalla ricca argilla locale. La città era infatti famosa per i suoi mattoni, e intere famiglie si tramandavano l’arte della loro fabbricazione (da cui il soprannome di città del cotto). Vi erano mugnai che macinavano il grano nei mulini ad acqua sul Nestore, fornai, macellai, sarti e armaioli che producevano balestre e altre armi da difesa per la milizia locale.</p>
+
+<p>La religione permeava la vita quotidiana della comunità. La campana della pieve (poi duomo) scandiva le ore e convocava i fedeli alle messe domenicali e alle festività dei santi patroni Gervasio e Protasio. Gran parte della popolazione era analfabeta, ma apprendeva i precetti religiosi attraverso le prediche e le immagini sacre nelle chiese. La vita sociale e spirituale dei laici era animata dalle confraternite: associazioni di devoti che organizzavano processioni, opere di carità e riti penitenziali. Ad esempio, la Confraternita dei Disciplinati, detta dei “Bianchi” per il colore del saio, sorse probabilmente nel Trecento sull’onda dei movimenti penitenziali e costruì il suo oratorio dedicato a Santa Maria dei Bianchi nel cuore del borgo
+. Tali confraternite svolgevano importanti funzioni sociali nel Medioevo, assistendo poveri e malati grazie alle elemosine e lasciti dei confratelli e dei fedeli. Nella quotidianità, i ritmi agricoli e religiosi si intrecciavano: le feste liturgiche (Natale, Pasqua, il patrono) erano momenti di sospensione dal lavoro e di celebrazione collettiva, spesso accompagnati da mercati e fiere dove i contadini potevano vendere i loro prodotti e acquistare utensili o stoffe.</p>
+
+<p>Per quanto riguarda l’abbigliamento, gli abiti riflettevano la condizione sociale. I contadini e gli artigiani indossavano vestiti pratici di panno grezzo: tuniche e calzoni in lana pesante tessuta in casa, spesso non tinti o di colori terrosi. Le donne portavano semplici gonne e corpetti in lana o lino, con fazzoletti sul capo. Gli aristocratici e i ricchi borghesi sfoggiavano invece tessuti più raffinati acquistati magari nelle vicine Perugia o Siena: velluti, broccati di seta e lana finemente tinta (anche con il locale zafferano, che conferiva preziose tonalità dorate). Un cavaliere pievese avrebbe indossato, oltre all’armatura in caso di guerra, una cappa o mantello in stoffa pregiata, stivali di cuoio e una cintura ornamentale. Nel complesso, la vita a Città della Pieve in epoca medievale era semplice e laboriosa: il lavoro nei campi e nelle botteghe, la fede religiosa e le tradizioni comunitarie costituivano il perno dell’esistenza quotidiana degli abitanti.</p>
+
+<h3>Economia locale e attività produttive</h3>
+
+<p>L’economia medievale di Città della Pieve si basava su una combinazione di agricoltura, allevamento, artigianato specializzato e scambi commerciali a livello locale. Il settore agricolo forniva il sostentamento primario: cereali, ortaggi, vite e olivo coltivati nei campi circostanti. Si praticava la rotazione delle colture e l’allevamento di pecore e maiali, ottenendo lana, formaggi e salumi per il consumo e il mercato. I surplus agricoli, soprattutto grano e vino, alimentavano un attivo commercio: il borgo ospitava mercati periodici dove i contadini vendevano i propri prodotti e commercianti forestieri giungevano per scambiare merci. La posizione di confine favoriva scambi sia verso l’Umbria che verso la Toscana: dal territorio pievese passavano infatti vie secondarie che collegavano il lago Trasimeno, la Val di Chiana e la via Francigena, consentendo il transito di mercanti e pellegrini.</p>
+
+<p>Tra le attività produttive, un ruolo di spicco spettava all’artigianato. Come già accennato, la produzione di zafferano divenne nel Due-Trecento una vera specialità locale: lo “oro rosso” di Città della Pieve era molto ricercato come tintura e spezia, costituendo una fonte di ricchezza per il borgo. Documenti del XIV e XVI secolo attestano regolamenti severi sulla raccolta e tassazione dello zafferano, a riprova dell’importanza economica che rivestiva. Parallelamente prosperava l’industria tessile: botteghe di tessitori e tintori trasformavano la lana locale in panni colorati di alta qualità, venduti poi nei mercati regionali. La lavorazione del cotto era un altro pilastro: le colline argillose offrivano materia prima per laterizi e ceramiche. Fornaci medioevali producevano mattoni, tegole, orci e vasellame da cucina; la maestria dei fornaciai pievesi divenne rinomata, tanto che la città sviluppò un commercio di mattoni e terrecotte verso altri centri umbri.</p>
+
+<p>Anche altri mestieri contribuivano all’economia locale: i falegnami producevano botti e tini per il vino (una tradizione proseguita nei secoli), i maniscalchi ferrai forgiavano attrezzi agricoli e ferrature per cavalli, i calzolai confezionavano scarpe e stivali in cuoio per gli abitanti e i viaggiatori. La presenza di boschi permise lo sviluppo di carbonai (per la produzione di carbone di legna) e la raccolta di miele da arnie rustiche nei boschi (miele e cera erano beni utili per dolcificare e per le candele).</p>
+
+<p>Sul piano commerciale, pur essendo un piccolo centro, Castel della Pieve trasse vantaggio dalla sua collocazione geografica: la vicinanza con la Toscana favoriva contatti con mercanti di Chiusi, Siena e Firenze, mentre l’appartenenza alla sfera umbra-pontificia permetteva scambi con Perugia, Orvieto e Roma. Non a caso Città della Pieve sorse come luogo di transito: presso la rocca iniziava la Via Pievaiola, strada che collegava la cittadina a Perugia già dal 1296, fungendo da arteria commerciale e militare di rilievo. La città istituì probabilmente da fiere annuali o mercati franchi (esenti da dazi) in occasioni religiose, per attirare compratori e venditori dai dintorni. L’economia locale, dunque, era quella di un borgo autosufficiente ma ben integrato nelle reti economiche medievali, con prodotti di eccellenza (zafferano, panni tinti, laterizi) che costituivano il suo vanto e fonte di entrate.</p>
+
+<h3>Eventi storici rilevanti e personaggi importanti</h3>
+
+<p>Nel corso del Medioevo e della prima età moderna, Città della Pieve fu teatro di numerosi eventi storici e legata a figure di spicco che ne segnarono le vicende:</p>
+
+<ul>
+<li><b>1228 – Nascita del libero Comune:</b> in un contesto di lotte tra Papato e Impero, Castel della Pieve ottenne l’autonomia comunale sotto la protezione di Federico II di Svevia. Il legame con l’imperatore ghibellino conferì al borgo un’anima ribelle e indipendente, simboleggiata dall’aquila imperiale nel suo stemma urbano.</li>
+
+<li><b>1250 – Sottomissione a Perugia:</b> approfittando della morte di Federico II, la guelfa Perugia conquistò la città, ponendo fine alla breve stagione comunale indipendente
+. Iniziò un periodo di dominazione perugina, anche se segnato da continue rivolte dei pievesi contro il giogo esterno</li>
+
+<li><b>1326 – Costruzione della Rocca Perugina:</b> per arginare le rivolte locali e consolidare il proprio potere, Perugia edificò all’interno di Castel della Pieve una fortezza militare (la Rocca), progettata dal celebre architetto Lorenzo Maitani di Orvieto. La rocca, con le sue torri e guarnigioni, divenne il simbolo tangibile del dominio perugino sul borgo.
+</li>
+
+<li><b>XIV-XV secolo – Epoca delle Signorie:</b> tra fine Trecento e inizio Quattrocento, Città della Pieve passò sotto il controllo di vari signori. Biordo Michelotti, audace condottiero perugino, prese possesso del borgo sul finire del XIV secolo; pochi anni dopo, il suo successore Braccio Fortebraccio da Montone estese la propria signoria su Pieve (circa 1416) nel tentativo di costruire un grande stato umbro. Queste figure, pur estranee alla città, lasciarono un’impronta nelle cronache locali come potenti governanti militari.</li>
+
+<li><b>1430 ca. – Ritorno allo Stato Pontificio:</b> durante il pontificato di Martino V (1417-1431), approfittando della fine delle signorie locali, lo Stato della Chiesa riaffermò la propria sovranità su Città della Pieve. La città fu definitivamente integrata nei domini pontifici, perdendo qualsiasi velleità di autonomia comunale ma ottenendo in cambio una relativa stabilità politica.</li>
+
+<li><b>Per tutto il Medioevo – Sviluppi sociali e culturali:</b> in parallelo agli eventi politici, vanno ricordati i progressi nella vita cittadina. Nel 1480 circa nacque a Città della Pieve Pietro Vannucci, detto il Perugino, destinato a diventare uno dei massimi pittori del Rinascimento italiano. Sebbene appartenente all’epoca rinascimentale, Perugino rappresenta il figlio più illustre di questa terra: alcune sue prime opere vennero realizzate proprio nelle chiese pievesi (come l’Adorazione dei Magi nell’Oratorio dei Bianchi, affrescata nel 1504). La sua figura testimonia la vivacità culturale che il borgo aveva raggiunto a cavallo tra Medioevo e Rinascimento.</li>
+
+<li><b>1527-1529 – Ultimi tumulti e dominio papale diretto:</b> durante il Sacco di Roma (1527) le truppe imperiali di Carlo V saccheggiarono anche questi territori. Poco dopo, Papa Clemente VII decise di sottrarre Castel della Pieve dalla giurisdizione perugina, ponendola sotto il controllo diretto di Roma. Nel 1529 la città ritornò sotto l’egida stabile dello Stato Pontificio, e pochi decenni dopo, nel 1600, verrà elevata al rango di Città e sede vescovile da Clemente VIII (evento post-medievale che corona però il lungo percorso storico del borgo).</li>
+
+</ul>
+
+<p>Tra gli altri personaggi di rilievo legati alla storia pievese, si possono citare Ascanio della Corgna, nominato governatore perpetuo del borgo nel 1550 da Papa Giulio III: appartenente a una potente famiglia umbra, Ascanio risiedette a Città della Pieve e vi fece costruire il grande Palazzo della Corgna, introducendo fasti rinascimentali nella cittadina. Sebbene esuli dal medioevo stretto, la sua figura incarna la transizione verso l’era moderna. In ambito locale, vanno menzionate anche le famiglie nobili pievesi, come i Bandini, che nel XVI secolo ottennero dal papa il titolo ducale su Castel della Pieve: il loro palazzo signorile sorge tuttora nel borgo ed è testimonianza dell’ascesa di aristocrazie locali sul finire del Rinascimento.</p>
+
+<h3>Sviluppi culturali e religiosi</h3>
+
+<p>Sul piano culturale e religioso, Città della Pieve in epoca medievale visse un progressivo arricchimento di istituzioni ecclesiastiche, tradizioni devozionali e – verso la fine del periodo – delle prime forme di istruzione. La presenza di numerose chiese e ordini religiosi testimonia la profonda religiosità della comunità: oltre alla pieve/cattedrale dei SS. Gervasio e Protasio, nel Due-Trecento si stabilirono in città i Francescani, gli Agostiniani e i Serviti, ognuno edificando il proprio luogo di culto (San Francesco, Sant’Agostino, Santa Maria dei Servi). Queste chiese divennero centri di predicazione, arte sacra e assistenza ai bisognosi. Ad esempio, i frati avviavano opere pie come ospedali e ospizi per pellegrini: non a caso è attestato un antico ospedale di San Bartolomeo legato all’oratorio omonimo, che accoglieva viandanti e infermi presso Porta Perugina. Le chiese pievesi furono abbellite nel corso del Trecento e Quattrocento da cicli di affreschi e tavole dipinte: vi lavorarono maestri umbri e toscani, segno di una vivace circolazione artistica. Un affresco del XIV secolo raffigurante la Crocifissione (attribuito al senese Nicolò di Bonifazio) si conserva nell’oratorio di San Bartolomeo, mentre varie opere del giovane Perugino arricchirono gli altari locali nel primo Cinquecento.</p>
+
+<p>Le confraternite laicali costituiscono un elemento culturale e sociale di primaria importanza. Oltre ai Disciplinati “Bianchi”, vi furono probabilmente confraternite della Misericordia (dedite all’assistenza ai condannati a morte e ai poveri) e confraternite del Santissimo Sacramento, tutte dedite a particolari forme di culto e carità. La Confraternita della Misericordia di Gesù (citata in fonti storiche locali) aveva anch’essa un proprio oratorio e partecipava alle processioni della Settimana Santa con rappresentazioni sacre. Attraverso le confraternite, i laici potevano esprimere la propria fede in modo comunitario e organizzato: queste associazioni mettevano in scena sacre rappresentazioni, amministravano patrimoni per dotare chiese di arredi sacri e gestivano scuole di dottrina cristiana per i fanciulli.</p>
+
+<p>Riguardo all’istruzione, nel medioevo avanzato iniziarono a comparire i primi segni di alfabetizzazione, sebbene limitati. In assenza di scuole pubbliche vere e proprie, era la Chiesa a provvedere all’educazione di base: i giovani destinati al sacerdozio o alla vita monastica studiavano latino, canto e scrittura presso il clero del duomo o nei conventi. È noto che presso il convento francescano di San Francesco furono rinvenute iscrizioni romane, segno che i frati raccoglievano anche testi antichi e forse tenevano uno scriptorium dove copiare codici. Verso il Quattrocento, con la crescita del ceto borghese, il Comune poteva aver patrocinato un maestro d’abaco per insegnare ai figli dei mercanti i rudimenti di aritmetica e scrittura commerciale – una pratica comune in molte città italiane. Inoltre, alcune scuole confraternitali insegnavano il catechismo e forse a leggere le preghiere ai bambini del popolo. Sebbene non esistessero “scuole” nel senso moderno, Città della Pieve gettò le basi della propria tradizione culturale: prova ne è la presenza, già dal tardo medioevo, di personalità colte come notai, medici e religiosi scrittori originari del luogo.</p>
+
+<p>In sintesi, durante il periodo medievale Città della Pieve sviluppò un ricco tessuto religioso e culturale: chiese e conventi punteggiavano il borgo, le confraternite coinvolgevano attivamente i laici nelle opere di fede e di solidarietà, e gradualmente si formarono nuclei di sapere che preludono all’epoca umanistica. Questo patrimonio intangibile di fede, arte e primi saperi costituì le fondamenta su cui, nel Rinascimento, la cittadina avrebbe visto fiorire opere d’arte di rilievo e figure illustri come il Perugino, lasciando un’eredità culturale che ancora oggi rappresenta un vanto per Città della Pieve.</p>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="cittadellapieve.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
