@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territori del Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+    
+    
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+
+    .centrato {display: flex; justify-content: center;}
+
+  .gallery-section {
+    padding: 40px 20px;
+   
+  }
+  
+  .section-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .section-description {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .gallery-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .image-caption {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+
+/* Stili per il modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Città della Pieve (PG)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="cittadellapieve.html">Introduzione</a></li>
+        <li><a href="storiapievese.html">Storia</a></li>
+        <li><a href="culturaetradizioni.html">Tradizioni</a></li>
+        <li><a href="luoghi.html">Luoghi da Visitare</a></li>
+        <li><a href="eventi.html">Eventi Locali</a></li>
+        <li><a href="intervistepievesi.html">Interviste</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+
+
+<section id="galleria" class="gallery-section">
+  <div class="container">
+    <h1 class="section-title" style="color:black; font-size:3rem;">Archivio Fotografico Storico Città della Pieve</h1>
+<p style="font-size: 2rem; font-weight:bold; text-align: center;">Archivio non completo, a breve inserirò il decennio alla quale appartengono, foto per foto.</p>
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="archivio/foto1.jpg" alt="Descrizione Immagine 1" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 1</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto2.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 2</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto3.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 3</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto4.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 4</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto5.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 5</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto6.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 6</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto7.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 7</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto8.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 8</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto9.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 9</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto10.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 10</p>
+      </div>
+	 <div class="gallery-item">
+        <img src="archivio/foto11.jpg" alt="Descrizione Immagine 1" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 11</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto12.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 12</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto13.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 13</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto14.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 14</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto15.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 15</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto16.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 16</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto17.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 17</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto18.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 18</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto19.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 19</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto20.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 20</p>
+      </div>
+	<div class="gallery-item">
+        <img src="archivio/foto21.jpg" alt="Descrizione Immagine 1" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 21</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto22.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 22</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto23.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 23</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto24.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 24</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto25.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 25</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto26.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 26</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto27.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 27</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto28.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 28</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto29.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 29</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto30.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 30</p>
+      </div>
+	 <div class="gallery-item">
+        <img src="archivio/foto31.jpg" alt="Descrizione Immagine 1" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 31</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto32.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 32</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto33.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 33</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto34.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 34</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto35.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 35</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto36.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 36</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto37.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 37</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto38.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 38</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto39.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 39</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto40.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 40</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto41.jpg" alt="Descrizione Immagine 1" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 41</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto42.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 42</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto43.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 43</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto44.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 44</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto45.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 45</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto46.jpg" alt="Descrizione Immagine 2" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 46</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="archivio/foto47.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 47</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto48.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 48</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto49.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 49</p>
+      </div>
+      <div class="gallery-item">
+        <img src="archivio/foto50.jpg" alt="Descrizione Immagine 3" class="gallery-image">
+        <p class="image-caption">Descrizione Immagine 50</p>
+
+
+
+
+
+      
+    </div>
+  </div>
+
+ <div class="back-home">
+    <a href="cittadellapieve.html">In Terris Clanis</a>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+// Aggiungi il codice JavaScript per gestire l'apertura e la chiusura del modal
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', function() {
+    // Crea il modal
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+    
+    const largeImage = document.createElement('img');
+    largeImage.src = img.src; // Imposta la stessa immagine cliccata
+
+    modalContent.appendChild(largeImage);
+
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'X';
+    closeButton.classList.add('close');
+    closeButton.onclick = function() {
+      modal.style.display = 'none';
+    };
+
+    modalContent.appendChild(closeButton);
+    modal.appendChild(modalContent);
+
+    // Aggiungi il modal al body
+    document.body.appendChild(modal);
+    modal.style.display = 'flex'; // Mostra il modal
+  });
+});
+
+  </script>
+</body>
+</html>
