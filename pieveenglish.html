@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territori del Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Città della Pieve (PG)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="pievehistory.html">History</a></li>
+        <li><a href="pievetradition.html">Tradition</a></li>
+        <li><a href="pieveplace.html">Places to Visit</a></li>
+        <li><a href="pieveevents.html">Local Events</a></li>
+        <li><a href="pieveinterviews.html">Interviews</a></li>
+        <li><a href="archive.html">Photographic Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>The territory of Città della Pieve: between borders and landscapes</h1>
+
+<img src="pieve.jpg" 
+srcset="pieve.jpg 600w, pieve.jpg 1200w, pieve.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+<p>The territory of Città della Pieve is one of the most fascinating and unique in western Umbria. Situated on a hill over 500 meters above sea level, the town overlooks the natural border between two iconic regions: Umbria and Tuscany. This position has always represented a strategic and cultural crossroads between the influences of Perugia, Siena, and Orvieto, and it continues to be reflected in the variety of its landscapes and local traditions.</p>
+
+<p>The hill on which the town stands offers a vast panorama that stretches from Lake Trasimeno to the Val di Chiana, providing spectacular views of cultivated fields, olive groves, vineyards, and dense patches of woodland. Nature here is expressed in harmonious and gentle forms, typical of central Italy, where human labor has been integrated with the environment for centuries without altering its beauty.</p>
+
+<p>The municipal territory of Città della Pieve is vast and varied. In addition to the historic center, which preserves its medieval layout intact, it extends into a countryside dotted with hamlets, farms, and small villages. It is a landscape shaped by time and agricultural wisdom, characterized by a network of scenic roads that wind through hills and valleys, ideal for those who love hiking, walking, and cycling excursions.</p>
+
+<p>From a geological and environmental perspective, the area is located in the belt of clayey and sandy hills of western Umbria, with a rich and protected biodiversity. There are also streams and small brooks that flow towards Lake Trasimeno and the Paglia River, helping to keep the land fertile.</p>
+
+<p>Città della Pieve is therefore a perfect example of how geography is not just a backdrop, but a protagonist: its landscape has defined over the centuries the history, economy, and lifestyle of those who inhabit it.</p>
+
+<h3>"Population and Hamlets"</h3>
+
+<p>With a population of around 7,386 inhabitants, Città della Pieve is made up of several hamlets that enrich its social and cultural fabric:</p>
+
+<ul>
+<li><b>Moiano</b>: known for its agricultural and artisanal production.</li>
+<li><b>Po' Bandino</b>: an important commercial and residential center.</li>
+<li><b>Ponticelli</b>: characterized by artisanal and industrial activities.</li>
+<li><b>Salci</b>: a medieval village with a fascinating history.</li>
+<li><b>San Litardo, Canale, Maranzano</b>: small towns that preserve local traditions.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="../home.html">In Terris Clanis</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
