@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From prehistory to Rome</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">History of Città della Pieve</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="pieveenglish.html">Introduction</a></li>
+        <li><a href="pevetradition.html">Tradition</a></li>
+        <li><a href="pieveplace.html">Place to Visit</a></li>
+        <li><a href="pieveevents.html">Local Events</a></li>
+        <li><a href="pieveinterviews.html">interviews</a></li>
+        <li><a href="pievearchive.html">Photographic Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h2>Prehistory and Antiquity</h2>
+
+<img src="pievepreistorica.jpg" 
+srcset="pievepreistorica.jpg 600w, pievepreistorica.jpg 1200w, pievepreistorica.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="50%" class="centrato">
+
+
+<p>The first traces of human settlements in the area of Città della Pieve date back to the Neolithic period (around 6000-2000 B.C.), as evidenced by several finds discovered in various locations around the surrounding territory, including stone tools and ceramic fragments. The area, located between the Val di Chiana and Val d'Orcia, was indeed an important crossroads for peoples and cultures.</p>
+
+<p>During the Bronze Age (around 2000-1000 B.C.), the region began to be more intensively inhabited, with the emergence of small villages settling in the hilly areas.
+These prehistoric villages were characterized by dwellings made from natural materials such as wood and stone, and the production of bronze tools and decorative ceramics.</p>
+
+<p>During the Iron Age (around 1000-500 B.C.), the area saw greater social organization, likely influenced by the increasing presence of the Etruscan people, who settled in the surrounding territory.</p>
+
+<hr>
+
+<h2>In the Etruscan Era</h2>
+
+<img src="villaggio.jpg" 
+srcset="villaggio.jpg 600w, villaggio.jpg 1200w, villaggio.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+
+<p>Although Città della Pieve was not one of the main Etruscan cities, its strategic position on a hill overlooking the surrounding valleys made it an important transit point for trade and communication. The area was, in fact, located along the main Etruscan routes that connected the cities of Chiusi, Cortona, and Perugia, thus facilitating the flow of goods and information between the centers of Etruscan civilization.</p>
+
+<p>The Etruscan presence in the region is evidenced by some remains of tombs and funerary objects found near Città della Pieve. The Etruscan necropolises, places of great religious and social significance, were intended for the burials of members of the ruling class as well as common people. The tombs, often carved into the rock or constructed in the shape of a mound, reflected the deep connection between life and the afterlife that characterized Etruscan culture. These sacred sites were usually located in panoramic or strategic positions, symbolizing the passage from the earthly world to the divine realm.</p>
+
+<p>Some studies suggest that the necropolises around Città della Pieve were closely linked to the city of Chiusi, one of the most influential centers of the ancient Etruscan civilization, which held extensive control over the region. Among the finds discovered in the tombs are decorated vases, armor, jewelry, and votive statues, evidence of a culture that placed great value on preparing the deceased for the journey to the afterlife and on perpetuating the memory of their ancestors.</p>
+
+<h2>In Roman Era</h2>
+
+<img src="castrum.jpg" 
+srcset="castrum.jpg 600w, castrum.jpg 1200w, castrum.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+<p>With the expansion of the Roman Empire in the 3rd century B.C., the region that today hosts Città della Pieve became an integral part of the network of colonies and municipia under Roman control. Although the city of Città della Pieve did not have the strategic or administrative importance of other more developed Roman centers in the area, its favorable position continued to make it a crucial hub in commercial and communication routes.</p>
+
+<p>During the Roman period, the area surrounding Città della Pieve continued to be inhabited and exploited for agriculture, primarily thanks to its fertile valley. The Etruscans had already begun to transform the region into a rich and prosperous area, and with the arrival of the Romans, agricultural techniques and infrastructure were improved and expanded. The use of the land for the cultivation of wheat, olives, and vines became an increasingly established practice, contributing to the well-being of the region.</p>
+
+<p>One of the most significant aspects of Roman influence on Città della Pieve was the development of communication routes. The Romans were masters in the construction of roads and bridges, and the area was probably included in a road network that connected important Etruscan cities like Chiusi and Cortona to Rome and other centers in central Italy. These roads facilitated trade, but also military movements, increasing the integration of the region into the Empire.</p>
+
+<p>During the imperial period, Roman architecture made its way into these territories as well, with the construction of rural villas and villages that testify to the Roman way of life in the countryside. Many of these settlements were dedicated to large-scale agricultural production, an aspect that remained fundamental even after the end of Roman rule.</p>
+
+<p>Another element that took hold during the Roman era was the spread of Roman religion. Although the Etruscan religion did not disappear immediately, the presence of Roman temples and places of worship in the region began to become increasingly evident. Roman deities were placed alongside local ones, and religion became one of the tools for the Romanization of the population. The founding of temples dedicated to gods like Jupiter, Minerva, and Diana reflected the strong connection between Rome's political and religious power and the conquered lands.</p>
+
+<p>The end of Etruscan civilization and the assimilation of this area into the Roman Empire marked an important transition. The Romans, while preserving many of the Etruscan traditions, also introduced new architectural, artistic, and cultural techniques that gradually altered the identity of the region. Although Città della Pieve did not become a major Roman city, it still became an integral part of a larger territory administered by the power of Rome.</p>
+
+<p>With the rise of Christianity in the 4th and 5th centuries A.D., and the beginning of the decline of the Western Roman Empire, the area began to see new developments linked to the birth of Christian settlements. The transformation of the Church of Santa Maria, which over time became the spiritual center of the town, is just one example of how Christian religion and traditions gradually began to replace Roman and pagan religious practices.</p>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="pieveenglish.html">Introduction</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
