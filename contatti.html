@@ -15,6 +15,11 @@
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
+
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
     }
 .pergamenato-box {
   background: rgba(245, 222, 179, 0.85); /* pergamena chiara */
@@ -160,6 +165,33 @@ header.hero-header {
   <footer>
     &copy; 2025 Arthur Veo – Tutti i diritti riservati
   </footer>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
 
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
 </body>
 </html>
