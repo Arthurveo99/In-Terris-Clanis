@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiusi (SI)</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Sarteano (SI)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="storiasarteano.html">Storia</a></li>
+        <li><a href="tradizionisarteano.html">Tradizioni</a></li>
+        <li><a href="luoghisarteano.html">Luoghi da Visitare</a></li>
+        <li><a href="eventisarteano.html">Eventi Locali</a></li>
+        <li><a href="intervistesarteano.html">Interviste</a></li>
+        <li><a href="archiviosarteano.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Un Tuffo nel Passato della Val di Chiana</h1>
+
+<img src="sarteano.jpg" 
+srcset="sarteano.jpg 600w, sarteano.jpg 1200w, sarteano.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+<p>Situato nel cuore della Val di Chiana, il comune di Sarteano è un affascinante borgo medievale che conserva tracce di un passato ricco di storia e tradizioni. Con la sua posizione strategica sulle colline che dominano la valle, Sarteano è da sempre stato un importante punto di passaggio per le vie commerciali che collegavano l'Italia centrale. Oggi, il paese è un'ineguagliabile testimonianza di come la storia e la natura possano intrecciarsi in un paesaggio affascinante.</p>
+
+<h2>Un Po' di Storia</h2>
+
+<p>Sarteano affonda le sue radici in tempi antichi, quando la zona era abitata dagli Etruschi, come testimoniano i numerosi reperti archeologici trovati nelle vicinanze. La sua posizione strategica sulla valle lo rese un punto di riferimento anche durante l’occupazione romana. Tuttavia, è nel Medioevo che il borgo acquisì un ruolo decisivo nella regione, diventando un centro di interesse per i signori locali.</p>
+
+<p>Nel corso dei secoli, Sarteano fu al centro di alleanze e conflitti tra i grandi casati toscani. Con il passaggio sotto il controllo dei Medici nel XVI secolo, il paese subì una serie di trasformazioni, con la costruzione di nuove fortificazioni e l’ampliamento delle strutture nobiliari. Questa lunga e variegata storia ha lasciato a Sarteano un patrimonio culturale ricco e variegato, che ancora oggi si riflette nel suo aspetto e nei suoi monumenti.</p>
+
+<h2>Il Castello di Sarteano</h2>
+
+<img src="castellosarteano.jpg" 
+srcset="castellosarteano.jpg 600w, castellosarteano.jpg 1200w, castellosarteano.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+
+<p>Uno degli elementi più caratteristici del paese è il Castello di Sarteano, una fortezza medievale che domina il borgo. Questa imponente struttura, originariamente costruita nel 1083 d.C., ha subito numerosi interventi nel corso dei secoli, ma conserva ancora intatte molte delle sue caratteristiche architettoniche. Oggi il castello ospita un museo archeologico che raccoglie importanti reperti etruschi e romani, che raccontano la storia del territorio 
+(<a href="castello/castellosarteano.html">approfondimento</a>).</p>
+
+<h2>Architettura e Monumenti</h2>
+
+<p>Passeggiando per le vie di Sarteano, si possono ammirare numerosi palazzi storici, chiese medievali e angoli che sembrano sospesi nel tempo. Tra questi, spicca la Chiesa di San Lorenzo, un'imponente struttura che conserva al suo interno opere d'arte di grande valore. La piazza principale del paese è il cuore pulsante di Sarteano, dove i visitatori possono immergersi nell'atmosfera di un tempo passato.</p>
+
+<h2>Natura e Tradizioni</h2>
+
+<p>Il territorio circostante è caratterizzato da colline verdeggianti e boschi rigogliosi, ideali per gli amanti della natura e delle passeggiate all'aria aperta. La Val di Chiana, con i suoi paesaggi mozzafiato, offre numerosi sentieri e percorsi escursionistici che partono proprio da Sarteano. La tradizione gastronomica del paese è un altro aspetto che non può essere dimenticato: piatti tipici come la cinghiale in umido, il pecorino locale e il vin santo sono solo alcune delle prelibatezze che è possibile assaporare in uno dei ristoranti del borgo.</p>
+
+<h2>Sarteano Oggi</h2>
+
+<p>Oggi Sarteano è un paese che ha saputo mantenere il suo fascino antico, pur proiettandosi verso il futuro. Il turismo è una risorsa importante per l'economia locale, ma il paese ha saputo preservare le sue tradizioni, rendendolo un luogo ideale per chi cerca una fusione di cultura, natura e tranquillità. Sarteano è, senza dubbio, un angolo di Toscana che merita di essere scoperto, sia per il suo patrimonio storico e artistico, che per la sua atmosfera autentica e accogliente.</p>
+</section>
+  
+
+  <div class="back-home">
+    <a href="../index.html">In Terris Clanis</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
