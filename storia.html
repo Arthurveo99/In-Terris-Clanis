@@ -1,813 +1,136 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
+  <!DOCTYPE html>
+  <html lang="it">
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Storia del Clanis</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-091CFPRCWW');
-</script>
-  
-
-  
+  <title>Storia del Castello di Sarteano</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'EB Garamond', serif;
-      background-color: #c96c4f;
-      background-image: url('sfondoclanis.jpg');
-      background-size: auto;
-      background-repeat: repeat;
-
-       user-select: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      
+      font-family: "EB Garamond", serif;
+      background: url('texture-pergamena.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #3b2d1f;
+      padding: 2em;
+      line-height: 1.8;
     }
 
     header {
-      background-color: #004d3a;
-      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
-      background-repeat: repeat;
-      background-size: cover;
-      color: #3b2f2f;
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      border-bottom: 4px double #a67c52;
-      position: relative;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 2rem;
-      color: white;
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    .logo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background-image: url('logo.jpg');
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 1rem;
-      border: 3px solid #a67c52;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .motto {
-      font-style: italic;
-      font-size: 1.5rem;
-      color: white;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-
-    nav {
       width: 100%;
+      max-height: 500px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 2em;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
+    .hero-img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      font-size: 2rem;
-      border-bottom: 1px dotted transparent;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    p, li {
-      font-size: 1.3rem;
-      line-height: 1.7;
-      font-weight: bold;
+    h1, h2 {
+      font-family: "Cinzel", serif;
+      color: #2e1a0f;
+      text-align: center;
     }
 
     h1 {
-      font-size: 2rem;
-      text-align: center;
-      font-weight: bold;
+      font-size: 2.8em;
+      margin-bottom: 0.5em;
     }
 
     h2 {
-      font-size: 1.7rem;
-      text-align: left;
-      font-weight: bold;
-      color: brown;
+      font-size: 2em;
+      margin-top: 2em;
     }
 
-    h3 {
-      font-size: 1.5rem;
-      text-align: left;
-      font-weight: bold;
-      color: black;
-    }
-
-    hr {
-      background-color: red;
-      border: none;
-      height: 1px;
-    }
-
-    b {
-      color: brown;
-    }
-    a {color: green;}
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #3c3c3c;
-      color: #fff;
-      margin-top: 2rem;
-      font-size: 1.5rem;
-    }
-
-    #intro {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-      background-color: #dcb8a1;
-      color: #3b2f2f;
-    }
-
-    .image-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10%;
-      margin-top: 2rem;
-    }
-
-    .image-gallery img {
-      width: 25%;
-    }
-
-    .back-home {
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .back-home a {
-      padding: 1rem 2rem;
-      background-color: #7a5742;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
+    p {
+      font-size: 1.15em;
+      margin-bottom: 1.2em;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #FCF5E5;
+      padding: 1.2em;
       border-radius: 8px;
-      font-family: 'Cinzel', serif;
-      box-shadow: 0 0 8px #0003;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
     }
-
-    .back-home a:hover {
-      background-color: #5e3c2b;
-    }
-     img {
-   max-width: 100%;
-   height: auto;
-   display: block;
-   }
-
 
     @media (max-width: 768px) {
-      header {
-        align-items: flex-start;
-        text-align: left;
+      body {
+        padding: 1em;
       }
 
-      .menu-toggle {
-        display: block;
+      .hero-img {
+        height: 250px;
+        object-position: center 15%;
       }
 
-      .logo {
-        align-self: flex-start;
-        margin-top: 2rem;
-        margin-left: 3rem;
-        margin-bottom: 0.5rem;
+      h1 {
+        font-size: 2em;
       }
 
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-        display: none;
-        margin-top: 1rem;
-        margin-left: 3rem;
+      h2 {
+        font-size: 1.5em;
       }
 
-      nav ul.show {
-        display: flex;
-      }
-
-      .image-gallery img {
-        width: 80%;
+      p {
+        font-size: 1em;
+        padding: 1em;
       }
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
-<body oncontextmenu="return false;">
+<body>
   <header>
-    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
-    <div class="logo"></div>
-    <div class="motto">Dove l’acqua scolpiva il tempo. Racconti di una valle antica.</div>
-    <nav>
-      <ul id="menu">
-        <li><a href="index.html">Introduzione</a></li>
-        <li><a href="natura.html">Natura</a></li>
-        <li><a href="territori.html">Territori</a></li>
-        <li><a href="interviste.html">Voci del territorio</a></li>
-        <li><a href="esplora.html">Esplora</a></li>
-      </ul>
-    </nav>
+    <img src="sarteanomedievale.jpg" alt="Castello di Sarteano" class="hero-img">
   </header>
 
-  <section id="intro">
-    <h1>La Storia del Clanis e delle sue Terre <a href="history.html">(English version here)</a></h1>
-    <hr>
-    <h2>Preistoria e Formazioni Naturali della Val di Chiana</h2>
+  <h1>Il Castello di Sarteano</h1>
+
+  <p>Situato nel cuore del borgo medievale di Sarteano, il castello domina l’intera vallata dalla sommità di un masso di travertino. Con oltre mille anni di storia, rappresenta uno dei simboli più imponenti della Val di Chiana senese. Le sue torri, i camminamenti e le misteriose scale interne raccontano secoli di guerre, potere e arte.</p>
+
+  <h2>Contesto storico e politico</h2>
+  <p>Nel corso dell'Alto Medioevo, il territorio dell'attuale Toscana era suddiviso in numerosi feudi e signorie, spesso in conflitto tra loro. Sarteano, grazie alla sua posizione strategica tra la Val di Chiana e la Val d'Orcia, si trovò a essere un punto di interesse sia per il potere religioso che per quello politico. Durante i secoli XI-XIII, la Repubblica di Siena consolidava il suo potere nella regione, e Sarteano divenne parte integrante del suo sistema difensivo e amministrativo. Il legame con Siena segnò profondamente lo sviluppo architettonico, culturale e militare del borgo.</p>
+
+  <h2>Origini e primi secoli</h2>
+  <p>Le prime testimonianze scritte del Castello di Sarteano risalgono al 1038, quando il territorio era conteso tra la Chiesa e i signori locali. Già in epoca altomedievale, l’altura su cui sorge era considerata strategica per il controllo delle vie commerciali e militari che collegavano la Val di Chiana all’Amiata e alla Val d’Orcia. Il castello si sviluppò come presidio feudale, difendendo e sorvegliando il borgo sottostante e le sue terre agricole.</p>
+
+  <h2>L’assedio di Cesare Borgia e la Siena militare</h2>
+  <p>Nel 1467, la Repubblica di Siena decise di fortificare il castello per difendersi dalle minacce provenienti dallo Stato Pontificio. I lavori, attribuiti ad architetti come Antonio Federighi e Il Vecchietta, resero la fortezza tra le più inespugnabili della zona. La struttura fu adattata alle nuove esigenze belliche, con torri più robuste e mura rinforzate.</p>
+  <p>Nel 1503, il castello fu assediato da Cesare Borgia, detto “Il Valentino”, ambizioso condottiero e figlio di papa Alessandro VI. Nonostante la potenza militare di Borgia, l'assedio non portò alla conquista della rocca, che rimase sotto il controllo senese. Questo episodio fu una delle ultime grandi prove di resistenza del castello prima dell’annessione senese allo Stato Mediceo nel tardo Cinquecento.</p>
+
+  <h2>Architettura e struttura</h2>
+  <p>Il castello si sviluppa attorno a un mastio centrale di quattro piani, accessibile tramite un ingresso sopraelevato. Due torrioni semicircolari difendono i lati sud e nord, mentre una scala a chiocciola “segreta” permette la fuga diretta verso l’esterno in caso di assedio. Le mura, in travertino locale, rivelano ancora oggi i segni delle modifiche apportate nei secoli.</p>
+  <p>All’interno si conservano: il cortile centrale, i camminamenti di ronda, antichi affreschi murali (parzialmente visibili) e una vista straordinaria sulle colline toscane e umbre. Il castello era dotato anche di cisterne sotterranee per la raccolta dell’acqua piovana, elemento fondamentale durante gli assedi.</p>
+
+  <h2>Il castello oggi</h2>
+  <p>Oggi il Castello di Sarteano è visitabile e ospita eventi culturali, visite guidate, laboratori per bambini e rievocazioni storiche. È gestito dal Comune e rappresenta uno dei poli culturali del territorio. Durante le visite, è possibile accedere a tutte le principali aree della fortezza e godere di un'esperienza immersiva tra architettura medievale e paesaggi mozzafiato.</p>
+  <p>Aperto durante la bella stagione e nei fine settimana d’inverno, il castello è una meta perfetta per chi ama la storia medievale, la fotografia paesaggistica e il turismo lento e culturale.</p>
+
+
+<div style="text-align: center; margin-top: 3rem;">
+  <a href="castellosarteano.html" style="
+    padding: 1rem 2rem;
+    background-color: #7a5742;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 0 8px #0003;
+    transition: background-color 0.3s ease;">
+    Torna alla Home
+  </a>
+</div>
 
-    <img 
-  src="preistoria.jpg" 
-  srcset="preistoria.jpg 600w, preistoria.jpg 1200w, preistoria.jpg 2000w"
-  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  alt="Descrizione immagine">
-
-
-<p style="font-size: 1.3rem; line-height: 1.7;">
-     La Val di Chiana, estesa tra Toscana e Umbria, è un territorio modellato nel corso di milioni
-     di anni da forze geologiche e ambientali straordinarie. Prima di diventare la fertile pianura
-     che conosciamo oggi, era un'area ricca di acque, laghi e foreste primordiali.
-    </p>
-
-    <h3>Origini Geologiche</h3>   
-
-    <p style="font-size: 1.3rem; line-height: 1.7;">
-     La valle ha avuto origine tra il tardo Pliocene e il Pleistocene, a seguito di grandi movimenti tettonici
-     che deformarono l'antica dorsale appenninica. Inizialmente era un grande bacino lacustre,
-     il "Lago della Chiana", alimentato da fiumi e piogge abbondanti. Sedimenti fini, trasportati
-     dall'acqua, si accumularono lentamente sul fondo, creando il terreno argilloso e fertile tipico
-     della regione.<br>
-    </p>
-
-    <h3>Formazioni Naturali</h3>
-
-    <ul>
-    <li>Le colline circostanti, composte da strati di sabbia, argilla e fossili marini, testimoniano
-    un antico passato sommerso.</li>
-    <li>Le sorgenti termali, come quelle di Chianciano e San Casciano dei Bagni, sono il risultato di
-    profondi circuiti idrotermali che si svilupparono in seguito alle spaccature della crosta terrestre.</li>
-    <li>Il Fiume Clanis, anticamente navigabile, rappresentava il cuore idrografico della valle,
-    prima delle bonifiche rinascimentali che trasformarono il paesaggio.</li>
-    </ul>
-    
-    <h3>Presenza Umana nella Preistoria</h3>
-
-    <p>La Val di Chiana fu abitata sin dalla preistoria:</p>
-    <ul>
-    <li>Resti di insediamenti paleolitici e neolitici testimoniano la presenza di gruppi di
-    cacciatori-raccoglitori e successivamente di agricoltori.</li>
-    <li>Attrezzi in selce, ossa lavorate e ceramiche primitive sono stati ritrovati in diversi
-    punti della valle.</li>
-    <li>Le prime comunità si insediarono nei luoghi più elevati, vicino alle sorgenti d'acqua,
-    sfruttando le risorse naturali per la caccia, la pesca e la raccolta.</li>
-    </ul>
-    <hr>
-
-    <h2>L'Evoluzione Storica del Clanis tra Neolitico ed Età del Ferro</h2>
-    
-    <img 
-    src="bronzo.jpg" 
-    srcset="bronzo.jpg 600w, bronzo.jpg 1200w, bronzo.jpg 2000w"
-    sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-    alt="Descrizione immagine">
-    
-    <p>Il fiume Clanis, protagonista della storia antica della Val di Chiana, ha attraversato nel corso
-    nel corso dei millenni profonde trasformazioni naturali e culturali. Tra il <b>Neolitico e l'Età del Ferro</b>,
-    il suo corso e il paesaggio circostante mutarono radicalmente, influenzando profondamente la vita
-    delle comunità che vi si stabilirono.<br></p>
-    
-    <p>Durante il <b>Neolitico</b>, la Val di Chiana era caratterizzata da un ambiente dominato da bacini lacustri e
-    vaste zone paludose. Il Clanis, in questa fase primitiva, non si presentava come un fiume definito,
-    bensì come una rete di acque basse, alimentata da sorgenti, piogge e piccoli corsi d’acqua.
-    Il paesaggio era formato da stagni, paludi e boschi umidi, un habitat ideale per le prime
-    comunità umane. Gli insediamenti neolitici si sviluppavano su alture naturali o su isole fluviali,
-    luoghi sicuri e protetti dalle inondazioni. Qui, l'uomo praticava un'agricoltura rudimentale,
-    coltivando cereali e legumi, affiancata da attività di allevamento e pesca. I corsi d'acqua,
-    oltre a fornire risorse vitali, costituivano i primi canali di comunicazione e di scambio
-    tra i vari gruppi.<br></p>
-
-    <p>Con l'avanzare del tempo e l'inizio dell'<b>Età del Bronzo</b>, il clima della valle divenne più stabile.
-    Il bacino idrico della Val di Chiana iniziò lentamente a ritirarsi: l'accumulo di sedimenti contribuì
-    al prosciugamento di molte aree paludose, delineando un paesaggio diverso, in cui il Clanis cominciò
-    a strutturarsi come un vero e proprio fiume, pur mantenendo un corso lento e tortuoso.
-    Durante questo periodo si assistette a una moltiplicazione degli insediamenti umani lungo il fiume,
-    favorita dalla maggiore disponibilità di terre coltivabili.
-    Gli uomini iniziarono a realizzare rudimentali opere di canalizzazione per meglio gestire le acque e
-    proteggersi dalle piene. I villaggi divennero più stabili e le attività agricole e pastorali si intensificarono,
-    mentre il Clanis stesso cominciava a servire come una via naturale per scambi e contatti tra le
-    popolazioni della regione.<br></p>
-    
-    <p>Con l'arrivo dell'<b>Età del Ferro</b>, il Clanis si affermò come un vero corridoio fluviale. Ormai definito
-    nel suo corso, il fiume continuava a lambire zone paludose, ma era diventato una presenza più stabile
-    e prevedibile nel paesaggio. Le popolazioni della cultura villanoviana si insediarono stabilmente lungo
-    le sue rive, approfittando dei terreni alluvionali estremamente fertili. In questo periodo si assistette al
-    primo sfruttamento sistematico delle risorse del fiume: la pesca divenne organizzata, l'agricoltura si
-    sviluppò su scala più ampia e i commerci attraverso vie d'acqua si intensificarono. Il Clanis collegava
-    la Val di Chiana al Lago Trasimeno, al Tevere e infine al Mar Tirreno, fungendo da arteria
-    commerciale che favorì i contatti e gli scambi tra i Tirreni, gli Umbri e i Sabini.<br></p>
-
-    <p>Lungo il suo corso sorsero villaggi strutturati e ben organizzati, spesso dotati di fortificazioni,
-    e si svilupparono necropoli che testimoniano una crescente complessità sociale.
-    L'importanza strategica del Clanis preparò il terreno per il successivo sviluppo della civiltà etrusca,
-    che erediterà e perfezionerà molte delle pratiche insediative, agricole e commerciali già avviate
-    in questa epoca.</p>
-    
-    <hr>
-   <h2>i Villanoviani nella valle del Clanis</h2>
-
-   <img 
-  src="villanoviani.jpg" 
-  srcset="villanoviani.jpg 600w, villanoviani.jpg 1200w, villanoviani.jpg 2000w"
-  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  alt="Descrizione immagine">
-
-
-   <p>La presenza dei <b>Villanoviani</b> nella regione del fiume Clanis, corrispondente all'attuale Val di Chiana,
-   rappresenta una fase cruciale nella storia dell'Italia centrale, segnando il passaggio da comunità
-   preistoriche a società più complesse che avrebbero poi dato origine alla civiltà etrusca.<br></p>
-
-   <h3>Il contesto geografico e ambientale</h3>
-
-   <p>Durante l'Età del Ferro (circa IX-VIII secolo a.C.), il fiume Clanis scorreva attraverso la Val di Chiana,
-   creando un ambiente favorevole all'insediamento umano. Le sue acque lente e navigabili, insieme ai
-   terreni alluvionali fertili, offrivano risorse abbondanti per l'agricoltura, la pesca e il trasporto.
-   Questo scenario naturale attrasse le comunità villanoviane, che si stabilirono lungo le sue rive,
-   sfruttando le opportunità offerte dal fiume.<br></p>
-   
-   <h3>Gli insediamenti villanoviani</h3>
- 
-   <p>La cultura villanoviana è caratterizzata da una produzione ceramica distintiva, con vasi decorati da
-   motivi geometrici e urne cinerarie biconiche utilizzate per la cremazione dei defunti.
-   Sono stati rinvenuti anche oggetti in bronzo, come fibule e rasoi lunati, che testimoniano
-   l'abilità artigianale di queste comunità. Questi reperti, spesso ritrovati in necropoli,
-   offrono preziose informazioni sulle pratiche funerarie e sulle credenze religiose
-   dei Villanoviani.<br></p>
-
-   <h3>L'evoluzione verso la civiltà etrusca</h3>
-
-   <p>Con il tempo, gli insediamenti villanoviani nella regione del Clanis si svilupparono e si
-   trasformarono, dando origine a centri urbani più complessi che sarebbero diventati parte della
-   civiltà etrusca. Le conoscenze agricole, le tecniche metallurgiche e le strutture sociali dei
-   Villanoviani costituirono la base su cui si edificò la cultura etrusca, che avrebbe dominato
-   la regione nei secoli successivi.<br></p>
-   
-   <p>In sintesi, la presenza dei Villanoviani lungo il fiume Clanis rappresenta un capitolo fondamentale
-   nella storia della Val di Chiana, segnando l'inizio di un processo di sviluppo culturale e sociale che
-   avrebbe portato alla fioritura della civiltà etrusca.<br></p>
-
-   <hr>
-
-   <h2>Gli Etruschi nella Valle del Clanis</h2>
-
-   <img 
-   src="etruschi.jpg" 
-   srcset="etruschi.jpg 600w, etruschi.jpg 1200w, etruschi.jpg 2000w"
-   sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-   alt="Descrizione immagine">
-
-
-   <p>Con l'inizio del VII secolo a.C., la Valle del Clanis divenne uno degli scenari principali della
-   civiltà etrusca, che, raccogliendo l’eredità delle culture villanoviane, trasformò profondamente il
-   territorio e la sua organizzazione. Gli Etruschi portarono nella valle un nuovo concetto di insediamento,
-   di sfruttamento delle risorse e di gestione del paesaggio.<br></p>
-   
-   <h3>Un territorio strategico</h3>
-
-   <p>La posizione della valle era di straordinaria importanza: il Clanis, ancora navigabile in ampi tratti,
-   permetteva un collegamento diretto tra l'area interna della penisola e la costa tirrenica,
-   attraverso il Tevere. Controllare il Clanis significava dominare un nodo commerciale vitale, dove merci,
-   persone e idee circolavano liberamente.<br></p>
-
-   <p>Gli Etruschi, abilissimi commercianti e agricoltori, compresero il potenziale del fiume.
-   Lungo il suo corso sorsero nuovi centri abitati, spesso fortificati, che fungevano da presidi politici,
-   economici e militari. La valle divenne così un importante corridoio di collegamento tra le città
-   dell’Etruria interna e quelle più prossime al mare.<br></p>
- 
-   <h3>L'intervento sul paesaggio</h3>
-
-   <p>Gli Etruschi non si limitarono ad abitare il territorio: lo trasformarono attivamente. Attraverso opere
-   di canalizzazione e bonifica, ridussero l’estensione delle zone paludose, aumentarono le terre e
-   coltivabili resero il Clanis più regolare e navigabile. Realizzarono canali artificiali, argini e sistemi
-   di drenaggio che permisero di ampliare notevolmente la produttività agricola della valle.<br></p>
-
-   <p>La coltivazione di cereali, viti e ulivi si intensificò, mentre l'allevamento di bestiame ebbe
-   un ruolo sempre più centrale. La produzione agricola della Val di Chiana etrusca sosteneva non solo 
-   il fabbisogno locale, ma alimentava anche il commercio con altre città-stato e con il
-   mondo mediterraneo.<br></p>
-
-   <h3>La vita urbana e la cultura</h3>
-
-   <p>Nei principali centri etruschi della regione — come Chiusi (Clevsin) e Cortona (Curtun) —
-   si svilupparono forme avanzate di urbanizzazione. Le città si dotarono di mura, templi, aree mercantili
-   e necropoli monumentali. La presenza di tombe a tumulo, di complessi funerari riccamente decorati
-   e di corredi raffinati testimonia il livello raggiunto dalla società etrusca nella valle.</p>
-   
-   <p>Le classi dirigenti locali controllavano non solo le terre, ma anche i traffici lungo il Clanis.
-   I commercianti etruschi esportavano vino, ceramiche pregiate, metalli lavorati e importavano beni
-   di lusso dal mondo greco, fenicio e orientale</p>
-
-   <p>Dal punto di vista culturale, la valle fu teatro di un'intensa produzione artistica: vasi dipinti,
-   sculture, iscrizioni in lingua etrusca sono stati ritrovati in abbondanza, indicando una società vivace,
-   complessa e aperta agli influssi esterni.</p>
-
-   <h3>Il declino</h3>
-
-   <p>La dominazione etrusca nella valle del Clanis cominciò a declinare progressivamente a partire
-   dal IV secolo a.C., sotto la pressione crescente di Roma. Tuttavia, l'eredità etrusca sopravvisse
-   a lungo: molte delle infrastrutture idrauliche e agrarie realizzate in epoca etrusca continuarono
-   a essere usate anche nei secoli successivi, influenzando l’organizzazione territoriale della
-   valle fino all'età romana e oltre.</p>
-
-   <hr>
-
-   <h2>Roma e il Fiume Clanis</h2>
-
-   <img 
-   src="romani.jpg" 
-   srcset="romani.jpg 600w, romani.jpg 1200w, romani.jpg 2000w"
-   sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-   alt="Descrizione immagine">
-
-
-   <p>Con la progressiva espansione di Roma verso l’Italia centrale, tra il IV e il III secolo a.C.,
-   anche la Valle del Clanis e il suo sistema fluviale entrarono nell’orbita del potere romano.
-   L’antico fiume, che aveva visto fiorire insediamenti villanoviani ed etruschi, si trovò così
-   al centro di una nuova fase storica di trasformazione politica, economica e ambientale.</p>
-
-   <h3>Il controllo del territorio</h3>
-
-   <p>La conquista romana dell’Etruria, culminata con la sottomissione di Chiusi e delle altre
-   città-stato etrusche, portò alla completa integrazione della Val di Chiana nel sistema romano.
-   Per Roma, controllare il Clanis significava garantire una via sicura e diretta tra il nord
-   e il sud della penisola, fondamentale sia per scopi militari che commerciali.</p>
-
-   <p>Il Clanis, grazie al suo corso lento e navigabile, continuava a essere una preziosa
-   via di comunicazione. Le merci — soprattutto grano, vino, olio, ceramiche e materiali
-   da costruzione — potevano essere trasportate lungo il fiume fino al Tevere e da lì
-   verso Roma e i principali porti tirrenici.</p>
-
-   <h3>Le bonifiche romane</h3>
-   
-   <p>Tuttavia, per i Romani, il paesaggio acquitrinoso e instabile della valle rappresentava
-   anche un problema. Le zone paludose, sebbene fertilissime, erano malsane e ostacolavano i
-   collegamenti terrestri. Roma mise dunque mano a una vasta opera di bonifica e canalizzazione.</p>
-
-   <p>Attraverso la costruzione di canali artificiali, fossati di drenaggio e argini, si cercò di
-   regimentare meglio il corso del Clanis, riducendo l’estensione delle paludi e aumentando la
-   superficie agricola disponibile. Queste opere, che continuarono nel corso dei secoli, portarono
-   a una trasformazione profonda della valle, rendendola una delle aree agricole più produttive d'Italia.</p>
-   
-   <p>Inoltre, i Romani costruirono strade — come tratti della Via Cassia e altre vie secondarie —
-   che affiancavano il corso del Clanis, rendendo più agevoli gli spostamenti tra le varie città della
-   valle e Roma stessa.</p>
-
-   <h3>Il Clanis come arteria economica</h3>
-
-   <p>Durante l’età repubblicana e imperiale, il Clanis divenne parte di un sistema economico più ampio.
-   Non era solo un fiume agricolo, ma un corridoio commerciale che garantiva il trasporto di beni
-   locali e contribuiva a integrare la Val di Chiana nella rete economica mediterranea.
-   Lungo il fiume sorsero villae rusticae, grandi proprietà agricole gestite da aristocratici romani,
-   dove si producevano cereali, vino e olio destinati al mercato romano.</p>
-
-   <p>I villaggi e le città lungo il Clanis si dotarono di strutture tipiche della romanizzazione
-   fori, templi, terme, anfiteatri, tutti elementi che trasformarono anche culturalmente la valle.</p>
-
-   <h3>Il cambiamento ambientale</h3>
-
-   <p>Paradossalmente, però, l’intervento umano, pur migliorando la produttività, cominciò lentamente
-   a modificare anche l’equilibrio naturale. Le grandi opere idrauliche, pur riducendo le paludi,
-   alterarono i flussi idrici, rendendo alcune aree più soggette a inondazioni irregolari.
-   Con il lento declino dell’Impero Romano, la manutenzione delle opere di bonifica venne meno,
-   e il Clanis tornò progressivamente a invadere parti della valle, portando a un nuovo ciclo di
-   insalubrità che caratterizzerà il Medioevo.</p>
-
-   <p>In conclusione: il rapporto tra Roma e il Fiume Clanis fu di natura strategica, economica e
-   ingegneristica. Roma vide nel Clanis non solo una risorsa naturale da sfruttare, ma anche un
-   territorio da trasformare secondo i propri modelli di organizzazione e produzione.
-   Le tracce di questa trasformazione sono ancora oggi visibili nei resti archeologici sparsi
-   nella Val di Chiana e nei lineamenti stessi del paesaggio.</p>
-
-   <hr>
-
-   <h2>Il declino del Clanis negli ultimi secoli dell'Impero Romano</h2>
-
-    <img 
-  src="postroma.jpg" 
-  srcset="postroma.jpg 600w, postroma.jpg 1200w, postroma.jpg 2000w"
-  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  alt="Descrizione immagine">
-
-    
-   <p>Durante i primi secoli dell'Impero Romano, il Clanis mantenne un ruolo strategico nella vita
-   economica della Val di Chiana. Tuttavia, a partire dal III secolo d.C., una serie di mutamenti politici,
-   economici e ambientali cominciò a ridurre progressivamente l'importanza di questo fiume e delle
-   attività che gravitavano attorno ad esso.</p>
-
-   <h3>La crisi del III secolo</h3>
-
-   <p>Il III secolo fu un periodo di profonde crisi per l’Impero Romano: guerre civili, invasioni barbariche,
-   epidemie e un forte calo della produzione agricola minarono la stabilità politica ed economica
-   dell'intero territorio imperiale. Anche la Val di Chiana, pur relativamente lontana dalle principali
-   direttrici delle invasioni, soffrì di questi sconvolgimenti.</p>
- 
-   <p>La rete commerciale che per secoli aveva sostenuto il traffico fluviale lungo il Clanis si indebolì
-   drasticamente. Con il crollo dei grandi mercati urbani e il declino delle aristocrazie terriere
-   che gestivano le villae rusticae, la produzione agricola si ridusse e il trasporto delle merci
-   perse d'importanza.</p>
-
-   <h3>Il degrado delle opere idrauliche</h3>
-
-   <p>Un altro fattore determinante fu l’abbandono progressivo delle opere di bonifica e manutenzione
-   idraulica. Durante i secoli d'oro dell'Impero, il Clanis e la valle erano stati attentamente
-   regolati da sistemi di canali, chiuse e argini. Con la crisi politica e la riduzione delle risorse
-   disponibili, la manutenzione di queste strutture cessò.</p>
-
-   <p>Il fiume, non più contenuto, riprese a espandersi nelle aree circostanti. Le paludi, mai del tutto
-   scomparse, si estesero nuovamente, trasformando progressivamente ampie zone della valle in
-   ambienti malsani e difficilmente coltivabili. La navigazione stessa, ostacolata dall’interramento
-   di alcuni tratti e dall’espansione delle zone paludose, divenne sempre più difficile.</p>
-
-   <h3>Dal Clanis come via commerciale al Clanis come ostacolo</h3>
-
-   <p>Nel IV e V secolo d.C., il Clanis non rappresentava più una grande via commerciale ma piuttosto una
-   barriera naturale, difficile da superare e fonte di malattie. La malaria, che aveva già colpito
-   l'Italia centrale in epoche precedenti, si diffuse nuovamente nelle zone paludose della Val di Chiana,
-   contribuendo allo spopolamento di molte aree rurali.</p>
-
-   <p>I pochi insediamenti che sopravvissero si ritirarono su alture o su aree più sicure, lontane dalle
-   piane invase dalle acque stagnanti. Le antiche città etrusche e romane entrarono in una fase di
-   progressivo declino o trasformazione in piccoli villaggi fortificati.</p>
-
-   <h3>La fine dell’età antica</h3>
-
-   <p>Con la caduta dell’Impero Romano d’Occidente nel 476 d.C., il controllo sulla valle venne meno
-   del tutto. La Val di Chiana divenne una regione marginale, attraversata nei secoli successivi da
-   popolazioni barbariche e contesa da poteri locali. Il Clanis, ormai privo di gestione idraulica
-   centralizzata, continuò a modellare il paesaggio in modo incontrollato, consolidando il suo
-   carattere di fiume instabile e di territorio difficile.</p>
-
-   <p>Solo molto più tardi, tra Medioevo ed Età Moderna, si tenteranno nuove e imponenti opere
-   di bonifica per restituire alla valle la sua antica fertilità.</p>
-
-   <hr>
-
-   <h2>Il Fiume Clanis nel Medioevo</h2>
-
-   <img 
-   src="medioevo.jpg" 
-   srcset="medioevo.jpg 600w, medioevo.jpg 1200w, medioevo.jpg 2000w"
-   sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-   alt="Descrizione immagine">
-
-
-   <p>Dopo la caduta dell’Impero Romano d’Occidente nel 476 d.C., la Valle del Clanis entrò in una
-   lunga fase di trasformazione e decadenza, che avrebbe caratterizzato l’intero Medioevo.
-   Il fiume, che per secoli era stato un’importante via commerciale e una risorsa agricola fondamentale,
-   cambiò radicalmente il suo ruolo e il suo aspetto.</p>
-
-   <h3>Il ritorno delle paludi</h3>
-
-   <p>Con la fine dell'autorità imperiale e l’assenza di una gestione centralizzata delle acque, le opere
-   di bonifica e di canalizzazione costruite in epoca romana vennero abbandonate. Senza manutenzione,
-   il Clanis tornò a comportarsi come aveva fatto nei tempi più antichi: straripava frequentemente,
-   creando ampie zone paludose lungo il suo corso.</p>
-   
-   <p>Queste paludi resero molte parti della Val di Chiana malsane e difficilmente abitabili. La malaria,
-   già diffusa in età tardo-romana, si radicò nella valle, contribuendo allo spopolamento delle
-   aree pianeggianti. Gli insediamenti medievali si ritirarono sui rilievi e sulle
-   colline circostanti: nascono o si rafforzano così i borghi fortificati come Cortona,
-   Chiusi, Montepulciano e Castiglion Fiorentino, luoghi più sicuri e salubri rispetto alla piana.</p>
-   
-   <h3>Il Clanis come confine naturale</h3>
-  
-   <p>Durante il Medioevo, il Clanis assunse anche un'importante funzione strategico-difensiva.
-   Essendo difficile da attraversare, specialmente in prossimità delle paludi, divenne un
-   confine naturale tra diversi poteri locali. La valle fu spesso contesa tra città, vescovati
-   e signorie che cercavano di controllare i pochi guadi sicuri e le strade principali che
-   attraversavano la regione.</p>
-
-   <p>In particolare, nel corso dei secoli XI-XIII, la Val di Chiana fu oggetto di una
-   lunga rivalità tra Arezzo, Siena, Orvieto e, più tardi, Firenze. Il controllo delle
-   risorse idriche e dei percorsi lungo il Clanis era considerato strategico per il
-   commercio, per la guerra e per il dominio territoriale.</p>
-
-   <h3>I tentativi di controllo e le prime opere idrauliche medievali</h3>
-
-   <p>Nonostante le difficoltà, già a partire dall'Alto Medioevo (VIII-IX secolo) si
-   tentarono alcuni interventi locali per arginare l’espansione delle paludi e rendere
-   di nuovo produttive alcune aree. Monasteri, pievi rurali e comunità contadine
-   intrapresero lavori di drenaggio su piccola scala: scavarono fossi, costruirono
-   piccoli canali e rialzarono i terreni agricoli con tecniche rudimentali.</p>
-
-   <p>Questi sforzi, però, erano spesso limitati e soggetti ai capricci del fiume.
-   Solo in pochi tratti si riuscì a riconquistare terra coltivabile, mentre la
-   maggior parte della valle rimase per tutto il Medioevo un ambiente dominato
-   dalle acque stagnanti e da una natura selvaggia.</p>
-
-   <h3>La percezione culturale del Clanis medievale</h3>
-
-   <p>Nel Medioevo, il Clanis non era più visto come una risorsa positiva, ma piuttosto
-   come una presenza minacciosa. Le cronache, i documenti notarili e gli statuti
-   comunali spesso parlano del fiume e delle sue paludi in termini di pericolo:
-   fonte di malattie, di isolamento e di carestie.</p>
-
-   <p>Questo cambiamento di percezione segnò profondamente anche l'immaginario
-   collettivo: il Clanis venne associato alla malaria, agli spiriti delle acque,
-   alla degradazione della terra, diventando una sorta di "fiume oscuro" da temere
-   più che da sfruttare.</p>
-
-   <p>Concludendo: durante il Medioevo, il Clanis passò da essere un corridoio
-   commerciale vitale a un ostacolo naturale, difficile da gestire e fonte di gravi
-   problemi ambientali e sanitari. Solo verso la fine del Medioevo e l'inizio dell'età
-   moderna si sarebbero poste le basi per grandi progetti di bonifica che avrebbero
-   cambiato di nuovo il destino della valle.</p>
-
-   <hr>
-
-   <h2>Il Fiume Clanis durante il Rinascimento</h2>
-   
-   <img 
-   src="rinascimento.jpg" 
-   srcset="rinascimento.jpg 600w, rinascimento.jpg 1200w, rinascimento.jpg 2000w"
-   sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-   alt="Descrizione immagine">
-
-
-   <p>Nel corso del Rinascimento, tra il XV e il XVI secolo, il fiume Clanis e l'intera
-   Val di Chiana entrarono in una nuova fase della loro lunga storia, segnando il
-   passaggio da una valle abbandonata e insalubre a un territorio oggetto di ambiziosi
-   progetti di recupero e bonifica.</p>
-
-   <p>Dopo i secoli bui del Medioevo, il Rinascimento portò un rinnovato interesse per
-   l’ingegneria idraulica, l'agricoltura e la razionalizzazione del territorio.
-   Le grandi città toscane, in particolare Firenze, sotto il dominio dei Medici,
-   videro nella bonifica della valle del Clanis non solo una possibilità economica,
-   ma anche una sfida tecnica che rifletteva i nuovi ideali di ordine e progresso.</p>
-
-   <p>Durante il Rinascimento, il Clanis continuava a essere una presenza dominante,
-   ma la sua natura si era profondamente modificata rispetto all'antichità.
-   Non più un fiume navigabile e vitale per il commercio, era ora un corso d'acqua
-   lento e instabile, che alimentava vaste aree paludose. Queste paludi, un tempo
-   difese naturali contro le invasioni, vennero sempre più percepite come un problema
-   da risolvere: ostacolavano la viabilità, riducevano la produttività agricola e
-   favorivano la diffusione di malattie come la malaria.</p>
-
-   <p>Il Granducato di Toscana, guidato dalla famiglia Medici, avviò una serie di
-   interventi sistematici per regolare il corso del Clanis e bonificare le terre circostanti.
-   Vennero progettati e costruiti canali di scolo, argini, chiuse e opere di deviazione,
-   con l'obiettivo di prosciugare le acque stagnanti e di restituire nuova vita agricola
-   alla valle. Uno dei punti più delicati fu la deviazione delle acque del Clanis verso
-   l’Arno, alterando in maniera definitiva il sistema idrografico naturale della regione.</p>
-
-   <p>Le opere di bonifica furono lente e complesse, spesso ostacolate da difficoltà
-   tecniche, da eventi climatici imprevedibili e da conflitti politici tra Firenze,
-   Siena e lo Stato Pontificio, che a loro volta rivendicavano diritti sulle acque
-   e sui terreni.</p>
-
-   <p>Nonostante queste sfide, il Rinascimento segnò l'inizio della trasformazione
-   della Val di Chiana in una delle pianure agricole più fertili d’Italia. Il Clanis,
-   da fiume incontrollabile e temuto, divenne un elemento imbrigliato e regolato,
-   funzionale a un progetto più ampio di sviluppo agricolo, urbanistico e commerciale.</p>
-
-   <p>Questa nuova gestione delle acque rifletteva perfettamente lo spirito rinascimentale:
-   la volontà dell'uomo di domare la natura, di razionalizzare il paesaggio e di
-   costruire un mondo ordinato e funzionale, secondo principi matematici, ingegneristici
-   e politici.</p>
-
-   <hr>
-
-   <h2>Il Fiume Clanis dal Post-Rinascimento all'epoca Moderna</h2>
-
-    
-<img 
-  src="postrinascimento.jpg" 
-  srcset="postrinascimento.jpg 600w, postrinascimento.jpg 1200w, postrinascimento.jpg 2000w"
-  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  alt="Descrizione immagine">
-
-
-   <p>Dopo la fine del Rinascimento, il fiume Clanis e la Valle di Chiana attraversarono una fase
-   di grande trasformazione. Le opere di bonifica avviate dai Medici avevano tentato di ridurre
-   l'estensione delle paludi e di controllare le piene del fiume, ma i risultati erano ancora parziali.
-   Il Clanis rimaneva una presenza instabile, soggetta a straripamenti, e molte aree della valle
-   continuavano a essere malsane e poco produttive. L’antico fiume, un tempo arteria commerciale,
-   era ormai percepito più come un ostacolo da gestire che come una risorsa naturale. Nonostante
-   gli sforzi ingegneristici rinascimentali, il paesaggio della Val di Chiana conservava ancora
-   l’aspetto di una terra a metà tra palude e campagna, incapace di esprimere appieno il suo
-   potenziale agricolo.</p>
-
-   <h3>Il Progetto Lorenese: La Bonifica Scientifica</h3>
-
-   <p>Con l’estinzione della dinastia medicea e l’ascesa al potere dei Lorena nel XVIII secolo, il destino
-   della valle cambiò definitivamente. I Lorena introdussero un approccio più     moderno e scientifico
-   alla gestione delle acque. Affidandosi agli studi di ingegneri idraulici esperti, avviarono un grande
-   piano di riorganizzazione idrografica, mirando non solo a prosciugare le paludi ma anche a ricostruire
-   l’intera struttura territoriale della valle.</p>
-
-   <p>Il progetto più ambizioso fu la realizzazione del Canale Maestro della Chiana, che deviò
-   definitivamente le acque del Clanis verso l’Arno. Questa imponente opera permise il prosciugamento
-   delle aree più basse e rese possibile una razionale suddivisione dei terreni agricoli. La valle venne
-   così progressivamente bonificata e trasformata in una vasta pianura coltivabile, in cui l'antico corso
-   del Clanis fu completamente integrato in una rete di canali regolati.</p>
-
-   <h3>L’Ottocento: Il "Granaio della Toscana"</h3>
-
-   <p>Nel XIX secolo, la Val di Chiana raggiunse l'apice della sua trasformazione agricola. La valle
-   divenne famosa come il "Granaio della Toscana", per l'abbondanza e la qualità della sua produzione
-   agricola. I poderi furono distribuiti con criteri geometrici e razionali, le case coloniche sorsero
-   al centro delle campagne bonificate e i raccolti di cereali, viti e ulivi iniziarono a caratterizzare
-   in modo permanente il paesaggio.</p>
-
-   <p>La malaria, che per secoli aveva flagellato la popolazione della valle, fu progressivamente debellata
-   grazie alla drastica riduzione delle zone paludose. La nuova organizzazione della campagna toscana
-   non solo assicurava una produzione agricola regolare, ma rifletteva anche i nuovi principi politici
-   ed economici che vedevano nella gestione razionale del territorio uno dei segni distintivi della
-   civiltà moderna.</p>
-
-   <h3>L'Epoca Moderna</h3>
-   
-   <p>Con l'arrivo del XX secolo, la Val di Chiana consolidò il suo ruolo agricolo, integrando pratiche
-   moderne come la meccanizzazione e l'introduzione di nuove tecniche agronomiche.
-   L’antica impronta lasciata dalle grandi bonifiche rimase comunque visibile: i poderi continuavano
-   a seguire il disegno regolare imposto dalle trasformazioni lorenesi, e il Canale Maestro della Chiana,
-   erede diretto del Clanis, proseguiva nel suo compito di regolare le acque della valle.</p>
-
-   <p>La memoria storica del fiume Clanis, pur offuscata nella toponomastica e nel linguaggio comune,
-   continuava a vivere nell’organizzazione stessa del territorio e nella cultura materiale della regione.
-   La Val di Chiana moderna si presenta dunque come il risultato di una lunghissima evoluzione che,
-   partita dall'antico Clanis, è giunta fino ai giorni nostri trasformando una valle paludosa in una
-   delle più fertili pianure agricole d'Italia.</p>
-  </section>
-
-  <div class="back-home">
-    <a href="index.html">Introduzione</a>
-  </div>
-
-  <footer>
-    &copy; Blog di Arthur Veo
-  </footer>
-
-  <script>    
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.getElementById('menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('keydown', function(e) {
-      if (
-        e.key === 'F12' ||
-        (e.ctrlKey && e.key === 'u') ||
-        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-        (e.ctrlKey && e.shiftKey && e.key === 'J')
-      ) {
-        e.preventDefault();
-        alert("Funzione disattivata.");
-      }
-    });
-
-  </script>
 </body>
 </html>
+
+

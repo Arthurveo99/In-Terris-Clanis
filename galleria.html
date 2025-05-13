@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleria - Castello di Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "EB Garamond", serif;
+      background-color: #f8f8f8;
+      color: #333;
+      background: url('texture-pergamena.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+
+    }
+    header {
+      background-color: #3c3c3c;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      font-size: 2rem;
+    }
+header.hero-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.hero-wrapper {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  background-color: #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-image-small {
+  width: 100%;
+  height: 400px; /* altezza visibile, regolabile */
+  background-image: url('castello.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% auto; /* questa è la chiave: immagine rimpicciolita */
+  background-color: #000; /* colore attorno all'immagine */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2em;
+}
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+    }
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+ <header class="hero-header" style="padding: 0; background-color: transparent;">
+  <img src="decorazione.jpg" alt="Decorazione medievale" style="width: 100%; height: auto; display: block;">
+</header>
+<div style="
+  text-align: center;
+  margin-top: -2em;
+  margin-bottom: 2em;
+  background-color: rgba(250, 245, 230, 0.8);
+  border: 2px solid #7a5742;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  color: #3c3c3c;">
+  <h1 style="margin: 0; font-size: 2.5rem;">Galleria fotografica</h1>
+</div>
+
+
+
+
+  <main class="gallery-container">
+    <div class="gallery-grid">
+      <img src="img1.jpg" alt="foto 1" onclick="openLightbox(this.src)">
+      <img src="img2.jpg" alt="foto 2" onclick="openLightbox(this.src)">
+      <img src="img3.jpg" alt="foto 3" onclick="openLightbox(this.src)">
+      <img src="img4.jpg" alt="foto 4" onclick="openLightbox(this.src)">
+      <img src="img5.jpg" alt="foto 5" onclick="openLightbox(this.src)">
+      <img src="img6.jpg" alt="foto 6" onclick="openLightbox(this.src)">
+      <img src="img7.jpg" alt="foto 7" onclick="openLightbox(this.src)">
+      <img src="img8.jpg" alt="foto 8" onclick="openLightbox(this.src)">
+      <img src="img9.jpg" alt="foto 9" onclick="openLightbox(this.src)">
+      <img src="img10.jpg" alt="foto 10" onclick="openLightbox(this.src)">
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+<div style="text-align: center; margin-top: 3rem;">
+  <a href="castellosarteano.html" style="
+    padding: 1rem 2rem;
+    background-color: #7a5742;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 0 8px #0003;
+    transition: background-color 0.3s ease;">
+    Torna alla Home
+  </a>
+</div>
+
+  <footer>
+    &copy; 2025 Castello di Sarteano - Tutti i diritti riservati
+  </footer>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+
+</body>
+</html>

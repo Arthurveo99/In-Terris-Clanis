@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scopri il Castello di Sarteano: storia, leggende, visite guidate e informazioni pratiche per raggiungerlo.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Castello di Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+   :root {
+  --main-color: #7a5742;
+  --bg-color: #f3eacb;
+  --accent-color: #a52a2a;
+  --menu-bg-color: #e8dbc0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Cinzel', serif;
+  background-image: url('texture-pergamena.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+}
+p, li {
+  font-weight: bold;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+header {
+  background: url('img8.jpg') no-repeat center center / cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem 1rem;
+}
+h1.pergamenato, h2.pergamenato {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  background: rgba(245, 222, 179, 0.8);
+  border: 4px double #7a5742;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(122, 87, 66, 0.4);
+  color: #4a2e1d;
+  text-shadow: 1px 1px 1px #d6c7ab;
+}
+#intro {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  text-align: center;
+  padding: 2rem;
+}
+#intro h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 20px;
+}
+#intro button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#intro button:hover {
+  background-color: #b22222;
+}
+nav {
+  background-color: var(--main-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  border: 2px solid #7a5742;
+  padding: 2rem;
+  background-color: rgba(255, 248, 220, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #c5a77d;
+  margin: 2rem;
+}
+section h2, section h3 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+}
+section h2::before {
+  content: "\2726";
+  margin-right: 0.5rem;
+  color: var(--accent-color);
+}
+section h3::before {
+  content: "\2794";
+  margin-right: 0.5rem;
+  color: var(--main-color);
+}
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.image-row img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex: 1 1 100%;
+}
+@media (min-width: 480px) {
+  .image-row img {
+    flex: 1 1 45%;
+  }
+}
+@media (min-width: 768px) {
+  .image-row img {
+    flex: 1 1 30%;
+  }
+}
+.cta-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta-buttons a {
+  padding: 1rem 2rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 1.2rem;
+}
+.cta-buttons a:hover {
+  background-color: #8b1e1e;
+  text-decoration: underline;
+}
+footer {
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
+.nero:hover {
+  text-decoration: underline;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: var(--menu-bg-color);
+  z-index: 999;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.mobile-nav.show {
+  max-height: 500px;
+}
+.mobile-nav a {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  header {
+    min-height: 60vh;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('show')">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="mobile-nav">
+
+    <a href="storia.html">Scopri la Storia</a>
+    <a href="eventi.html">Guarda gli eventi</a>
+    <a href="galleria.html">Galleria</a>
+    <a href="contatti.html">Contatti</a>
+  </div>
+
+  <header>
+    <h1 class="pergamenato">Protetto dalla lupa, forgiato nella storia</h1>
+  </header>
+
+  <nav>
+    <a class="nero" href="storia.html">Scopri la Storia</a>
+    <a class="nero" href="eventi.html">Guarda gli eventi</a>
+    <a class="nero" href="galleria.html">Galleria</a>
+    <a class="nero" href="contatti.html">Contatti</a>
+  </nav>
+
+  <section id="storia">
+    <h3>Storia del Castello</h3>
+    <p>Costruito nel 1038, il Castello di Sarteano ha vissuto secoli di storia tra assedi, famiglie nobiliari e restauri. Un luogo in cui ogni pietra racconta un'epoca
+    <a href="storia.html">...continua qui</a></p>
+
+    <div class="image-row">
+      <img src="sarteanomedievale.jpg" alt="immagine 2">
+      <img src="img2.jpg" alt="immagine 3">
+      <img src="img1.jpg" alt="immagine 4">
+    </div>
+  <br>
+  <h2 id="leggenda">La Lupa sulle Mura</h2>
+    <p>
+      Appena varcata la soglia del Castello di Sarteano, lo sguardo si posa su un’antica figura scolpita nella pietra: 
+      una <strong>lupa che allatta due gemelli</strong>. È più di un simbolo: è il legame con una leggenda millenaria.<br><br>
+      Secondo la tradizione, <strong>Senio e Ascanio</strong>, figli di Remo, fuggirono da Roma portando con sé la sacra immagine della lupa capitolina. 
+      Giunsero tra queste colline, dove fondarono la città di Siena e diffusero il mito della loro origine.<br><br>
+      Quando la <strong>Repubblica di Siena</strong> prese possesso del castello, volle lasciare un segno indelebile: scolpì la lupa sulle mura, 
+      a protezione del luogo e della sua gente.<br><br>
+      Ancora oggi, nelle notti silenziose, si racconta che la pietra si scaldi leggermente sotto la luna piena, 
+      come se quella lupa <em>vegliasse ancora</em> su Sarteano e sui suoi segreti.
+    </p>
+</section>
+  <section id="visite">
+    <h2>Informazioni per la Visita</h2>
+  
+    <h3>Orari di apertura: dal 12 Aprile al 30 settembre</h3>
+    <ul>
+  <li><strong>Lunedì:</strong> Chiuso</li>
+  <li><strong>Martedì:</strong> Mattina: 10:30-13:00 / Pomeriggio: 15:00-19:00</li>
+  <li><strong>Mercoledì:</strong> Mattina: 10:30-13:00 / Pomeriggio: 15:00-19:00</li>
+  <li><strong>Giovedì:</strong> Mattina: 10:30-13:00 / Pomeriggio: 15:00-19:00</li>
+  <li><strong>Venerdì:</strong> Mattina: 10:30-13:00 / Pomeriggio: 15:00-19:00</li>
+  <li><strong>Sabato:</strong> Mattina: 10:30-13:00 / Pomeriggio: 15:00-19:00</li>
+  <li><strong>Domenica:</strong> Mattina: 10:30-13:00 / Pomeriggio: 15:00-19:00</li>
+    </ul>
+    <br>
+    <ul>
+  <li><strong>Ottobre:</strong> aperto venerdì, sabato, domenica e festivi dalle 10:30 alle 13:00 e dalle 15:00 alle 18:00</li>
+  <li><strong>Novembre:</strong> aperto sabato, domenica e festivi dalle 10:30 alle 13:00 e dalle 15:00 alle 17:00</li>
+  <li><strong>Dal 1° al 7 dicembre:</strong> aperto solo festivi e prefestivi dalle 10:30 alle 13:00 e dalle 15:00 alle 17:00</li>
+  <li><strong>Dall’8 dicembre al 6 gennaio:</strong> aperto da martedì a domenica (chiuso la mattina del 24 dicembre<br>
+  e del 1° gennaio) dalle 10:00 alle 12:30 e dalle 15:30 alle 18:30
+  </li>
+</ul>
+<br>
+<h3>Tariffe per biglietti:</h3>
+<br>
+<ul>
+  <li><strong>Biglietto intero:</strong> €4,00</li>
+  <li><strong>Biglietto ridotto:</strong> €3,00</li>
+  <li><strong>Scolaresche:</strong> €2,00</li>
+</ul>
+<br>
+
+    <h3>Tariffe biglietti cumulativi:</h3>
+<br>
+    <ul>
+  <li><strong>Castello + Museo Archeologico:</strong> €6,00</li>
+  <li><strong>Castello + Museo Archeologico + Sala d’Arte Domenico Beccafumi:</strong> €8,00</li>
+  <li><strong>Castello + Museo Archeologico + Sala d’Arte + Tomba della Quadriga Infernale:</strong> €12,00</li>
+</ul>
+<br>
+
+<h3>Come Raggiungere il Castello</h3>
+
+<p><strong>🚗 In auto:</strong> Sarteano è facilmente raggiungibile tramite l'autostrada A1. Esci al casello <em>Chiusi–Chianciano Terme</em> e segui le indicazioni per Sarteano lungo la SP478 per circa 10 km. Una volta arrivato in paese, puoi parcheggiare nei pressi del centro storico e raggiungere il castello a piedi in pochi minuti.</p>
+<br>
+<br>
+<p><strong>🚆 In treno:</strong> La stazione ferroviaria più vicina è <em>Chiusi-Chianciano Terme</em>, ben collegata da treni provenienti da Roma, Firenze, Siena e Perugia. Dalla stazione, Sarteano dista circa 10 km: puoi proseguire in taxi oppure utilizzare la linea di autobus FT5 che ferma in <em>Piazza della Libertà</em> e <em>Via Trieste</em>.</p>
+<br>
+<br>
+<p><strong>🚌 In autobus:</strong> Diverse linee regionali collegano Sarteano con i comuni vicini. Le principali sono:</p>
+<br>
+<ul>
+  <li><strong>FT5</strong>: collega Chiusi, Cetona, Sarteano, Chianciano, Montepulciano</li>
+  <li><strong>FT9</strong>: collega Chiusi, Sarteano, Radicofani, Abbadia San Salvatore</li>
+  <li><strong>T10</strong>: collega Ponte al Rigo, Celle, Cetona, Chiusi</li>
+</ul>
+<p>La fermata centrale è <em>Piazza Bargagli</em>, a pochi minuti dal castello.</p>
+<br>
+<br>
+<p><strong>✈️ In aereo:</strong> Gli aeroporti più vicini a Sarteano sono:</p>
+<br>
+<ul>
+  <li><strong>Firenze Peretola (FLR)</strong>: circa 135 km</li>
+  <li><strong>Roma Fiumicino (FCO)</strong>: circa 185 km</li>
+  <li><strong>Pisa Galileo Galilei (PSA)</strong>: circa 180 km</li>
+</ul>
+<p>Da ogni aeroporto puoi noleggiare un'auto o combinare treno e autobus fino a Sarteano.</p>
+<br>
+   </section>
+
+  <footer id="contatti">
+    <p>© 2025 Castello di Sarteano – Tutti i diritti riservati</p>
+    <p>Email: info@castellodisarteano.it | Tel: +39 0578 000000</p>
+  </footer>
+
+<script>
+  function entraNelCastello() {
+    document.getElementById("intro").style.display = "none";
+    const audio = document.getElementById("audioIntro");
+    audio.play();
+  }
+</script>
+
+</body>
+</html>
