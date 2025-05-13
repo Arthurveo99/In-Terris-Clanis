@@ -26,6 +26,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--bg-color);
+
+   user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
 }
 p, li {
   font-weight: bold;
@@ -364,13 +369,34 @@ footer {
     <p>© 2025 Arthur Veo – Tutti i diritti riservati</p>
   </footer>
 
-<script>
-  function entraNelCastello() {
-    document.getElementById("intro").style.display = "none";
-    const audio = document.getElementById("audioIntro");
-    audio.play();
-  }
-</script>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
 
 </body>
 </html>
