@@ -14,6 +14,11 @@
       color: #3b2d1f;
       padding: 2em;
       line-height: 1.8;
+
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
     }
 
     header {
@@ -129,6 +134,38 @@
     Torna alla Home
   </a>
 </div>
+ <footer id="contatti">
+    <p>© 2025 Castello di Sarteano – Tutti i diritti riservati</p>
+    <p>Email: info@castellodisarteano.it | Tel: +39 0578 000000</p>
+  </footer>
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
 
 </body>
 </html>
