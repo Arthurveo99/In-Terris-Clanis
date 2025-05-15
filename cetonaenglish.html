@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cetona (SI)</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Cetona (SI)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="cetonahistory.html">Histroy</a></li>
+        <li><a href="cetonatradition.html">Traditions</a></li>
+        <li><a href="cetonaplaces.html">Places to Visit</a></li>
+        <li><a href="cetonaevents.html">Local events</a></li>
+        <li><a href="cetonainterviews.html">Interviews</a></li>
+        <li><a href="cetonaarchive.html">Photographic Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Cetona: At the Origins of Civilization, in the Heart of the Val di Chiana</h1>
+
+<img src="cetona.jpg" 
+srcset="cetona.jpg 600w, cetona.jpg 1200w, cetona.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+<p>At the point where the southern end of the Sienese Val di Chiana narrows and the woods grow denser along the slopes of the mountain that gives it its name, Cetona reveals itself as one of the most fascinating and ancient villages in Tuscany. A place where time has left its mark with reverence, without erasing anything—layering millennia of human presence in an unspoiled and deeply evocative landscape.</p>
+
+<h2>A Land Inhabited Since Prehistoric Times</h2>
+
+<p>Cetona is renowned as one of the most important prehistoric sites in Italy. The Belverde caves, inhabited since the Paleolithic era, tell ancient stories—rituals, daily life, burials, flint tools, and pottery. Today, these places can be visited within the Monte Cetona Archaeological and Natural Park, while the Civic Museum for the Prehistory of Monte Cetona, housed in the Town Hall, preserves the most significant artifacts of this long human history.</p>
+
+<h2>From the Ancient World to the Middle Ages</h2>
+
+<img src="cetonamedievale.jpg" 
+srcset="cetonamedievale.jpg 600w, cetonamedievale.jpg 1200w, cetonamedievale.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Description imagine" 
+width="60%" class="centrato">
+
+
+<p>The territory of Cetona was also inhabited during the Etruscan and Roman periods, as evidenced by tombs, road segments, and remains of rural villas. However, it was in the Middle Ages that the village took on its current form: the Rocca, dating back at least to the 11th century, still dominates the historic center today, which unfolds in concentric circles around it, with stone streets, travertine houses, and views that seem to come straight out of a fresco.</p>
+
+<p>Over the centuries, Cetona was contested by various lords and cities, until it eventually became part of the Sienese, and later Medicean, sphere of influence. In the 16th century, it became an important rural and spiritual center, as evidenced by the many convents and churches.</p>
+
+<h2>Nature, Spirituality, and Landscape</h2>
+
+<p>Monte Cetona, rising over 1100 meters, is much more than a natural elevation: it is a place of spirituality, pathways, and silence. Its trails cross ancient woods, hidden hermitages, and old places of worship. From the mountain, one can admire one of the widest panoramas in central Tuscany, stretching from the Val d’Orcia to Lake Trasimeno, from the Val di Chiana to Mount Amiata.</p>
+
+<p>The countryside surrounding the village is cultivated with vineyards, olive groves, and cereals, featuring historic farms and stone farmhouses, in a perfect balance between agriculture and landscape.</p>
+
+<h2>Village Life and Living Traditions</h2>
+
+<p>Despite its long history, Cetona is a vibrant village that preserves traditional festivals, a strong cultural identity, and a quality of life that attracts visitors and new residents. Piazza Garibaldi, the heart of the village, is a gathering place for locals and tourists alike, with its outdoor cafés, artisan markets, and summer evenings full of life.</p>
+
+<p>The village is part of the "Most Beautiful Villages in Italy" network, a recognition that reflects the harmony between historical heritage, architectural preservation, and quality of life.</p>
+
+
+<h2>Hamlets and Localities</h2>
+
+<ul>
+  <li><strong>Piazze</strong> – about 704 inhabitants (official hamlet)</li>
+  <li><strong>Camporsevoli</strong> – historic locality</li>
+  <li><strong>Patarnione</strong> – rural locality; about 27 inhabitants</li>
+  <li><strong>Poggio alla Vecchia</strong> – rural locality; 4 inhabitants</li>
+  <li><strong>Vecciano</strong> – rural locality</li>
+</ul>
+
+
+<p>Currently, <strong>Piazze</strong> is the only officially recognized hamlet of the municipality of Cetona. The others are considered rural localities or smaller inhabited settlements. For updated data, sources such as ISTAT or the Municipal Office can be consulted.</p>
+
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="../home.html">Home Page</a>
+  </div>
+
+  <footer>
+    &copy; Blog of Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
