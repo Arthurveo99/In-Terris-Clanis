@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarteano (SI)</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">San Casciano dei Bagni (SI)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="storiasancascianodb.html">Storia</a></li>
+        <li><a href="tradizionisancascianodb.html">Tradizioni</a></li>
+        <li><a href="luoghisancascianodb.html">Luoghi da Visitare</a></li>
+        <li><a href="eventisancascianodb.html">Eventi Locali</a></li>
+        <li><a href="intervistesancascianodb.html">Interviste</a></li>
+        <li><a href="archiviosancascianodb.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>San Casciano dei Bagni: At the Source of Time</h1>
+
+<img src="sancascianodb.jpg" 
+srcset="sancascianodb.jpg 600w, sancascianodb.jpg 1200w, sancascianodb.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+<p>In the far southern tip of the province of Siena, San Casciano dei Bagni lies nestled along a hillside ridge, on the border between Tuscany, Umbria, and Lazio. This ancient village is a treasure chest of water, history, and silence, where thermal springs have surfaced for millennia in a landscape that is lush, solemn, and untouched. Its name has always been linked to water: with over forty hot springs gushing from underground, San Casciano is one of Europe’s most important thermal centers, with a daily flow exceeding five million liters.</p>
+
+<h2>A Sacred Place, from Etruria to Rome</h2>
+
+<p>The history of the village is deeply intertwined with the worship of water. As early as the 7th–6th century BCE, the Etruscans frequented these lands, regarding them as sacred sites of healing and divine connection. Recent archaeological discoveries at the <strong>Bagno Grande</strong>—including bronze statues, votive altars, inscriptions, and surgical tools—confirm the existence of a sanctuary visited for centuries, including during Roman times. Here, languages, peoples, and traditions met: Etruscan and Latin deities coexisted in a spiritual dialogue that still echoes in the mud and stone.</p>
+
+<p>During the Roman imperial era, San Casciano—then known as <em>Balnea Clusina</em>—attracted renowned figures, including Emperor Augustus himself. Yet the thermal tradition did not fade with the fall of Rome: it endured through the Middle Ages and the Renaissance, reaching the modern day renewed by a reputation for healing and hospitality.</p>
+
+<h2>The Village and Its Stones</h2>
+
+<p>Today, San Casciano dei Bagni is officially recognized as one of the <em>Most Beautiful Villages in Italy</em>, and for good reason. Its historic center preserves an intact medieval layout, with narrow alleys, intimate squares, and views that open onto forested valleys and distant ridgelines. Among its noteworthy structures are the <strong>Collegiate Church of Saints Leonard and Cassia</strong>, with its Romanesque façade and artistic interior, and the <strong>Church of Santa Maria ad Balnea</strong>, built near the oldest springs.</p>
+
+<p>The main square features the Town Hall, 16th-century loggias, and noble residences that testify to the vitality of the town over the centuries. Everything here speaks of harmony, proportion, and reverence for the land.</p>
+
+<h2>The Healing Waters</h2>
+
+<p>The thermal springs of San Casciano are unparalleled in Europe. The most renowned is the <strong>Bagno Grande</strong>, still freely accessible today and set amidst nature, offering a timeless atmosphere. Alongside it are modern spas such as the elegant <strong>Fonteverde</strong>, which combines wellness with Renaissance architecture.</p>
+
+<p>The thermal waters, rich in sulfur, calcium, magnesium, and other trace elements, have long been used to treat skin, respiratory, and rheumatic conditions. Yet beyond science lies the deep sense of renewal that these waters offer to those who immerse themselves in them.</p>
+
+<h2>Landscape and Hamlets</h2>
+
+<p>The municipality of San Casciano includes several villages and rural hamlets, each with its own character. Among them are <strong>Celle sul Rigo</strong>, known for its traditional handmade pasta festival; <strong>Palazzone</strong>, surrounded by vineyards; and <strong>Fighine</strong>, a tiny hamlet dominated by a restored castle overlooking the Umbrian landscape. The area is ideal for hiking, biking, and horseback riding, offering woods, trails, streams, and open vistas toward Monte Cetona and the surrounding hills.</p>
+
+<h2>Today and Tomorrow</h2>
+
+<p>San Casciano dei Bagni continues to thrive as a cultural and thermal destination of excellence. The ongoing archaeological excavations—led in partnership with universities and cultural institutions—are revealing a priceless heritage that will soon become the heart of a new <strong>Archaeological Park of the Waters</strong>. This represents an extraordinary opportunity to relaunch the village internationally, drawing new attention to its deepest roots.</p>
+
+<p>Those who visit San Casciano do not come only for beauty, but to connect with history, nature, and time itself. And among the morning mist and the steam rising from the springs, they find a small world where the past still speaks with a clear and living voice.</p>
+
+<h2>Hamlets and Localities</h2>
+
+<ul>
+  <li><strong>Celle sul Rigo</strong> – 353 inhabitants</li>
+  <li><strong>Palazzone</strong> – 316 inhabitants</li>
+  <li><strong>Ponte a Rigo</strong> – 55 inhabitants</li>
+  <li><strong>Fighine</strong> – population data not available</li>
+  <li><strong>Sasso</strong> – population data not available</li>
+  <li><strong>Stabbiano</strong> – population data not available</li>
+  <li><strong>Stabbiano di Sotto</strong> – population data not available</li>
+</ul>
+
+<p><em>Note:</em> Official demographic data are available for the main hamlets only. The remaining names refer to rural or minor localities that, although small in population, are an essential part of the cultural and environmental identity of San Casciano dei Bagni.</p>
+</section>
+  
+
+  <div class="back-home">
+    <a href="../home.html">In Terris Clanis</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
