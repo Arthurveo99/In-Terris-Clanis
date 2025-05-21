@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mappa Interattiva di Città della Pieve</title>
+    <meta charset="utf-8" />
+    <style>
+      #map {
+        height: 100vh;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Mappa Interattiva di Città della Pieve</h2>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        const cdpCenter = { lat: 42.9514, lng: 12.0046 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: cdpCenter,
+        });
+
+        const locations = [
+          {
+            name: "Cattedrale dei Santi Gervasio e Protasio",
+            position: { lat: 42.9525, lng: 12.0030 },
+            info: "La principale chiesa della città, con opere del Perugino.",
+          },
+          {
+            name: "Oratorio di Santa Maria dei Bianchi",
+            position: { lat: 42.9518, lng: 12.0045 },
+            info: "Ospita l'“Adorazione dei Magi” del Perugino.",
+          },
+          {
+            name: "Palazzo della Corgna",
+            position: { lat: 42.9510, lng: 12.0055 },
+            info: "Residenza rinascimentale con affreschi di Pomarancio e Salvio Savini.",
+          },
+          {
+            name: "Vicolo Baciadonne",
+            position: { lat: 42.9505, lng: 12.0060 },
+            info: "Uno dei vicoli più stretti d'Italia, largo circa 50 cm.",
+          },
+          {
+            name: "Rocca Perugina",
+            position: { lat: 42.9495, lng: 12.0070 },
+            info: "Fortezza del XIV secolo con cinque torri.",
+          },
+        ];
+
+        locations.forEach((location) => {
+          const marker = new google.maps.Marker({
+            position: location.position,
+            map: map,
+            title: location.name,
+          });
+
+          const infoWindow = new google.maps.InfoWindow({
+            content: `<h3>${location.name}</h3><p>${location.info}</p>`,
+          });
+
+          marker.addListener("click", () => {
+            infoWindow.open(map, marker);
+          });
+        });
+      }
+    </script>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+  </body>
+</html>
