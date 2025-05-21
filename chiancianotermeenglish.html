@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chianciano Terme (SI)</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Chianciano Terme (SI)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="storiachiancianotenglish.html">History</a></li>
+        <li><a href="tradizionichiancianotenglish.html">Traditions</a></li>
+        <li><a href="luoghichiancianotenglish.html">Places to Visit</a></li>
+        <li><a href="eventichiancianotenglish.html">Local Events</a></li>
+        <li><a href="intervistechiancianotenglish.html">Interviews</a></li>
+        <li><a href="archiviochiancianotenglish.html">Photographic Service</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>In the Heart of Tuscany, Between Thermal Springs, History, and Landscape</h1>
+
+<img src="chiancianot.jpg" 
+srcset="chiancianot.jpg 600w, chiancianot.jpg 1200w, chiancianot.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+<p>Chianciano Terme is one of those places where Tuscany reveals its most authentic and harmonious face: nestled between the gentle hills of the Valdichiana and the wide horizons of the Val d'Orcia, this village combines the charm of ancient history, the virtues of thermal waters, and the beauty of an unspoiled landscape.</p>
+
+<h2>A Bridge Between Two Valleys</h2>
+
+<p>Perched on a hilltop at about 550 meters above sea level, Chianciano enjoys a privileged position: it overlooks the surrounding valleys, embracing views of cypress rows, cultivated fields, wooded areas, and the profiles of nearby villages like Montepulciano, Pienza, and Cetona. Its location between the Val di Chiana and the Val d’Orcia also makes it a natural crossroads of cultures, traditions, and landscapes.</p>
+
+<h2>Climate and Nature</h2>
+
+<p>The climate is typically hilly, with warm but breezy summers and mild winters. Rainfall is mainly concentrated in autumn and spring, nourishing the forests and springs, enriching the area with spontaneous vegetation, oaks, holm oaks, pines, and olive trees. Numerous parks, such as Parco Fucoli and Parco Acqua Santa, offer green spaces ideal for walking, sports, or simply relaxing in nature.</p>
+
+<h2>The Waters of Health</h2>
+
+<p>For centuries, Chianciano’s thermal springs have been renowned for their beneficial properties. The Romans were already familiar with them, but it was the Etruscans who first worshipped the “sacred waters.” Today, thermal facilities like the Sensory Spa or Theia Pools offer wellness experiences that blend tradition and innovation, attracting thousands of visitors from all over the world each year.</p>
+
+<h2>Old Chianciano and Etruscan Culture</h2>
+
+<p>The historic village, compact and quiet, retains a medieval atmosphere with its stone alleys, ancient gates, the Clock Tower, and the Church of San Giovanni. Not far away, the Archaeological Museum of the Waters tells the Etruscan past of the area, with artifacts that testify to the sacred importance of water sources as early as the 6th century BC.</p>
+
+<h2>A Place to Rejuvenate</h2>
+
+<p>Today, Chianciano is much more than a thermal resort: it is a place where body and mind find balance, where slowness becomes a virtue, where each season offers different colors, scents, and sounds. It is ideal as a starting point to explore the Valli del Tempo, but also as a peaceful refuge for those seeking wellness, culture, and beauty in one place.</p>
+
+<h2>Hamlets and Localities</h2>
+
+<p>The territory of Chianciano Terme extends beyond the urban center, embracing numerous localities immersed in the green hills of Tuscany. Some retain a rural and agricultural identity, while others are small communities inhabited year-round or seasonally. Here is a list of the main ones:</p>
+
+<ul>
+  <li><strong>Fonteregina</strong> – a small agricultural locality surrounded by cultivated fields</li>
+  <li><strong>Giovancorso</strong> – about 30 inhabitants, a quiet residential area near main roads</li>
+  <li><strong>Toppo Basso</strong> – hilly area with scattered farmhouses and panoramic views</li>
+  <li><strong>Poggio Olivo</strong> – around twenty residents, surrounded by olive groves and vineyards</li>
+  <li><strong>Quattro Poderi</strong> – agricultural area with restored farmhouses and country houses</li>
+  <li><strong>Montevenere</strong> – wooded rural area with nearby historical evidence</li>
+  <li><strong>Podere Caselle</strong> – small agricultural settlement with stone farmhouses</li>
+  <li><strong>San Gregorio</strong> – locality named after an ancient rural church</li>
+  <li><strong>Asso di Picche</strong> – curious name for an area between countryside and forest, inhabited by just a few residents</li>
+</ul>
+
+<p>These localities preserve the rural memory of the territory, still alive in the landscapes and traditional architecture, offering evocative and authentic glimpses of lesser-known Tuscany.</p>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="../home.html">In Terris Clanis</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
