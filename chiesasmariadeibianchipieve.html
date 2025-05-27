@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Chiesa di S.Maria dei Bianchi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-image: url('sfondoclanis.jpg');
+      color: #333;
+
+       user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
+    }
+
+    header {
+      background-color: #7b2e2e;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 4px solid #e4c7a1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+.centrato {text-align: center;}
+
+section {background-color: #dcb8a1; margin-left: 10%;  margin-right: 10%; padding: 1rem;}
+
+p {font-size: 1.5rem;}
+
+footer {
+      background-color: #7c5e3c;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+    }
+
+
+
+    .intro {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .back-home {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-home a {
+  padding: 1rem 2rem;
+  background-color: #7a5742;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Cinzel', serif;
+  box-shadow: 0 0 8px #0003;
+  transition: background-color 0.3s ease;
+}
+
+.back-home a:hover {
+  background-color: #5e3c2b;
+}
+
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+      .intro {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Città della Pieve (PG)</h1>
+  </header>
+
+  <section>
+
+<h1>Chiesa di S.Maria dei Bianchi</h1>
+
+<img src="chiesasmariadeibianchipieve.jpg" 
+srcset="chiesasmariadeibianchipieve.jpg 600w, chiesasmariadeibianchipieve.jpg 1200w, chiesasmariadeibianchipieve.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+
+<p> La Chiesa di Santa Maria dei Bianchi, situata nel centro storico di Città della Pieve, è un importante luogo di culto e di arte rinascimentale. Originariamente sede della Confraternita dei Disciplinati, noti come "Bianchi" per il colore delle loro vesti, l'edificio risale al XIII secolo e comprendeva anche un ospedale per pellegrini lungo la Via Romea Germanica .</p>
+
+<h2>L'Adorazione dei Magi del Perugino</h2>
+
+<img src="adorazioneperugino.jpg" 
+srcset="adorazioneperugino.jpg 600w, adorazioneperugino.jpg 1200w, adorazioneperugino.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+
+<p>Il principale tesoro artistico della chiesa è l'affresco "Adorazione dei Magi" di Pietro Vannucci, detto il Perugino, realizzato nel 1504. L'opera, di dimensioni imponenti (650x700 cm), raffigura la scena biblica con un paesaggio ispirato alle colline umbre tra il Lago Trasimeno e la Val di Chiana. La composizione è ricca di personaggi eleganti e dettagli raffinati, tipici dello stile del maestro .</p>
+
+<p>Durante i lavori di restauro nel 1835, furono ritrovate due lettere del Perugino che documentano la commissione dell'opera. Inizialmente, l'artista chiese 200 fiorini, ma accettò di ridurre la cifra a 75 fiorini, chiedendo in cambio una mula per gli spostamenti tra Perugia e Città della Pieve.</p>
+
+<h2>Architettura e Storia</h2>
+
+<p>Nel XVIII secolo, l'antico oratorio fu trasformato in chiesa per accogliere un numero maggiore di fedeli. I lavori interni si conclusero nel 1743, mentre la facciata in stile tra il Rococò e il Neoclassicismo fu completata intorno al 1780. L'interno presenta una pianta rettangolare con volte a vela e paraste di ordine composito, creando un ambiente armonioso e solenne.</p>
+
+<h2>Informazioni per la Visita</h2>
+
+<p>La Chiesa di Santa Maria dei Bianchi si trova in Via Pietro Vannucci, 40, a Città della Pieve. L'ingresso è gratuito, con la possibilità di lasciare un'offerta. È possibile richiedere visite guidate tramite l'Info Point o contattando direttamente la Confraternita dei Bianchi all'indirizzo email disciplinati@libero.it .</p>
+
+<p>Per ulteriori informazioni e per pianificare la visita, è consigliabile consultare il sito ufficiale del turismo umbro: umbriatourism.it</p>
+
+</section>
+
+<div class="back-home">
+  <a href="cittadellapieve.html">← Home Città della Pieve</a>
+</div>
+<br>
+<br>
+<br>
+ <footer>
+    &copy; 2025 Arthur Veo
+  </footer> 
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+
+</body>
+</html>
