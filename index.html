@@ -2,241 +2,227 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Palazzo Corgna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
-  * {
-    box-sizing: border-box;
-  }
+  <title>In Terris Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
 
-  body {
-    margin: 0;
-    font-family: Georgia, serif;
-    background-image: url('sfondoclanis.jpg');
-    color: #333;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url("sfondo.jpg");
+      background-repeat: repeat;
+      background-size: cover;
 
-  header {
-    background-color: #7b2e2e;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    border-bottom: 4px solid #e4c7a1;
-  }
+      
 
-  header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    letter-spacing: 1px;
-  }
-
-  .centrato {
-    display: block;
-    margin: 1rem auto;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-  }
-
-  section {
-    background-color: #dcb8a1;
-    width: 100%;
-    max-width: 1000px;
-    margin: 1rem auto;
-    padding: 1rem;
-    border-radius: 8px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-  }
-
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-
-  li {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  footer {
-    background-color: #7c5e3c;
-    color: white;
-    padding: 1em 2em;
-    text-align: center;
-  }
-
-  .intro {
-    font-size: 2em;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  .back-home {
-    text-align: center;
-    margin-top: 3rem;
-  }
-
-  .back-home a {
-    padding: 1rem 2rem;
-    background-color: #7a5742;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    font-family: 'Cinzel', serif;
-    box-shadow: 0 0 8px #0003;
-    transition: background-color 0.3s ease;
-  }
-
-  .back-home a:hover {
-    background-color: #5e3c2b;
-  }
-
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 1.6em;
     }
 
-    .intro {
-      font-size: 1.5em;
+ #map {
+      height: 90vh;
+      width: 100%;
     }
 
-    section {
-      width: 95%;
+    header {
+      background-color: #004d3a;
+      background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+     p {font-size: 1.2rem; line-height: 1.5; font-weight: bold;}
+     h2 {font-size: 2rem; text-align: center; font-weight: bold;}
+     a {color: brown;}
+
+   footer {
+      text-align: center;
       padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
     }
 
-    p, li {
-      font-size: 1.1rem;
-    }
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
 
-    img.centrato {
-      width: 100% !important;
-    }
-  }
+      .menu-toggle {
+        display: block;
+      }
 
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 1.3em;
-    }
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
 
-    .intro {
-      font-size: 1.2em;
-    }
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
 
-    section {
-      padding: 0.8rem;
+      nav ul.show {
+        display: flex;
+      }
     }
-
-    p, li {
-      font-size: 1rem;
-    }
-
-    .back-home a {
-      padding: 0.8rem 1.5rem;
-      font-size: 0.9rem;
-    }
-     i {font-size: 1.2rem;}
-  }
-</style>
+  </style>
 </head>
-<body>
-
+<body oncontextmenu="return false;">
   <header>
-    <h1>Città della Pieve (PG)</h1>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Dove l’acqua scolpiva il tempo. Racconti di una valle antica.<br>
+     (Sito in fase di costruzione)
+    <nav>
+      <ul id="menu">
+        <li><a href="storia.html">Storia</a></li>
+        <li><a href="natura.html">Natura</a></li>
+        <li><a href="territori.html">Territori</a></li>
+        <li><a href="interviste.html">Voci del territorio</a></li>
+        <li><a href="esplora.html">Esplora</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section>
+  <section id="intro" style="padding: 3rem 2rem; max-width: 800px; margin: auto; background-color: #dcb8a1;
+ color: #3b2f2f;">
+    <h2>Perché “in terris Clanis”</h2>
+    <p style="font-size: 1.3rem; line-height: 1.7;">
+      Un tempo, prima che la valle fosse prosciugata e bonificata, un fiume sacro scorreva da Arezzo verso Orvieto: il Clanis. 
+      Univa popoli, trasportava merci, rifletteva il cielo e le stagioni. 
+      Oggi il suo nome sopravvive tra pievi dimenticate, campi antichi, storie mai raccontate.
+    </p>
+    <p style="font-size: 1.3rem; line-height: 1.7;">
+      <strong>“In terris Clanis”</strong> è un viaggio — storico, naturale, umano — tra i luoghi che un tempo furono bagnati da quelle acque. 
+      È un blog, ma anche un archivio vivente, un invito all’esplorazione e alla memoria.
+    </p>
 
-<h1>Il Palazzo della Corgna di Città della Pieve</h1>
+  <h2 style="font-size: 1.7rem; text-align: center; margin-bottom: 2rem; line-height: 1.8;">Cosa troverai in questo viaggio</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+    
+    <div>
+      <h3 style="font-size: 1.3rem; color: #3b2f2f;">📜 Storia viva</h3>
+      <p>Racconti di un fiume perduto, delle civiltà etrusche e dei segni lasciati nel tempo.</p>
+    </div>
 
-<img src="palazzocorgnapieve.jpg" 
-srcset="palazzocorgnapieve.jpg 600w, palazzocorgnapieve.jpg 1200w, palazzocorgnapieve.jpg 2000w" 
-sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-alt="Image description" 
-width="60%" class="centrato">
+    <div>
+      <h3 style="font-size: 1.3rem; color: #3b2f2f;">🌿 Natura e paesaggio</h3>
+      <p>Le colline, i laghi, i campi dove il Clanis scorreva. Un ecosistema antico, ancora vivo.</p>
+    </div>
 
+    <div>
+      <h3 style="font-size: 1.3rem; color: #3b2f2f;">🗣️ Voci del territorio</h3>
+      <p>Interviste, storie orali, frammenti di vita e memoria di chi vive in questi luoghi.</p>
+    </div>
 
-<h2>Una dimora rinascimentale tra potere, arte e cultura</h2> 
+    <div>
+      <h3 style="font-size: 1.3rem; color: #3b2f2f;">📖 Blog e approfondimenti</h3>
+      <p>Articoli storici, suggerimenti di viaggio, percorsi a piedi e riflessioni culturali.</p>
+    </div>
 
-<p>Nel cuore di Città della Pieve, affacciato sulla centralissima Piazza Gramsci e proprio di fronte alla Cattedrale, si erge uno degli edifici più rappresentativi del Rinascimento umbro: il <strong>Palazzo della Corgna</strong>. Non è soltanto una dimora nobiliare, ma il segno tangibile dell’ascesa di una famiglia che, nel Cinquecento, si ritrovò al centro delle trame politiche, militari e religiose dell’Italia di allora.</p> 
-
-<h2>Le origini della famiglia della Corgna</h2> 
-
-<p>I fratelli <strong>Ascanio e Fulvio della Corgna</strong>, nipoti di Papa Giulio III (Giovanni Maria Ciocchi del Monte), furono i protagonisti dell’epoca d’oro della casata. Fulvio, uomo di Chiesa, divenne cardinale e vescovo di Perugia; Ascanio, invece, fu un valente condottiero e venne nominato Marchese di Castiglione del Lago dall’imperatore Carlo V nel 1550.</p> <p>Fu proprio grazie alla protezione papale e agli onori imperiali che i due fratelli avviarono una politica di rinnovamento architettonico nei loro domini. Città della Pieve, loro luogo d’origine, fu il primo centro ad essere dotato di una residenza nobiliare degna del prestigio raggiunto.</p>
-
-<h2>Progetto architettonico e costruzione</h2> 
-
-<p>La costruzione del palazzo iniziò nel <strong>1555</strong> e si concluse nel <strong>1563</strong>. L’incarico fu affidato all’architetto <strong>Galeazzo Alessi</strong>, uno dei più importanti progettisti del tardo Rinascimento, attivo anche a Perugia, Genova e Roma. L'edificio fu costruito utilizzando <em>pietra serena</em>, in uno stile sobrio ma elegante, tipico del classicismo manierista.</p> 
-
-<p>La pianta a “U” dell’edificio, con cortile interno, richiama gli schemi delle ville suburbane romane. Le finestre rettangolari scandiscono con ordine le facciate, mentre l’ingresso principale è incorniciato da un portale lapideo di notevole sobrietà. L’insieme trasmette una sensazione di equilibrio e compostezza, coerente con il gusto umanistico del tempo.</p>
-
-<h2>Gli interni: un ciclo pittorico di prestigio</h2>
-
-<img src="affreschidellacorgnapieve.jpg" 
-srcset="affreschidellacorgnapieve.jpg 600w, affreschidellacorgnapieve.jpg 1200w, affreschidellacorgnapieve.jpg 2000w" 
-sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-alt="Image description" 
-width="60%" class="centrato">
-
-
-<p>All'interno del palazzo si sviluppa un articolato <strong>programma iconografico</strong> che riflette sia la cultura del tempo, sia le ambizioni della famiglia committente. Gli affreschi sono distribuiti su due piani:</p>
-
-<h3>Piano Terra – Le allegorie del buon governo</h3>
-
-<p>Qui si trova la celebre <strong>Sala del Governatore</strong>, affrescata da <strong>Niccolò Circignani</strong>, detto il <em>Pomarancio</em>, originario anch’egli di Città della Pieve. Il ciclo pittorico include allegorie delle <em>Virtù Cardinali e Teologali</em>, scene mitologiche e simboliche. Spicca in particolare la scena del <strong>Concerto delle Muse</strong>, metafora dell’armonia tra sapienza, musica e politica.</p>
-
-<h3>Primo Piano – La mitologia classica</h3>
-
-<p>Il piano nobile era destinato agli ospiti illustri e ai ricevimenti. Qui il <strong>Salvio Savini</strong>, allievo del Pomarancio, realizzò uno dei cicli più curiosi: <em>Il Convivio degli Dei</em>, ispirato alle <em>Metamorfosi</em> di Ovidio. Si tratta di una celebrazione del potere attraverso le divinità classiche, in cui la famiglia della Corgna si rispecchiava come nuova aristocrazia guidata dalla virtù e dalla ragione.</p>
-
-<h2>La Biblioteca e il Museo</h2> <p>Il Palazzo è oggi sede di importanti istituzioni culturali:</p>
-
-<ul> 
-
-<li><strong>La Biblioteca Comunale "Francesco Melosio"</strong>, al pianterreno, con oltre 48.000 volumi, tra cui rari manoscritti, incunaboli e un pregevole antifonario miniato del Quattrocento.</li> 
-
-<li><strong>Il Museo di Storia Naturale e del Territorio</strong>, al piano superiore, che illustra l’evoluzione ambientale del territorio pievese, con collezioni di fossili, minerali e una preziosa <em>xiloteca</em>.</li>
-
-</ul> 
-
-<p>All’ingresso, i visitatori sono accolti da un <strong>obelisco etrusco in pietra fetida</strong> del V secolo a.C., rinvenuto nella zona di Poggio Cavaliere, testimone della millenaria stratificazione storica di Città della Pieve.</p>
-
-<h2>Simbolismo e memoria storica</h2>
-
-<p>Il Palazzo della Corgna non è solo un monumento, ma una narrazione vivente. Le sue sale raccontano la tensione tra potere temporale e spirituale, tra classicismo e devozione cristiana, tra la gloria personale e la transitorietà del tempo. Ogni affresco, ogni fregio, ogni libro antico della biblioteca porta con sé un frammento della grande stagione del Rinascimento umbro.</p>
-
-<h2>Visita e informazioni</h2>
-
-<p><strong>Indirizzo:</strong> Piazza Antonio Gramsci, 14 – 06062 Città della Pieve (PG)</p> <p><strong>Orari:</strong> Tutti i giorni 9:30 – 17:30 (inverno); 9:30 – 18:30 (estate)</p>
-
-<p><strong>Contatti:</strong> <i>cittadellapieve@sistemamuseo.it</i> <br> Tel. 0578 298840</p> <p><strong>Accessibilità:</strong> Il palazzo è dotato di ascensori e servoscala</p>
-
-</section>
-
-<div class="back-home">
-  <a href="cittadellapieve.html">← Home Città della Pieve</a>
+  </div>
+<div style="text-align:center;">
+  <h2>Per qualsiasi domanda e/o collaborazione:</h2>
+  <p>Cellulare:<a href="tel:+391234567890">+39 3661606016</a></p>
+  <p>E-mail:<a href="mailto:tuamail@example.com">arthurveo23@gmail.com</a></p>
+  <p>Facebook:<a href="https://www.facebook.com/Arthurveo99/" target="_blank">Arthur Veo</a></p>
+  <p>Instagram:<a href="https://www.instagram.com/in_terris_clanis/" target="_blank">in_terris_clanis</a></p>
 </div>
-<br>
-<br>
-<br>
- <footer>
-    &copy; 2025 Arthur Veo
-  </footer> 
+  </section>
 
+
+
+
+
+
+
+ <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
   <script>
+
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.getElementById('menu');
+
     toggle.addEventListener('click', () => {
       menu.classList.toggle('show');
     });
-
 
 //Può impedire l'accesso veloce a "Visualizza sorgente"
 
@@ -256,8 +242,6 @@ document.addEventListener('keydown', function(e) {
       }
     });
 
-
   </script>
-
 </body>
 </html>
