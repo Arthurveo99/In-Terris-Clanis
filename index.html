@@ -4,88 +4,147 @@
   <meta charset="UTF-8">
   <title>Palazzo Corgna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background-image: url('sfondoclanis.jpg');
-      color: #333;
+ <style>
+  * {
+    box-sizing: border-box;
+  }
 
-       user-select: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
+  body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-image: url('sfondoclanis.jpg');
+    color: #333;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
 
-    }
+  header {
+    background-color: #7b2e2e;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 4px solid #e4c7a1;
+  }
 
-    header {
-      background-color: #7b2e2e;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      border-bottom: 4px solid #e4c7a1;
-    }
+  header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+  }
 
+  .centrato {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  section {
+    background-color: #dcb8a1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  li {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  footer {
+    background-color: #7c5e3c;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+  }
+
+  .intro {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .back-home {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .back-home a {
+    padding: 1rem 2rem;
+    background-color: #7a5742;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 0 8px #0003;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-home a:hover {
+    background-color: #5e3c2b;
+  }
+
+  @media (max-width: 768px) {
     header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      letter-spacing: 1px;
+      font-size: 1.6em;
     }
-.centrato {text-align: center;}
-
-section {background-color: #dcb8a1; margin-left: 10%;  margin-right: 10%; padding: 1rem;}
-
-p {font-size: 1.5rem;}
-
-li {font-size: 1.2rem;}
-
-footer {
-      background-color: #7c5e3c;
-      color: white;
-      padding: 1em 2em;
-      text-align: center;
-    }
-
-
 
     .intro {
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      line-height: 1.6;
-      text-align: center;
-      font-weight: bold;
+      font-size: 1.5em;
     }
 
-    .back-home {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.back-home a {
-  padding: 1rem 2rem;
-  background-color: #7a5742;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  font-family: 'Cinzel', serif;
-  box-shadow: 0 0 8px #0003;
-  transition: background-color 0.3s ease;
-}
-
-.back-home a:hover {
-  background-color: #5e3c2b;
-}
-
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6em;
-      }
-      .intro {
-        font-size: 1em;
-      }
+    section {
+      width: 95%;
+      padding: 1rem;
     }
-  </style>
+
+    p, li {
+      font-size: 1.1rem;
+    }
+
+    img.centrato {
+      width: 100% !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.3em;
+    }
+
+    .intro {
+      font-size: 1.2em;
+    }
+
+    section {
+      padding: 0.8rem;
+    }
+
+    p, li {
+      font-size: 1rem;
+    }
+
+    .back-home a {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+    }
+     i {font-size: 1.2rem;}
+  }
+</style>
 </head>
 <body>
 
@@ -157,7 +216,7 @@ width="60%" class="centrato">
 
 <p><strong>Indirizzo:</strong> Piazza Antonio Gramsci, 14 – 06062 Città della Pieve (PG)</p> <p><strong>Orari:</strong> Tutti i giorni 9:30 – 17:30 (inverno); 9:30 – 18:30 (estate)</p>
 
-<p><strong>Contatti:</strong> cittadellapieve@sistemamuseo.it | Tel. 0578 298840</p> <p><strong>Accessibilità:</strong> Il palazzo è dotato di ascensori e servoscala</p>
+<p><strong>Contatti:</strong> <i>cittadellapieve@sistemamuseo.it</i> <br> Tel. 0578 298840</p> <p><strong>Accessibilità:</strong> Il palazzo è dotato di ascensori e servoscala</p>
 
 </section>
 
