@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Vicolo Baciadonne</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-image: url('sfondoclanis.jpg');
+      color: #333;
+
+       user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
+    }
+
+    header {
+      background-color: #7b2e2e;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 4px solid #e4c7a1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+.centrato {text-align: center;}
+
+section {background-color: #dcb8a1; margin-left: 10%;  margin-right: 10%; padding: 1rem;}
+
+p {font-size: 1.5rem;}
+
+footer {
+      background-color: #7c5e3c;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+    }
+
+
+
+    .intro {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .back-home {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-home a {
+  padding: 1rem 2rem;
+  background-color: #7a5742;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Cinzel', serif;
+  box-shadow: 0 0 8px #0003;
+  transition: background-color 0.3s ease;
+}
+
+.back-home a:hover {
+  background-color: #5e3c2b;
+}
+
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+      .intro {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Città della Pieve (PG)</h1>
+  </header>
+
+  <section>
+
+<h1>A Warm Brick Embrace in the Ancient Heart of Città della Pieve</h1>
+
+<img src="vicolobaciadonne.jpg" 
+srcset="vicolobaciadonne.jpg 600w, vicolobaciadonne.jpg 1200w, vicolobaciadonne.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+<p>In the heart of the historic center of <strong>Città della Pieve</strong>, nestled among the red-brick houses that color the narrow Umbrian streets, lies a corner where history, architecture, and legend meet: the <strong>Vicolo Baciadonne</strong>. At just <strong>53 centimeters wide at its narrowest point</strong>—and rarely more than 80—it is considered one of the narrowest alleys in Italy, if not in all of Europe. But it’s not just the measurements that make it special: it’s the name, the origin, and the unique atmosphere that still lingers today.</p>
+
+<h2>A story carved in brick</h2>
+
+<p>The origins of this narrow passage date back to the Middle Ages, when the town was divided into <em>terzieri</em> (districts) and rivalries between neighboring families were a daily occurrence. Legend has it that the alley was born out of a dispute between two families who, despite living side by side, wanted to keep as much distance as possible from one another. They left just enough space for a person to pass through—unintentionally creating a tiny urban masterpiece.</p>
+
+<p>But the people, as they often do, turned a sign of division into a symbol of unity: <strong>Vicolo Baciadonne</strong> (literally “Kiss-the-Women Alley”) earned its name because two people passing through it can’t help but brush against each other… and perhaps even steal a kiss.</p>
+
+<h2>A sensory experience</h2>
+
+<p>Walking through Vicolo Baciadonne is more than just a tourist gesture—it’s an experience for the senses. The ancient brick walls, smoothed by time and moisture, seem to close in around the visitor, encouraging a slower pace, inviting one to look up, to breathe in the scent of stone and history. Each step is a journey into the past, an immersion in the daily life of a town that has preserved its authentic soul.</p>
+
+<p>And at the end of the alley, as a reward for the attentive observer, a breathtaking view opens up over the <strong>Val di Chiana</strong> and the distant silhouette of <strong>Mount Cetona</strong>, silent witnesses to centuries of history and landscape.</p>
+
+<h2>A symbol of romance</h2>
+
+<p>Today, Vicolo Baciadonne is one of the most photographed spots in Città della Pieve. During <strong>Valentine’s Day</strong>, it is often decorated with hearts, flowers, and soft lights, becoming a true “street of love.” It hosts romantic events, flash mobs, and even marriage proposals, as couples choose this unique setting to seal their eternal bond.</p>
+
+<h2>A microcosm of Umbrian beauty</h2>
+
+<p>In its silence and simplicity, Vicolo Baciadonne encapsulates the very essence of <strong>Città della Pieve</strong>: a masterful blend of medieval architectural rigor and heartfelt warmth, of stone and poetry. It’s a place you can walk through in seconds—but it stays with you forever.</p>
+
+</section>
+
+<div class="back-home">
+  <a href="cittadellapieve.html">← Home Città della Pieve</a>
+</div>
+<br>
+<br>
+<br>
+ <footer>
+    &copy; 2025 Arthur Veo
+  </footer> 
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+
+</body>
+</html>
