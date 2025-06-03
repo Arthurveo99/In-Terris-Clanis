@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Chiesa S.Maria dei Bianchi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-image: url('sfondoclanis.jpg');
+      color: #333;
+
+       user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
+    }
+
+    header {
+      background-color: #7b2e2e;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 4px solid #e4c7a1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+.centrato {text-align: center;}
+
+section {background-color: #dcb8a1; margin-left: 10%;  margin-right: 10%; padding: 1rem;}
+
+p {font-size: 1.5rem;}
+
+footer {
+      background-color: #7c5e3c;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+    }
+
+
+
+    .intro {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .back-home {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-home a {
+  padding: 1rem 2rem;
+  background-color: #7a5742;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Cinzel', serif;
+  box-shadow: 0 0 8px #0003;
+  transition: background-color 0.3s ease;
+}
+
+.back-home a:hover {
+  background-color: #5e3c2b;
+}
+
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+      .intro {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Città della Pieve (PG)</h1>
+  </header>
+
+  <section>
+
+<h1>Chiesa S.Maria dei Bianchi</h1>
+
+<img src="chiesasmariadeibianchipieve.jpg" 
+srcset="chiesasmariadeibianchipieve.jpg 600w, chiesasmariadeibianchipieve.jpg 1200w, chiesasmariadeibianchipieve.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+<p>The Church of Santa Maria dei Bianchi, located in the historic center of Città della Pieve, is an important place of worship and Renaissance art. Originally the seat of the Confraternity of the Disciplinati, known as the “Bianchi” (“Whites”) for the color of their robes, the building dates back to the 13th century and also included a hospital for pilgrims along the Via Romea Germanica.</p>
+
+<h2>The Adoration of the Magi by Perugino</h2>
+
+<img src="adorazioneperugino.jpg" 
+srcset="adorazioneperugino.jpg 600w, adorazioneperugino.jpg 1200w, adorazioneperugino.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+<p>The church’s main artistic treasure is the fresco “Adoration of the Magi” by Pietro Vannucci, known as Perugino, painted in 1504. The large-scale work (650x700 cm) depicts the biblical scene set in a landscape inspired by the Umbrian hills between Lake Trasimeno and the Val di Chiana. The composition is filled with elegant figures and refined details, typical of the master’s style.</p>
+
+<p>During restoration work in 1835, two letters by Perugino were discovered, documenting the commission of the fresco. Initially, the artist requested 200 florins but agreed to reduce the amount to 75 florins, asking in exchange for a mule to travel between Perugia and Città della Pieve.</p>
+
+<h2>Architecture and History</h2>
+
+<p>In the 18th century, the old oratory was transformed into a church to accommodate a larger number of worshippers. The interior work was completed in 1743, while the façade—showing a style between Rococo and Neoclassicism—was finished around 1780. The interior features a rectangular layout with vaulted ceilings and composite order pilasters, creating a harmonious and solemn atmosphere.</p>
+
+<h2>Visitor Information</h2>
+
+<p>The Church of Santa Maria dei Bianchi is located at Via Pietro Vannucci, 40, in Città della Pieve. Admission is free, with the option of leaving a donation. Guided tours can be requested through the Info Point or by contacting the Confraternity of the Bianchi directly at the email address: disciplinati@libero.it.</p>
+
+<p>For more information and to plan your visit, it is advisable to consult the official website of Umbria tourism: umbriatourism.it</p>
+
+</section>
+
+<div class="back-home">
+  <a href="cittadellapieve.html">← Home Città della Pieve</a>
+</div>
+<br>
+<br>
+<br>
+ <footer>
+    &copy; 2025 Arthur Veo
+  </footer> 
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+
+</body>
+</html>
