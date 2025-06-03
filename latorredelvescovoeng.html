@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Torre del Vescovo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-image: url('sfondoclanis.jpg');
+      color: #333;
+
+       user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+
+    }
+
+    header {
+      background-color: #7b2e2e;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 4px solid #e4c7a1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+.centrato {text-align: center;}
+
+section {background-color: #dcb8a1; margin-left: 10%;  margin-right: 10%; padding: 1rem;}
+
+p {font-size: 1.5rem;}
+
+footer {
+      background-color: #7c5e3c;
+      color: white;
+      padding: 1em 2em;
+      text-align: center;
+    }
+
+
+
+    .intro {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .back-home {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-home a {
+  padding: 1rem 2rem;
+  background-color: #7a5742;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Cinzel', serif;
+  box-shadow: 0 0 8px #0003;
+  transition: background-color 0.3s ease;
+}
+
+.back-home a:hover {
+  background-color: #5e3c2b;
+}
+
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+      .intro {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Città della Pieve (PG)</h1>
+  </header>
+
+  <section>
+
+<h1>A Warm Brick Embrace in the Ancient Heart of Città della Pieve</h1>
+
+<img src="latorredelvescovopieve.jpg" 
+srcset="latorredelvescovopieve.jpg 600w, latorredelvescovopieve.jpg 1200w, latorredelvescovopieve.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+<h2>A Discreet Yet Imposing Presence</h2>
+
+<p>The Bishop's Tower of Città della Pieve is one of the most emblematic and evocative structures in the Umbrian town, although it is not always listed among its main attractions. It is a tall, massive brick tower, austere and unadorned, standing silently beside the Church of Saints Gervasius and Protasius, in the heart of the eastern part of the city, not far from Porta Perugina. The sober and severe appearance of the tower, with its square layout and wall surfaces interrupted by a large blind arch, immediately recalls the defensive purposes for which it was likely conceived, as well as the symbolic role it has held for centuries in the urban context.</p>
+
+<h2>Ecclesiastical Origins and the Bishop’s Power</h2>
+
+<p>The name "Bishop's Tower" derives from the fact that its construction and ownership were tied to the bishop of Chiusi, an ecclesiastical authority who also exercised considerable power over Città della Pieve, especially during the Middle Ages. In those centuries, the city held a strategic political and geographical position: it was a stronghold between Tuscany and Umbria, between the cities of Perugia, Orvieto, and Chiusi, in a territory often contested, where civil and religious authorities vied for control—even through the construction of symbolic architectural structures. In this context, the tower was not just a physical control point, but also a visual statement of the bishop's authority in the city.</p>
+
+<h2>Architecture and Walled Secrets</h2>
+
+<p>The structure blends seamlessly into the city’s fortified fabric, camouflaged among the brick buildings and defensive walls, yet standing out for its height and slightly elevated position, accessible via a brick staircase. The now-sealed doorway at the top of the stairs suggests an ancient private entrance, probably connected to internal passageways or reserved spaces, perhaps used by the bishop’s envoys or a custodian. It is also possible that it served as a signaling or lookout tower along the walls, given the open view of the Nestore valley and its proximity to the city’s main entrances.</p>
+
+<h2>A Place Outside of Time</h2>
+
+<p>Today, the tower stands as a place full of charm, steeped in solemn silence. The small courtyard it overlooks, enclosed by ancient stone and brick walls, retains an unspoiled medieval atmosphere. By day, the wall surfaces absorb the sunlight, reflecting the characteristic warm tones of Pieve’s bricks, while at sunset and nighttime, the scene transforms entirely: long shadows, artificial lights, and often clear skies lend this corner of the city a theatrical quality. It is not uncommon, especially during historical reenactments, to find people dressed in medieval costumes here, while photographers and artists stop to study the geometries of the place, drawn by centuries of history.</p>
+
+<h2>A Silent Symbol of the City</h2>
+
+<p>Though not accessible inside, the Bishop's Tower remains an essential landmark for understanding the deeper identity of Città della Pieve—a city that has always been a crossroads of power, cultures, and symbols. Its simple, silent presence, unchanged for centuries, reminds us how architecture can tell stories of dominion, resistance, spirituality, and pride—without ever speaking a word.</p>
+
+</section>
+
+<div class="back-home">
+  <a href="cittadellapieve.html">← Home Città della Pieve</a>
+</div>
+<br>
+<br>
+<br>
+ <footer>
+    &copy; 2025 Arthur Veo
+  </footer> 
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+
+</body>
+</html>
