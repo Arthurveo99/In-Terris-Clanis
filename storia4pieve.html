@@ -1,0 +1,385 @@
+  <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XVI-XIX secolo</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Città della Pieve (PG)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="storiapievese.html">Storia</a></li>
+        <li><a href="culturaetradizioni.html">Tradizioni</a></li>
+        <li><a href="luoghi.html">Luoghi da Visitare</a></li>
+        <li><a href="eventi.html">Eventi Locali</a></li>
+        <li><a href="intervistepievesi.html">Interviste</a></li>
+        <li><a href="archivio.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+  <h1>Città della Pieve nel Novecento: un secolo di cambiamenti</h1>
+
+  <h2>I primi del Novecento: una città contadina alle soglie della modernità</h2>
+  <p>
+    All’inizio del XX secolo, Città della Pieve era ancora immersa in un contesto profondamente rurale. Il paesaggio
+    circostante era modellato da poderi e colline coltivate a cereali, olivi e vigne, mentre il tessuto sociale era retto da una
+    struttura ancora largamente mezzadrile. Famiglie contadine vivevano nei poderi in simbiosi con la terra, in accordi di mezzadria
+    stipulati con i proprietari, spesso residenti nei palazzi del centro storico.
+  </p>
+  <p>
+    La città, racchiusa tra le sue mura medievali, conservava un’identità forte, fatta di tradizioni religiose, feste popolari e
+    piccoli commerci. Tuttavia, gli echi della modernità iniziavano a farsi sentire: le prime comunicazioni ferroviarie con Chiusi
+    e Perugia, l’arrivo del telegrafo, la crescita del sentimento nazionale. Nelle osterie e nei caffè si discuteva di politica,
+    di socialismo, di monarchia. La tensione sociale, alimentata dalle dure condizioni di vita, portava alla nascita delle prime
+    leghe contadine e cooperative, in particolare nelle frazioni come Moiano.
+  </p>
+
+  <h2>La Prima Guerra Mondiale: sangue e memoria</h2>
+  <p>
+    Con l’entrata dell’Italia nel primo conflitto mondiale, nel maggio del 1915, anche Città della Pieve fu profondamente coinvolta.
+    Centinaia di giovani furono chiamati alle armi e inviati al fronte. Molti non fecero ritorno. Le lettere dal fronte raccontano
+    storie di fango, gelo, coraggio e disperazione.
+  </p>
+  <p>
+    Le famiglie pievesi, rimaste a casa, affrontavano nel frattempo le conseguenze della guerra: carenza di manodopera, razionamenti
+    alimentari, crisi economica. Le donne divennero protagoniste della sopravvivenza rurale, mantenendo attiva la produzione agricola
+    in assenza degli uomini.
+  </p>
+  <p>
+    Dopo il 1918, la città, ferita dal lutto ma fiera dei propri caduti, eresse un Monumento ai Caduti: un obelisco elegante,
+    collocato nei giardini pubblici, ornato da rilievi e decorazioni in bronzo, divenuto simbolo della memoria collettiva.
+  </p>
+
+  <h2>Il Ventennio fascista: repressione, trasformazioni, consenso forzato</h2>
+  <p>
+    Dopo la crisi del primo dopoguerra, l’instabilità sociale ed economica aprì la strada all’ascesa del fascismo. Anche a Città
+    della Pieve, fin dai primi anni '20, il clima divenne teso. Nella frazione di Moiano, nel 1921, si verificò un episodio emblematico:
+    la Casa del Popolo, fondata nel 1913 dai socialisti, fu attaccata e devastata dalle camicie nere. Fu un evento traumatico,
+    che segnò l’inizio di un periodo di repressione politica e di annullamento delle libertà democratiche.
+  </p>
+  <p>
+    Con la presa del potere da parte di Mussolini, il Comune fu commissariato e il sindaco eletto sostituito dal podestà, figura
+    nominata dal regime. Furono imposte uniformi, simboli, cerimonie e propaganda. I bambini venivano inquadrati nei Balilla, gli adulti
+    nei Fasci, mentre il dissenso veniva silenziato con sorveglianza e violenza.
+  </p>
+  <p>
+    Tuttavia, il regime portò anche a opere pubbliche: la costruzione della scuola Marconi in stile razionalista, il miglioramento
+    della viabilità rurale, la realizzazione di impianti sportivi e di colonie estive. Ma sotto la superficie, fermentava ancora
+    una coscienza critica: intellettuali, contadini, artigiani che non accettavano passivamente la retorica del regime e che avrebbero
+    trovato voce nella Resistenza.
+  </p>
+
+  <h2>La Seconda Guerra Mondiale: occupazione, dolore e liberazione</h2>
+  <p>
+    Quando, nel 1940, l’Italia entrò nel secondo conflitto mondiale, le famiglie pievesi si trovarono ancora una volta a dover salutare
+    figli e fratelli diretti al fronte. Le prime difficoltà si fecero sentire nei campi: mancanza di manodopera, razionamenti,
+    requisizioni da parte dello Stato.
+  </p>
+  <p>
+    Dopo l’8 settembre 1943, con l’armistizio firmato da Badoglio, l’Italia centro-settentrionale cadde sotto l’occupazione tedesca.
+    Città della Pieve non fu risparmiata: i soldati della Wehrmacht presidiarono il territorio, si installarono nei palazzi e
+    nelle scuole, minarono i ponti in previsione di una ritirata e usarono la popolazione come scudo umano.
+  </p>
+  <p>
+    Tra il 15 e il 19 giugno 1944, la città fu teatro di intensi scontri tra le forze tedesche e gli Alleati, supportati dalla
+    Resistenza locale. Più di 70 civili persero la vita in quei giorni, tra cui don Pompeo Perai, il parroco, ucciso mentre prestava
+    soccorso ai feriti nella zona di Ponticelli. Il 19 giugno 1944, giorno dei santi patroni Gervasio e Protasio, Città della Pieve fu
+    finalmente liberata.
+  </p>
+
+  <h2>Il dopoguerra: ricostruzione, memoria e rinascita culturale</h2>
+  <p>
+    Terminata la guerra, la città si trovò davanti alla necessità di ricostruire non solo edifici e strade, ma anche un tessuto
+    sociale lacerato. La Repubblica Italiana prese forma anche nei piccoli borghi come Città della Pieve, dove si tornò a eleggere
+    sindaci e consigli comunali, e dove nacquero nuovamente partiti, circoli culturali e cooperative.
+  </p>
+  <p>
+    Nel 1965, nella frazione di Moiano, fu ricostruita la Casa del Popolo, simbolo della rinascita antifascista, alla presenza
+    di Luigi Longo, segretario nazionale del PCI. Il gesto fu carico di significato: una ferita aperta nel 1921 veniva simbolicamente
+    rimarginata.
+  </p>
+  <p>
+    Tra gli anni ’60 e ’80, il centro storico cominciò a svuotarsi per via dell’esodo rurale, ma nello stesso tempo iniziò a essere
+    riscoperto: nacque un movimento per la tutela del patrimonio, per il recupero del legame con il Perugino, per la valorizzazione
+    delle architetture storiche.
+  </p>
+  <p>
+    Il Palio dei Terzieri, che rinasce in forma moderna in questo periodo, divenne un simbolo di orgoglio civico e memoria identitaria,
+    così come la nascita di associazioni musicali, corali, e culturali che contribuirono a rinsaldare il tessuto comunitario.
+  </p>
+  <p>
+    Città della Pieve uscì dal Novecento profondamente cambiata, ma non domata. Forte della sua storia, delle sue perdite e delle sue
+    conquiste, ha saputo conservare la propria anima, intrecciando tradizione e modernità in un racconto collettivo che ancora oggi
+    vive nelle strade, nei monumenti, nei volti dei suoi abitanti.
+  </p>
+</section>
+  
+
+  <div class="back-home">
+    <a href="../index.html">In Terris Clanis</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
