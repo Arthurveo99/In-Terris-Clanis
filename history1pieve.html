@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From prehistory to Rome</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">History of Città della Pieve</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="pieveenglish.html">Introduction</a></li>
+        <li><a href="pevetradition.html">Tradition</a></li>
+        <li><a href="pieveplace.html">Place to Visit</a></li>
+        <li><a href="pieveevents.html">Local Events</a></li>
+        <li><a href="pieveinterviews.html">interviews</a></li>
+        <li><a href="pievearchive.html">Photographic Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Medieval Città della Pieve</h1>
+
+<img src="pievemedievale.jpg" 
+srcset="pievemedievale.jpg 600w, pievemedievale.jpg 1200w, pievemedievale.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+<h3>Historical context and the medieval foundation of the town</h3>
+
+<p>
+Città della Pieve traces its roots back to ancient times, with probable Etruscan settlements linked to the nearby city of Chiusi. It became a municipium in the Roman era, but it was during the Early Middle Ages that it gained strategic importance: around the 7th century AD, the Lombard dukes of Chiusi established a fortified outpost here to control the border with Perugia, which at the time was under Byzantine rule. Outside of this early fortification, in the 8th century, a baptistery church—or *pieve*—dedicated to Saints Gervasius and Protasius was built. With the expansion of the settlement in the 11th century, the *pieve* was enclosed within a new city wall, giving rise to the *Castrum Plebis*—the "Castle of the Pieve"—from which the town’s present name derives. Documents dating shortly after the year 1000 mention the fortified village as *Castrum Plebis S. Gervasi*, confirming the foundation of the medieval town surrounded by walls and towers around its ancient *pieve*.
+</p>
+
+<h3>Political Organization and Relations with External Powers</h3>
+
+<p>In the High Middle Ages, Città della Pieve (then known as Castel della Pieve) organized itself as a free commune. Around 1228, taking advantage of the ongoing struggles between the Empire and the Papacy, the city placed itself under the protection of Emperor Frederick II of Swabia, aligning with the Ghibelline faction. Thus, from 1228, it became a Free Commune with its own institutions: the town was divided into three districts (Borgodentro, Castello, and Casalino), each of which elected its own prior and representatives to the communal council. However, this autonomous structure did not last long: in 1250, upon the death of Frederick II, Castel della Pieve was forced to submit to the powerful city of Perugia, traditionally Guelph and allied with the Papacy.</p>
+
+<p>Despite this formal submission, the inhabitants of Città della Pieve maintained a rebellious spirit for a long time. Located on the border between the Papal States and the Tuscan territories, the town exploited its strategic position to defend its autonomy. It was frequently in conflict with both Perugia and the Papacy, even going so far as to ally with the Tuscan city of Siena—also Ghibelline—in the struggles against papal authority. Between the 14th and 16th centuries, Castel della Pieve repeatedly rebelled against Perugian and papal rule, causing no small amount of trouble for its overlords. Perugia had to reassert its authority multiple times: in 1326 it decided to build a fortified stronghold within the Pieve’s walls, a tangible sign of its control over the rebellious town. During the turbulent period of the Umbrian lordships, the city fell under the control of various powerful figures: among the most notable were the condottieri Biordo Michelotti (late 14th century) and Braccio da Montone (early 15th century), lords of Perugia. Finally, in the early 15th century, Pope Martin V firmly re-established Città della Pieve under the authority of the Papal States, putting an end to its communal autonomy. From that time on, the city remained under papal influence (except for brief occupations) until the Unification of Italy in 1860.</p>
+
+<h3>Urban Structure and Architecture</h3>
+
+<p>
+The historic center of Città della Pieve still retains its medieval urban and architectural character, marked by the extensive use of local exposed brick. Already in the second half of the 13th century, the town’s layout was well defined and, according to tradition, when seen from above, it resembles the profile of an eagle in flight toward Rome—a tribute to Emperor Frederick II’s imperial eagle, to whom the Ghibelline Pievesi were devoted. The streets of the town also reflect the society of the time: the main roads are wide and winding, suitable for mounted knights, while a dense network of narrow and winding alleys spreads out from them, designed for the defense by pedestrians armed with bows and crossbows. A symbolic example is Vicolo Baciadonne, just 80 cm wide, one of the narrowest alleys in Italy. An entire neighborhood, still known today as Casalino, was built during the communal period with rows of identical medieval houses: two-story brick houses, each with a residential entrance and two shop openings on the ground floor. This architectural uniformity in brick gives the town its distinctive pinkish-red hue, so much so that Città della Pieve is considered one of the historical homelands of Umbrian terracotta.
+</p>
+
+<p>
+As for fortifications, Castel della Pieve was equipped with sturdy walls as early as the 11th century, later expanded in the 13th century. Sections of the ancient 13th-century walls are still visible today, for example between the present-day Porta Romana and the fortress, and near Porta Fiorentina, close to the so-called Bishop's Tower. This latter tower was built in 1326, when Perugia erected a massive fortress at the northern corner of the town, equipped with corner towers to keep the rebellious town under control. The Perugian Fortress, triangular in shape and once surrounded by a moat and palisades, represents a remarkable example of Umbrian military architecture. It had five watchtowers connected by walkways, allowing fire signals to be sent to Perugia in case reinforcements were needed. Today, the fortress and some surviving towers (such as the Torre del Prato near Porta Perugina and the semi-ruined Torre del Frontone) visually testify to the town’s medieval past and the control Perugia exercised over it.
+</p>
+
+<p>
+Among the religious buildings, the focal point of the town was—and still is—the Cathedral of Saints Gervasius and Protasius, originally born as an early medieval <em>pieve</em> (baptistery church). The current cathedral was built in Romanesque-Gothic forms between the 11th and 12th centuries on the ruins of a 5th-century church, and it was modified at the end of the 13th century. The brick façade is simple, while the interior was rebuilt in the Baroque era. During the 13th and 14th centuries, important monastic complexes also arose just outside the walls: the Church of San Francesco (with annexed Franciscan convent) and the Church of Sant’Agostino (with Augustinian convent), both founded around the mid-13th century in a simple Gothic style. Another Gothic church, Santa Maria dei Servi, was built by the Servite Order near Porta Romana, also outside the medieval city walls. Within the inhabited center, small places of worship linked to lay confraternities emerged, such as the Oratory of Santa Maria dei Bianchi (formerly the oratory of the Disciplinati) and the Oratory of San Bartolomeo, enriched with frescoes and works of art in the late Middle Ages. Altogether, the urban layout and monuments of Città della Pieve offer an almost intact glimpse of a fortified medieval town of central Italy, harmoniously developed in brick within its frame of walls and towers.
+</p>
+
+<h3>Daily Life of the Population</h3>
+
+<p>
+In the Middle Ages, daily life in Città della Pieve reflected that of a small fortified rural center, with a society divided between a noble elite and a majority of commoners—peasants and artisans. Most of the population lived off agriculture in the surrounding countryside: cereals such as wheat, barley, and spelt were cultivated for daily bread, and vineyards produced wine, already renowned in the hilly Pieve area. In the fields, sheep, pigs, and poultry were raised, providing meat for feast days and wool for clothing. The surrounding woods offered timber, game, and products like mushrooms and chestnuts, enriching the local diet. The common people’s diet was simple: soups made from legumes and vegetables, dark bread baked in communal ovens, pecorino cheese, olive oil, and watered wine at every meal, while meat was rarely consumed, usually reserved for religious holidays or market fairs.
+</p>
+
+<p>
+Within the town walls, the streets buzzed with crafts and workshops that animated the narrow alleys of the village. As early as the 13th century, Città della Pieve was known for the production of saffron—a precious spice cultivated in the area both for culinary use and especially as a textile dye. The Statute of Perugia from 1279 confirms the importance of this crop, prohibiting outsiders from planting saffron crocuses in the Pieve territory, showing that saffron was considered a valuable economic asset worth protecting. Alongside saffron production, the textile arts flourished: the yellow dye from saffron was used to color threads of wool, linen, and silk, and for a long time Città della Pieve was a notable center for dyed fabrics and fine yarns. In addition to dyers and weavers, there were many other artisans: carpenters, blacksmiths, shoemakers, masons, and kiln workers specialized in firing bricks and terracotta (such as vases and tiles)—an activity favored by the area's rich clay deposits. The town was renowned for its bricks, and entire families passed down the craft of their manufacture (hence the nickname “City of Terracotta”). Millers ground grain in watermills along the Nestore River; bakers, butchers, tailors, and weaponsmiths crafted crossbows and other defensive arms for the local militia.
+</p>
+
+<p>
+Religion permeated every aspect of community life. The bell of the pieve (later cathedral) marked the hours and called the faithful to Sunday Mass and the feast days of Saints Gervasius and Protasius. Most of the population was illiterate but learned the principles of the faith through sermons and sacred images in churches. The social and spiritual life of laypeople was animated by confraternities: associations of devotees who organized processions, charity works, and penitential rites. For example, the Confraternity of the Disciplinati, known as the “Whites” due to the color of their robes, probably emerged in the 14th century during the wave of penitential movements, and built their oratory dedicated to Santa Maria dei Bianchi in the heart of the village. These confraternities played important social roles during the Middle Ages, assisting the poor and the sick thanks to alms and bequests from members and the faithful. In everyday life, agricultural and religious rhythms were intertwined: liturgical celebrations (Christmas, Easter, the patron saint’s day) were moments of rest from work and collective celebration, often accompanied by markets and fairs where farmers could sell their produce and buy tools or fabrics.
+</p>
+
+<p>
+As for clothing, garments reflected social status. Peasants and artisans wore practical outfits made from coarse wool: tunics and trousers woven at home, often undyed or in earthy tones. Women wore simple wool or linen skirts and bodices, with headscarves. Nobles and wealthy townspeople, on the other hand, flaunted more refined fabrics—sometimes purchased in nearby Perugia or Siena—such as velvet, silk brocades, and fine wool dyed (even with local saffron, which gave a precious golden hue). A knight from Città della Pieve would have worn, in addition to armor in times of war, a cloak of fine cloth, leather boots, and a decorative belt. Overall, life in Città della Pieve during the medieval period was simple and industrious: work in the fields and workshops, religious faith, and community traditions formed the foundation of the inhabitants’ everyday existence.
+</p>
+
+<h3>Local Economy and Productive Activities</h3>
+
+<p>
+The medieval economy of Città della Pieve was based on a combination of agriculture, livestock farming, specialized craftsmanship, and local commercial exchanges. Agriculture was the primary means of subsistence: cereals, vegetables, vines, and olive trees were cultivated in the surrounding fields. Crop rotation was practiced along with the raising of sheep and pigs, producing wool, cheese, and cured meats for both consumption and trade. Agricultural surpluses—especially wheat and wine—fueled a lively trade: the town hosted periodic markets where farmers sold their products and foreign merchants arrived to exchange goods. The border position of Città della Pieve favored trade with both Umbria and Tuscany: secondary routes passed through the area, linking Lake Trasimeno, the Val di Chiana, and the Via Francigena, enabling the passage of merchants and pilgrims.
+</p>
+
+<p>
+Among productive activities, craftsmanship played a prominent role. As mentioned earlier, saffron production became a true local specialty in the 13th and 14th centuries: Città della Pieve’s “red gold” was highly sought after as a dye and spice, becoming a valuable source of wealth for the town. Documents from the 14th and 16th centuries record strict regulations on the harvesting and taxation of saffron, underscoring its economic importance. In parallel, the textile industry flourished: workshops of weavers and dyers transformed local wool into high-quality colored fabrics, later sold in regional markets. Terracotta manufacturing was another pillar of the economy: the clay-rich hills provided raw materials for bricks and ceramics. Medieval kilns produced bricks, tiles, jars, and cooking ware; the skill of Pieve’s brickmakers became renowned, and the town developed a trade in bricks and terracotta with other Umbrian centers.
+</p>
+
+<p>
+Other trades also contributed to the local economy: carpenters made barrels and vats for wine (a tradition that continued for centuries), blacksmiths forged agricultural tools and horseshoes, and cobblers crafted leather shoes and boots for locals and travelers. The presence of forests allowed the development of charcoal burners (for producing charcoal) and the gathering of honey from rustic beehives (honey and beeswax being essential for sweetening and candles).
+</p>
+
+<p>
+Commercially, although a small center, Castel della Pieve benefited greatly from its geographic location: its proximity to Tuscany encouraged contact with merchants from Chiusi, Siena, and Florence, while its integration into the Umbrian-Papal sphere enabled trade with Perugia, Orvieto, and Rome. Not coincidentally, Città della Pieve emerged as a place of transit: near the fortress began the Via Pievaiola, a road linking the town to Perugia since at least 1296, functioning as a key commercial and military artery. The city likely established annual fairs or tax-free markets on religious occasions to attract buyers and sellers from the surrounding countryside. Thus, the local economy was that of a self-sufficient town well integrated into the medieval economic networks, with exceptional products (saffron, dyed cloths, bricks) that were its pride and sources of income.
+</p>
+
+<h3>Cultural and Religious Developments</h3>
+
+<p>
+On the cultural and religious front, medieval Città della Pieve experienced a progressive enrichment of ecclesiastical institutions, devotional traditions, and—toward the end of the period—the earliest forms of education. The presence of numerous churches and religious orders bears witness to the community’s deep spirituality: in addition to the parish/cathedral of Saints Gervasius and Protasius, the Franciscans, Augustinians, and Servites settled in the town during the 13th and 14th centuries, each building their own place of worship (San Francesco, Sant’Agostino, Santa Maria dei Servi). These churches became centers of preaching, sacred art, and assistance to the needy. For example, friars founded charitable works such as hospitals and hospices for pilgrims: indeed, an old hospital of San Bartolomeo, connected to the oratory of the same name, is documented as welcoming travelers and the sick near Porta Perugina. Throughout the 14th and 15th centuries, Pieve’s churches were embellished with fresco cycles and painted panels: Umbrian and Tuscan masters worked there, proof of a vibrant artistic exchange. A 14th-century fresco of the Crucifixion (attributed to the Sienese painter Nicolò di Bonifazio) is preserved in the Oratory of San Bartolomeo, while several early works by Perugino adorned local altars in the early 16th century.
+</p>
+
+<p>
+Lay confraternities were a key cultural and social element. In addition to the “White” Disciplinati, there were likely confraternities of the Misericordia (dedicated to helping the poor and those condemned to death) and confraternities of the Holy Sacrament, each devoted to specific forms of worship and charity. The Confraternity of the Misericordia of Jesus (mentioned in local historical sources) also had its own oratory and took part in Holy Week processions with sacred performances. Through confraternities, laypeople could express their faith in an organized, communal way: these associations staged religious plays, managed funds to furnish churches with sacred items, and ran Christian doctrine schools for children.
+</p>
+
+<p>
+As for education, signs of literacy began to appear in the later Middle Ages, although still limited. In the absence of formal public schools, the Church provided basic instruction: boys destined for the priesthood or monastic life studied Latin, chant, and writing under the guidance of cathedral clergy or in monasteries. At the Franciscan convent of San Francesco, Roman inscriptions were found—evidence that the friars collected ancient texts and perhaps maintained a scriptorium for copying manuscripts. By the 15th century, with the rise of the merchant class, the town may have sponsored an “abacus master” to teach merchant sons basic arithmetic and commercial writing—a common practice in many Italian towns. Some confraternal schools also likely taught catechism and perhaps taught children to read prayers. Although “schools” in the modern sense did not yet exist, Città della Pieve laid the foundations of its cultural tradition: proof lies in the presence, even in the late Middle Ages, of educated figures such as notaries, physicians, and scholarly religious figures native to the area.
+</p>
+
+<p>
+In summary, during the medieval period, Città della Pieve developed a rich religious and cultural fabric: churches and convents dotted the town, confraternities actively engaged laypeople in works of faith and charity, and small centers of learning gradually emerged that heralded the coming humanist era. This intangible heritage of faith, art, and early learning formed the foundations upon which the town would flourish during the Renaissance, producing remarkable artworks and illustrious figures such as Perugino—leaving behind a cultural legacy that continues to be a source of pride for Città della Pieve today.
+</p>
+
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="pieveenglish.html">Introduction</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
