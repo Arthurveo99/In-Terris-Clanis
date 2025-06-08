@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XVI-XIX secolo</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+      color: brown;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: bold;
+      color: black;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Città della Pieve (PG)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="storiapievese.html">Storia</a></li>
+        <li><a href="culturaetradizioni.html">Tradizioni</a></li>
+        <li><a href="luoghi.html">Luoghi da Visitare</a></li>
+        <li><a href="eventi.html">Eventi Locali</a></li>
+        <li><a href="intervistepievesi.html">Interviste</a></li>
+        <li><a href="archivio.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Città della Pieve in the 20th Century: A Century of Change</h1>
+
+<img src="foto5.jpg" 
+srcset="foto5.jpg 600w, foto5.jpg 1200w, foto5.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Image description" 
+width="60%" class="centrato">
+
+<h2>Early 20th Century: A Farming Town on the Threshold of Modernity</h2>
+<p>
+At the beginning of the 20th century, Città della Pieve was still deeply rooted in a rural environment. The surrounding landscape was shaped by farmsteads and hills cultivated with grains, olives, and vineyards, while the social fabric was largely based on a sharecropping system. Farming families lived in close connection with the land, under sharecropping agreements with landowners who often resided in the historic palaces of the town center.
+</p>
+<p>
+The town, enclosed within its medieval walls, maintained a strong identity marked by religious traditions, local festivals, and small-scale commerce. However, signs of modernity were beginning to emerge: the first railway connections with Chiusi and Perugia, the arrival of the telegraph, and the growing sense of national identity. In taverns and cafés, people discussed politics, socialism, and monarchy. Social tensions, fueled by harsh living conditions, led to the formation of the first peasant unions and cooperatives, especially in outlying villages such as Moiano.
+</p>
+
+
+<h2>World War I: Blood and Memory</h2>
+<p>
+With Italy’s entry into World War I in May 1915, Città della Pieve was deeply affected. Hundreds of young men were called to arms and sent to the front. Many never returned. Letters from the front tell stories of mud, freezing cold, courage, and despair.
+</p>
+<p>
+Meanwhile, the families left behind in Città della Pieve faced the consequences of war: a shortage of labor, food rationing, and economic crisis. Women became central to rural survival, keeping agricultural production going in the absence of men.
+</p>
+<p>
+After 1918, the town, wounded by grief but proud of its fallen, erected a War Memorial: an elegant obelisk placed in the public gardens, adorned with bronze reliefs and decorations, which became a symbol of collective memory.
+</p>
+
+<h2>The Fascist Era: Repression, Transformation, and Enforced Consensus</h2>
+<p>
+Following the postwar crisis, social and economic instability paved the way for the rise of Fascism. In Città della Pieve, the atmosphere grew tense from the early 1920s. In the hamlet of Moiano, a symbolic event occurred in 1921: the People’s House, founded by socialists in 1913, was attacked and devastated by the Blackshirts. It was a traumatic episode that marked the beginning of a period of political repression and the dismantling of democratic freedoms.
+</p>
+<p>
+When Mussolini seized power, the municipality was placed under a commissioner, and the elected mayor was replaced by a podestà, an official appointed by the regime. Uniforms, symbols, ceremonies, and propaganda were imposed. Children were enrolled in the Balilla, adults in the Fascist Party, while dissent was silenced through surveillance and violence.
+</p>
+<p>
+Nonetheless, the regime also carried out public works: the construction of the Marconi School in rationalist style, the improvement of rural roads, the building of sports facilities and summer camps. But beneath the surface, a critical conscience persisted—among intellectuals, farmers, and artisans who did not passively accept the regime’s rhetoric and would later give voice to the Resistance.
+</p>
+
+
+<h2>World War II: Occupation, Suffering, and Liberation</h2>
+<p>
+When Italy entered the Second World War in 1940, the families of Città della Pieve once again had to bid farewell to sons and brothers heading to the front. The first difficulties were felt in the fields: lack of manpower, rationing, and requisitions by the State.
+</p>
+<p>
+After September 8, 1943, with the armistice signed by Badoglio, central and northern Italy fell under German occupation. Città della Pieve was not spared: Wehrmacht soldiers took control of the area, occupying palaces and schools, mining bridges in preparation for retreat, and using the civilian population as human shields.
+</p>
+<p>
+Between June 15 and 19, 1944, the town was the scene of intense fighting between German forces and the Allies, supported by the local Resistance. More than 70 civilians lost their lives during those days, including Don Pompeo Perai, the parish priest, who was killed while aiding the wounded in the Ponticelli area. On June 19, 1944, the feast day of Saints Gervasius and Protasius, Città della Pieve was finally liberated.
+</p>
+
+<h2>The Postwar Period: Reconstruction, Memory, and Cultural Rebirth</h2>
+<p>
+After the war, the town faced the challenge of rebuilding not only its buildings and roads but also its torn social fabric. The Italian Republic took shape even in small towns like Città della Pieve, where mayors and town councils were once again elected, and where political parties, cultural clubs, and cooperatives were reborn.
+</p>
+<p>
+In 1965, in the hamlet of Moiano, the People’s House was rebuilt—symbol of antifascist rebirth—in the presence of Luigi Longo, national secretary of the Italian Communist Party. The act was highly symbolic: a wound opened in 1921 was being symbolically healed.
+</p>
+<p>
+Between the 1960s and 1980s, the historic center began to empty due to rural exodus, but at the same time, it began to be rediscovered: a movement was born for the protection of heritage, for the rediscovery of the link to Perugino, and for the enhancement of historical architecture.
+</p>
+<p>
+The Palio dei Terzieri, revived in a modern form during this period, became a symbol of civic pride and shared identity, along with the founding of musical, choral, and cultural associations that helped strengthen the community fabric.
+</p>
+<p>
+Città della Pieve emerged from the 20th century profoundly changed, but not defeated. Proud of its history, its losses, and its victories, it managed to preserve its soul, weaving together tradition and modernity in a collective story that still lives today in its streets, its monuments, and the faces of its people.
+</p>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="home.html">In Terris Clanis</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
