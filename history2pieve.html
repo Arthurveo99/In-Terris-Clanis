@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Territori del Clanis</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Il Rinascimento a Città della Pieve (PG)</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="cittadellapieve.html">Introduzione</a></li>
+        <li><a href="culturaetradizioni.html">Tradizioni</a></li>
+        <li><a href="luoghi.html">Luoghi da Visitare</a></li>
+        <li><a href="eventi.html">Eventi Locali</a></li>
+        <li><a href="intervistepievesi.html">Interviste</a></li>
+       <li><a href="archivio.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>The Renaissance in Città della Pieve</h1>
+
+<img src="pieverinascimento.jpg" 
+srcset="pieverinascimento.jpg 600w, pieverinascimento.jpg 1200w, pieverinascimento.jpg 2000w" 
+sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+alt="Descrizione immagine" 
+width="60%" class="centrato">
+
+
+
+<p>The Renaissance in Città della Pieve marked a crucial period of artistic, cultural, and social development for the town. Located in a strategic position between Umbria and Tuscany, the city experienced significant vitality during the 15th and 16th centuries, largely thanks to the figure of Pietro Perugino (Pietro Vannucci), one of the most renowned painters of the Italian Renaissance, who was born in Città della Pieve in 1446. His influence, not only artistic but also cultural, defined much of the era, and the city retains tangible traces of it in its artworks, religious traditions, and urban planning of the time.</p>
+
+<p>During this period, Città della Pieve, which had initially developed as a small fortified center in the Middle Ages, became an important border town for art, religion, and culture. The Renaissance brought new artistic, architectural, and political influences, marking a significant transition from a medieval society to a more modern one, inspired by the rediscovery of classical values and the centrality of the human being.</p>
+
+<p>Moreover, Città della Pieve became a center of cultural activity, largely thanks to the work of Pietro Perugino, but also due to the growth of an active religiosity, which found a stronghold in the confraternities and religious schools. The town witnessed important economic and social changes, reflecting those occurring throughout the rest of Italy, with an increase in trade and the expansion of new forms of artisanal production.</p>
+
+<p>In this context, the Renaissance in Città della Pieve was not limited to art alone, but was a true workshop of innovation—a period of growth and openness that shaped the destiny of the town for centuries to come.</p>
+
+<h3>Key Figures of the Renaissance in Città della Pieve</h3>
+
+<p>Here is an overview of the most important figures in Città della Pieve during this period:</p>
+
+<ol>
+
+<li><b>Pietro Perugino (Pietro Vannucci):</b> Pietro Perugino, born in Città della Pieve in 1446, is undoubtedly the most famous and significant figure of the local Renaissance. Perugino was one of the greatest painters of the Italian Renaissance, known for his refined style and use of perspective. His art had a lasting influence on the evolution of painting both in Umbria and across Italy. Works in Città della Pieve include:
+<ul>
+<li><b>Polyptych of San Pietro:</b> Created for the Church of San Pietro, this is one of the most celebrated examples of his art. The piece demonstrates the refinement of Renaissance techniques with its use of perspective and delicate color palette.</li>
+<li><b>Frescoes in the Oratory of the Bianchi:</b> This cycle of frescoes is among Perugino’s earliest documented works, already showing the harmony and elegance that would define his style. The Oratory is one of the city’s most important artistic landmarks.</li>
+</ul>
+<p>His fame spread throughout Europe, and he received major commissions in Rome (such as the Sistine Chapel), yet his bond with Città della Pieve remained strong. The city honors his legacy through the Perugino Museum, which preserves numerous works and memories of his life.</p>
+</li>
+<br>
+<li><b>Giovanni Della Corgna:</b> The Della Corgna family was one of the most influential dynasties in Città della Pieve during the Renaissance. Giovanni Della Corgna (late 15th – early 16th century) was an important local lord and member of a family that held governance and leadership roles for a long time. He played a key role in the construction of noble residences, such as Palazzo Della Corgna, one of the most imposing examples of Renaissance architecture in the city. He was also involved in the city’s politics, as the Della Corgna family had strong ties to the Papal States and shaped local political affairs. Palazzo Della Corgna remains a symbol of the family’s political and economic power.</li>
+<br>
+<li><b>Ascanio Della Corgna:</b> Ascanio Della Corgna was another prominent member of the Della Corgna family and a key figure in the political and cultural life of Città della Pieve. He served as governor of the city and played a pivotal role in its Renaissance revival, overseeing the restoration and beautification of many public and private structures. Known for his patronage, he supported local artists, architects, and intellectuals. Under his leadership, Città della Pieve experienced a cultural blossoming thanks to investments in architecture and the promotion of artistic works. His influence was crucial in consolidating papal control and erecting several major civil and religious buildings.</li>
+<br>
+<li><b>Francesco di Giorgio Martini:</b> Francesco di Giorgio Martini (1430–1501), architect and military engineer, also had an impact on Città della Pieve. Though not a native of the town, he is credited with designing part of the city’s fortress, the Rocca, which symbolized the Papal States' control over the area and was later expanded. Martini was one of the leading court architects of the Duchy of Milan, and his work influenced many aspects of Renaissance architecture in Italy. The Rocca, still visible today, was a strategic element in asserting and consolidating papal power over the town.</li>
+<br>
+<li><b>Vincenzo Della Corgna:</b> Vincenzo Della Corgna, like his father Giovanni, played a role in the city's politics and development. He was a nobleman and military figure who sought to modernize and strengthen the city at a time when the Papal States aimed to assert greater control over Città della Pieve. His life unfolded during a period of political instability and conflicts among noble families and external powers. He also acted as a patron of artists and architects, contributing indirectly to the cultural flourishing of the town.</li>
+<br>
+<li><b>Salvio Savini:</b> A Tuscan painter active in the 16th century and linked to the Mannerist movement, Savini’s importance in Città della Pieve is closely tied to the decoration of the prestigious Palazzo della Corgna, the noble residence commissioned by Ascanio Della Corgna, the city’s governor and patron. Savini was tasked with decorating the palace halls with mythological and allegorical themes, giving the interiors the refined and cultured tone typical of elite Renaissance residences. His work made the palace not only a symbol of power but also an important artistic reference for the city and surrounding region. Thanks to him, Città della Pieve gained artistic decorations that reflected the tastes and cultural ambitions of the time, fully immersing it in the Renaissance atmosphere.</li>
+<br>
+<li><b>Galeazzo Alessi:</b> One of the most important architects of the Italian Renaissance, Alessi was known for his elegant and harmonious style, combining monumentality with refinement. His influence on Città della Pieve is especially linked to the design of Palazzo della Corgna, commissioned by the powerful political and military figure Ascanio Della Corgna. Already renowned for his works in Perugia and Genoa, Alessi helped define the Renaissance look of the palace and, by extension, the city itself. His architectural vision transformed the palace into a true symbol of power and culture: elegant in proportion, with loggias, courtyards, and refined decorative elements. Thanks to Alessi’s work, Città della Pieve gained an architectural gem that placed it in dialogue with the great art cities of central Italy, marking its transformation from a medieval village into a Renaissance hub open to the cultural currents of the era.</li>
+<br>
+<li><b>Il Pomarancio (Cristoforo Roncalli):</b> Among the key figures of Città della Pieve's artistic culture is Cristoforo Roncalli, known as Il Pomarancio (c. 1552–1626). A painter active during the late Renaissance and early Baroque periods, Il Pomarancio left a significant mark on the Umbrian town, helping to preserve its artistic tradition after the age of great masters like Perugino. His dynamic forms and intense colors reflected the new trends of the Counter-Reformation and Mannerism. His works in Città della Pieve, found in churches and sacred spaces, still enrich the local artistic heritage and represent an important bridge between Renaissance classicism and the more emotional and theatrical expressions of the 17th century. His presence confirms Città della Pieve’s role as a city open to innovation and a crossroads for artists, maintaining its cultural prestige even beyond the Renaissance.</li>
+<br>
+<li><b>Other Intellectuals and Patrons:</b> During the Renaissance, various local intellectuals and patrons enriched the town’s cultural life. Many members of the noble Pievese families, such as the Della Corgna, had strong ties with the courts of Rome, Siena, and Florence, allowing for the exchange of ideas and Renaissance works. This cultural flow nourished not only religious life but also artistic activities and philosophical thought in the city. Starting in the 16th century, Città della Pieve saw the arrival of poets, philosophers, and theologians educated in its religious school, which became an important center for the study of theology and sciences.</li>
+
+</ol>
+
+<p>In summary, the Renaissance in Città della Pieve was a period of great change and cultural development, marked by influential figures who shaped the town’s history—most notably the brilliant Pietro Perugino, who left an indelible mark on the artistic landscape, and the noble Della Corgna family, who influenced the politics, architecture, and economy of the era.</p>
+
+<h3>Renaissance Architecture</h3>
+
+<p>During the Renaissance, Città della Pieve experienced a period of intense architectural activity, with the construction and renovation of public and private buildings that reflected the new aesthetic and urban planning ideas typical of the era. The Renaissance brought a true revolution in architecture, with the adoption of principles inspired by classical antiquity, such as symmetry, proportion, and the use of perspective. Although on a smaller scale than great Italian cities like Florence and Rome, Città della Pieve also embraced this movement. Here are the main aspects of Renaissance architecture that characterize the town:</p>
+
+<ol>
+<li><b>Noble Palaces and Residences:</b> The Renaissance in Città della Pieve is closely tied to the Della Corgna family, who, like many other Italian noble families, sought to display their wealth and power through the construction of grand residences. The Palazzo della Corgna is without doubt the most significant example of Renaissance architecture in Città della Pieve. Built between 1560 and 1570, it was the residence of the Della Corgna family, one of the most powerful local dynasties. The palace clearly shows the influence of classical Renaissance lines, with a symmetrical layout, rounded arches, and windows framed in stone. The building has a solid and imposing appearance, demonstrating the family’s desire to project an image of power and wealth. Inside, the palace hosts frescoes celebrating the family’s deeds, with works reflecting the artistic trends of the time. More than just a residence, Palazzo della Corgna also served as an administrative center and symbol of the family’s political power.</li>
+<br>
+<li><b>Churches and Religious Buildings:</b> Renaissance religious architecture in Città della Pieve reflects the adoption of more sober and proportional forms compared to earlier medieval styles, while maintaining the central liturgical function. Churches remained the heart of the city’s social and religious life.
+
+<ul>
+
+<li><b>Cathedral of Saints Gervasius and Protasius:</b> is another example of Renaissance architecture in Città della Pieve. Although the original structure dates back to the medieval period, the church was renovated during the Renaissance, with the introduction of Renaissance elements such as proportion and the use of noble materials like travertine, which enriched the facade. The Latin cross floor plan, typical of medieval churches, was preserved, but the lines and proportions of the interior were reinterpreted in Renaissance style. The interior was also adorned with frescoes by Renaissance artists, giving it a majestic atmosphere while respecting religious tradition.</li>
+<br>
+<li><b>Church of San Francesco:</b> is another example of Renaissance religious architecture. Dating to the 13th century, it underwent significant modifications during the Renaissance, with the introduction of Gothic and Renaissance elements. In particular, the adoption of simpler and more elegant lines, the use of arches and columns, reflects the trends of the era, which saw proportion and balance as fundamental values of architectural beauty.</li>
+
+</ul></li>
+
+<br>
+
+<li><b>Urban Planning and Public Spaces:</b> The Renaissance in Città della Pieve also brought significant changes to the urban fabric, although on a smaller scale compared to major cities. The restructuring of squares, the alignment of streets, and the organization of public spaces followed the principles of order and symmetry that were central to Renaissance theories. The Piazza del Popolo, the main square of Città della Pieve, is an example of how Renaissance principles influenced the city's urban planning. Although its layout dates back to earlier periods, the square was reorganized during the Renaissance with the construction of palaces that define its space. The square remains the heart of the city and demonstrates how Renaissance architecture aimed to promote harmony between humans and their environment, creating spaces that encouraged social interaction and reflection.</li>
+
+<br>
+
+<li><b>Use of Terracotta and Local Materials:</b> A distinctive aspect of Renaissance architecture in Città della Pieve is the use of local terracotta, which gives the buildings a unique character. Sandstone and terracotta were used extensively in the construction of palaces, churches, and fortifications. This not only gave the buildings a rustic appearance but also a sense of permanence and solidity, in line with Renaissance thought, which celebrated the grandeur and strength of structures.</li>
+
+<br>
+
+<li><b>The Fortress (Rocca):</b> The Rocca of Città della Pieve is one of the town’s most important Renaissance-era fortifications. Although the original structure dates back to earlier times, it was transformed and expanded during the Renaissance, incorporating Renaissance features such as cylindrical towers and large courtyards, serving both defensive purposes and noble residence. The Rocca remained a symbol of papal power and the defense of lands under Vatican control.</li>
+</ol>
+
+<p>In conclusion, Renaissance architecture in Città della Pieve is characterized by a search for balance, symmetry, and proportion—principles adopted in both religious and civil buildings. Noble families like the Della Corgna played a key role in shaping the town, constructing palaces and structures that reflected Renaissance architectural trends while maintaining a strong connection to local traditions. Though Città della Pieve did not become a major Renaissance capital like Florence or Rome, its contribution to the architecture of the period was significant, and many buildings constructed or renovated during the Renaissance remain among the city's most important landmarks today.</p>
+
+<h3>Cultural and Religious Developments</h3>
+
+<p>During the Renaissance, Città della Pieve, though a relatively small town compared to other Italian cities, became an important cultural and religious hub. The artistic, scientific, and philosophical innovations of the period blended with the town’s religious tradition, creating a unique environment of cultural development. Let's take a closer look at the cultural and religious developments in Città della Pieve during the Renaissance:</p>
+
+<ol>
+<li><b>The Importance of Religion</b>
+In the Renaissance, religion remained the cornerstone of daily life and culture, even in smaller towns like Città della Pieve. Although humanism and the rediscovery of classical arts began to influence culture, the Church and religious institutions continued to play a fundamental role in shaping the cultural and social landscape.
+
+<ul>
+<li><b>Cathedral of Saints Gervasius and Protasius:</b>
+Dedicated to Saints Gervasius and Protasius, this cathedral is one of the main testaments to the central role of religion in the town’s life. The Renaissance influenced the structure of the church, which was expanded and renovated with Renaissance architectural elements. The cathedral’s interior, with its imposing nave and high altar, continued to serve as a place of prayer and spiritual reflection for the community.</li>
+
+<li><b>Confraternities and Religious Life:</b>
+Lay confraternities played a central role in the religious life of Città della Pieve. During the Renaissance, these confraternities not only performed liturgical and religious functions but also carried out charitable works such as assisting the sick, the poor, and the condemned. The most important was the Confraternity of the Bianchi (or Disciplinati), devoted to penance and spiritual assistance. Their oratory, known as the Oratory of the Bianchi, is one of the most significant examples of how religiosity and culture were interwoven during this period.</li>
+</ul></li>
+
+<li><b>The Academy of Saint Luke and Humanism:</b>
+Although Città della Pieve was not a major center of humanism, a flourishing humanist culture did develop there, significantly influencing intellectual training and religious activities. In the 15th century, the city saw the establishment of a theological school that attracted scholars and intellectuals from all over Umbria. Some of these, influenced by humanist ideas, helped spread critical thinking and the rediscovery of classical texts. The presence of humanists in Città della Pieve, such as Francesco Trento—one of the region's first humanist promoters—encouraged philosophical, scientific, and artistic discussions aiming to integrate Christian spirituality with classical values. The Academy of Saint Luke, founded during the Renaissance, played a key role in introducing new concepts in art and science and promoting humanist philosophical and aesthetic thought. In a context where religious and cultural traditions were strongly interlinked, humanism emerged as a reflection on how to reconcile the ancient and the Christian, developing a more rational vision of spirituality.</li>
+
+<li><b>The Influence of Pietro Perugino:</b>
+The figure of Pietro Perugino lies at the heart of many cultural and religious developments in Città della Pieve. The renowned Renaissance painter, born in this very town, represents a bridge between the religiosity and art of the time. His works, primarily focused on sacred painting, deeply influenced not only Città della Pieve but the entire Umbrian region. Perugino combined Christian devotion with new Renaissance artistic discoveries, such as linear perspective, the harmonious depiction of human figures, and balanced compositions. In Città della Pieve, his influence extended beyond the works he created for local churches to include his role as a patron. His connections with the Church and local institutions allowed him to influence the decoration of numerous religious buildings, such as the Oratory of the Bianchi, which contains some of his earliest frescoes and paintings. His style helped bridge the devotional needs of the Church with the stylistic innovations of the Renaissance.</li>
+
+<li><b>The Tradition of the Theological School:</b>
+The Renaissance in Città della Pieve was not only a time of artistic and cultural development but also a period of growth for the town’s theological school. Although there is no documented evidence of a large-scale Renaissance school, the influence of religious ideas and humanist philosophical theories was evident in the way local churches promoted religious education. These religious schools, overseen by the local Church, helped train priests, theologians, and philosophers who later disseminated humanist and theological ideas to other parts of Italy. Though not a cultural capital like Florence or Rome, Città della Pieve became a place where thinkers and theologians engaged in doctrinal discussions.</li>
+
+<li><b>Religious Festivals and Processions:</b>
+Religious festivals and processions were significant events in the life of the town. Each year, Città della Pieve celebrated major Christian holidays such as Christmas, Easter, the feast of Saints Gervasius and Protasius (the town’s patron saints), and other liturgical observances. During these celebrations, the town was filled with worshippers, and churches and squares came alive with religious events marking the liturgical calendar. In particular, processions and liturgical celebrations were often accompanied by sacred theatrical performances and collective prayers, involving the entire community—from peasants to nobles. These events were not only spiritually meaningful but also socially and culturally important, serving as moments of collective cohesion for the population.</li>
+
+<li><b>Educational Institutions and Training:</b>
+Religious schools in Città della Pieve during the Renaissance played an important role in the education of youth. These schools were primarily focused on theology but also taught literature and philosophy, following the guidelines of the pontifical universities. Young people from noble families or those with religious ties came to Città della Pieve to receive an education based on Christian principles.</li>
+</ol>
+
+<p>
+The Renaissance in Città della Pieve was a period of great cultural and religious transformation. Art, theology, and humanism interwove, enriching the town with an artistic and intellectual heritage still visible today in its churches, Perugino’s works, and places of worship. This cultural renewal, while rooted in religious traditions, also opened up to philosophical reflection and engagement with the new ideas that marked the Renaissance. Città della Pieve, as a border town, experienced the Renaissance in its own unique way, blending its medieval legacy with the revitalizing influences of the era.
+</p>
+
+<h3>Economy and Society in the 16th Century</h3>
+
+<p>In the 16th century, Città della Pieve, like many other Italian towns, experienced a period of significant economic and social change. Although the city was relatively small compared to major Renaissance centers such as Florence and Rome, its development was influenced by the political and cultural context of the time, especially by the central role of the Church and the dominance of the Papal States. Its economy was based on agriculture, craftsmanship, and trade, while its society was marked by a clear division between the noble classes and the common people.</p>
+
+<ol>
+<li><b>Agriculture and Rural Production:</b>
+Agriculture formed the backbone of Città della Pieve’s economy in the 16th century, and like many Umbrian towns, rural life played a crucial role in sustaining the population. Main crops included:<br>
+<br>
+<ul>
+<li><b>Cereals:</b> Wheat, barley, and spelt were primarily grown for local consumption and trade, ensuring food supply stability.</li>
+<br>
+<li><b>Grapevines:</b> Viticulture was very important, as evidenced by the numerous vineyards in the Val di Chiana and Val d’Orcia. Wine was a trade commodity that contributed to the local economy and was also exported.</li>
+<br>
+<li><b>Olives:</b> Like many towns in Tuscany and Umbria, Città della Pieve produced high-quality olive oil. It was used for both cooking and religious purposes (e.g., in church candles).</li>
+<br>
+<li><b>Livestock:</b> The raising of pack animals, sheep (for wool and meat), and pigs (for food) was widespread. Mules and oxen were used for farm work and for transporting goods.</li>
+</ul></li>
+
+<br>
+
+<li><b>Craftsmanship and Production:</b>
+Craftsmanship was another fundamental part of the local economy in the 1500s. Artisan workshops were essential for sustaining the community and producing goods for both consumption and prestige. Main sectors included:<br>
+<br>
+<ul>
+<li><b>Terracotta and Brickwork:</b>
+Città della Pieve was known for producing bricks, tiles, and other terracotta materials. Kilns were among the most active industries: local terracotta was used in building palaces, houses, and churches, as well as in creating vases and decorative objects.</li>
+<br>
+<li><b>Ironworking and Silk Weaving:</b>
+In the 16th century, blacksmiths and farriers in Città della Pieve forged iron tools for agriculture, weapons, and everyday instruments. There was also limited silk production, used to make fine fabrics, though on a smaller scale compared to regions like Lucca or Florence.</li>
+<br>
+<li><b>Ceramics and Leatherwork:</b>
+The production of ceramics and leather goods was widespread. Ceramics were used for making vases, plates, and kitchenware, while leather was used to craft shoes, belts, bags, and other everyday items.</li>
+</ul></li>
+<br>
+
+<li><b>Trade and Commerce:</b>
+Trade in 16th-century Città della Pieve was not as extensive as in larger cities, but its strategic location between Umbria, Tuscany, and Lazio made it a crossroads for movement and exchange.<br>
+<br>
+<ul>
+<li><b>Markets:</b>
+The town regularly hosted markets that attracted both local and regional merchants. The main square, Piazza del Popolo, became the focal point for weekly and annual fairs. Here, agricultural products such as grain, wine, and oil were sold, along with artisan goods and luxury items from Florence and Rome like fine textiles, jewelry, and fashionable accessories.</li>
+<br>
+<li><b>Exports and Trade Routes:</b>
+Although the local economy was rural and small-scale, the proximity to Perugia, Siena, and Rome placed Città della Pieve within a network of trade routes. Goods like spices, wool, cotton, and ceramics were traded, as well as local specialties such as saffron and wine.</li>
+</ul></li>
+<br>
+
+<li><b>Social Structure in the 16th Century:</b>
+Città della Pieve’s society was class-based, with a sharp divide between the nobility and the commoners, reflected in both social organization and political dynamics.<br>
+<br>
+<ul>
+<li><b>The Nobility and Powerful Families:</b>
+Noble families such as the Della Corgna, Bandini, and Ciocchi were key players in the political and social landscape. They held political, economic, and cultural power, owning large tracts of land, controlling resources, and occupying prestigious roles in municipal administration and the papal court. Nobles lived in mansions and villas and often served as patrons of artists and writers. The Della Corgna family, in particular, had a strong influence on the cultural and administrative life of the town, as shown by Palazzo della Corgna, which became a hub of local power.</li>
+<br>
+<li><b>The Common People:</b>
+The lower classes were mainly composed of peasants, artisans, and small merchants. Peasants lived in the countryside and worked lands owned by nobles or the Church, often under sharecropping or lease agreements. Artisans worked in workshops, producing goods for local consumption and export such as ceramics, clothing, shoes, and tools. The merchant class was smaller, but shops and stalls were operated by individuals engaged in trade and importing goods from nearby cities like Florence, Perugia, and Siena.</li>
+<br>
+<li><b>The Church and Its Influence:</b>
+The Church held a central role in Pieve’s society. The Cathedral of Saints Gervasius and Protasius, along with other churches, served not only as places of worship but also as centers of religious and social education. Many noble families were members of religious confraternities that organized charitable works and also social and cultural events. The Church exercised enormous economic power through land ownership and donations, and its influence extended to many aspects of city life—from justice to public morality.</li>
+</ul></li>
+<br>
+
+<li><b>Relations with the Papal States:</b>
+In the 16th century, Città della Pieve was firmly under papal control and part of the Papal States. This political dependence shaped the city’s politics and economy. Papal authority ensured political stability but also imposed taxes and trade tariffs that burdened the population. However, the Papal States also had advantages: they offered protection from foreign invasions and promoted patronage that supported the arts and cultural development. The Church, as a major landowner, held substantial economic influence over the local community.</li>
+</ol>
+<br>
+
+<p>In the 16th century, Città della Pieve was an agricultural and artisanal town that prospered thanks to its strategic position and papal governance. While not a major commercial or cultural capital, the town enjoyed a certain degree of prosperity through agricultural trade and craftsmanship. Society was divided between a privileged nobility that controlled politics and the economy, and a popular class of farmers, artisans, and merchants. The Church exercised strong control over all aspects of civic life, influencing social, economic, and cultural development.</p>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="cittadellapieve.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
