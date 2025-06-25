@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storia Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-091CFPRCWW');
+</script>
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Dal Neolitico all'Epoca Romana</div>
+    <nav>
+      <ul id="menu">
+            <li><a href="sarteano.html">Introduzione</a></li>
+        <li><a href="tradizionisarteano.html">Tradizioni</a></li>
+        <li><a href="luoghisarteano.html">Luoghi da Visitare</a></li>
+        <li><a href="eventisarteano.html">Eventi Locali</a></li>
+        <li><a href="intervistesarteano.html">Interviste</a></li>
+        <li><a href="archiviosarteano.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Sarteano nel Medioevo: dal crollo dell’Impero alla Rocca senese</h1>
+
+<h2>Alto Medioevo (476–1000)</h2>
+
+<p>Alla caduta dell’Impero Romano d’Occidente nel 476, la vita a Sarteano non si interruppe: la comunità locale continuò ad abitare queste colline senza soluzione di continuità.
+In questa prima fase medievale, il borgo toscano risentì dell’influenza della vicina città di Chiusi, centro dominante sin dall’epoca etrusca e romana,
+a cui rimase legato anche durante la dominazione longobarda. Proprio i Longobardi, calati in Italia nel VI secolo, lasciarono tracce della loro presenza nel territorio
+sarteanese – come una tomba rinvenuta in località Montarioso – segnando il passaggio dall’ordine romano ai nuovi regni germanici. 
+In assenza del potere imperiale, furono spesso la Chiesa e i nobili locali a fornire riferimenti stabili: la diocesi di Chiusi assicurò la continuità religiosa, 
+mentre piccoli insediamenti rurali sorsero attorno alle prime pievi e luoghi di culto.</p>
+
+<p>Nel corso dell’Alto Medioevo la popolazione di Sarteano si concentrò sulle alture per difendersi dalle incursioni e dall’insicurezza diffusa.
+Il nucleo abitato si raccolse attorno all’acropoli del paese, dove sorse un primo castello fortificato sulla sommità del colle. 
+Verso la fine del I millennio, con l’arrivo dei Franchi e l’organizzazione feudale carolingia, emersero potenti famiglie aristocratiche nella zona.
+Una di queste fu la stirpe dei Farolfingi, da cui discese la casata comitale destinata a governare Sarteano nei secoli successivi.
+Nel 1085, ad esempio, la nobildonna Willa, vedova del conte Pepone I Manenti di Sarteano, fondò l’Abbazia della Santissima Trinità di Spineto sui monti vicini.
+Questo monastero vallombrosano, costruito in un luogo allora isolato, divenne ben presto un importante centro religioso per le valli circostanti, 
+dotato anche di strutture ospitaliere: qui i monaci offrivano assistenza ai viandanti e ai pellegrini diretti a Roma lungo le vie della fede.
+A conferma del profondo legame tra potere feudale e Chiesa, documenti medievali attestano inoltre la donazione di proprietà da parte di un sacerdote locale,
+Attovante di Sarteano, per costruire un piccolo ospedale monastico, segno della crescente attenzione religiosa verso i bisognosi. Non mancò neppure la presenza
+di figure spirituali di rilievo: secondo la tradizione, San Francesco d’Assisi attraversò questi luoghi agli inizi del XIII secolo. Si narra che nel 1212 il santo
+soggiornò brevemente come eremita presso le grotte di Sarteano – note oggi come Celle di San Francesco – lasciando un ricordo vivo della sua predicazione
+nella comunità locale.</p>
+
+<h2>XI–XIII secolo: Feudalesimo e nascita del Comune</h2>
+
+<p>All’alba dell’Anno Mille, Sarteano era dominata da una potente famiglia feudale locale. Nell’XI secolo rientrava infatti nei possessi di una stirpe nobiliare progenitrice dei conti Manenti,
+i quali mantennero il controllo sul borgo per tutto l’Alto Medioevo. La prima menzione documentaria del Castrum Sarturiani –il castello di Sarteano– risale all’anno 1038.
+Attorno a questa fortificazione, posta a guardia dei crinali tra la Val di Chiana e la Val d’Orcia, si sviluppò progressivamente l’abitato medievale, circondato da una cerchia di mura.
+I conti Manenti esercitarono il potere signorile sul territorio fino alla fine del Duecento, detenendo diritti feudali e beni fondiari estesi. Sotto la loro signoria il paese vide
+la costruzione di chiese in muratura e lo sviluppo di istituzioni civili embrionali. Già nel 1171 infatti Sarteano risultava dotata di un proprio collegio di consoli,
+segno che la comunità locale godeva di una certa autonomia amministrativa pur all’interno del sistema feudale. Nel corso del XII e XIII secolo sorsero anche importanti
+luoghi di culto dentro e fuori le mura: la Chiesa di Santa Vittoria, ad esempio, venne edificata in stile romanico all’inizio del XII secolo appena fuori dal borgo, riutilizzando forse pietre
+provenienti da antichi edifici pagani. All’interno del circuito murato, nella piazzetta di San Martino, sorgeva l’antica pieve dedicata a San Martino in Foro, fulcro della vita religiosa cittadina in epoca comunale.
+La fede e l’organizzazione ecclesiastica andavano così strutturandosi accanto al potere civile, accompagnando la crescita del paese.</p>
+
+<p>Nel Duecento, sull’onda della prosperità e dei fermenti comunali toscani, Sarteano iniziò ad affrancarsi gradualmente dal giogo feudale dei conti Manenti. Gli stessi abitanti e i governanti locali avviarono un processo
+di emancipazione civile, riscattando pezzi di sovranità dai loro signori: il comune acquistò dai Manenti immobili e diritti, limitando via via l’autorità comitale. L’occasione per un cambiamento definitivo giunse 
+quando le grandi città-stato circostanti iniziarono a disputarsi l’area. Situata in posizione strategica al confine tra i territori della Repubblica di Siena, di Orvieto e di Perugia,
+Sarteano si ritrovò suo malgrado coinvolta nelle guerre di espansione dei potenti vicini. All’inizio del XIII secolo il paese fu teatro di aspri scontri: durante la guerra tra Siena e Orvieto,
+le truppe orvietane si asserragliarono nel castello di Sarteano, ma vennero espugnate dai Senesi. La fortezza, appollaiata sul colle, dovette quindi sostenere assedi e battaglie in questo periodo turbolento.
+Tuttavia, le sorti del conflitto volsero a sfavore di Siena: con la pace del 1235 la Repubblica senese fu costretta a cedere Sarteano, che passò sotto la giurisdizione di Orvieto.
+Per qualche decennio il borgo rimase nell’orbita orvietana, a cui restò fedele fino alla metà del XIII secolo. Nel frattempo, però, l’autorità dei conti Manenti continuava a declinare:
+entro il 1280 si consumò l’atto finale del feudalesimo locale. In quell’anno i Manenti vendettero una parte del castello e dei loro diritti al comune di Sarteano, sancendo di fatto la nascita di un Comune autonomo.
+Pochi anni dopo, nel 1302, anche le ultime quote di proprietà signorile furono cedute. Sarteano divenne così un libero comune rurale, sebbene sotto la tutela e l’influenza della potente Siena,
+che fin dall’inizio aveva favorito la sua autonomia per indebolire i feudatari locali. La fine del Duecento vide dunque il borgo dotarsi di propri statuti e magistrature cittadine, avviandosi sulla via comunale 
+come molte altre comunità toscane.</p>
+
+<h2>Il Trecento (XIV secolo)</h2>
+
+<p>Il XIV secolo fu per Sarteano un’epoca di contrasti e trasformazioni, segnata da crisi ma anche da nuovi equilibri politici. All’esterno, la posizione di confine continuava a rendere il borgo vulnerabile
+alle mire espansionistiche altrui. La Repubblica di Orvieto, che aveva dominato per buona parte del Duecento, entrò in declino intorno alla metà del Trecento, indebolita da lotte interne e dalle calamità
+che sconvolsero l’Italia (su tutte la grande peste del 1348). In questo contesto turbolento si inserirono altri attori: la vicina Perugia, approfittando della crisi orvietana, inviò le sue milizie e assoggettò Sarteano intorno al 1350.
+Il castello e il territorio passarono dunque sotto il controllo perugino, sperimentando una nuova dominazione. Gli anni seguenti furono tutt’altro che tranquilli: alle contese esterne si aggiungevano faide nobiliari e
+tentativi di riconquista. La potente famiglia Monaldeschi di Orvieto – protagonista delle fazioni guelfe in città – ebbe un ruolo anche nelle vicende sarteanesi. Fonti locali attestano che proprio i Monaldeschi promossero
+importanti lavori di rafforzamento alla rocca di Sarteano nel 1345, segno del loro temporaneo influsso sull’area in quella fase convulsa. Ancora oggi, uno degli ingressi storici del paese ricorda quei tempi: la Porta Monalda
+(dal nome della casata orvietana) conserva in alto gli stemmi dei Monaldeschi accanto a quelli di Siena e persino dei Medici, testimonianza araldica delle varie autorità che si avvicendarono nel controllo del borgo medievale.
+Nella seconda metà del Trecento si assistette a un nuovo cambiamento di scenario. Il potere di Orvieto tramontò definitivamente e Perugia faticò a mantenere le sue conquiste lontane.
+Intorno al 1370 Orvieto tentò un’ultima volta di riaffermare la propria influenza su Sarteano, ma fu un dominio effimero. Stanca di continue guerre e passaggi di mano, la comunità sarteanese cercò protezione affidandosi
+a un alleato forte: così, nel 1379, il comune di Sarteano si sottomise spontaneamente alla Repubblica di Siena, stipulando con essa un accordo di protezione. Da questo momento in poi la bandiera con la balzana bianca
+e nera di Siena sventolò stabilmente sulle mura di Sarteano. Il borgo entrò a far parte del contado senese, mantenendo le proprie istituzioni comunali ma con un podestà forestiero nominato da Siena a garantirne la fedeltà.
+Dopo decenni di instabilità, si aprì dunque un periodo relativamente più sicuro sotto l’egida senese. Ciò non significò però isolamento: trovandosi lungo le direttrici che univano l’Umbria e la Toscana meridionale, 
+Sarteano continuò a vedere passare mercanti, eserciti e pellegrini. Proprio nel Trecento il flusso dei viandanti diretti a Roma lungo la Via Francigena rimase costante, e l’abbazia di Spineto – sulle colline sarteanesi –
+fiorì come punto di sosta e preghiera. Durante tutto il Medioevo, questo monastero fornì aiuto e ristoro a molti pellegrini diretti alla tomba di San Pietro, oltre a fungere da centro spirituale
+per le popolazioni della Val d’Orcia e della Val di Chiana. Il tessuto civile intanto si arricchiva di nuove consuetudini e iniziative: nell’anno 1385 nacque a Sarteano Alberto Berdini,
+destinato a divenire noto come Alberto da Sarteano, frate francescano osservante. Cresciuto nell’ambiente devoto locale, Alberto studiò teologia e divenne uno dei più brillanti predicatori del suo tempo, 
+collaborando con San Bernardino da Siena. Verso la fine del secolo, la piccola patria di Alberto non era più un luogo periferico: attraverso la sua figura e i tanti viaggiatori che vi transitavano, 
+Sarteano era ormai connessa alle grandi correnti spirituali e culturali dell’Italia tardomedievale.</p>
+
+<h2>Il Quattrocento (XV secolo)</h2>
+
+<p>Con il Quattrocento Sarteano visse la piena integrazione nei domini della Repubblica di Siena e l’ingresso nell’età rinascimentale, pur conservando il suo carattere di roccaforte di frontiera. Sotto il saldo controllo senese,
+il borgo conobbe una fase di rafforzamento urbanistico e militare. La Rocca di Sarteano, già cuore dell’abitato, venne completamente rinnovata e ampliata in funzione anti-espansionistica. Tra il 1467 e il 1474, infatti,
+i Senesi intrapresero grandiosi lavori di ricostruzione: il vecchio castello medievale fu ristrutturato dalle fondamenta e assunse l’aspetto imponente che ancora oggi possiamo ammirare. Pare che al progetto abbia
+contribuito anche un celebre architetto senese, Lorenzo di Pietro detto Il Vecchietta, conferendo alla fortezza alcuni elementi stilistici ormai prossimi al gusto rinascimentale fiorentino. Il risultato fu un’architettura
+militare all’avanguardia per l’epoca: un massiccio mastio quadrangolare in travertino, affiancato da due possenti torrioni circolari ai lati. Attorno alla torre venne eretta una nuova cortina muraria dotata di
+camminamenti di ronda e rinforzata da bastioni agli angoli, a difesa sia del castello che del borgo sottostante. Ancora oggi, percorrendo il sentiero sotto la Rocca, si percepisce il senso di sicurezza che queste
+fortificazioni dovevano infondere alla popolazione di Sarteano. L’ingresso principale del castello fu dotato di un ponte levatoio e abbellito con un tocco di orgoglio civico: sopra il portale venne scolpito un bassorilievo
+raffigurante la lupa capitolina che allatta Romolo e Remo – l’emblema della città di Siena – sormontato dallo scudo bipartito bianco e nero della Balzana senese. Questi simboli, mutuati dalla leggenda delle
+origini di Siena (fondata, si dice, da Senio figlio di Remo fuggito da Roma con la statua della Lupa), proclamavano visivamente l’appartenenza di Sarteano alla grande repubblica toscana. 
+Ogni viandante che varcava quella soglia nel Quattrocento sapeva di entrare in un territorio protetto da Siena. La possente Rocca di Sarteano domina ancora oggi il borgo, con il mastio in travertino affiancato dai
+torrioni circolari eretti dai Senesi nel XV secolo. L’aspetto attuale del castello è frutto della ristrutturazione del 1467–1474, quando Sarteano era soggetta alla Repubblica di Siena. All’interno, la Rocca fu attrezzata
+per resistere ai più lunghi assedi. Le sue mura raggiunsero uno spessore di sette metri alla base, con scarpate possenti che rendevano arduo ogni tentativo di scalata. Un ingegnoso sistema di difesa prevedeva fossati
+riempibili di materiale incendiabile presso il primo ponte levatoio, per bloccare gli assalitori con il fuoco. Inoltre, fino al 1699, l’unico accesso al mastio era costituito da una ripida scala esterna collegata
+a un secondo ponte levatoio che conduceva al primo piano: in questo modo i nemici che fossero riusciti a penetrare nel cortile si sarebbero trovati esposti ai tiri incrociati dei difensori dalle mura.</p>
+
+<p>Tali accorgimenti resero il castello di Sarteano praticamente inespugnabile con le tecniche belliche medievali. Non a caso esso dovette fronteggiare diversi attacchi nei secoli a venire, reggendo anche all’urto di figure temibili.
+Si ricorda ad esempio che nel 1503 il duca Valentino, Cesare Borgia, pose assedio alla Rocca durante le sue campagne militari in Toscana, prova ulteriore dell’importanza strategica di questa fortezza sul finire del Medioevo.
+Sotto l’amministrazione senese, Sarteano godette di una relativa tranquillità e di un vivace sviluppo locale. Il borgo divenne sede di una podesteria: un podestà inviato da Siena governava in nome della Repubblica,
+amministrando la giustizia e mantenendo l’ordine. L’organizzazione civile si arricchì di nuovi statuti comunali e regolamenti, spesso armonizzati con quelli senesi. La vita quotidiana degli abitanti proseguiva intanto secondo
+i ritmi tradizionali, basati su agricoltura e artigianato: le campagne producevano grano, vino ed olio, mentre i boschi fornivano legname e pascolo per il bestiame. In paese fiorirono anche alcune attività manifatturiere
+e commerciali legate ai prodotti locali. Sul piano sociale e culturale, il Quattrocento vide un forte impulso dell’edilizia civile e religiosa. Le ricche famiglie senesi e la Chiesa investirono nell’abbellimento di Sarteano:
+ne sono esempio i palazzi signorili che sorsero nel centro (come Palazzo Piccolomini e Palazzo Cennini) e il rinnovamento di importanti luoghi di culto. Proprio in questo periodo, ad esempio, fu edificata o rimodernata
+la facciata della Chiesa di San Francesco – situata appena fuori dalla cerchia muraria medievale – per volontà di un influente cardinale della famiglia Piccolomini. Ancora oggi il grande rosone in facciata mostra al centro
+le chiavi decussate e la tiara papale, accanto allo stemma araldico dei Piccolomini, a memoria di quel patronato ecclesiastico quattrocentesco. La presenza del beato Alberto da Sarteano contribuì anch’essa a tenere vivo
+il prestigio spirituale del borgo: dopo aver predicato in varie città d’Italia al fianco di Bernardino da Siena, nel 1434 Alberto fu incaricato da Papa Eugenio IV di recarsi in Oriente come inviato pontificio,
+per trattare l’unione della Chiesa greca con Roma. Si trattava di una missione diplomatica di grande rilievo, che lo portò a Gerusalemme e a interloquire con patriarchi e comunità cristiane lontane. Il frate sarteanese,
+dotato di solida formazione umanistica e conoscitore della lingua greca, servì persino da interprete al Concilio di Firenze tra delegati occidentali e orientali. La sua figura, venerata poi come beato nell’Ordine francescano,
+testimoniava come anche da un piccolo borgo toscano potessero emergere protagonisti della scena religiosa e culturale del tempo. Sul finire del Medioevo, Sarteano era dunque divenuta una comunità prospera e ben fortificata,
+profondamente inserita nei domini di Siena ma orgogliosa della propria identità locale. Le mura cittadine – di cui restavano la Porta Umbra a nord e la Porta Monalda a sud – erano adornate con gli stemmi dei governi succedutisi:
+l’insegna della lupa senese e della Balzana, il leone rosso in campo oro dei conti Manenti, la rosa araldica dei Monaldeschi d’Orvieto e, in seguito, i simboli dei Medici di Firenze, giunti nel XVI secolo.
+Tali stemmi scolpiti in pietra, visibili ancor’oggi, raccontano in silenzio la storia movimentata del borgo nel Medioevo. Con l’anno 1500 alle porte, Sarteano poteva guardare al nuovo secolo forte delle sue radici medievali:
+il castello sorvegliante sulle alture, le chiese e i conventi custodi di fede e arte, le tradizioni civiche consolidate. Di lì a poco, le vicende del Rinascimento e delle guerre tra Francia e Spagna in Italia avrebbero travolto
+la Repubblica di Siena, portando nel 1555 alla caduta della città e all’avvento dei Medici. Ma questa è già un’altra storia. Al termine del Medioevo, il borgo di Sarteano aveva attraversato mille anni di storia trasformandosi
+da insediamento altomedievale a libero comune, per poi divenire avamposto strategico di una potente città-stato. La sua vicenda racchiude in sé tutti gli elementi tipici della storia toscana: le invasioni barbariche e la fede longobarda
+in San Michele, il feudalesimo dei castelli e delle abbazie, le lotte tra comuni e la supremazia contesa delle repubbliche, fino all’alba dell’età moderna sotto il segno dei Medici. Eppure, nonostante il succedersi di tante dominazioni,
+Sarteano ha saputo conservare nei secoli successivi il fascino del suo impianto medievale e l’orgoglio delle proprie tradizioni, caro ai suoi abitanti e ai visitatori che ancor oggi ne percorrono i vicoli carichi di storia.</p>
+
+<p><b style="color:green">Fonti:</b> Le informazioni sopra esposte sono tratte da ricerche storiche e fonti locali quali il sito del Comune di Sarteano, l’archivio del Palio di Siena, 
+documenti sull’abbazia di Spineto, oltre a studi specialistici (Treccani, ecc.) sull’opera di Beato Alberto Berdini (detto Alberto da Sarteano).</p>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="sarteano.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
