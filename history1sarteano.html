@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-091CFPRCWW');
+</script>
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Dal Neolitico all'Epoca Romana</div>
+    <nav>
+      <ul id="menu">
+            <li><a href="sarteano.html">Introduzione</a></li>
+        <li><a href="tradizionisarteano.html">Tradizioni</a></li>
+        <li><a href="luoghisarteano.html">Luoghi da Visitare</a></li>
+        <li><a href="eventisarteano.html">Eventi Locali</a></li>
+        <li><a href="intervistesarteano.html">Interviste</a></li>
+        <li><a href="archiviosarteano.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Medieval Sarteano: From the Fall of the Empire to the Sienese Fortress</h1>
+
+<h2>Early Middle Ages (476–1000)</h2>
+
+<p>
+With the fall of the Western Roman Empire in 476, life in Sarteano did not come to a halt: the local community continued to inhabit these hills without interruption.
+During this early medieval phase, the Tuscan village remained under the influence of nearby Chiusi, a dominant center since Etruscan and Roman times, to which it stayed connected even during Lombard rule.
+</p>
+
+<p>
+The Lombards, who descended into Italy in the 6th century, left traces of their presence in the Sarteano area—for example, a tomb discovered in the locality of Montarioso—marking the transition from Roman order to the new Germanic kingdoms.
+</p>
+
+<p>
+In the absence of imperial authority, it was often the Church and local nobles who provided stable points of reference: the Diocese of Chiusi ensured religious continuity, while small rural settlements arose around the first parish churches and places of worship.
+</p>
+
+
+<p>
+During the Early Middle Ages, the population of Sarteano concentrated on the hilltops to defend themselves from raids and widespread insecurity. The settlement clustered around the town’s acropolis, where an initial fortified castle was built at the top of the hill.
+</p>
+
+<p>
+Toward the end of the first millennium, with the arrival of the Franks and the Carolingian feudal system, powerful aristocratic families emerged in the area. One of these was the Farolfingi lineage, from which descended the comital house destined to rule Sarteano in the following centuries.
+</p>
+
+<p>
+In 1085, for instance, the noblewoman Willa, widow of Count Pepone I Manenti of Sarteano, founded the Abbey of the Holy Trinity of Spineto in the nearby mountains. This Vallombrosan monastery, built in what was then a remote area, quickly became an important religious center for the surrounding valleys, also equipped with hospitality structures: here, the monks offered assistance to travelers and pilgrims heading to Rome along the paths of faith.
+</p>
+
+<p>
+Confirming the deep bond between feudal power and the Church, medieval documents also attest to the donation of property by a local priest, Attovante of Sarteano, for the construction of a small monastic hospital—a sign of the growing religious concern for the needy.
+</p>
+
+<p>
+Important spiritual figures were not absent either: according to tradition, Saint Francis of Assisi passed through these lands in the early 13th century. It is said that in 1212 the saint briefly stayed as a hermit in the caves of Sarteano—now known as the “Celle di San Francesco”—leaving a vivid memory of his preaching in the local community.
+</p>
+
+
+<h2>11th–13th Century: Feudalism and the Birth of the Comune</h2>
+
+<p>
+At the dawn of the second millennium, Sarteano was ruled by a powerful local feudal family. In the 11th century, it was part of the possessions of a noble lineage that gave rise to the Counts Manenti, who maintained control over the village throughout the Early Middle Ages.
+</p>
+
+<p>
+The first documented mention of the *Castrum Sarturiani*—the castle of Sarteano—dates to the year 1038. Around this fortress, positioned to guard the ridges between the Val di Chiana and the Val d’Orcia, the medieval settlement gradually developed, surrounded by a ring of defensive walls.
+</p>
+
+<p>
+The Counts Manenti exercised seigneurial power over the territory until the end of the 13th century, holding feudal rights and vast landed estates. Under their rule, the town saw the construction of stone churches and the emergence of early civic institutions. As early as 1171, in fact, Sarteano already had its own board of consuls—a sign that the local community enjoyed a degree of administrative autonomy, even within the feudal system.
+</p>
+
+<p>
+Throughout the 12th and 13th centuries, important places of worship arose both inside and outside the walls. The Church of Santa Vittoria, for instance, was built in Romanesque style at the beginning of the 12th century just outside the village, possibly reusing stones from ancient pagan buildings.
+</p>
+
+<p>
+Within the walled circuit, in the small square of San Martino, stood the old parish church dedicated to San Martino in Foro, the religious heart of the town during the communal era. Faith and ecclesiastical organization thus developed alongside civil power, accompanying the growth of the town.
+</p>
+
+<p>
+In the 13th century, riding the wave of prosperity and civic ferment that swept across Tuscany, Sarteano began to gradually free itself from the feudal rule of the Counts Manenti. The local inhabitants and leaders initiated a process of civil emancipation, reclaiming elements of sovereignty from their lords: the comune purchased properties and rights from the Manenti, progressively limiting comital authority.
+</p>
+
+<p>
+The opportunity for definitive change arose when the surrounding city-states began to compete for control of the area. Strategically located at the border of the territories of the Republic of Siena, Orvieto, and Perugia, Sarteano found itself—willingly or not—caught up in the expansionist wars of its powerful neighbors.
+</p>
+
+<p>
+In the early 13th century, the town was the scene of fierce clashes: during the war between Siena and Orvieto, Orvietan troops barricaded themselves in the castle of Sarteano, but were eventually driven out by the Sienese. The fortress, perched atop the hill, thus had to withstand sieges and battles during this turbulent period.
+</p>
+
+<p>
+However, the tide of the conflict turned against Siena: under the peace treaty of 1235, the Sienese Republic was forced to cede Sarteano, which passed under the jurisdiction of Orvieto. For several decades, the town remained under Orvietan influence, to which it remained loyal until the mid-13th century.
+</p>
+
+<p>
+In the meantime, the authority of the Counts Manenti continued to decline: by 1280, the final chapter of local feudalism was written. That year, the Manenti sold part of the castle and their remaining rights to the comune of Sarteano, effectively marking the birth of an autonomous municipality.
+</p>
+
+<p>
+A few years later, in 1302, even the last remnants of noble property were ceded. Sarteano thus became a free rural comune, though under the tutelage and influence of the powerful city of Siena, which had supported its autonomy from the start as a way to weaken the local feudal lords.
+</p>
+
+<p>
+By the end of the 13th century, the town had adopted its own statutes and civic magistracies, setting out on the path of self-governance like many other Tuscan communities of the time.
+</p>
+
+<h2>The 14th Century (Trecento)</h2>
+
+<p>
+The 14th century was a time of contrasts and transformations for Sarteano, marked by crises but also by new political balances. Externally, its border position continued to make the village vulnerable to expansionist ambitions. The Republic of Orvieto, which had ruled much of the 13th century, entered a period of decline around the mid-14th century, weakened by internal strife and the calamities that struck Italy—above all, the Black Death of 1348.
+</p>
+
+<p>
+In this turbulent context, other players stepped in: nearby Perugia, taking advantage of Orvieto’s crisis, sent its troops and took control of Sarteano around 1350. The castle and surrounding territory thus came under Perugian domination, marking a new phase of rule. The following years were anything but peaceful: in addition to external conflicts, noble feuds and reconquest attempts erupted.
+</p>
+
+<p>
+The powerful Monaldeschi family of Orvieto—leading figures among the Guelf factions in the city—also played a role in Sarteano’s affairs. Local sources attest that the Monaldeschi sponsored significant reinforcement work on the Sarteano fortress in 1345, indicating their temporary influence over the area during that chaotic period.
+</p>
+
+<p>
+To this day, one of the town’s historical gates recalls that era: Porta Monalda (named after the Orvietan family) still displays the Monaldeschi coat of arms above it, alongside those of Siena and even the Medici, heraldic evidence of the various powers that succeeded one another in ruling the medieval village.
+</p>
+
+<p>
+In the second half of the 14th century, the geopolitical landscape changed again. Orvieto's power faded permanently, and Perugia struggled to hold onto its distant conquests. Around 1370, Orvieto made one last attempt to regain influence over Sarteano, but it was short-lived. Weary of ongoing wars and shifting allegiances, the people of Sarteano sought the protection of a strong ally.
+</p>
+
+<p>
+Thus, in 1379, the comune of Sarteano voluntarily submitted to the Republic of Siena, signing a pact of protection. From that moment on, Siena’s black and white <em>balzana</em> flag flew permanently over Sarteano’s walls. The village became part of the Sienese countryside, maintaining its municipal institutions but now governed by a foreign <em>podestà</em> appointed by Siena to ensure loyalty.
+</p>
+
+<p>
+After decades of instability, a relatively more secure period began under Sienese rule. This did not mean isolation, however: located along the routes connecting Umbria and southern Tuscany, Sarteano continued to receive merchants, armies, and pilgrims. In the 14th century, the flow of travelers heading to Rome via the Via Francigena remained steady, and the Abbey of Spineto—located in the Sarteano hills—flourished as a place of rest and prayer.
+</p>
+
+<p>
+Throughout the Middle Ages, this monastery offered aid and refuge to many pilgrims on their way to the tomb of Saint Peter, and also served as a spiritual center for the peoples of the Val d’Orcia and Val di Chiana.
+</p>
+
+<p>
+Meanwhile, the town's civic life became enriched with new customs and initiatives. In 1385, Alberto Berdini was born in Sarteano—later known as Alberto da Sarteano, an Observant Franciscan friar. Raised in the devout local environment, Alberto studied theology and became one of the most brilliant preachers of his time, collaborating with Saint Bernardino of Siena.
+</p>
+
+<p>
+By the end of the century, Alberto’s small hometown was no longer a peripheral outpost: through his legacy and the many travelers passing through, Sarteano had become connected to the broader spiritual and cultural movements of late medieval Italy.
+</p>
+
+
+<h2>The 15th Century (Quattrocento)</h2>
+
+<p>
+In the 15th century, Sarteano experienced full integration into the domains of the Republic of Siena and entered the Renaissance era, while maintaining its character as a frontier stronghold. Under Siena’s firm control, the town entered a phase of urban and military reinforcement.
+</p>
+
+<p>
+The Rocca of Sarteano, already the heart of the settlement, was completely renovated and expanded with anti-expansionist purposes. Between 1467 and 1474, the Sienese undertook major reconstruction works: the old medieval castle was rebuilt from the ground up and took on the imposing appearance that can still be admired today.
+</p>
+
+<p>
+It seems that the famous Sienese architect Lorenzo di Pietro, known as “Il Vecchietta,” contributed to the project, giving the fortress stylistic features already leaning toward the Florentine Renaissance taste. The result was a military architecture that was cutting-edge for the time: a massive quadrangular keep made of travertine, flanked by two powerful circular towers.
+</p>
+
+<p>
+Around the central tower, a new curtain wall was erected, equipped with walkways and reinforced by bastions at the corners, defending both the castle and the village below. Even today, walking along the path beneath the Rocca, one can feel the sense of security that these fortifications must have inspired in the people of Sarteano.
+</p>
+
+<p>
+The castle’s main entrance was fitted with a drawbridge and adorned with a civic symbol of pride: above the gate, a bas-relief was carved depicting the Capitoline Wolf nursing Romulus and Remus—the emblem of the city of Siena—topped by the black-and-white split shield of the Sienese *Balzana*. These symbols, drawn from the legend of Siena’s foundation (which tells of Senio, son of Remus, fleeing Rome with the statue of the she-wolf), visually proclaimed Sarteano’s belonging to the great Tuscan republic.
+</p>
+
+<p>
+Every traveler who crossed that threshold in the 15th century knew they were entering a territory protected by Siena. The mighty Rocca of Sarteano still dominates the village today, with its travertine keep flanked by the circular towers erected by the Sienese in the 15th century.
+</p>
+
+<p>
+The castle’s current appearance is the result of the renovation carried out between 1467 and 1474, when Sarteano was under the rule of the Republic of Siena. Inside, the Rocca was equipped to withstand prolonged sieges. Its walls reached a thickness of seven meters at the base, with powerful sloped foundations that made any attempt at scaling them extremely difficult.
+</p>
+
+<p>
+An ingenious defense system included moats that could be filled with flammable materials near the first drawbridge, to block attackers with fire. Moreover, until 1699, the only access to the keep was via a steep external staircase connected to a second drawbridge leading to the first floor: in this way, any enemies who managed to breach the courtyard would be exposed to crossfire from the defenders on the walls.
+</p>
+
+<p>
+These defensive features made the castle of Sarteano virtually impregnable by medieval warfare standards. Not surprisingly, it faced several attacks in the centuries to come, resisting even the assaults of formidable figures. For instance, in 1503, Duke Valentino—Cesare Borgia—laid siege to the Rocca during his military campaigns in Tuscany, further evidence of the fortress’s strategic importance at the end of the Middle Ages.
+</p>
+
+<p>
+Under Sienese administration, Sarteano enjoyed relative peace and dynamic local development. The town became the seat of a *podesteria*: a *podestà* sent from Siena governed in the name of the Republic, administering justice and maintaining order. The civil organization was enriched by new municipal statutes and regulations, often harmonized with those of Siena.
+</p>
+
+<p>
+The daily life of the inhabitants continued according to traditional rhythms based on agriculture and craftsmanship: the countryside produced wheat, wine, and olive oil, while the forests provided wood and grazing for livestock. Some small-scale manufacturing and trade activities also flourished in connection with local products.
+</p>
+
+<p>
+On the social and cultural front, the 15th century saw a strong push in civil and religious construction. Wealthy Sienese families and the Church invested in the embellishment of Sarteano: examples include the noble palaces that arose in the center (such as Palazzo Piccolomini and Palazzo Cennini) and the renovation of major places of worship.
+</p>
+
+<p>
+During this period, for instance, the façade of the Church of San Francesco—located just outside the medieval walls—was either built or renovated at the initiative of a prominent cardinal of the Piccolomini family. Still today, the large rose window on the façade bears the crossed keys and papal tiara at its center, alongside the Piccolomini coat of arms, a lasting memory of 15th-century ecclesiastical patronage.
+</p>
+
+<p>
+The presence of Blessed Alberto da Sarteano also helped maintain the town’s spiritual prestige. After preaching in various Italian cities alongside Bernardino of Siena, in 1434 Alberto was commissioned by Pope Eugene IV to travel to the East as a papal envoy, tasked with negotiating the union of the Greek Church with Rome.
+</p>
+
+<p>
+This was a high-profile diplomatic mission that took him to Jerusalem and into dialogue with patriarchs and distant Christian communities. The friar from Sarteano, equipped with a solid humanistic education and fluent in Greek, even served as an interpreter at the Council of Florence between Western and Eastern delegates.
+</p>
+
+<p>
+His legacy—later venerated as a blessed figure within the Franciscan Order—demonstrates how even a small Tuscan village could produce influential players in the religious and cultural landscape of the time.
+</p>
+  
+<p>
+By the end of the Middle Ages, Sarteano had become a prosperous and well-fortified community—deeply integrated into the domains of Siena, yet proud of its local identity. The town walls—with Porta Umbra to the north and Porta Monalda to the south—were adorned with the coats of arms of the successive ruling powers: the she-wolf of Siena and the black-and-white *Balzana*, the red lion on a gold field of the Counts Manenti, the heraldic rose of the Monaldeschi of Orvieto, and later, the emblems of the Medici of Florence, who arrived in the 16th century.
+</p>
+
+<p>
+These coats of arms, carved in stone and still visible today, silently tell the turbulent history of the village during the Middle Ages. As the year 1500 approached, Sarteano could look to the new century with the strength of its medieval roots: the castle watching from the heights, the churches and convents as guardians of faith and art, and the well-established civic traditions.
+</p>
+
+<p>
+Soon, however, the events of the Renaissance and the wars between France and Spain in Italy would sweep away the Republic of Siena, leading to its fall in 1555 and the rise of Medici rule. But that is another story. 
+</p>
+
+<p>
+At the close of the Middle Ages, the village of Sarteano had journeyed through a thousand years of history—transforming from an early medieval settlement to a free comune, and later becoming a strategic outpost of a powerful city-state. Its story embodies all the essential elements of Tuscan history: barbarian invasions and Lombard devotion to Saint Michael, the feudal era of castles and abbeys, the struggles between city-states, and the contested supremacy of the republics, up to the dawn of the modern age under the sign of the Medici.
+</p>
+
+<p>
+And yet, despite the succession of many rulers, Sarteano has managed to preserve in the centuries that followed the charm of its medieval layout and the pride of its traditions—dear to both its inhabitants and to the visitors who still wander its history-laden alleys today.
+</p>
+
+<p><b style="color:green">Sources:</b> The information presented above is drawn from historical research and local sources such as the official website of the Municipality of Sarteano, the archive of the Palio di Siena, documents regarding the Abbey of Spineto, as well as scholarly studies (Treccani, etc.) on the life and works of Blessed Alberto Berdini (known as Alberto da Sarteano).</p>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="sarteano.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
