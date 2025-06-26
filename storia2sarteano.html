@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storia Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-091CFPRCWW');
+</script>
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Dal Neolitico all'Epoca Romana</div>
+    <nav>
+      <ul id="menu">
+            <li><a href="sarteano.html">Introduzione</a></li>
+        <li><a href="tradizionisarteano.html">Tradizioni</a></li>
+        <li><a href="luoghisarteano.html">Luoghi da Visitare</a></li>
+        <li><a href="eventisarteano.html">Eventi Locali</a></li>
+        <li><a href="intervistesarteano.html">Interviste</a></li>
+        <li><a href="archiviosarteano.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Sarteano nel Rinascimento (1400–1600)</h1>
+
+<h2>Eventi politici e militari</h2>
+
+<p>
+Nel tardo medioevo Sarteano entrò nell’orbita della Repubblica di Siena: dopo essere stata contesa tra Siena, Orvieto e Perugia, nel 1379 il borgo si sottomise formalmente a Siena con un atto di dedizione, mantenendo però alcuni propri statuti locali.
+</p>
+
+<p>
+Data la sua posizione strategica al confine meridionale dello Stato senese, Sarteano fu coinvolta in vari conflitti del Rinascimento. La sua rocca – l’imponente castello che domina il paese – subì numerosi assedi e passaggi di mano.
+</p>
+
+<p>
+Ad esempio, fu espugnata o attaccata da forze ostili in più occasioni: nel 1409 subì l’assedio di re Ladislao di Napoli; nel 1455 fu attaccata dal capitano di ventura Niccolò Piccinino; e nel 1503 dovette affrontare l’offensiva di Cesare Borgia, detto il Valentino. Ogni volta, dopo questi assalti, i Senesi provvidero a riparare e potenziare le difese del castello.
+</p>
+
+<p>
+In tempo di pace, le autorità di Siena rafforzarono comunque Sarteano, consapevoli della sua importanza militare. Già nel 1467–1469 la rocca medievale venne radicalmente ristrutturata: le fortificazioni furono adeguate ai nuovi canoni dell’arte militare rinascimentale, con l’aggiunta di una cinta muraria munita di torrioni cilindrici e un ponte levatoio.
+</p>
+
+<p>
+A questo progetto parteciparono importanti architetti senesi come Lorenzo di Pietro, detto Il Vecchietta, che contribuì a conferire al castello elementi stilistici rinascimentali.
+</p>
+
+<p>
+Qualche decennio più tardi, nel quadro del potenziamento generale delle fortezze senesi, si ritiene che Baldassarre Peruzzi – celebre architetto senese – abbia visitato Sarteano (intorno al 1528) e preparato un progetto per adattare ulteriormente la rocca all’uso delle armi da fuoco.
+</p>
+
+<p>
+Di fatto, tra il 1540 e il 1550 la fortezza venne rinforzata secondo tecniche moderne, rendendola una vera “cittadella” capace di resistere a bombardamenti di cannoni e archibugi.
+</p>
+
+<p>
+Il culmine delle vicende belliche si ebbe a metà Cinquecento con la Guerra di Siena. Dopo un assedio durissimo, Siena capitolò nel 1555 e il suo territorio – Sarteano compresa – fu occupato dalle forze ispano-fiorentine dei Medici.
+</p>
+
+<p>
+Già nel 1552 truppe spagnole al comando del marchese di Marigliano avevano attaccato Sarteano, preludio alla resa finale. Il 19 gennaio 1556 il castello di Sarteano si arrese e passò sotto il dominio dei Medici, sancendo la definitiva fine della Repubblica di Siena e l’annessione al nascente Granducato di Toscana.
+</p>
+
+<p>
+I nuovi sovrani medicei disattivarono in parte la rocca (riempendo fossati e demolendo alcune opere difensive) per impedirne usi insurrezionali. In seguito, i granduchi concessero la fortezza in feudo alla famiglia Fanelli (nel 1590 al capitano Eustachio Fanelli, confermato poi nel 1617 a Brandimarte Fanelli con titolo ereditario).
+</p>
+
+<p>
+Dopo secoli burrascosi, dunque, Sarteano entrò in un lungo periodo di pace sotto la sovranità medicea.
+</p>
+
+<h2>Sviluppi artistici, architettonici e culturali</h2>
+
+<p>
+Durante il Rinascimento, nonostante le ridotte dimensioni del borgo, Sarteano beneficiò di importanti committenze artistiche e rinnovamenti architettonici. L’adeguamento della fortezza nel 1469 (e poi nel XVI secolo) non ebbe solo una valenza militare ma anche stilistica: la rocca assunse forme più moderne, segnando il passaggio dal gotico al gusto rinascimentale.
+</p>
+
+<p>
+Oltre alle mura, sorsero o vennero rinnovati vari edifici civili. Tra questi spicca Palazzo Piccolomini, elegante palazzo rinascimentale fatto erigere alla fine del Quattrocento dal cardinale Francesco Tedeschini Piccolomini (futuro papa Pio III). Il palazzo presenta un bellissimo cortile interno con colonne corinzie decorate da mezzelune, e sulla facciata mostra ancora lo stemma marmoreo della famiglia Piccolomini risalente al XV secolo.
+</p>
+
+<p>
+Un altro edificio di pregio è Palazzo Gabrielli, di origine medievale ma profondamente trasformato nel XVI secolo: le ristrutturazioni cinquecentesche gli conferiscono un aspetto signorile rinascimentale (oggi ospita il Museo Archeologico).
+</p>
+
+<p>
+Anche Palazzo Goti-Fanelli, antica sede dell’Accademia degli Arrischianti, venne ampliato nel 1536 con la creazione di un cortile interno e sale affrescate, dotandosi persino di una cappella gentilizia. Questi palazzi nobiliari denotano il riflesso dell’architettura rinascimentale toscana anche in un centro minore come Sarteano.
+</p>
+
+<p>
+Il patrimonio religioso venne ugualmente arricchito o rinnovato in quel periodo. La principale chiesa del borgo, la Collegiata di San Lorenzo, fu oggetto di interventi rinascimentali: proprio in quegli anni il cardinale Piccolomini (Pio III) ne finanziò un restauro, elevando la chiesa al rango di collegiata e arricchendola di opere d’arte.
+</p>
+
+<p>
+All’interno di San Lorenzo si conservano due tavole centinate raffiguranti un’Annunciazione attribuita al pittore senese Girolamo del Pacchia, testimonianza della pittura rinascimentale di scuola senese in paese.
+</p>
+
+<p>
+Un altro intervento di grande rilievo si ebbe alla Chiesa di San Francesco (antica chiesa dei frati francescani): attorno al 1500, il cardinale Piccolomini fece realizzare per San Francesco una nuova facciata in stile pienamente rinascimentale, ispirata a quella del Duomo di Pienza. Ancora oggi il rosone della chiesa presenta le insegne papali e lo stemma Piccolomini, a memoria di quel rifacimento.
+</p>
+
+<p>
+L’interno di San Francesco unisce il nuovo al vecchio: vi si trovano infatti preservati alcuni affreschi quattrocenteschi provenienti dall’antica pieve romanica di Santa Vittoria, segno di continuità con la tradizione artistica precedente.
+</p>
+
+<p>
+Proprio Santa Vittoria era la più antica pieve del territorio (situata fuori le mura); nel Cinquecento era ancora attiva e custodiva importanti opere. Ad esempio, la tavola dell’Annunciazione del pittore Domenico Beccafumi – uno dei massimi artisti manieristi senesi – fu dipinta per la pieve di Santa Vittoria intorno al 1545.
+</p>
+
+<p>
+Quest’opera, considerata un capolavoro, è tra le ultime realizzazioni di Beccafumi (1546) e presenta un uso magistrale di effetti di luce e colori: vi spicca una Madonna molto umana contrapposta a un angelo sospeso in aria, in un gioco cromatico luminoso di grande originalità.
+</p>
+
+<p>
+In seguito, questa pala d’altare venne trasferita nella Chiesa di San Martino, dove tuttora è ammirabile come uno dei tesori artistici di Sarteano.
+</p>
+
+<p>
+Nella stessa Chiesa di San Martino in Foro (oggi con facciata neoclassica ottocentesca) si trovano anche una Madonna col Bambino attribuita a Jacopo di Mino del Pellicciaio (pittore gotico senese del Trecento) e una tavola con la Madonna col Bambino tra i santi Rocco e Sebastiano di Andrea di Niccolò (pittore attivo a Siena a cavallo tra XV e XVI secolo).
+</p>
+
+<p>
+Queste opere indicano come Sarteano abbia accolto esempi d’arte sacra di alta qualità nel periodo rinascimentale, spesso grazie a legami con la vicina Siena e al mecenatismo di figure locali.
+</p>
+
+<p>
+Sul finire del Cinquecento, il clima religioso della Controriforma portò a nuove fondazioni: nel 1580 fu istituito in paese il monastero femminile di Santa Chiara, dove si insediò una comunità di monache clarisse. Il convento di Santa Chiara, costruito nella parte alta dell’abitato, fu dotato di un raffinato chiostro con pozzo al centro (ancora esistente e oggi adibito ad usi ricettivi).
+</p>
+
+<p>
+L’insediamento delle clarisse testimonia la vitalità della fede locale e l’adesione alle riforme religiose post-tridentine. In generale, durante il Rinascimento a Sarteano sorsero anche piccole confraternite laicali e si consolidarono le istituzioni ecclesiastiche: ne è esempio la Confraternita del Suffragio, attestata successivamente con una propria chiesa, frutto della devozione per le anime del Purgatorio tipica del tardo Cinquecento.
+</p>
+
+<p>
+La vita culturale del borgo, inoltre, fu arricchita dalle feste popolari e dalle tradizioni che iniziarono a strutturarsi in quel periodo – come vedremo – segnando l’identità comunitaria di Sarteano.
+</p>
+
+<h2>Vita quotidiana e società</h2>
+
+<p>
+La società sarteanese del Rinascimento era quella di un piccolo centro rurale toscano, profondamente legato alla terra ma non privo di proprie istituzioni civiche. Dopo il 1379, Sarteano divenne sede di una podesteria: il governo locale era affidato a un podestà inviato annualmente da Siena, coadiuvato però da consigli locali di notabili del luogo. Ciò garantiva un minimo di autonomia amministrativa sotto la supervisione senese.
+</p>
+
+<p>
+La popolazione del borgo, probabilmente di poche migliaia di abitanti o meno, era composta in gran parte da contadini, pastori e artigiani. Nelle campagne attorno al paese si praticava un’agricoltura diversificata: le colline fornivano olivo, vite e frutteti (con produzione di olio, vino e frutta), mentre nei fondovalle si coltivavano cereali, legumi e si piantavano gelsi per l’allevamento dei bachi da seta, oltre alla canapa utilizzata per corde e tessuti.
+</p>
+
+<p>
+I boschi di querce sulle pendici del Monte Cetona erano sfruttati per il pascolo dei maiali (ghiande) e per il legname; l’allevamento di bestiame da carne e da tiro (bovini, ovini, suini) integrava l’economia agricola locale. Queste risorse garantivano al borgo autosufficienza e qualche eccedenza da scambiare nei mercati.
+</p>
+
+<p>
+La vita quotidiana si svolgeva secondo i ritmi agricoli e religiosi. La religione cattolica permeava la società: le feste del patrono (San Lorenzo) e dei santi principali erano momenti di coesione comunitaria. In particolare, la festa di San Lorenzo (10 agosto) divenne anche occasione di mercato e fiera annuale, così come la festa autunnale di San Martino (11 novembre).
+</p>
+
+<p>
+Sin dal XVI secolo il comune di Sarteano organizzò fiere in corrispondenza di queste ricorrenze: documenti attestano che il Consiglio Generale della Comunità emanò disposizioni per lo svolgimento regolare di due fiere annuali, a San Lorenzo e San Martino. Questi eventi richiamavano gente dai villaggi e campagne circostanti, favorendo gli scambi commerciali – si vendevano bestiame, derrate, tessuti grezzi, utensili artigianali – e costituivano al contempo momenti di festa popolare.
+</p>
+
+<p>
+Ad esempio, sembra attestata già nel tardo ’500 la pratica di un torneo cavalleresco, la Giostra del Saracino, legata alle celebrazioni locali (anche se la sua formalizzazione avvenne più tardi). Tra bancarelle, giochi e banchetti all’aperto, durante le fiere il borgo assumeva un’atmosfera vivace e festosa che rompeva la monotonia della vita contadina.
+</p>
+
+<p>
+La stratificazione sociale vedeva al vertice i pochi nobili e proprietari terrieri (come i signori che risiedevano nei palazzi cittadini). A Sarteano in questo periodo erano presenti alcune famiglie eminenti: i Piccolomini – famiglia nobile senese legata a papa Pio II – avevano possedimenti e una residenza nel borgo; più tardi, in età medicea, emerse la famiglia Fanelli, investita del castello e di privilegi feudali.
+</p>
+
+<p>
+Accanto ai nobili stavano i notabili locali (spesso ricchi agricoltori, mercanti o professionisti) che componevano il ceto dirigente della comunità e ricoprivano incarichi nel consiglio comunale o nelle confraternite religiose.
+</p>
+
+<p>
+Il clero aveva un ruolo di primo piano: oltre ai monaci dell’abbazia di Spineta nei dintorni e ai frati del convento di San Francesco, la Collegiata contava un gruppo di canonici impegnati nel culto e nell’educazione religiosa.
+</p>
+
+<p>
+La gente comune – piccoli proprietari, mezzadri, braccianti – conduceva un’esistenza semplice, scandita dal lavoro nei campi dall’alba al tramonto. Le case erano in pietra locale, spesso raggruppate entro la cerchia muraria; l’acqua si attingeva da pozzi pubblici; artigiani come fabbri, falegnami, fornai e sarti soddisfacevano i bisogni quotidiani del paese.
+</p>
+
+<p>
+La religione e la solidarietà comunitaria erano fattori coesivi nella società sarteanese. Le confraternite laicali organizzavano opere di assistenza ai poveri e ai malati; esisteva probabilmente già un piccolo spedale (ospizio) per pellegrini e indigenti, come in molti borghi toscani.
+</p>
+
+<p>
+I frequenti riti religiosi (messe quotidiane, processioni, festività liturgiche) offrivano momenti di aggregazione. Il popolo partecipava devotamente alle processioni del Corpus Domini, alle rogazioni per i campi, alle celebrazioni della Settimana Santa, seguendo tradizioni radicate.
+</p>
+
+<p>
+Nel contempo, non mancavano occasioni profane di svago: oltre alle fiere e giostre citate, si tenevano talvolta rappresentazioni teatrali sacre in piazza, e i giovani praticavano giochi popolari e gare di abilità.
+</p>
+
+<p>
+Complessivamente, nella Sarteano rinascimentale la vita scorreva lenta e operosa; le grandi vicende storiche (guerre, cambi di regime) fecero da sfondo a una comunità resiliente, legata ai propri santi patroni e alle proprie consuetudini contadine.
+</p>
+
+  <h2>Figure storiche rilevanti (1400–1600)</h2>
+
+<ul>
+  <li>
+    <strong>Francesco Tedeschini Piccolomini (Papa Pio III)</strong> – Membro della nobile famiglia Piccolomini di Siena, fu strettamente legato a Sarteano. Nato qui nel 1439, Francesco Piccolomini divenne cardinale e nel 1503 ascese al soglio pontificio col nome di Pio III, sebbene il suo pontificato durò soltanto 26 giorni. Da cardinale, fu un grande mecenate per Sarteano: fece costruire la facciata rinascimentale della chiesa di San Francesco – dove campeggia il suo stemma papale – e fece edificare il magnifico Palazzo Piccolomini con cortile interno. Nipote del celebre Pio II, Pio III considerava Sarteano quasi una seconda patria e vi mantenne la sua casa natale in via dei Goti. La sua figura unisce il profilo di nobile e religioso: fu infatti un uomo di Chiesa influente, ma anche un patrono delle arti e dell’architettura nel borgo.
+  </li>
+
+  <li>
+    <strong>Beato Alberto da Sarteano (1385–1450)</strong> – Illustre figura religiosa nata a Sarteano con il nome di Alberto Berdini. Frate francescano dell’Osservanza, è venerato come beato per la sua eccezionale opera di predicazione, diplomazia e riforma spirituale. Discepolo e collaboratore di San Bernardino da Siena, Alberto viaggiò in tutta Italia come predicatore carismatico e fu inviato da papa Eugenio IV in delicate missioni diplomatiche per favorire l’unità tra la Chiesa cattolica e le Chiese orientali. Partecipò al Concilio di Firenze nel 1439 come interprete grazie alla sua conoscenza del greco e fu Vicario generale dell’Ordine francescano nel 1442. Pur non essendo mai stato canonizzato formalmente, il Beato Alberto è ricordato a Sarteano per il suo fervore religioso e il contributo alla diffusione dell’Osservanza francescana. La sua vita, spesa per la fede e la pace, resta uno dei motivi di orgoglio storico del borgo.
+  </li>
+
+  <li>
+    <strong>Domenico Beccafumi (1486–1551)</strong> – Insigne artista senese, tra i maggiori pittori del Manierismo italiano. Pur non essendo nativo di Sarteano, vi è legato dalla sua opera: a lui si deve la splendida Annunciazione dipinta intorno al 1545 per la pieve di S. Vittoria, oggi conservata nella chiesa di S. Martino. Questa pala d’altare è considerata un capolavoro di Beccafumi e dell’arte rinascimentale locale: realizzata negli ultimi anni di attività del pittore, esalta gli effetti di luce e il colore in modo innovativo, con una composizione di grande raffinatezza. Beccafumi lavorò prevalentemente a Siena (sua è, ad esempio, la decorazione del pavimento del Duomo senese), ma l’Annunciazione di Sarteano testimonia la sua presenza nel territorio circostante su commissione di un facoltoso sarteanese (Antonio di Gabriello). La fama di Beccafumi e la qualità della sua pittura aggiungono prestigio al patrimonio artistico di Sarteano nel XVI secolo.
+  </li>
+
+  <li>
+    <strong>Girolamo del Pacchia (1477–1533)</strong> – Pittore originario di Siena, appartenente alla generazione di artisti attivi nei primi decenni del ’500. A Sarteano gli sono attribuite alcune opere significative: in particolare, nella Collegiata di San Lorenzo sono custodite tavole rinascimentali raffiguranti l’Annunciazione dipinte dalla sua bottega. Girolamo del Pacchia, formatosi a Siena nell’ambito del classicismo rinascimentale, portò nei suoi dipinti un gusto elegante e dolce, ravvisabile anche nelle opere lasciate a Sarteano. Sebbene meno noto al grande pubblico, è considerato un esponente di spicco della scuola pittorica senese e la sua presenza in questo borgo indica i rapporti artistici vivaci fra Siena e i centri minori vicini. Le opere di Pacchia a Sarteano testimoniano dunque il trasferimento delle forme artistiche urbane nel contesto provinciale, grazie al mecenatismo locale e all’influenza culturale senese.
+  </li>
+
+  <li>
+    <strong>Lorenzo di Pietro, detto “Il Vecchietta” (1410–1480)</strong> – Artista poliedrico (scultore, pittore e architetto) originario di Siena, fu tra le figure di spicco che operarono a Sarteano in ambito architettonico. Viene infatti ricordato per aver contribuito al progetto di ristrutturazione della rocca di Sarteano intorno al 1469. Il Vecchietta, celebre per le sue opere gotico-rinascimentali (come la Fonte Gaia originaria di Siena e affreschi nell’Ospedale di Santa Maria della Scala), a Sarteano mise le sue competenze tecniche al servizio dell’architettura militare. Fonti locali lo annoverano fra i “maestri senesi” incaricati di trasformare il cassero medievale in una fortezza moderna, capace di reggere alle nuove artiglierie. Pur non lasciando opere d’arte visibili nel borgo, la sua impronta rimane nella struttura stessa del castello. Il contributo del Vecchietta simboleggia l’apporto dei grandi artisti senesi al di fuori della città, in un’epoca in cui l’arte e l’ingegneria militare spesso si intrecciavano.
+  </li>
+</ul>
+
+
+  
+  <h3>📚 Fonti bibliografiche</h3>
+<ol>
+  <li>
+    <strong>Fanelli, Fanello</strong> –<br>
+    <em>Memorie storiche di Sarteano</em><br>
+    Perugia: Tipografia L’Astrone, 1892 (ristampa a cura di L. Aggravi, Sarteano, 1996).<br>
+    ➤ <strong>Contenuto:</strong> storia completa di Sarteano fino al 1556, con eventi, chiese, famiglie, opere.<br>
+    ➤ <strong>Nota:</strong> fonte primaria locale.
+  </li>
+  <li>
+    <strong>Comune di Sarteano</strong> –<br>
+    <em>Guida a Sarteano – Un borgo gioiello nelle Terre di Siena</em><br>
+    Opuscolo turistico-culturale ufficiale, edizione 2023.<br>
+    ➤ <strong>Contenuto:</strong> chiese, palazzi, rocca, feste e tradizioni locali.<br>
+    ➤ <strong>Consultabile presso:</strong> Ufficio Turistico di Sarteano.
+  </li>
+</ol>
+
+
+
+
+
+
+  
+</section>
+  
+
+  <div class="back-home">
+    <a href="sarteano.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
