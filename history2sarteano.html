@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-091CFPRCWW');
+</script>
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Renaissance in Sarteano</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="sarteanoenglish.html">Home</a></li>
+        <li><a href="sarteanotraditions.html">Traditions</a></li>
+        <li><a href="sarteanoplaces.html">Places to Visit</a></li>
+        <li><a href="sarteanoevents.html">Local Events</a></li>
+        <li><a href="sarteanointerviews.html">Interviews</a></li>
+        <li><a href="sarteanoarchive.html">Photographic Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Sarteano in the Renaissance (1400–1600)</h1>
+
+<h2>Political and Military Events</h2>
+
+<p>
+In the late Middle Ages, Sarteano came under the influence of the Republic of Siena: after being contested by Siena, Orvieto, and Perugia, the town formally submitted to Siena in 1379 through an act of dedication, while retaining some of its own local statutes.
+</p>
+
+<p>
+Due to its strategic position on the southern border of the Sienese state, Sarteano was involved in several Renaissance-era conflicts. Its fortress – the imposing castle overlooking the town – endured numerous sieges and changes of control.
+</p>
+
+<p>
+For example, it was besieged or attacked by hostile forces on multiple occasions: in 1409 it suffered a siege by King Ladislaus of Naples; in 1455 it was assaulted by the mercenary captain Niccolò Piccinino; and in 1503 it faced an offensive by Cesare Borgia, known as “Il Valentino.” After each of these assaults, the Sienese authorities repaired and reinforced the castle’s defenses.
+</p>
+
+<p>
+During times of peace, Siena’s authorities continued to strengthen Sarteano, aware of its military importance. Between 1467 and 1469, the medieval fortress was extensively renovated: its fortifications were updated to meet the new standards of Renaissance military architecture, with the addition of a curtain wall equipped with cylindrical towers and a drawbridge.
+</p>
+
+<p>
+Notable Sienese architects participated in this project, including Lorenzo di Pietro, known as “Il Vecchietta,” who helped give the castle its Renaissance stylistic elements.
+</p>
+
+<p>
+A few decades later, as part of a broader program to strengthen Sienese fortresses, it is believed that Baldassarre Peruzzi – the renowned Sienese architect – visited Sarteano (around 1528) and drafted a plan to further adapt the fortress for the use of firearms.
+</p>
+
+<p>
+In fact, between 1540 and 1550, the stronghold was reinforced with modern techniques, turning it into a true “citadel” capable of withstanding bombardments by cannons and arquebuses.
+</p>
+
+<p>
+The peak of Sarteano’s military involvement came in the mid-16th century with the War of Siena. After a grueling siege, Siena surrendered in 1555, and its territory – including Sarteano – was occupied by the Spanish-Florentine forces of the Medici.
+</p>
+
+<p>
+As early as 1552, Spanish troops under the command of the Marquis of Marigliano had attacked Sarteano, a prelude to the final surrender. On January 19, 1556, Sarteano’s castle capitulated and came under Medici control, marking the definitive end of the Republic of Siena and its annexation into the nascent Grand Duchy of Tuscany.
+</p>
+
+<p>
+The new Medici rulers partially decommissioned the fortress (filling in moats and demolishing some defensive structures) to prevent its use in future uprisings. Later, the Grand Dukes granted the fortress as a fief to the Fanelli family (in 1590 to Captain Eustachio Fanelli, and confirmed in 1617 to Brandimarte Fanelli with hereditary title).
+</p>
+
+<p>
+Thus, after centuries of turbulence, Sarteano entered a long period of peace under Medici rule.
+</p>
+
+
+<h2>Artistic, Architectural, and Cultural Developments</h2>
+
+<p>
+During the Renaissance, despite the small size of the village, Sarteano benefited from significant artistic patronage and architectural renewal. The renovation of the fortress in 1469 (and again in the 16th century) had not only a military purpose but also a stylistic one: the castle took on more modern forms, marking the transition from Gothic to Renaissance taste.
+</p>
+
+<p>
+Beyond the walls, several civic buildings were built or renovated. Among them stands out Palazzo Piccolomini, an elegant Renaissance palace erected at the end of the 15th century by Cardinal Francesco Tedeschini Piccolomini (the future Pope Pius III). The palace features a beautiful inner courtyard with Corinthian columns decorated with crescents, and its façade still displays the marble coat of arms of the Piccolomini family from the 15th century.
+</p>
+
+<p>
+Another noteworthy building is Palazzo Gabrielli, of medieval origin but extensively transformed in the 16th century: the renovations of that era gave it a noble Renaissance appearance (today it houses the Archaeological Museum).
+</p>
+
+<p>
+Palazzo Goti-Fanelli, the former seat of the Accademia degli Arrischianti, was also expanded in 1536 with the addition of an internal courtyard and frescoed rooms, even including a private chapel. These noble residences reflect the influence of Tuscan Renaissance architecture even in a minor center like Sarteano.
+</p>
+
+<p>
+The town’s religious heritage was also enriched or renewed during this period. The main church, the Collegiate Church of San Lorenzo, underwent Renaissance-era interventions: it was during these years that Cardinal Piccolomini (Pius III) funded its restoration, raising it to the status of a collegiate church and enriching it with works of art.
+</p>
+
+<p>
+Inside San Lorenzo are preserved two arched panels depicting an Annunciation attributed to the Sienese painter Girolamo del Pacchia, a testament to the local presence of Sienese Renaissance painting.
+</p>
+
+<p>
+Another major intervention occurred at the Church of San Francesco (the former church of the Franciscan friars): around 1500, Cardinal Piccolomini had a new façade built in full Renaissance style, inspired by that of the Cathedral of Pienza. Even today, the church’s rose window bears the papal insignia and the Piccolomini coat of arms, as a reminder of that reconstruction.
+</p>
+
+<p>
+The interior of San Francesco blends the new with the old: it still preserves some 15th-century frescoes originally from the ancient Romanesque parish church of Santa Vittoria, showing continuity with earlier artistic traditions.
+</p>
+
+<p>
+Santa Vittoria itself was the oldest parish church in the area (located outside the town walls); in the 16th century it was still active and housed important works. For example, the panel of the Annunciation by the painter Domenico Beccafumi—one of the greatest Mannerist artists of Siena—was painted for the parish of Santa Vittoria around 1545.
+</p>
+
+<p>
+This work, considered a masterpiece, was among Beccafumi’s last creations (1546) and showcases masterful use of light effects and color: it features a very human Madonna opposed to a hovering angel, in a luminous and original chromatic interplay.
+</p>
+
+<p>
+Later, this altarpiece was moved to the Church of San Martino, where it is still admired today as one of Sarteano’s artistic treasures.
+</p>
+
+<p>
+In the same Church of San Martino in Foro (now with a 19th-century neoclassical façade) there are also a Madonna and Child attributed to Jacopo di Mino del Pellicciaio (a 14th-century Gothic painter from Siena) and a panel of the Madonna and Child with Saints Roch and Sebastian by Andrea di Niccolò (a painter active in Siena between the 15th and 16th centuries).
+</p>
+
+<p>
+These works show how Sarteano welcomed high-quality examples of sacred art during the Renaissance period, often thanks to its connections with nearby Siena and the patronage of local figures.
+</p>
+
+<p>
+Toward the end of the 16th century, the religious climate of the Counter-Reformation led to new foundations: in 1580, a convent of Poor Clare nuns was established in the village. The Monastery of Santa Chiara, built in the upper part of town, was equipped with a refined cloister with a central well (still existing today and currently used for hospitality purposes).
+</p>
+
+<p>
+The establishment of the Poor Clares testifies to the vitality of local faith and adherence to post-Tridentine religious reforms. In general, during the Renaissance, small lay confraternities also emerged in Sarteano, and ecclesiastical institutions were strengthened: an example is the Confraternity of Suffrage, later documented with its own church, born from the devotion to the souls in Purgatory typical of the late 16th century.
+</p>
+
+<p>
+The cultural life of the town was also enriched by popular festivals and traditions that began to take shape during this period—as we shall see—helping to define Sarteano’s communal identity.
+</p>
+
+
+<h2>Daily Life and Society</h2>
+
+<p>
+Renaissance-era Sarteano was a small rural Tuscan community, deeply tied to the land yet not lacking its own civic institutions. After 1379, Sarteano became the seat of a podesteria: local government was entrusted to a podestà appointed annually by Siena, assisted by local councils composed of notable citizens. This ensured a minimum level of administrative autonomy under Sienese oversight.
+</p>
+
+<p>
+The population of the village, likely a few thousand inhabitants or fewer, consisted largely of farmers, shepherds, and craftsmen. The surrounding countryside supported a diversified agriculture: the hills produced olives, vines, and orchards (yielding oil, wine, and fruit), while the valley floors were cultivated with grains and legumes, and mulberry trees were planted for silkworm farming, along with hemp used for rope and textiles.
+</p>
+
+<p>
+The oak forests on the slopes of Monte Cetona were used for pig grazing (acorns) and timber; livestock farming for meat and draft animals (cattle, sheep, pigs) complemented the local agrarian economy. These resources granted the village a degree of self-sufficiency and some surplus to trade in local markets.
+</p>
+
+<p>
+Daily life followed the rhythms of agriculture and religion. Catholicism permeated society: the feasts of the patron saint (San Lorenzo) and other major saints were moments of communal cohesion. In particular, the feast of San Lorenzo (August 10) became both a religious celebration and the occasion for an annual market and fair, as did the autumn festival of San Martino (November 11).
+</p>
+
+<p>
+Since the 16th century, the municipality of Sarteano organized fairs on these occasions: records show that the General Council of the Community issued ordinances to ensure the regular holding of two annual fairs, for San Lorenzo and San Martino. These events attracted people from nearby villages and countryside, encouraging trade—livestock, produce, raw textiles, and handmade tools were sold—and at the same time served as popular festivals.
+</p>
+
+<p>
+For example, evidence suggests that a chivalric tournament, the Giostra del Saracino, was practiced as early as the late 1500s in connection with local celebrations (although its formalization came later). With stalls, games, and open-air feasts, the fairs gave the village a lively and festive atmosphere that broke the monotony of rural life.
+</p>
+
+<p>
+Social stratification placed the few nobles and landowners at the top (such as the lords who lived in the town’s palaces). In this period, several prominent families were present in Sarteano: the Piccolomini—a noble Sienese family linked to Pope Pius II—held property and a residence in the village; later, during the Medici era, the Fanelli family rose to prominence, holding the castle and enjoying feudal privileges.
+</p>
+
+<p>
+Alongside the nobles stood the local notables (often wealthy farmers, merchants, or professionals) who formed the ruling class of the community and held positions in the town council or in religious confraternities.
+</p>
+
+<p>
+The clergy played a leading role: in addition to the monks of the nearby Abbey of Spineta and the friars of the convent of San Francesco, the Collegiate Church included a group of canons dedicated to worship and religious education.
+</p>
+
+<p>
+Common people—small landowners, sharecroppers, laborers—led simple lives, marked by work in the fields from dawn to dusk. Houses were made of local stone, often clustered within the city walls; water was drawn from public wells; craftsmen such as blacksmiths, carpenters, bakers, and tailors met the daily needs of the village.
+</p>
+
+<p>
+Religion and community solidarity were cohesive forces in Sarteano's society. Lay confraternities organized charitable works for the poor and sick; there likely already existed a small hospice for pilgrims and the needy, as in many Tuscan villages.
+</p>
+
+<p>
+Frequent religious rites (daily Masses, processions, liturgical celebrations) offered moments of social gathering. The people devoutly participated in the Corpus Domini processions, rogation days for the fields, and Holy Week rituals, following deeply rooted traditions.
+</p>
+
+<p>
+At the same time, there were also secular occasions for leisure: in addition to the fairs and tournaments mentioned above, sacred theatrical performances were sometimes held in the main square, and young people played traditional games and held skill contests.
+</p>
+
+<p>
+All in all, life in Renaissance Sarteano was slow-paced and industrious; major historical events (wars, changes of regime) formed the backdrop to a resilient community, devoted to its patron saints and rooted in its agricultural traditions.
+</p>
+
+<h2>Key Historical Figures (1400–1600)</h2>
+
+<ul>
+  <li>
+    <strong>Francesco Tedeschini Piccolomini (Pope Pius III)</strong> – A member of the noble Piccolomini family of Siena, he had a strong connection to Sarteano. Born here in 1439, Francesco Piccolomini became a cardinal and ascended to the papal throne in 1503 as Pius III, although his papacy lasted only 26 days. As a cardinal, he was a great patron of Sarteano: he commissioned the Renaissance façade of the Church of San Francesco—where his papal coat of arms still appears—and built the magnificent Palazzo Piccolomini with its internal courtyard. Nephew of the famous Pope Pius II, Pius III considered Sarteano almost a second homeland and maintained his birthplace there in Via dei Goti. His legacy unites noble and ecclesiastical roles: an influential churchman and also a patron of the arts and architecture in the town.
+  </li>
+
+  <li>
+    <strong>Blessed Alberto da Sarteano (1385–1450)</strong> – A distinguished religious figure born in Sarteano as Alberto Berdini. A Franciscan friar of the Observance, he is venerated as Blessed for his exceptional preaching, diplomacy, and spiritual reform. A disciple and collaborator of Saint Bernardino of Siena, Alberto traveled throughout Italy as a charismatic preacher and was sent by Pope Eugene IV on delicate diplomatic missions to foster unity between the Catholic Church and the Eastern Churches. He took part in the Council of Florence in 1439 as an interpreter thanks to his knowledge of Greek, and in 1442 he became Vicar General of the Franciscan Order. Though never formally canonized, Blessed Alberto is remembered in Sarteano for his fervent faith and his contribution to spreading Franciscan Observance. His life, devoted to faith and peace, remains a source of historical pride for the town.
+  </li>
+
+  <li>
+    <strong>Domenico Beccafumi (1486–1551)</strong> – A renowned Sienese artist, among the greatest painters of Italian Mannerism. Although not a native of Sarteano, he is linked to the town through his work: the splendid *Annunciation*, painted around 1545 for the parish church of Santa Vittoria (now housed in the Church of San Martino), is by his hand. This altarpiece is considered a masterpiece of Beccafumi and of local Renaissance art: created during the final years of the painter’s career, it displays innovative use of light and color, with a composition of great elegance. Beccafumi worked mainly in Siena (he designed, for example, the pavement of the Siena Cathedral), but the *Annunciation* in Sarteano attests to his presence in the surrounding territory on commission from a wealthy local (Antonio di Gabriello). Beccafumi’s fame and the quality of his painting add prestige to Sarteano’s artistic heritage in the 16th century.
+  </li>
+
+  <li>
+    <strong>Girolamo del Pacchia (1477–1533)</strong> – A painter originally from Siena, part of the generation of artists active in the early 1500s. He is credited with several important works in Sarteano, particularly in the Collegiate Church of San Lorenzo, which preserves Renaissance panels depicting the Annunciation painted by his workshop. Trained in Siena in the context of Renaissance classicism, Pacchia brought a refined and gentle style to his paintings, evident even in the works he left in Sarteano. Although less known to the general public, he is considered a prominent figure in the Sienese school of painting. His presence in Sarteano reflects the vibrant artistic exchanges between Siena and nearby minor centers. Pacchia’s works in Sarteano thus demonstrate how urban artistic forms were transferred into the provincial setting, thanks to local patronage and Sienese cultural influence.
+  </li>
+
+  <li>
+    <strong>Lorenzo di Pietro, known as “Il Vecchietta” (1410–1480)</strong> – A multifaceted artist (sculptor, painter, and architect) from Siena, he was one of the key figures who worked in Sarteano in the field of architecture. He is remembered for contributing to the renovation project of Sarteano’s fortress around 1469. Il Vecchietta, known for his Gothic-Renaissance works (such as the original Fonte Gaia in Siena and frescoes in the Santa Maria della Scala hospital), applied his technical skills to military architecture in Sarteano. Local sources list him among the “Sienese masters” commissioned to transform the medieval keep into a modern fortress capable of withstanding new artillery. Though he left no visible artworks in the town, his influence endures in the very structure of the castle. Il Vecchietta’s contribution symbolizes the involvement of major Sienese artists beyond the city, in an age when art and military engineering often intersected.
+  </li>
+</ul>
+ 
+ <h3>📚 Bibliographic Sources</h3>
+<ol>
+  <li>
+    <strong>Fanelli, Fanello</strong> –<br>
+    <em>Historical Memoirs of Sarteano</em><br>
+    Perugia: Tipografia L’Astrone, 1892 (reprint edited by L. Aggravi, Sarteano, 1996).<br>
+    ➤ <strong>Content:</strong> complete history of Sarteano up to 1556, including events, churches, families, and works.<br>
+    ➤ <strong>Note:</strong> local primary source.
+  </li>
+  <li>
+    <strong>Municipality of Sarteano</strong> –<br>
+    <em>Guide to Sarteano – A Jewel Village in the Lands of Siena</em><br>
+    Official cultural-tourist booklet, 2023 edition.<br>
+    ➤ <strong>Content:</strong> churches, palaces, fortress, local festivals and traditions.<br>
+    ➤ <strong>Available at:</strong> Sarteano Tourist Office.
+  </li>
+</ol>
+  
+</section>
+  
+
+  <div class="back-home">
+    <a href="sarteano.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
