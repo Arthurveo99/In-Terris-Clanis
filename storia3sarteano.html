@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storia Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-091CFPRCWW');
+</script>
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Dal Seicento all'Unità d'Italia</div>
+    <nav>
+      <ul id="menu">
+            <li><a href="sarteano.html">Introduzione</a></li>
+        <li><a href="tradizionisarteano.html">Tradizioni</a></li>
+        <li><a href="luoghisarteano.html">Luoghi da Visitare</a></li>
+        <li><a href="eventisarteano.html">Eventi Locali</a></li>
+        <li><a href="intervistesarteano.html">Interviste</a></li>
+        <li><a href="archiviosarteano.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>Storia di Sarteano dal Seicento alla Fine dell'Ottocento</h1> 
+
+<h2>Evoluzione Politica e Amministrativa</h2>
+
+<p>
+Panorama di Sarteano, con il castello in posizione dominante sul borgo. Sarteano entrò stabilmente nell’orbita del Granducato di Toscana a metà Cinquecento, dopo la caduta della Repubblica di Siena. Nel 1555 il borgo e la sua rocca furono occupati dalle truppe medicee, che disattivarono le fortificazioni rendendo “inoffensiva la Rocca” mediante il parziale interramento dei sistemi difensivi. In epoca medicea (XVII secolo) la stabilità politica favorì una gestione amministrativa locale ordinata: Sarteano era inquadrata nel sistema senese del Granducato e dotata di propri rappresentanti. Il castello, ormai privo di funzione strategica, fu donato nel 1617 dal granduca Cosimo II a Brandimarte Fanelli e ai suoi eredi maschi, rimanendo così proprietà privata della famiglia Fanelli fino all’età contemporanea.
+</p>
+<p>
+Con l’estinzione dei Medici (1737) e l’avvento dei Lorena, Sarteano passò sotto la dinastia asburgico-lorenese. I nuovi granduchi implementarono riforme amministrative ispirate all’Illuminismo, che interessarono anche Sarteano. In particolare, la riforma comunitativa del 1774 riorganizzò le istituzioni periferiche: venne istituita la Comunità di Sarteano con un Magistrato comunitativo (gonfaloniere e priori) e un Consiglio generale, organi composti in parte da possidenti locali e in parte da rappresentanti dei villaggi e dei popoli del territorio. Questa nuova struttura sostituì le precedenti podesterie e garantì una partecipazione anche ai ceti degli artigiani e mezzadri (sia pure in misura limitata).
+</p>
+<p>
+Durante il periodo napoleonico (1808-1814) il Granducato fu annesso all’Impero francese e Sarteano venne amministrata come parte del Dipartimento dell’Ombrone secondo l’ordinamento francese. Con la Restaurazione (1815) ritornarono i Lorena (granduchi Ferdinando III e poi Leopoldo II), sotto i quali la comunità di Sarteano riprese il suo ruolo amministrativo. Verso la metà dell’Ottocento il clima politico mutò: la Toscana conobbe i moti del 1848 e nel 1859 Leopoldo II abdicò. Sarteano prese parte al processo di annessione al Regno di Sardegna (poi Regno d’Italia) tramite il plebiscito del 1860. Dal 1861 il borgo fece parte del nuovo Regno d’Italia, mantenendo lo status di comune all’interno della provincia di Siena.
+</p>
+<p>
+Sul piano amministrativo ciò portò all’adozione dello statuto comunale italiano, con consiglio comunale eletto secondo la legge nazionale. Complessivamente, dal dominio mediceo e lorenese all’Unità d’Italia, Sarteano passò da un sistema principe-podestà a forme di autogoverno locale sempre più istituzionalizzate, pur restando inquadrata nelle più ampie strutture statali del Granducato prima e del Regno poi.
+</p>
+
+<h2>Aspetti Economici</h2>
+  
+<p>
+Nei secoli XVII-XIX l’economia di Sarteano rimase prevalentemente agraria. Il territorio, posto fra la Val di Chiana e la Val d’Orcia, produceva soprattutto cereali (frumento), vino e olio d’oliva. Il sistema agricolo era quello tipico toscano della mezzadria: grandi proprietari (spesso nobili o enti ecclesiastici) affidavano poderi a famiglie contadine, dividendo i raccolti. Attorno a questo modello rurale si sviluppò una modesta attività artigianale locale (fabbri, falegnami, fornai, tessitori, ecc.) destinata principalmente a soddisfare i bisogni del borgo e delle campagne.
+</p>
+<p>
+Il commercio avveniva in gran parte sui mercati locali: a Sarteano si teneva un mercato settimanale ogni venerdì (istituito formalmente già nel Cinquecento) e soprattutto due fiere annuali di grande richiamo. La fiera di San Lorenzo (intorno al 10 agosto) durava quattro giorni e attirava mercanti di bestiame di ogni tipo, merci varie e chincaglierie, con un ampio concorso di pubblico; ancor più importante era la fiera di San Martino (11 novembre) che si protraeva fino a fine mese, specializzata nel commercio di bestiame – in particolare suini da ingrasso (magroni porcini) – oltre a cereali e mercerie. Queste fiere, dichiarate “libere” (esentate da gabelle), costituivano un volano economico fondamentale per Sarteano, inserendola nelle rotte commerciali tra la Toscana, l’Umbria e il Lazio.
+</p>
+<p>
+Da documenti ottocenteschi risulta anche un cosiddetto Mercatone il secondo venerdì di settembre, dedicato soprattutto al bestiame bovino (vacche maremmane), segno che l’allevamento aveva un peso nell’economia locale insieme all’agricoltura.
+</p>
+<p>
+Nel Settecento, le riforme lorenesi (come la liberalizzazione del commercio dei grani voluta da Pietro Leopoldo) ebbero effetti benefici sulle campagne di Sarteano, incentivando la coltivazione cerealicola e migliorando le condizioni dei contadini. Di grande rilievo furono anche le opere di bonifica della Val di Chiana portate avanti prima dai Medici e poi dai Lorena (sotto l’ingegnere Fossombroni): il prosciugamento progressivo delle paludi fino all’Ottocento rese le pianure intorno a Chiusi più salubri e coltivabili, aumentando le terre produttive a disposizione dei coloni sarteanesi e riducendo l’incidenza della malaria. Questo miglioramento ambientale contribuì alla crescita agricola e demografica del territorio.
+</p>
+<p>
+A partire dalla metà del XIX secolo si assiste anche ai primi tentativi di industrializzazione locale. Un caso notevole fu la fondazione di una cartiera (cartiera di Sarteano) ad opera dell’imprenditore e editore Giuseppe Civelli, attiva dagli anni 1850-60. La fabbrica della carta sfruttava l’abbondanza di acque della zona e giunse ad impiegare decine di operai (circa 70 secondo alcuni dati, sebbene altre fonti parlino addirittura di oltre 200 addetti). La cartiera di Civelli non raggiunse le 300 maestranze inizialmente prospettate, ma portò allo sviluppo di una solida cooperativa di consumatori fra i lavoratori stessi e di attività collaterali (ad esempio un caffè dopolavoro gestito dagli operai).
+</p>
+<p>
+Questo episodio testimonia l’avvio di una trasformazione economica: accanto alla tradizionale agricoltura comparvero realtà proto-industriali e manifatturiere, sia pure su piccola scala. Anche le infrastrutture migliorarono: la vicinanza della stazione ferroviaria di Chiusi (sulla linea Firenze-Roma, aperta negli anni 1860) facilitò il trasporto di merci e persone, integrando Sarteano nei circuiti commerciali moderni. Verso la fine dell’Ottocento l’economia locale rimaneva comunque imperniata sull’agricoltura mezzadrile, ma con una presenza crescente di professioni urbane (notai, farmacisti, maestri) e con una maggiore apertura ai mercati esterni grazie alle vie di comunicazione nazionali.
+</p>
+
+<h2>Struttura Sociale e Dinamiche Demografiche</h2>
+  
+<p>
+La società sarteanese fra Seicento e Ottocento era caratterizzata da una netta prevalenza del ceto rurale e contadino, organizzato secondo il sistema della mezzadria. Le famiglie contadine vivevano nei poderi attorno al borgo, dipendendo dai fattori e proprietari terrieri (spesso nobili locali o istituzioni religiose) ai quali versavano metà del raccolto. In paese risiedeva un piccolo ceto borghese e artigiano: bottegai, calzolai, sarti, maniscalchi e altri mestieri, oltre a professionisti come medici, spezieri e notai. Vi erano poi alcune famiglie aristocratiche che detenevano la maggior parte della terra e rivestivano ruoli di prestigio: tra queste i Fanelli (proprietari del castello dal 1617), i Cennini e, in età più tarda, i Bargagli (che acquistarono beni ex ecclesiastici nel XIX secolo). Queste famiglie costituivano la classe dirigente locale, spesso impegnata anche nelle cariche amministrative (gonfaloniere, priori della comunità, ecc.).
+</p>
+<p>
+Sul piano demografico, Sarteano attraversò una lunga fase di stasi seguita da una crescita nell’Ottocento. Fonti statistiche indicano che la popolazione del comune era di 2.121 abitanti nel 1640 e quasi identica (2.123) nel 1745. Questa stabilità, tipica dell’ancien régime, era dovuta all’equilibrio tra un’alta natalità e un’alta mortalità (causata da malattie endemiche, carestie occasionali e scarsa igiene). Non mancarono crisi demografiche: si ricordano ad esempio il contagio pestilenziale del 1630-1633, che colpì anche l’area senese, e periodiche annate di carestia o di epidemie (come il colera del 1855), eventi che falcidiarono la popolazione.
+</p>
+<p>
+Tuttavia, nel corso del Settecento si registrò un leggero incremento grazie a migliori condizioni alimentari e sanitarie (specie dopo la bonifica della Val di Chiana). Nel 1811 gli abitanti risultavano 2.729, saliti a 2.949 nel 1833 e a 3.096 nel 1840. L’aumento demografico divenne più marcato nella seconda metà dell’Ottocento: al momento dell’Unità d’Italia la popolazione comunale crebbe rapidamente, raggiungendo 4.504 abitanti nel 1871. Tale balzo può spiegarsi con il miglioramento delle condizioni generali (vaccinazioni, fine delle grandi epidemie, diffusione di colture più produttive come il mais e la patata) e forse con l’ampliamento dei confini amministrativi del comune. Dopo il 1871 la popolazione continuò a crescere fino a sfiorare i 5.000 residenti nei primi del ’900.
+</p>
+<p>
+Quanto alla struttura sociale, permanevano profonde differenze tra città e campagna. La maggioranza della gente viveva di agricoltura, spesso in condizioni modeste ma relativamente stabili grazie al patto mezzadrile che garantiva alla famiglia contadina casa colonica e sussistenza. Una piccola parte della popolazione, costituita dai proprietari terrieri e dalla borghesia locale, deteneva ricchezza e potere: a loro appartenevano le ville-fattoria, i palazzi del centro e le cariche pubbliche.
+</p>
+<p>
+Nonostante ciò, le riforme lorenesi del tardo Settecento introdussero alcuni elementi di mobilità e partecipazione: ad esempio, dal 1774 anche un certo numero di mezzadri e artigiani poté sedere nel Consiglio comunale, seppur in minoranza, accanto ai possidenti. Ciò indica un riconoscimento istituzionale (per quanto limitato) del ruolo dei coltivatori diretti e dei lavoratori.
+</p>
+<p>
+Le istituzioni caritative locali contribuivano a mitigare le disuguaglianze: il piccolo spedale (ospedale) di Sarteano, ad esempio, era dotato di rendite provenienti da quattro poderi già nel tardo Seicento, con un introito annuo di 152 scudi – collocandosi per ricchezza subito dopo i grandi ospedali di Siena, Montalcino e Torrita nella provincia senese. Questo ospedale e le confraternite fornivano assistenza ai poveri e ai malati, fungendo da rete di protezione sociale ante litteram.
+</p>
+<p>
+Verso la fine dell’Ottocento si manifestarono anche a Sarteano fenomeni comuni all’Italia post-unitaria, come le prime emigrazioni verso le Americhe o verso città più grandi, in cerca di migliori condizioni di vita. Sebbene il grosso dell’emigrazione avverrà nel Novecento, già negli anni 1880-90 alcune famiglie sarteanesi lasciarono la terra natale.
+</p>
+<p>
+Nel complesso, tra Seicento e Ottocento Sarteano evolse lentamente da una società contadina tradizionale, chiusa e gerarchica, a una comunità più dinamica, integrata nello Stato unitario e aperta (ancorché timidamente) ai cambiamenti socio-economici moderni.
+</p>
+
+<h2>Vita Religiosa e Istituzioni Ecclesiastiche</h2>
+  
+<p>
+La vita religiosa di Sarteano in età moderna e contemporanea era assai vivace e rivestiva un ruolo centrale nella comunità. Il borgo dipendeva dal punto di vista ecclesiastico dalla diocesi di Chiusi (poi Chiusi-Pienza, e in tempi recenti Montepulciano-Chiusi-Pienza), ma godeva di proprie istituzioni religiose locali di grande importanza. La pieve principale era la Collegiata di San Lorenzo Martire, chiesa parrocchiale situata al centro del paese. Questo edificio, risalente nelle strutture originarie al Medioevo, venne ristrutturato e ampliato più volte: in particolare fu restaurato e consacrato nuovamente dal cardinale Francesco Todeschini Piccolomini (futuro papa Pio III) intorno al 1500, come attesta un’iscrizione marmorea posta all’interno. Successivamente, la collegiata fu ampliata nel 1514 e dotata di un capitolo di canonici; una lapide ricorda che la “nuova” Collegiata fu inaugurata solo nel 1758, a causa di lunghe dispute con gli eredi Gabrielli per questioni di patronato.
+</p>
+<p>
+La chiesa di San Lorenzo custodisce pregevoli opere d’arte, tra cui due tavole centinate con l’Annunciazione (una attribuita a Domenico Beccafumi, 1546) e altre tele di scuola senese, segno della devozione e del mecenatismo locale nel corso dei secoli. Accanto alla Collegiata, un gran numero di chiese e cappelle punteggia il centro storico, testimoniando la profonda religiosità della comunità. Di grande rilievo è la Chiesa di San Francesco, posta appena fuori dall’antica cerchia muraria in quella che oggi è Piazza Bargagli. La struttura originaria di San Francesco risale al XIII secolo, ma la facciata attuale fu fatta erigere alla fine del Quattrocento dal già citato cardinal Piccolomini (Pio III), come indicano il rosone con le insegne papali e lo stemma dei Piccolomini sulla facciata.
+</p>
+<p>
+Adiacente a San Francesco sorgeva un convento dei Frati Minori Osservanti, fondato nel Medioevo e più volte rimaneggiato. Questo convento accolse anche San Bernardino da Siena in visita e, secondo la tradizione, ospitò San Francesco d’Assisi stesso in località Le Celle (grotte eremitiche presso Sarteano) nel 1212. Nel 1595, venne costruito inoltre un convento dei Cappuccini in località San Bartolomeo, segno della volontà dei sarteanesi di avere i frati più vicini al paese. La presenza francescana fu dunque importante e variegata: il primo insediamento (San Francesco alle Celle) fu sostituito o affiancato dal convento più vicino al centro, a testimonianza della sintonia tra popolazione e ordini mendicanti.
+</p>
+<p>
+Un altro pilastro della vita religiosa era il monastero di Santa Chiara, monastero femminile di Clarisse fondato nel 1521 grazie al lascito di un benestante locale, ser Benedetto di Bartolomeo Besti. Il convento di Santa Chiara, situato nella parte alta del paese, fu attivo “fino a tempi recenti” (indicazione di Fanelli, 1892), cioè probabilmente fino alle soppressioni post-unitarie. Le monache di clausura di Santa Chiara svolgevano un ruolo spirituale e sociale significativo: pregavano per la comunità e gestivano una scuola domestica per fanciulle benestanti, secondo consuetudine dell’epoca. L’edificio, cinquecentesco con un suggestivo chiostro interno e un pozzo al centro, dopo la soppressione fu convertito in uso civile ed oggi ospita una struttura ricettiva, conservando però intatta l’atmosfera raccolta dell’antico convento.
+</p>
+<p>
+In paese erano inoltre attive numerose confraternite laicali, che scandivano l’anno con funzioni e opere caritative. Una delle più antiche era la Societas pro Mortuis Tumulandis (Compagnia per la sepoltura dei morti) fondata già nel XVI secolo (1584), probabile antesignana dell’Arciconfraternita della Misericordia; essa si occupava di dare degna sepoltura ai defunti e di suffragare le anime, riflettendo la pietà popolare post-tridentina. Vi erano poi la Compagnia del Santissimo Sacramento, legata alla Collegiata, che curava le solennità del Corpus Domini e custodiva l’Eucaristia, e la Compagnia della Madonna del Rosario presso San Lorenzo. Queste confraternite coinvolgevano ampie fasce di popolazione (artigiani, contadini, notabili) in attività devozionali, processioni, feste e atti di mutuo soccorso.
+</p>
+<p>
+La devozione popolare aveva nei santuari mariani un fulcro importante. Il patrono di Sarteano è la Madonna del Buon Consiglio, la cui festa cade il 26 aprile. Questa devozione si diffuse nel Settecento: nel 1761 fu infatti collocato in paese un dipinto raffigurante la Madonna del Buon Consiglio, opera del pittore Francesco Bonichi di Lucignano, che divenne presto oggetto di venerazione locale. Da allora la Madonna del Buon Consiglio è invocata come protettrice di Sarteano, e ogni anno, nel giorno della sua festa, si tiene una solenne processione per le vie del borgo, con la partecipazione di confraternite e del clero in abiti festivi, accompagnata dalla banda musicale. Questo culto mariano si affiancava a quelli tradizionali di San Lorenzo Martire (titolare della parrocchia) e di altri santi patroni minori delle contrade cittadine (ad esempio San Martino, Sant’Andrea, ecc., a cui erano intitolate le porte e i rioni).
+</p>
+<p>
+L’influenza della Chiesa nella vita quotidiana era notevole: oltre alle funzioni religiose, le istituzioni ecclesiastiche gestivano l’ospedale di San Giacomo e di Santa Maria (dediti all’assistenza dei malati e pellegrini), amministravano scuole elementari informali (il prete locale spesso insegnava ai bambini il catechismo e le prime lettere) e registravano gli atti di stato civile (nascite, matrimoni, morti) fino all’introduzione dell’Anagrafe statale nell’Ottocento.
+</p>
+<p>
+Nel periodo lorenese, il granduca Pietro Leopoldo promosse una politica di giurisdizionalismo che incise anche a Sarteano: nel 1786, ad esempio, si tenne il sinodo di Pistoia che propose riforme ecclesiastiche (ispirate al Giansenismo) per limitare privilegi e proprietà della Chiesa. Nei fatti, a Sarteano ciò si tradusse nella soppressione di alcuni ordini religiosi “inutili” e nella riduzione delle festività religiose, ma la popolazione rimase fortemente legata alle tradizioni cattoliche.
+</p>
+<p>
+Dopo l’Unità d’Italia (1861), il nuovo Stato laico attuò la soppressione delle corporazioni religiose nel 1866: anche a Sarteano i beni dei conventi furono incamerati e venduti. Il convento di San Francesco, ad esempio, fu acquisito dalla famiglia Bargagli e trasformato in residenza agricola nel XIX secolo; il monastero di Santa Chiara fu chiuso e destinato ad altri usi. Ciò nonostante, la religione continuò ad avere un peso centrale nella comunità: le feste patronali, le confraternite (spesso rifondate come associazioni laicali), la Messa domenicale restarono momenti identitari per i sarteanesi.
+</p>
+<p>
+In sintesi, tra Seicento e Ottocento la vita religiosa di Sarteano fu caratterizzata da fervore devozionale, ricche istituzioni ecclesiastiche (parrocchie, conventi, confraternite) e un ruolo di primo piano della Chiesa locale sia sul piano spirituale sia sul piano sociale ed educativo.
+</p>
+
+<h2>Cultura, Istruzione e Personaggi Storici</h2>
+  
+<p>
+Nonostante le ridotte dimensioni del borgo, Sarteano vantò nei secoli una vivace vita culturale locale e diede i natali o fu scenario ad alcune figure di rilievo. In ambito religioso-culturale, spicca la figura – anteriore al nostro periodo ma ancora molto venerata – del Beato Alberto di Sarteano (1385-1450), celebre predicatore francescano osservante del Quattrocento, compagno di San Bernardino da Siena. Le imprese del beato Alberto (che convertì molti orientali e partecipò al Concilio di Firenze) rimasero vive nella memoria locale, e il suo esempio spirituale continuò a ispirare i sarteanesi nelle epoche successive.
+</p>
+<p>
+Tra i figli illustri di Sarteano va annoverato anche Francesco Todeschini Piccolomini, divenuto Papa Pio III nel 1503, il quale pur avendo regnato solo 26 giorni lasciò tracce tangibili nel paese: egli fece edificare un palazzo con bel chiostro (il Palazzo Piccolomini) e abbellire la chiesa di San Francesco, e la sua casa natale in via dei Goti è tuttora indicata da una lapide. La presenza di questo papa (nipote di Pio II) elevò il prestigio culturale e religioso di Sarteano già nel tardo Quattrocento.
+</p>
+<p>
+Nel periodo considerato (XVII-XIX secolo), la vita culturale di Sarteano fu improntata soprattutto alla sfera religiosa e alle tradizioni popolari, ma non mancarono segnali di apertura intellettuale. Le parrocchie organizzavano scuole elementari rudimentali: già nel Settecento, sulla scia delle riforme di Pietro Leopoldo, furono attivi maestri pubblici stipendiati dalle comunità locali (documenti del 1789 citano maestri a Sarteano). L’istruzione rimase appannaggio di pochi fino all’Ottocento inoltrato: la maggior parte della popolazione era analfabeta, ma i figli delle famiglie benestanti potevano studiare privatamente o in seminario a Chiusi.
+</p>
+<p>
+Dopo l’Unità d’Italia, grazie alla legge Casati e successive, furono istituite le scuole comunali laiche: a Sarteano sorse così una scuola primaria pubblica intorno agli anni ’60 dell’Ottocento, segnando un progresso nell’alfabetizzazione. A fine secolo esisteva inoltre una Biblioteca popolare circolante, alimentata anche dalle donazioni di nobili locali e dallo Stato, segno di una lenta ma crescente attenzione all’educazione e alla lettura.
+</p>
+<p>
+La vivacità culturale di Sarteano nell’Ottocento si manifestò anche attraverso società ed eventi. Nel 1855 alcuni notabili e giovani appassionati fondarono l’Accademia degli Arrischianti, un sodalizio teatrale e culturale tipico dei borghi toscani. L’Accademia allestì un piccolo teatro civico e organizzò spettacoli di prosa e musica, divenendo un punto di riferimento per la comunità. I verbali superstiti dell’Accademia consentono di tracciare oltre 120 anni di attività teatrale a Sarteano, dal 1855 sino a metà Novecento.
+</p>
+<p>
+Il Teatro degli Arrischianti fu inaugurato proprio nell’Ottocento (intorno al 1860) all’interno di un edificio preesistente e fu frequentato con entusiasmo: sulle sue scene si rappresentavano commedie in vernacolo, melodrammi ridotti e serate di beneficenza, contribuendo a diffondere cultura e divertimento. Parallelamente, nel 1870 nacque la Società Filarmonica locale, ossia la banda musicale del paese, che ebbe immediato risalto: la banda partecipò all’inaugurazione della Cartiera Civelli ed accompagnava regolarmente processioni e feste civili, diventando anch’essa parte integrante della vita culturale sarteanese.
+</p>
+<p>
+Sul finire dell’Ottocento, Sarteano poté contare anche su appassionati di storia e archeologia locali. Un personaggio di spicco fu Fanello Fanelli (discendente dell’omonima famiglia del castello), che nel 1892 pubblicò a Perugia le Memorie storiche di Sarteano, prima opera monografica dedicata alla storia del borgo. In questo lavoro – frutto di ricerche d’archivio e tradizioni orali – Fanelli documentò gli eventi salienti di Sarteano e raccolse notizie su monumenti, famiglie e costumi, ponendo le basi della storiografia locale.
+</p>
+<p>
+Contestualmente, il conte Bargagli (proprietario terriero arrivato in paese nel XIX secolo) si distinse per le sue ricerche archeologiche: intorno al 1840-50 esplorò una necropoli etrusca nei dintorni (località Solaia), riportando alla luce urne, bronzi e reperti che andarono a costituire una ricca collezione familiare. Tale collezione Bargagli fu persino temporaneamente esposta nel palazzo ex-convento di San Francesco a Sarteano prima di essere trasferita al Museo Archeologico di Siena. Queste attività mostrano come, accanto alla religiosità, vi fosse spazio anche per interessi eruditi e scientifici nel tessuto culturale locale.
+</p>
+<p>
+Da ricordare, infine, che la cultura popolare si esprimeva attraverso feste e tradizioni radicate: oltre alle già citate fiere, Sarteano aveva (ed ha tuttora) una sua Giostra del Saracino o Giostra dell’Anello, derivata forse da giochi cavallereschi ottocenteschi, e divisioni cittadine in contrade (San Lorenzo, San Martino, Sant’Andrea, Santa Caterina) che affondano le radici nell’organizzazione sociale storica. Durante il periodo granducale e post-unitario, queste feste popolari e rioni contribuivano al senso di identità comunitaria e favorivano la trasmissione di un patrimonio culturale immateriale, fatto di dialetto locale (il sarteanese), proverbi, canti religiosi e profani.
+</p>
+<p>
+In sintesi, la Sarteano del Sei-Ottocento, pur periferica, ebbe una vita culturale degna di nota: dal teatro alla musica, dalla storiografia locale all’archeologia amatoriale, passando per l’istruzione di base e le figure storiche rilevanti, il borgo seppe esprimere vitalità intellettuale e collegarsi, in piccolo, ai grandi fermenti culturali toscani.
+</p>
+
+<h2>Evoluzione Urbana e Architettonica</h2>
+  
+<p>
+Il tessuto urbano di Sarteano tra XVII e XIX secolo conservò l’impianto medievale originario, ma subì trasformazioni significative, soprattutto nell’Ottocento. Il centro storico sorse attorno al massiccio Castello medievale posto sulla sommità del colle: da qui le strette vie scendevano ad anello verso le porte cittadine. Fino ai primi dell’Ottocento il borgo era ancora cinto da mura con diverse porte d’accesso. A metà Ottocento però, nel clima di rinnovamento urbano del periodo lorenese e poi unitario, gran parte della cerchia muraria fu smantellata per favorire l’espansione e la viabilità urbana.
+</p>
+<p>
+Oggi restano visibili solo alcuni tratti di mura e due antiche porte: la Porta Umbra (detta anche Porta di Mezzo) e la Porta Monalda. Entrambe queste porte superstiti recano stemmi sovrapposti che raccontano la storia politica di Sarteano: lo stemma della lupa di Siena, l’emblema dei Medici e quello dei Monaldeschi di Orvieto – a ricordare le diverse dominazioni succedutesi nel Medioevo e Rinascimento.
+</p>
+<p>
+L’abbattimento delle mura nell’800 aprì il centro storico verso l’esterno e coincise con un periodo di riassetto urbanistico. In particolare, la piazza principale del paese (oggi Piazza XXIV Giugno) venne ampliata e regolarizzata nella seconda metà dell’Ottocento, comportando purtroppo la demolizione di alcune vestigia medievali, tra cui l’antica chiesa romanica di San Martino in Foro che sorgeva proprio al centro della piazza. Questo “distruttivo intervento” ottocentesco, pur cancellando parte dell’aspetto medievale della piazza, diede a Sarteano un moderno spazio pubblico aperto, sede del mercato e dei principali edifici civili.
+</p>
+<p>
+Nonostante tali cambiamenti, l’abitato di Sarteano conserva ancora oggi molti edifici storici di pregio, esito delle vicende architettoniche intercorse dal Seicento all’Ottocento. Appena sotto il castello, ad esempio, si trova il Palazzo Fanelli (già Palazzo Goti-Fanelli), elegante residenza nobiliare cinquecentesca eretta attorno al 1536 e poi ampliata, caratterizzata da una cappella gentilizia adiacente e soffitti interni riccamente affrescati.
+</p>
+<p>
+In Piazza San Lorenzo si affaccia invece Palazzo Cennini, appartenuto all’omonima famiglia locale: esso presenta una facciata sobria e lineare tipica del Rinascimento toscano e un bel cortile interno porticato, segno di architettura signorile di metà Cinquecento.
+</p>
+<p>
+Nel cuore del paese, nell’attuale Piazza XXIV Giugno, sorge il medievale Palazzo del Podestà (o Palazzo Comunale), riconoscibile per alcune bifore trecentesche ancora visibili sulla facciata: era la sede del governo cittadino sin dal tempo del libero comune (XIII-XIV secolo) e mantenne la sua funzione pubblica nei secoli seguenti, subendo restauri nell’Ottocento dopo i danneggiamenti dovuti alla ristrutturazione della piazza.
+</p>
+<p>
+Poco lontano si trova Palazzo Gabrielli, oggi sede del Museo Civico Archeologico: questo edificio, nelle forme attuali cinquecentesche, cela una struttura originaria del XIII secolo come testimoniato dalla presenza di una tipica porta del morto (la stretta porta elevata, murata, usata simbolicamente per far uscire i defunti). Palazzo Gabrielli fu adattato nel XVI-XVII secolo a dimora signorile dalla famiglia Gabrielli, e nel 1800 divenne di proprietà pubblica accogliendo la collezione archeologica locale (è tuttora visitabile come museo).
+</p>
+<p>
+Un edificio di particolare rilevanza storico-artistica è Palazzo Piccolomini, situato anch’esso nei pressi della chiesa di San Lorenzo. Edificato sul finire del Quattrocento dal cardinale Francesco Todeschini Piccolomini (Pio III), il palazzo presenta un notevole chiostro rinascimentale e ambienti spaziosi. Fu uno dei primi esempi di architettura “moderna” a Sarteano, integrando elementi di rappresentanza (come stemmi nobiliari e motti) e funzioni residenziali.
+</p>
+<p>
+Durante l’Ottocento, dopo l’estinzione della famiglia Piccolomini-Tedeschini (1783), il palazzo passò per eredità ad altre casate e subì modifiche di utilizzo; tuttavia, conserva tuttora l’eleganza originaria ed è un punto di interesse nel tessuto urbano. Proprio di fronte al Palazzo Piccolomini sorge la facciata della già menzionata chiesa di San Francesco, eretta dal medesimo cardinale: questo ensemble architettonico (chiesa e palazzo con chiostro) arricchì notevolmente la zona sud-occidentale del borgo nel tardo Quattrocento, costituendo una sorta di “quartiere Piccolomini”.
+</p>
+<p>
+Nel XIX secolo l’ex convento di San Francesco fu trasformato in Palazzo-Fattoria Bargagli: la famiglia Bargagli vi installò una residenza agricola e vi collocò temporaneamente la propria raccolta di antichità etrusche. L’intervento comportò alcuni adattamenti (ad esempio la costruzione di granai e cantine nelle ali del convento), ma il chiostro quattrocentesco – benché rovinato – rimase in parte visibile, con le sue eleganti bifore ora affacciate su un cortile rurale. Questo caso illustra come nel periodo post-unitario molti edifici religiosi a Sarteano abbiano trovato riutilizzo come residenze o fattorie, cambiando funzione ma rimanendo parte integrante del tessuto costruito.
+</p>
+<p>
+Nel settore extra moenia, meritano menzione due pregevoli architetture romaniche: la Chiesa di Santa Vittoria e la Chiesa di San Martino in Foro. Santa Vittoria si trovava appena fuori dalle mura, a nord, ed era una pieve romanica edificata agli inizi del XII secolo. Costruita in pietra locale (travertino) e probabilmente sorta su un sito già sacro in epoca antica (come suggerisce il reimpiego di blocchi romani e forse etruschi), Santa Vittoria fu parzialmente abbandonata nel corso dell’Ottocento. Già in rovina a metà Ottocento, ne fu deciso il consolidamento come rudere romantico: il tetto crollò e la chiesa rimase a cielo aperto, ma le mura perimetrali furono lasciate intatte come memoria storica.
+</p>
+<p>
+Oggi Santa Vittoria, priva di copertura ma ben ripulita, è utilizzata come suggestivo spazio all’aperto per spettacoli estivi, a testimonianza del fascino delle sue strutture millenarie. San Martino in Foro, invece, sorgeva entro le mura, all’incirca nell’area dell’odierna Piazza XXIV Giugno. Era una piccola chiesa romanica, probabilmente del XII secolo, che nel Medioevo fungeva da luogo di assemblea (in foro indica appunto la piazza del mercato). Purtroppo questa chiesa fu sacrificata nel quadro delle sistemazioni urbanistiche ottocentesche: intorno alla metà dell’Ottocento venne demolita per allargare la piazza principale, e con essa scomparve un notevole frammento del passato medievale sarteanese. Dell’edificio sopravvivono solo documenti d’archivio e pochi reperti scultorei conservati nel museo locale.
+</p>
+<p>
+Nel corso dell’Ottocento Sarteano vide anche la nascita di infrastrutture e servizi nuovi: vennero tracciati viali extraurbani (ad esempio il Viale della Peschiera verso est, costeggiato da cipressi), si installò la nuova fonte pubblica per l’acqua potabile e, sul finire del secolo, furono costruiti edifici come le Scuole Elementari e il Teatro comunale (all’interno del Palazzo Comunale). Il borgo cominciò timidamente ad espandersi oltre l’antica cerchia: case coloniche sorsero lungo le strade di uscita, e il cimitero fu spostato fuori dall’abitato (lungo l’attuale via del Cimitero) secondo le leggi napoleoniche che vietavano sepolture nelle chiese.
+</p>
+<p>
+Nonostante ciò, l’urbanistica di Sarteano rimase compatta e fedele al disegno originario: ancora oggi dal mastio del castello si può osservare chiaramente il reticolo di vie medievali sottostanti e il profilo armonioso del paese, punteggiato da campanili e. In sintesi, tra il XVII e il XIX secolo Sarteano vide un’evoluzione urbana fatta di conservazione e innovazione: la struttura fortificata ereditata dal Medioevo venne in parte superata (con la demolizione ottocentesca delle mura e l’apertura di spazi pubblici più ampi), mentre il patrimonio architettonico si arricchì di palazzi signorili, edifici religiosi rinnovati e qualche costruzione moderna.
+</p>
+<p>
+Il risultato è un centro storico che, al termine dell’Ottocento, appariva come un piccolo scrigno d’arte e storia: un borgo dall’aspetto prevalentemente medievale – dominato dall’imponente castello trecentesco – ma impreziosito da tocchi rinascimentali e barocchi nei suoi palazzi, e ormai proiettato verso la contemporaneità negli assetti funzionali (piazze, vie carrozzabili, servizi pubblici). Sarteano offre dunque l’esempio di una comunità che ha saputo adattare il proprio spazio urbano alle esigenze dei tempi, senza rinunciare alla continuità con il passato e anzi integrandola nel proprio sviluppo storico.
+</p>
+
+<h2>📚 Fonti</h2>
+  
+<p>
+Le informazioni sopra esposte sono tratte da fonti storiche documentate e studi locali. In particolare si rimanda a <strong>Fanello Fanelli</strong>, <em>Memorie storiche di Sarteano</em> (Perugia, 1892), con note a cura di <strong>L. Aggravi</strong> (1996), ricca di dati d’archivio su istituzioni e demografia.
+</p>
+<p>
+Utili riferimenti sono inoltre il <em>Dizionario Geografico Fisico Storico della Toscana</em> di <strong>Emanuele Repetti</strong> (1833-1846) e le memorie manoscritte ottocentesche pubblicate sul <em>Bullettino Senese di Storia Patria</em>.
+</p>
+<p>
+Per l’evoluzione architettonica e artistica del borgo si vedano i contributi di <strong>Luca Aggravi</strong>, in particolare sulle chiese locali e sul Teatro degli Arrischianti.
+</p>
+<p>
+Informazioni sintetiche ma preziose provengono dal sito istituzionale del <strong>Comune di Sarteano</strong> e da pubblicazioni divulgative come <em>Sarteano – un borgo gioiello nelle Terre di Siena</em>.
+</p>
+<p>
+L’articolo sul Castello di Sarteano nel portale <em>“Castelli Toscani”</em> è stato utilizzato per dettagli sulle vicende del castello e delle mura.
+</p>
+<p>
+Infine, dati economici e sociali (feste, fiere, cartiera Civelli) sono corroborati da studi specifici editi su riviste accademiche.
+</p>
+ 
+</section>
+  
+
+  <div class="back-home">
+    <a href="sarteano.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
