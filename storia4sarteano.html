@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storia Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-091CFPRCWW');
+</script>
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Sarteano durante il ventesimo secolo</div>
+    <nav>
+      <ul id="menu">
+            <li><a href="sarteano.html">Introduzione</a></li>
+        <li><a href="tradizionisarteano.html">Tradizioni</a></li>
+        <li><a href="luoghisarteano.html">Luoghi da Visitare</a></li>
+        <li><a href="eventisarteano.html">Eventi Locali</a></li>
+        <li><a href="intervistesarteano.html">Interviste</a></li>
+        <li><a href="archiviosarteano.html">Archivio Fotografico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+  <h1>Sarteano nel XX secolo: evoluzione storica, economica e culturale</h1>
+
+<h2>Evoluzione storica e politica (1900–2000)</h2>
+
+<p>
+All’inizio del Novecento Sarteano era un borgo rurale segnato dalla recente unità d’Italia e dalla memoria risorgimentale (Garibaldi vi transitò nel 1849).
+Durante la Prima Guerra Mondiale (1915-18), molti giovani sarteanesi furono chiamati alle armi e numerosi caddero al fronte.
+Nel dopoguerra la comunità commemorò i suoi caduti con un monumento inaugurato il 23 settembre 1923, opera dello scultore Arnoldo Zocchi.
+</p>
+<p>
+Questa monumentale statua, raffigurante un fante, fu donata da Zocchi in onore della moglie originaria di Sarteano ed è considerata “come miglior monumento ai caduti d’Italia”.
+Tale monumento domina tuttora la piazza principale del paese, oggi intitolata al 24 giugno 1944 (data della Liberazione).
+</p>
+<p>
+Negli anni del fascismo (1922-43), anche Sarteano vide l’abolizione delle istituzioni democratiche locali in favore del podestà nominato dal regime.
+La vita politica si allineò all’ideologia fascista, ma non mancarono episodi di dissenso sotterraneo, come nel resto della Toscana.
+</p>
+<p>
+In questo periodo il regime promosse iniziative di stampo nazionalista e folklorico: ad esempio, nel 1933 il commissario prefettizio Guidone Bargagli Petrucci decise di ripristinare la storica Giostra del Saracino, dotandola di una nuova organizzazione in cinque contrade corrispondenti alle antiche parrocchie.
+La giostra equestre – una tradizione locale risalente almeno al XVI secolo – venne così rilanciata con grande sfarzo negli anni Trenta, fino a essere corsa regolarmente in piazza ogni Ferragosto.
+L’ultima edizione prima della guerra si tenne nel 1939, dopodiché la manifestazione fu sospesa a causa del conflitto.
+</p>
+<p>
+Con l’entrata in guerra dell’Italia (1940), anche Sarteano subì privazioni, reclutamenti e lutti.
+Dopo l’armistizio dell’8 settembre 1943 il territorio divenne teatro della Resistenza: sul vicino Monte Cetona operava la Brigata partigiana “Simar”, che stabilì una base nel borgo montano di Fontevetriana.
+</p>
+<p>
+Nel giugno 1944, mentre gli Alleati avanzavano risalendo la penisola, i nazifascisti in ritirata compirono tragici episodi anche a Sarteano.
+Il 16 giugno 1944 a Castiglioncello del Trinoro, frazione sarteanese affacciata sulla Val d’Orcia, un reparto tedesco effettuò un rastrellamento e minacciò di fucilare la popolazione in rappresaglia a un attacco partigiano.
+</p>
+<p>
+In quella circostanza furono uccisi due civili, Amerigo Bai (35 anni) e Quirino Salvadori (36 anni), ma l’eccidio generale del paese fu sventato grazie al coraggioso intervento di Giuseppe Cecchini, un soldato italiano sfollato all’Elba che parlava tedesco: rivolgendosi agli ufficiali nazisti disse loro «O tutti vivi, o tutti morti», convincendoli a risparmiare gli ostaggi innocenti.
+</p>
+<p>
+L’eroico gesto di Cecchini – coadiuvato dal parroco don Enrico Bellucci – riuscì a fermare la rappresaglia tedesca e salvare decine di vite.
+Oggi una lapide a Fontevetriana (posta dall’ANPI nel 1980) ricorda i partigiani caduti in quei mesi e riporta le sprezzanti parole pronunciate dai nazisti prima di ucciderli, monito perché “tanta inumana criminale arroganza mai più possa affiorare”.
+</p>
+<p>
+Il 23 giugno 1944 Sarteano era ancora scosso dalla violenza dei combattimenti (proprio dal 17 al 28 giugno il fronte infuriò nella zona, con bombardamenti di artiglieria alleata).
+Il giorno successivo, 24 giugno 1944, le truppe alleate liberarono finalmente il paese dall’occupazione nazi-fascista.
+</p>
+<p>
+In ricordo di quella data storica, la piazza principale di Sarteano è stata in seguito dedicata al “24 Giugno 1944” e tutt’oggi celebra la Liberazione come festa cittadina.
+Nel dopoguerra la guida del Comune passò al Comitato di Liberazione Nazionale locale e quindi a sindaci espressi dalle forze antifasciste.
+</p>
+<p>
+Il primo sindaco fu Angelo Severini (in carica dal novembre 1945), che condusse la difficile fase della ricostruzione.
+In linea con la tendenza della Valdichiana e della provincia senese, la vita politica di Sarteano nel secondo Novecento fu caratterizzata da una forte presenza delle sinistre: il Partito Comunista Italiano e poi le forze di centro-sinistra hanno amministrato il Comune per decenni, promuovendo politiche sociali e culturali.
+</p>
+<p>
+Emblematico è il fatto che nel 1986 il Comune abbia scoperto una lapide in memoria di Palmiro Togliatti, storico leader comunista, a 22 anni dalla sua scomparsa.
+La stabilità democratica locale è confermata dalla longevità di alcuni sindaci: Primo Morgantini guidò Sarteano ininterrottamente dal 1965 al 1984, mentre negli anni Novanta la carica fu ricoperta da Rosanna Pugnalini, prima donna sindaco del paese (1994-2002).
+</p>
+<p>
+La transizione alla Seconda Repubblica fu gestita senza traumi: Sarteano continuò a essere amministrata da giunte di centro-sinistra, con attenzione alla valorizzazione del patrimonio storico e al benessere sociale.
+</p>
+
+  <h2>Cambiamenti economici e sociali</h2>
+
+<p>
+Sul piano economico e sociale, il XX secolo portò trasformazioni radicali a Sarteano. Agli inizi del Novecento l’economia locale era ancora prevalentemente agricola e basata sul sistema della mezzadria: le campagne circostanti erano coltivate a cereali, vite e olivo, e le famiglie contadine lavoravano le terre dei proprietari dividendo i raccolti.
+</p>
+<p>
+Questo sistema tradizionale cominciò a entrare in crisi già negli anni Trenta e crollò definitivamente nel secondo dopoguerra, con la riforma agraria e la modernizzazione agricola. Nel dopoguerra infatti molti mezzadri abbandonarono i poderi, attratti dal lavoro salariato nelle città o emigrati all’estero, provocando un marcato calo demografico rurale.
+</p>
+<p>
+I dati demografici evidenziano questa tendenza: la popolazione del Comune, che era di circa 5.076 abitanti nel 1901 (picco storico), diminuì a 4.584 nel 1921 e a 4.565 nel 1931. Dopo un temporaneo incremento nel secondo dopoguerra, la cifra tornò a calare negli anni ’60, decennio in cui si registrarono 1.692 emigrati a fronte di 1.208 immigrati, con un saldo migratorio negativo di circa 484 persone.
+</p>
+<p>
+Molti giovani lasciarono Sarteano in cerca di migliori opportunità: significative ondate migratorie si diressero verso le aree industriali del Nord Italia e persino oltreoceano, ad esempio verso l’Australia negli anni Sessanta. Questo esodo provocò l’invecchiamento della popolazione (indice di vecchiaia in aumento) e lo spopolamento di alcune frazioni rurali.
+</p>
+<p>
+Parallelamente al declino della mezzadria, l’economia agricola si ristrutturò in forme più moderne: le aziende agricole superstiti adottarono la meccanizzazione e si specializzarono (cereali, foraggi, allevamenti ovini e bovini), mentre alcune terre marginali furono abbandonate e ricolonizzate dal bosco.
+</p>
+<p>
+A Sarteano non si sviluppò mai una grande industria, ma piccole attività artigianali e industriali sorsero nella seconda metà del Novecento, spesso legate all’edilizia (laboratori di ceramica, lavorazione del legno, materiali da costruzione) o all’agroalimentare locale.
+</p>
+<p>
+Una risorsa peculiare del territorio è l’acqua termale delle sorgenti di Bagno Santo (Santa Lucia), note fin dall’epoca romana per le proprietà curative. Già dagli anni ’30 furono realizzate fonti e lavatoi termali, ma è soprattutto dagli anni ’60 che l’acqua sulfurea di Sarteano divenne un volano turistico: nel 1967 aprì il Parco delle Piscine, un campeggio con tre piscine alimentate da sorgenti termo-minerali a 24°C.
+</p>
+<p>
+Questa struttura, immersa nel verde ai margini del borgo, rese Sarteano “un centro di attrazione estiva” già dagli anni Settanta, richiamando turisti in cerca di relax e benessere.
+</p>
+<p>
+Il settore turistico, praticamente inesistente a inizio ’900, divenne dunque rilevante a fine secolo: accanto al turismo termale e naturalistico (Sarteano offre il fresco dei boschi di Pietraporciana e del Monte Cetona), si sviluppò il turismo culturale legato alle bellezze storiche (il Castello, le chiese, i musei) e alle tradizioni folkloristiche come la Giostra del Saracino.
+</p>
+<p>
+Molte abitazioni del centro storico vennero restaurate e destinate a seconde case o B&B per visitatori stranieri, soprattutto dagli anni ’90 in poi, inserendo Sarteano nel circuito dei borghi toscani apprezzati a livello internazionale.
+</p>
+<p>
+Sul fronte sociale, il Novecento vide un generale miglioramento delle condizioni di vita. Nel ventennio fascista furono introdotte alcune infrastrutture (ad esempio l’acquedotto pubblico venne ampliato, garantendo acqua potabile in paese) e servizi di base.
+</p>
+<p>
+Ma fu soprattutto dopo il 1945, con la Repubblica, che Sarteano beneficiò delle politiche di welfare nazionali: furono costruite scuole dell’obbligo, estesa l’elettrificazione nelle campagne e aperto un consultorio medico.
+</p>
+<p>
+L’associazionismo con finalità solidaristiche crebbe: nel 1971 nacque la sezione comunale dell’AVIS (donatori di sangue), affiancata dal gruppo Fratres, a testimonianza di una comunità attiva nel volontariato.
+</p>
+<p>
+Anche l’immigrazione, seppur su piccola scala, fece la sua comparsa sul finire del secolo: alcune famiglie di origine straniera (soprattutto dall’Est Europa) si stabilirono a Sarteano negli anni ’90, contribuendo leggermente a frenare il calo demografico.
+</p>
+<p>
+Nel 2000 la popolazione comunale era attestata intorno ai 4.400 abitanti, quindi inferiore al valore di inizio secolo ma più stabile rispetto ai minimi degli anni ’70 (circa 3.900 residenti nel 1970).
+</p>
+
+<h2>Urbanistica e architettura nel Novecento</h2>
+
+<p>
+Il Castello di Sarteano, risalente al Medioevo, domina il paese. Acquistato dal Comune nel 1997, fu restaurato e aperto al pubblico negli anni successivi.
+</p>
+<p>
+L’assetto urbano di Sarteano a inizio ’900 conservava l’impianto storico: un centro compatto attorno al Castello, cinto un tempo da mura medievali in gran parte abbattute già a metà Ottocento. Le trasformazioni ottocentesche avevano ampliato la piazza centrale (eliminando l’antica Pieve di San Martino in Foro e altre vestigia medievali), conferendo al “salotto” cittadino un aspetto più aperto e ottocentesco.
+</p>
+<p>
+Nel XX secolo, gli interventi urbanistici più rilevanti furono legati all’espansione edilizia fuori dal centro storico e alla realizzazione di infrastrutture civiche, piuttosto che a sventramenti interni (il borgo antico rimase intatto nel suo tessuto viario di vicoli e case in pietra).
+</p>
+<p>
+Durante il ventennio fascista vennero costruiti alcuni edifici pubblici e commemorativi. Oltre al citato Monumento ai Caduti (1923), fu probabilmente attiva anche a Sarteano una Casa del Fascio locale (come in molti comuni italiani) e si intitolarono strade a figure del regime, poi ridenominate dopo la Liberazione.
+</p>
+<p>
+Terminata la guerra, l’urgenza fu ricostruire i danni bellici: ad esempio, la Chiesa del Suffragio fu restaurata nel 1945 “restituita al pristino decoro” grazie a oblazioni popolari e alla Venerabile Misericordia.
+</p>
+<p>
+Negli anni ’50 e ’60 l’abitato conobbe una moderata espansione edilizia: sorsero quartieri residenziali moderni ai margini del centro storico, come la zona di Sant’Alberto a ovest. Proprio lì fu edificata una nuova chiesa parrocchiale in stile contemporaneo: la Chiesa di Sant’Alberto, consacrata nel 1972, caratterizzata da un’ardita copertura “a vela” in cemento.
+</p>
+<p>
+Contestualmente furono realizzati complessi di case popolari e villette unifamiliari per accogliere la popolazione trasferitasi dalle campagne.
+</p>
+<p>
+Un altro intervento di rilievo fu il potenziamento della rete stradale: la strada provinciale per Chianciano Terme venne migliorata e, negli anni ’60, l’apertura dell’Autostrada del Sole con casello a Chiusi-Chianciano rese Sarteano più accessibile, stimolandone il turismo.
+</p>
+<p>
+Nel centro storico, il Novecento fu invece epoca di tutela e recupero. A partire dagli anni ’80 il Comune intraprese progetti di restauro dei principali monumenti: il possente Castello medievale – rimasto per secoli in mani private – fu finalmente acquisito dall’amministrazione nel 1997.
+</p>
+<p>
+Subito dopo iniziarono lavori di consolidamento e restauro della rocca e delle mura, conclusi entro i primi anni Duemila, che consentirono di aprire il castello ai visitatori come museo e sede di eventi.
+</p>
+<p>
+Anche il pregevole Teatro Comunale degli Arrischianti (all’interno del Palazzo Comunale) attraversò vicissitudini: già costruito nel Settecento, aveva subito decenni di abbandono e nel 1965 era stato dichiarato inagibile, cadendo in degrado. Solo nel 1999 si conclusero i lavori di restauro integrale della sala teatrale, e il 27 maggio 2000 il Teatro degli Arrischianti ha riaperto al pubblico nel suo antico splendore.
+</p>
+<p>
+Oggi esso rappresenta un piccolo gioiello architettonico sette-ottocentesco (146 posti a sedere tra platea e palchi) e di nuovo il fulcro della vita culturale locale.
+</p>
+<p>
+Dal punto di vista urbanistico, Sarteano è rimasta una cittadina di dimensioni contenute (il capoluogo conta poche migliaia di abitanti). Fuori dalla cerchia storica il paese si è sviluppato con un’edilizia armoniosa e rispettosa del paesaggio: ad esempio, lungo la strada per Chianciano si estendono i curati giardini e campeggi del Parco delle Piscine, inaugurato nel ’67 e poi ampliato, con le sue vasche termali a cielo aperto incorniciate dal verde.
+</p>
+<p>
+Nel 1980, accanto al castello, è stato creato il “Parco della Pace”, un’area verde commemorativa con monumenti dedicati alla Resistenza, a sottolineare l’impegno della comunità verso la memoria storica.
+</p>
+<p>
+Anche la toponomastica urbana riflette il Novecento: oltre alla già citata Piazza XXIV Giugno 1944 in centro, a Castiglioncello del Trinoro la piazzetta principale è oggi intitolata “16 Giugno 1944” a memoria dell’episodio dei due martiri Bai e Salvadori.
+</p>
+
+  <h2>Cultura e tradizioni locali nel Novecento</h2>
+
+<p>
+La vita culturale di Sarteano nel XX secolo ha saputo coniugare la valorizzazione delle proprie radici storiche con nuove iniziative. La tradizione popolare più celebre è senza dubbio la Giostra del Saracino, torneo cavalleresco che affonda le radici nel Medioevo. Dopo secoli di alti e bassi, la Giostra subì varie interruzioni nel Novecento (si tenne sporadicamente fino al 1929 e fu rilanciata dal regime fascista nel 1933), ma nel dopoguerra riprese gradualmente vigore. Dal 1982 la Giostra del Saracino è tornata a svolgersi con regolarità ogni anno il 15 agosto, giorno dell’Assunta, divenendo un appuntamento fisso e identitario.
+</p>
+<p>
+Cinque cavalieri – in rappresentanza delle cinque contrade storiche di Sarteano (Santissima Trinità, San Bartolomeo, San Lorenzo, San Martino, Sant’Andrea) – si sfidano in costume settecentesco infilando con la lancia un anello al buratto del Saracino. La contrada vincitrice conquista il palio tra l’entusiasmo popolare. La Giostra, accompagnata da un vivace corteo storico e da cerimonie tradizionali (come la Tratta dei Bossoli e la Provaccia nei giorni precedenti), è oggi il fiore all’occhiello del folklore sarteanese e attira numerosi spettatori e turisti ogni estate.
+</p>
+<p>
+Intorno alla Giostra ruotano le attività di varie associazioni locali. Ciascuna contrada ha un proprio comitato organizzatore e sede sociale, e durante l’anno si svolgono feste rionali, cene propiziatorie e iniziative benefiche promosse dai contradaioli.
+</p>
+<p>
+Nel dopoguerra fu rifondata anche la secolare Accademia degli Arrischianti, istituzione culturale nata nel 1731. Dopo la riapertura del teatro comunale nel 2000, l’Accademia degli Arrischianti è tornata protagonista: la Nuova Accademia è stata costituita nel 1986 per iniziativa di un gruppo di appassionati di teatro e musica, allo scopo di “animare la vita culturale di Sarteano”. Da allora organizza spettacoli teatrali, corsi di recitazione e concerti di qualità, spesso in collaborazione con il Comune.
+</p>
+<p>
+In particolare, dagli anni ’90 Sarteano vanta un apprezzato festival musicale estivo: il Sarteano Jazz & Blues, nato come rassegna “Venerdì Jazz” nel 1990 e poi cresciuto fino a entrare nel circuito regionale dei festival toscani. Ogni anno musicisti jazz e blues si esibiscono nel teatro o in piazza, richiamando pubblico anche da fuori zona.
+</p>
+<p>
+Un importante presidio culturale inaugurato nel tardo Novecento è il Museo Civico Archeologico di Sarteano, aperto nel 1997 presso Palazzo Gabrielli. Questo museo, parte della Fondazione Musei Senesi, è nato con l’intento di riportare “nel territorio di origine” i numerosi reperti etruschi rinvenuti nelle necropoli locali.
+</p>
+<p>
+Il territorio di Sarteano è infatti ricchissimo di testimonianze etrusche, come le tombe affrescate della Necropoli delle Pianacce. Il museo espone corredi funerari, urne e ceramiche di eccezionale valore, tra cui i dipinti originali della celebre Tomba della Quadriga Infernale (IV sec. a.C.), scoperta nel 2003 poco fuori paese. Grazie al museo – che ospita anche laboratori didattici e una piccola sezione medievale – Sarteano si è affermata negli anni Duemila come meta di turismo archeologico e scolastico.
+</p>
+<p>
+Accanto ad esso, dal 2016, è stata allestita la Sala d’Arte Domenico Beccafumi (nella chiesa di San Michele), a riprova della volontà di arricchire l’offerta culturale locale.
+</p>
+<p>
+Le tradizioni religiose continuano a rivestire importanza nella vita comunitaria. Il patrono di Sarteano è San Lorenzo Martire, la cui festa cade il 10 agosto: fino al 1935 San Lorenzo fu considerato il santo protettore principale e ancora oggi viene onorato con funzioni solenni.
+</p>
+<p>
+Un’altra festività sentita è quella di San Rocco il 16 agosto, in passato associata proprio alla Giostra del Saracino (che storicamente nacque come gioco in onore di San Rocco). Nel corso del Novecento si sono introdotte anche nuove ricorrenze civili: ogni anno il 25 aprile e il 24 giugno la cittadinanza commemora rispettivamente la Liberazione d’Italia e la Liberazione di Sarteano dal nazifascismo, con cerimonie ufficiali e deposizione di corone al Monumento ai Caduti.
+</p>
+<p>
+Iniziative come le “Passeggiate Resistenti” (escursioni storico-naturalistiche sui luoghi della Resistenza, organizzate dall’ANPI locale) sottolineano la volontà di trasmettere la memoria storica alle nuove generazioni.
+</p>
+<p>
+Non mancano infine le tradizioni artigianali e folcloristiche di carattere profano. Nel Novecento si è mantenuta viva l’arte della ceramica e della lavorazione del ferro battuto, grazie a botteghe artigiane locali che producono ancora oggi manufatti ispirati allo stile toscano. Fino agli anni ’50 era diffusa la produzione casalinga di tessuti e ricami, praticata dalle donne in paese.
+</p>
+<p>
+Alcune usanze popolari sono scomparse (ad esempio il “Gioco della Pugna”, un tempo parte dei festeggiamenti di San Rocco, fu abolito nel 1712 perché troppo violento), ma altre si sono rinnovate: negli anni Duemila è stato recuperato ad esempio un torneo popolare detto “Torneo del Romitorio”, sorta di giostra in versione minore organizzata dalla contrada di San Bartolomeo, per far rivivere atmosfere medievali in agosto.
+</p>
+<p>
+Folklore antico e sensibilità moderna convivono così nell’identità sarteanese.
+</p>
+
+  <h2>Personaggi rilevanti nati o vissuti a Sarteano (1900–2000)</h2>
+
+<p>
+Nel corso del XX secolo, Sarteano ha dato i natali o ospitato diverse figure di rilievo in ambito storico, culturale e politico. Tra i patrioti e martiri locali vanno anzitutto ricordati Amerigo Bai (1909-1944) e Quirino Salvadori (1908-1944), contadini-partigiani che persero la vita nell’eccidio di Castiglioncello del Trinoro il 16 giugno 1944. I loro nomi sono incisi sulle lapidi commemorative e la comunità li onora come eroi della Resistenza.
+</p>
+<p>
+Assieme a loro viene celebrato Giuseppe Cecchini (1904-??), il soldato che quel giorno del 1944 salvò il borgo dalla strage facendosi interprete coi tedeschi: pur non essendo sarteanese di nascita (era originario dell’Isola d’Elba), Cecchini visse quegli eventi a Sarteano, divenendo cittadino onorario morale del paese.
+</p>
+<p>
+Una figura legata alla Resistenza è anche il parroco Don Enrico Bellucci, testimone oculare dei fatti del ’44, il cui diario ha tramandato le parole di Cecchini “o tutti vivi o tutti morti”.
+</p>
+<p>
+In ambito politico-amministrativo, spicca Rosanna Pugnalini (nata a Sarteano nel 1958), esempio di donna impegnata nelle istituzioni. Pugnalini entrò giovanissima nel Consiglio comunale nel 1984 e fu sindaco di Sarteano per due mandati (1994-2002), distinguendosi per iniziative in campo sociale e culturale. Successivamente ha proseguito la carriera come consigliere presso la Regione Toscana e presidente della Commissione Pari Opportunità regionale, portando la voce della Valdichiana in ambito regionale.
+</p>
+<p>
+Tra i sindaci storici del Novecento, merita menzione anche Primo Morgantini (1925-2001), che guidò il Comune per quasi 19 anni consecutivi (1965-1984), incarnando la tradizione “rossa” toscana: comunista della prima ora, fu partigiano adolescente e poi amministratore capace, divenendo una figura amatissima a livello locale (gli è dedicata una via cittadina).
+</p>
+<p>
+Nel campo culturale e artistico, Sarteano ricorda Domenico Bandini (1898-1981), studioso e araldista che – pur essendo originario di Marradi – visse a lungo a Sarteano contribuendo alla riscoperta della sua storia. Il dottor Bandini, Commendatore della Repubblica, nel 1948 redasse l’Ordinamento Fondamentale – Regolamento Generale delle Contrade della Giostra del Saracino, attribuendo a ciascuna contrada colori ed emblemi araldici ispirati alla storia locale. Fu autore inoltre della monumentale Raccolta delle armi (stemmi) di Sarteano pubblicata nel 1961, ancora oggi punto di riferimento per la conoscenza delle famiglie nobili sarteanesi.
+</p>
+<p>
+La sua passione per la storia patria riecheggia nell’opera del sarteanese Luca Aggravi (classe 1967), storico locale che nel 1996 curò la ristampa annotata delle Memorie storiche di Sarteano di Fanello Fanelli (testo ottocentesco). Aggravi è considerato uno dei custodi della memoria sarteanese contemporanea.
+</p>
+<p>
+Un posto particolare spetta all’ambito artistico e mediatico. Nel 1951 il celebre scrittore e regista Curzio Malaparte scelse Sarteano e dintorni come set per il suo film <em>Il Cristo proibito</em>, con attori come Raf Vallone e Gino Cervi. La presenza della troupe cinematografica destò curiosità in paese e immortalò scorci di Sarteano dell’epoca nel lungometraggio.
+</p>
+<p>
+In anni più recenti, il fotografo Luca Mengoni (nato nel 1971), pur non essendo originario, ha ritratto il Castello di Sarteano e altri monumenti partecipando al concorso Wiki Loves Monuments e contribuendo a diffondere immagini del borgo a livello internazionale.
+</p>
+<p>
+Da menzionare, infine, Arnoldo Zocchi (1862-1940), sebbene non sarteanese, in quanto autore del Monumento ai Caduti del 1923: scultore di fama internazionale (sue opere sono a Roma, Sofia, Buenos Aires, ecc.), Zocchi legò il suo nome a Sarteano avendo sposato una donna del luogo. Il suo imponente bronzo di soldato italico ha caratterizzato la piazza sarteanese per tutto il secolo, diventando parte integrante dell’identità visiva del paese.
+</p>
+<p>
+In sintesi, il Novecento a Sarteano fu attraversato da figure di combattenti coraggiosi, amministratori lungimiranti e custodi della cultura locale. Attraverso la loro eredità – i gesti eroici salvati dall’oblio, i libri, le tradizioni mantenute vive – la comunità ha potuto traghettare la propria storia nel nuovo millennio con rinnovata consapevolezza delle proprie radici.
+</p>
+<p>
+Sarteano del ventesimo secolo è dunque un microcosmo dove grandi eventi nazionali (guerre, fascismo, boom economico) hanno lasciato tracce tangibili, ma dove al contempo la dimensione locale e umana resta protagonista, incarnata dai volti e dai nomi dei sarteanesi che ne hanno fatto la storia.
+</p>
+
+ <h2>Fonti</h2>
+
+<p>
+Archivio storico comunale di Sarteano; lapidi commemorative e iscrizioni pubbliche (raccolta Roberto Della Lena); <em>Memorie storiche di Sarteano</em> di F. Fanelli (1892, con note di L. Aggravi 1996); periodico locale <em>Montepiesi</em>; dati ISTAT; sito ufficiale del Comune di Sarteano.
+</p>
+<p>
+ToscanaNovecento (Istituto Storico Toscano della Resistenza); straginazifasciste.it (schedario eccidio Castiglioncello); <em>Pietre della Memoria</em> – ANPI; <em>Resistenza Toscana</em>; <em>Sarteano Living</em> (blog culturale); <em>GiostradelSaracino.it</em> e Wikipedia.
+</p>
+<p>
+Consiglio Regionale Toscana (scheda R. Pugnalini); comunicati stampa Comune di Sarteano.
+</p>
+
+</section>
+  
+
+  <div class="back-home">
+    <a href="sarteano.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
