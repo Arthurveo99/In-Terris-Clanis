@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-091CFPRCWW');
+</script>
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">Sarteano during the 20th century</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="sarteanoenglish.html">Home</a></li>
+        <li><a href="sarteanotraditions.html">Traditions</a></li>
+        <li><a href="sarteanoplaces.html">Places to Visit</a></li>
+        <li><a href="sarteanoevents.html">Local Events</a></li>
+        <li><a href="sarteanointerviews.html">Interviews</a></li>
+        <li><a href="sarteanoarchive.html">Photographic Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+  <h1>Sarteano in the 20th Century: Historical, Economic, and Cultural Evolution</h1>
+
+<h2>Historical and Political Evolution (1900–2000)</h2>
+
+<p>
+At the beginning of the 20th century, Sarteano was a rural village marked by the recent unification of Italy and the memory of the Risorgimento (Garibaldi passed through in 1849).
+During the First World War (1915–18), many young men from Sarteano were called to arms and numerous lives were lost at the front.
+After the war, the community commemorated its fallen with a monument inaugurated on 23 September 1923, created by the sculptor Arnoldo Zocchi.
+</p>
+<p>
+This monumental statue, depicting an infantryman, was donated by Zocchi in honor of his wife, a native of Sarteano, and is considered “the finest war memorial in Italy.”
+The monument still dominates the town’s main square, now named after 24 June 1944 (the date of the Liberation).
+</p>
+<p>
+During the Fascist years (1922–43), Sarteano too saw the abolition of local democratic institutions in favor of a *podestà* appointed by the regime.
+Political life conformed to fascist ideology, though episodes of underground dissent occurred, as elsewhere in Tuscany.
+</p>
+<p>
+In this period, the regime promoted nationalist and folkloric initiatives: for example, in 1933, the prefectural commissioner Guidone Bargagli Petrucci decided to revive the historic *Giostra del Saracino*, reorganizing it into five districts corresponding to the old parishes.
+The equestrian joust—a local tradition dating back at least to the 16th century—was thus revived with great pomp in the 1930s and was run regularly in the town square every Ferragosto (15 August).
+The final edition before the war took place in 1939; the event was then suspended due to the conflict.
+</p>
+<p>
+With Italy’s entry into the war (1940), Sarteano too endured hardships, conscription, and mourning.
+After the armistice of 8 September 1943, the area became a theater of Resistance: on nearby Mount Cetona, the partisan brigade “Simar” operated, establishing a base in the mountain village of Fontevetriana.
+</p>
+<p>
+In June 1944, as Allied troops advanced up the peninsula, retreating Nazi-fascist forces committed tragic acts in Sarteano.
+On 16 June 1944 in Castiglioncello del Trinoro, a hamlet of Sarteano overlooking the Val d'Orcia, a German unit carried out a raid and threatened to execute the population in retaliation for a partisan attack.
+</p>
+<p>
+In that incident, two civilians, Amerigo Bai (35) and Quirino Salvadori (36), were killed, but a general massacre was averted thanks to the courageous intervention of Giuseppe Cecchini, an Italian soldier who had fled from Elba and spoke German: addressing the Nazi officers, he told them, “Either all alive, or all dead,” convincing them to spare the innocent hostages.
+</p>
+<p>
+Cecchini’s heroic gesture—assisted by parish priest Don Enrico Bellucci—halted the German reprisal and saved dozens of lives.
+Today, a plaque in Fontevetriana (placed by the ANPI in 1980) commemorates the partisans who fell in those months and bears the scornful words uttered by the Nazis before the killings, serving as a warning so that “such inhuman, criminal arrogance may never rise again.”
+</p>
+<p>
+On 23 June 1944, Sarteano was still shaken by the violence of the fighting (from 17 to 28 June the front raged in the area, with Allied artillery shelling).
+The next day, 24 June 1944, Allied troops finally liberated the town from Nazi-fascist occupation.
+</p>
+<p>
+In memory of that historic date, Sarteano’s main square was later dedicated to “24 June 1944” and to this day celebrates Liberation Day as a civic holiday.
+After the war, the leadership of the municipality passed to the local National Liberation Committee and subsequently to mayors from the anti-fascist parties.
+</p>
+<p>
+The first mayor was Angelo Severini (in office from November 1945), who led the difficult reconstruction phase.
+In line with the trend in the Valdichiana and the province of Siena, Sarteano’s political life in the latter 20th century was characterized by a strong presence of the left: the Italian Communist Party and then center-left coalitions governed the municipality for decades, promoting social and cultural policies.
+</p>
+<p>
+Symbolic of this political identity is the fact that in 1986, the municipality unveiled a plaque in memory of Palmiro Togliatti, the historic Communist leader, 22 years after his death.
+Local democratic stability is further reflected in the long tenures of several mayors: Primo Morgantini governed Sarteano uninterruptedly from 1965 to 1984, and in the 1990s the office was held by Rosanna Pugnalini, the town’s first woman mayor (1994–2002).
+</p>
+<p>
+The transition to the Second Republic was managed without upheaval: Sarteano continued to be governed by center-left administrations, with a focus on enhancing its historical heritage and ensuring social wellbeing.
+</p>
+
+  <h2>Economic and Social Changes</h2>
+
+<p>
+On the economic and social front, the 20th century brought radical transformations to Sarteano. At the beginning of the century, the local economy was still predominantly agricultural and based on the sharecropping system: the surrounding countryside was cultivated with cereals, vines, and olives, and peasant families worked the land of landowners by dividing the harvests.
+</p>
+<p>
+This traditional system began to decline as early as the 1930s and collapsed definitively in the postwar period, with agrarian reform and agricultural modernization. In fact, after the war, many sharecroppers abandoned their farms, attracted by wage labor in the cities or emigrating abroad, leading to a marked demographic decline in rural areas.
+</p>
+<p>
+Demographic data reflects this trend: the population of the municipality, which peaked at around 5,076 inhabitants in 1901, dropped to 4,584 in 1921 and 4,565 in 1931. After a temporary increase in the immediate postwar years, the number fell again in the 1960s, a decade in which 1,692 people emigrated while only 1,208 immigrated, resulting in a negative migration balance of about 484 people.
+</p>
+<p>
+Many young people left Sarteano in search of better opportunities: significant waves of emigration were directed toward the industrial areas of northern Italy and even overseas, for example to Australia in the 1960s. This exodus led to an aging population (increasing age index) and depopulation of some rural hamlets.
+</p>
+<p>
+In parallel with the decline of sharecropping, the agricultural economy was restructured into more modern forms: surviving farms adopted mechanization and specialization (cereals, forage, sheep and cattle farming), while some marginal lands were abandoned and reclaimed by woodland.
+</p>
+<p>
+Sarteano never developed large-scale industry, but small artisan and industrial businesses emerged in the second half of the 20th century, often linked to construction (ceramics workshops, wood processing, building materials) or to local agri-food production.
+</p>
+<p>
+A distinctive resource of the area is the thermal water from the Bagno Santo (Santa Lucia) springs, known since Roman times for its healing properties. Already in the 1930s, thermal fountains and washhouses were built, but it was especially from the 1960s that Sarteano’s sulfurous water became a tourist attraction: in 1967 the Parco delle Piscine opened, a campground with three pools fed by thermal-mineral springs at 24°C.
+</p>
+<p>
+This facility, nestled in greenery at the edge of the village, made Sarteano “a summer destination” as early as the 1970s, attracting tourists in search of relaxation and wellness.
+</p>
+<p>
+The tourism sector, practically non-existent at the beginning of the 20th century, became significant by the end of the century: alongside thermal and nature tourism (Sarteano offers the cool forests of Pietraporciana and Mount Cetona), cultural tourism also developed, focused on the town’s historical treasures (the Castle, churches, museums) and folkloric traditions such as the Giostra del Saracino.
+</p>
+<p>
+Many homes in the historic center were restored and converted into second homes or B&Bs for foreign visitors, especially from the 1990s onwards, bringing Sarteano into the circuit of internationally appreciated Tuscan villages.
+</p>
+<p>
+On the social side, the 20th century saw a general improvement in living conditions. During the Fascist era, some infrastructure was introduced (for example, the public aqueduct was expanded, providing drinkable water to the town) and basic services were implemented.
+</p>
+<p>
+But it was especially after 1945, under the Republic, that Sarteano benefited from national welfare policies: compulsory schools were built, electrification extended to the countryside, and a medical clinic was opened.
+</p>
+<p>
+Solidarity-based community associations grew: in 1971 the local chapter of AVIS (blood donors) was founded, alongside the Fratres group, as a sign of an active community engaged in volunteer work.
+</p>
+<p>
+Immigration, albeit on a small scale, also made its appearance at the end of the century: some families of foreign origin (mostly from Eastern Europe) settled in Sarteano in the 1990s, helping slightly to counter the demographic decline.
+</p>
+<p>
+By the year 2000, the municipal population was around 4,400 inhabitants, thus lower than the figure at the beginning of the century but more stable compared to the low point of the 1970s (about 3,900 residents in 1970).
+</p>
+
+<h2>Urban Planning and Architecture in the 20th Century</h2>
+
+<p>
+The Castle of Sarteano, dating back to the Middle Ages, dominates the town. Purchased by the Municipality in 1997, it was restored and opened to the public in the following years.
+</p>
+<p>
+At the beginning of the 20th century, Sarteano’s urban layout still preserved its historic structure: a compact center around the Castle, once surrounded by medieval walls largely demolished by the mid-19th century. The 19th-century transformations had expanded the main square (eliminating the ancient Pieve of San Martino in Foro and other medieval remnants), giving the town's "parlor" a more open, 19th-century appearance.
+</p>
+<p>
+In the 20th century, the most significant urban interventions were related to building expansion outside the historic center and the construction of civic infrastructure, rather than internal demolitions (the old town remained intact in its network of alleys and stone houses).
+</p>
+<p>
+During the Fascist period, several public and commemorative buildings were constructed. In addition to the aforementioned Monument to the Fallen (1923), a local Casa del Fascio was likely active in Sarteano (as in many Italian municipalities), and streets were named after figures of the regime, later renamed after the Liberation.
+</p>
+<p>
+After the war, the priority was to repair war damage: for example, the Church of the Suffrage was restored in 1945 and “returned to its former decorum” thanks to public donations and the efforts of the Venerable Misericordia.
+</p>
+<p>
+In the 1950s and 60s, the town experienced moderate residential expansion: modern residential neighborhoods were built on the outskirts of the historic center, such as the Sant’Alberto area to the west. A new parish church in contemporary style was built there: the Church of Sant’Alberto, consecrated in 1972, is notable for its bold “sail-shaped” concrete roof.
+</p>
+<p>
+At the same time, public housing complexes and single-family homes were built to accommodate the population that had moved from the countryside.
+</p>
+<p>
+Another significant development was the improvement of the road network: the provincial road to Chianciano Terme was upgraded and, in the 1960s, the opening of the Autostrada del Sole with a toll booth at Chiusi-Chianciano made Sarteano more accessible, stimulating tourism.
+</p>
+<p>
+In the historic center, the 20th century was instead a time of preservation and restoration. Starting in the 1980s, the Municipality launched restoration projects for the main monuments: the imposing medieval Castle – which had remained in private hands for centuries – was finally acquired by the administration in 1997.
+</p>
+<p>
+Soon after, consolidation and restoration works on the fortress and walls began, completed by the early 2000s, which allowed the castle to open to visitors as a museum and venue for events.
+</p>
+<p>
+The fine *Teatro Comunale degli Arrischianti* (inside the Town Hall) also experienced ups and downs: built in the 18th century, it suffered decades of abandonment and was declared unsafe in 1965, falling into disrepair. Only in 1999 were full restoration works completed, and on 27 May 2000, the Teatro degli Arrischianti reopened to the public in its former glory.
+</p>
+<p>
+Today, it represents a small 18th–19th-century architectural jewel (146 seats between stalls and boxes) and once again serves as the hub of local cultural life.
+</p>
+<p>
+From an urban planning perspective, Sarteano has remained a small town (the main center has only a few thousand inhabitants). Outside the historic core, the town has developed with harmonious building projects respectful of the landscape: for example, along the road to Chianciano stretch the well-kept gardens and campgrounds of the Parco delle Piscine, inaugurated in 1967 and later expanded, with open-air thermal pools framed by greenery.
+</p>
+<p>
+In 1980, next to the castle, the “Parco della Pace” (Peace Park) was created, a commemorative green space with monuments dedicated to the Resistance, highlighting the community’s commitment to historical memory.
+</p>
+<p>
+Urban toponymy also reflects the 20th century: in addition to the already mentioned Piazza XXIV Giugno 1944 in the town center, the main square in Castiglioncello del Trinoro is today named “16 June 1944” in memory of the episode involving the two martyrs Bai and Salvadori.
+</p>
+
+  <h2>Culture and Local Traditions in the 20th Century</h2>
+
+<p>
+Sarteano’s cultural life in the 20th century managed to blend the appreciation of its historical roots with new initiatives. The most famous popular tradition is undoubtedly the *Giostra del Saracino*, a chivalric tournament that dates back to the Middle Ages. After centuries of ups and downs, the *Giostra* underwent various interruptions in the 20th century (it was held sporadically until 1929 and was revived by the Fascist regime in 1933), but it gradually regained momentum after the war. Since 1982, the *Giostra del Saracino* has taken place regularly every year on August 15th, the Feast of the Assumption, becoming a fixed and deeply rooted event.
+</p>
+<p>
+Five knights—representing Sarteano’s five historical districts (*contrade*: Santissima Trinità, San Bartolomeo, San Lorenzo, San Martino, Sant’Andrea)—compete in 18th-century costume, aiming to insert a lance through the ring held by the rotating Saracen dummy. The winning *contrada* claims the *palio* amid widespread public enthusiasm. The *Giostra*, accompanied by a lively historical parade and traditional ceremonies (such as the *Tratta dei Bossoli* and the *Provaccia* in the days leading up to the event), is now the pride of Sarteano’s folklore and attracts numerous spectators and tourists every summer.
+</p>
+<p>
+Many local associations are involved in organizing the *Giostra*. Each *contrada* has its own organizing committee and community hall, and throughout the year there are neighborhood festivals, communal dinners, and charity events organized by residents.
+</p>
+<p>
+In the postwar period, the centuries-old *Accademia degli Arrischianti*, a cultural institution founded in 1731, was also reestablished. After the reopening of the municipal theater in 2000, the *Accademia degli Arrischianti* returned to the spotlight: the “New Academy” was established in 1986 by a group of theater and music enthusiasts with the goal of “reviving the cultural life of Sarteano.” Since then, it has organized theater productions, acting courses, and quality concerts, often in collaboration with the Municipality.
+</p>
+<p>
+Since the 1990s, Sarteano has also hosted a well-regarded summer music festival: *Sarteano Jazz & Blues*, which began as the “Jazz Fridays” series in 1990 and grew to join the regional circuit of Tuscan festivals. Each year, jazz and blues musicians perform in the theater or in the main square, attracting audiences from beyond the local area.
+</p>
+<p>
+An important cultural venue inaugurated in the late 20th century is the *Civic Archaeological Museum of Sarteano*, opened in 1997 inside *Palazzo Gabrielli*. This museum, part of the *Fondazione Musei Senesi*, was created with the aim of bringing back “to their place of origin” the many Etruscan artifacts discovered in local necropolises.
+</p>
+<p>
+Sarteano’s territory is indeed rich in Etruscan heritage, such as the painted tombs of the *Necropoli delle Pianacce*. The museum exhibits funerary objects, urns, and exceptionally valuable ceramics, including original paintings from the famous *Tomb of the Infernal Chariot* (4th century BCE), discovered in 2003 just outside the town. Thanks to the museum—which also offers educational workshops and a small medieval section—Sarteano has established itself in the 2000s as a destination for archaeological and school tourism.
+</p>
+<p>
+Next to it, since 2016, the *Domenico Beccafumi Art Gallery* has been set up (inside the Church of San Michele), demonstrating the town’s desire to enrich its cultural offerings.
+</p>
+<p>
+Religious traditions continue to play an important role in community life. The patron saint of Sarteano is Saint Lawrence Martyr, whose feast is celebrated on August 10th: until 1935, Saint Lawrence was regarded as the main protector of the town and is still honored with solemn services.
+</p>
+<p>
+Another deeply felt celebration is that of Saint Roch on August 16th, once directly associated with the *Giostra del Saracino* (historically held in his honor). Over the course of the 20th century, new civic commemorations were also introduced: every year on April 25 and June 24, the community marks the Liberation of Italy and the Liberation of Sarteano from Nazi-Fascist occupation, respectively, with official ceremonies and wreath-laying at the War Memorial.
+</p>
+<p>
+Events such as the *Passeggiate Resistenti* (“Resistance Walks,” historical-nature hikes to Resistance sites, organized by the local ANPI chapter) reflect the commitment to passing on historical memory to new generations.
+</p>
+<p>
+Profane folk and craft traditions also persist. In the 20th century, the art of ceramics and wrought ironwork remained alive, thanks to local artisan workshops that still produce items in traditional Tuscan style. Until the 1950s, home production of textiles and embroidery—typically practiced by women—was also common.
+</p>
+<p>
+Some popular customs have disappeared (such as the *Gioco della Pugna*, once part of the Saint Roch festivities, abolished in 1712 for being too violent), while others have been revived: for example, in the 2000s a popular tournament known as the *Torneo del Romitorio* was reintroduced—a smaller-scale *giostra* organized by the *Contrada di San Bartolomeo*, recreating medieval atmospheres each August.
+</p>
+<p>
+Ancient folklore and modern sensibility thus coexist in Sarteano’s local identity.
+</p>
+
+  <h2>Notable Figures Born or Who Lived in Sarteano (1900–2000)</h2>
+
+<p>
+Over the course of the 20th century, Sarteano was the birthplace or home of several prominent figures in the historical, cultural, and political fields. Among local patriots and martyrs, foremost are Amerigo Bai (1909–1944) and Quirino Salvadori (1908–1944), farmer-partisans who lost their lives during the massacre of Castiglioncello del Trinoro on June 16, 1944. Their names are inscribed on memorial plaques, and the community honors them as heroes of the Resistance.
+</p>
+<p>
+Alongside them is commemorated Giuseppe Cecchini (1904–??), the soldier who, on that day in 1944, saved the village from massacre by acting as interpreter with the Germans: although not a native of Sarteano (he was from the Island of Elba), Cecchini lived through those events in Sarteano, becoming its honorary moral citizen.
+</p>
+<p>
+Another figure tied to the Resistance is parish priest Don Enrico Bellucci, an eyewitness to the events of 1944, whose diary preserved Cecchini’s words: “Either all alive or all dead.”
+</p>
+<p>
+In political and administrative life, a notable figure is Rosanna Pugnalini (born in Sarteano in 1958), an example of a woman actively engaged in public institutions. Pugnalini joined the municipal council at a young age in 1984 and served as mayor of Sarteano for two terms (1994–2002), distinguishing herself through social and cultural initiatives. She later continued her career as a regional councillor for Tuscany and as president of the Regional Commission for Equal Opportunities, giving voice to Valdichiana at the regional level.
+</p>
+<p>
+Among the historic mayors of the 20th century, Primo Morgantini (1925–2001) deserves mention: he led the municipality for nearly 19 consecutive years (1965–1984), embodying the Tuscan “red” tradition. A lifelong communist, former teenage partisan, and capable administrator, Morgantini became a much-loved local figure (a street in town is named after him).
+</p>
+<p>
+In the cultural and artistic field, Sarteano remembers Domenico Bandini (1898–1981), a scholar and heraldist who—though originally from Marradi—lived in Sarteano for many years and contributed to rediscovering its history. Dr. Bandini, Commander of the Republic, drafted in 1948 the *Fundamental Ordinance – General Regulations of the Contrade of the Giostra del Saracino*, assigning each *contrada* colors and heraldic emblems inspired by local history. He also authored the monumental *Collection of Coats of Arms of Sarteano* published in 1961, still a key reference for knowledge of Sarteano’s noble families.
+</p>
+<p>
+His passion for local history echoes in the work of Sarteano-born historian Luca Aggravi (born 1967), who in 1996 edited the annotated reprint of Fanello Fanelli’s 19th-century *Historical Memoirs of Sarteano*. Aggravi is regarded as one of the guardians of Sarteano’s contemporary historical memory.
+</p>
+<p>
+A special place is reserved for the artistic and media sphere. In 1951, the renowned writer and filmmaker Curzio Malaparte chose Sarteano and its surroundings as the set for his film *The Forbidden Christ*, starring actors such as Raf Vallone and Gino Cervi. The presence of the film crew caused great curiosity in town and captured glimpses of 1950s Sarteano in the feature film.
+</p>
+<p>
+In more recent years, photographer Luca Mengoni (born in 1971), though not originally from Sarteano, has photographed the Castle and other landmarks, participating in the *Wiki Loves Monuments* contest and helping spread images of the village internationally.
+</p>
+<p>
+Finally, worth mentioning is Arnoldo Zocchi (1862–1940), although not from Sarteano, as the sculptor of the 1923 Monument to the Fallen. An internationally renowned artist (his works are in Rome, Sofia, Buenos Aires, etc.), Zocchi became linked to Sarteano through his marriage to a local woman. His imposing bronze statue of an Italic soldier has defined Sarteano’s main square for the entire century, becoming an integral part of the town’s visual identity.
+</p>
+<p>
+In summary, 20th-century Sarteano was shaped by courageous fighters, forward-thinking administrators, and guardians of local culture. Through their legacy—heroic acts saved from oblivion, books, and preserved traditions—the community has been able to carry its history into the new millennium with renewed awareness of its roots.
+</p>
+<p>
+Sarteano in the 20th century thus stands as a microcosm where major national events (wars, fascism, the economic boom) left tangible marks, while the local and human dimension remained central, embodied by the faces and names of the Sarteanese who made its history.
+</p>
+
+<h2>Sources</h2>
+
+<p>
+Municipal Historical Archive of Sarteano; commemorative plaques and public inscriptions (collection by Roberto Della Lena); <em>Historical Memoirs of Sarteano</em> by F. Fanelli (1892, with notes by L. Aggravi, 1996); local periodical <em>Montepiesi</em>; ISTAT data; official website of the Municipality of Sarteano.
+</p>
+<p>
+ToscanaNovecento (Tuscan Historical Institute of the Resistance); straginazifasciste.it (Castiglioncello massacre records); <em>Pietre della Memoria</em> – ANPI; <em>Resistenza Toscana</em>; <em>Sarteano Living</em> (cultural blog); <em>GiostradelSaracino.it</em> and Wikipedia.
+</p>
+<p>
+Regional Council of Tuscany (Rosanna Pugnalini profile); press releases from the Municipality of Sarteano.
+</p>
+
+  
+</section>
+  
+
+  <div class="back-home">
+    <a href="sarteanoenglish.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
