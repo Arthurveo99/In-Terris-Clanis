@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Sarteano</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-091CFPRCWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-091CFPRCWW');
+</script>
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #c96c4f;
+      background-image: url('sfondoclanis.jpg');
+      background-size: auto;
+      background-repeat: repeat;
+
+        user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      
+    }
+
+    header {
+      background-color: #004d3a;
+      background-image: url('https://www.transparenttextures.com/patterns/xv.png');
+      background-repeat: repeat;
+      background-size: cover;
+      color: #3b2f2f;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 4px double #a67c52;
+      position: relative;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: white;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-image: url('logo.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 1rem;
+      border: 3px solid #a67c52;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .motto {
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      border-bottom: 1px dotted transparent;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      line-height: 1.7;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      text-align: left;
+      font-weight: bold;
+      color: brown;
+    }
+
+    hr {
+      background-color: red;
+      border: none;
+      height: 1px;
+    }
+
+    b {
+      color: brown;
+    }
+
+    a {color: brown;}
+    a.appr {color: green;}
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #3c3c3c;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #intro {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #dcb8a1;
+      color: #3b2f2f;
+      
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10%;
+      margin-top: 2rem;
+    }
+
+    .image-gallery img {
+      width: 25%;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .back-home a {
+      padding: 1rem 2rem;
+      background-color: #7a5742;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Cinzel', serif;
+      box-shadow: 0 0 8px #0003;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #5e3c2b;
+    }
+     img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+    .centrato {display: flex; justify-content: center;}
+
+    @media (max-width: 768px) {
+      header {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        align-self: flex-start;
+        margin-top: 2rem;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        display: none;
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .image-gallery img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+    <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+    <div class="logo"></div>
+    <div class="motto">From 17th to 19th Century in Sarteano</div>
+    <nav>
+      <ul id="menu">
+        <li><a href="sarteanoenglish.html">Home</a></li>
+        <li><a href="sarteanotraditions.html">Traditions</a></li>
+        <li><a href="sarteanoplaces.html">Places to Visit</a></li>
+        <li><a href="sarteanoevents.html">Local Events</a></li>
+        <li><a href="sarteanointerviews.html">Interviews</a></li>
+        <li><a href="sarteanoarchive.html">Photographic Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="intro">
+
+<h1>History of Sarteano from the Seventeenth Century to the End of the Nineteenth Century</h1>
+  
+<h2>Political and Administrative Evolution</h2>
+
+<p>
+Panoramic view of Sarteano, with the castle in a dominant position over the village. Sarteano entered permanently into the orbit of the Grand Duchy of Tuscany in the mid-sixteenth century, after the fall of the Republic of Siena. In 1555, the village and its fortress were occupied by Medicean troops, who deactivated the fortifications by making the “Rocca harmless” through the partial burial of its defensive systems. In the Medici era (17th century), political stability favored an orderly local administrative management: Sarteano was integrated into the Sienese system of the Grand Duchy and had its own representatives. The castle, now devoid of strategic function, was donated in 1617 by Grand Duke Cosimo II to Brandimarte Fanelli and his male heirs, thus remaining private property of the Fanelli family until the contemporary age.
+</p>
+<p>
+With the extinction of the Medici (1737) and the advent of the House of Lorraine, Sarteano came under the Habsburg-Lorraine dynasty. The new grand dukes implemented Enlightenment-inspired administrative reforms, which also affected Sarteano. In particular, the 1774 community reform reorganized peripheral institutions: the Community of Sarteano was established with a Community Magistrate (gonfaloniere and priors) and a General Council, bodies composed partly of local landowners and partly of representatives from villages and parishes in the territory. This new structure replaced the previous podesteries and ensured participation even by artisans and sharecroppers (albeit in a limited manner).
+</p>
+<p>
+During the Napoleonic period (1808–1814), the Grand Duchy was annexed to the French Empire and Sarteano was administered as part of the Department of the Ombrone according to the French system. With the Restoration (1815), the Lorraines returned (Grand Dukes Ferdinand III and then Leopold II), under whom the community of Sarteano resumed its administrative role. Around the mid-19th century, the political climate changed: Tuscany experienced the uprisings of 1848, and in 1859 Leopold II abdicated. Sarteano took part in the process of annexation to the Kingdom of Sardinia (later the Kingdom of Italy) through the 1860 plebiscite. From 1861, the village became part of the new Kingdom of Italy, maintaining its status as a municipality within the province of Siena.
+</p>
+<p>
+On the administrative level, this led to the adoption of the Italian municipal statute, with a city council elected according to national law. Overall, from Medicean and Lorraine rule to the Unification of Italy, Sarteano transitioned from a prince-podestà system to increasingly institutionalized forms of local self-government, while remaining framed within the broader state structures of the Grand Duchy first and the Kingdom later.
+</p>
+
+  <h2>Economic Aspects</h2>
+
+<p>
+Between the 17th and 19th centuries, Sarteano’s economy remained predominantly agricultural. The territory, located between the Val di Chiana and the Val d’Orcia, mainly produced cereals (wheat), wine, and olive oil. The agricultural system followed the typical Tuscan model of sharecropping: large landowners (often nobles or ecclesiastical institutions) entrusted farms to peasant families, sharing the harvests. Around this rural model, a modest local artisan activity developed (blacksmiths, carpenters, bakers, weavers, etc.), mainly aimed at meeting the needs of the town and the countryside.
+</p>
+<p>
+Commerce took place largely in local markets: in Sarteano, a weekly market was held every Friday (formally established as early as the 16th century) and, above all, two major annual fairs attracted large crowds. The fair of San Lorenzo (around August 10) lasted four days and drew in livestock merchants of all kinds, various goods, and trinkets, with a large public turnout. Even more important was the fair of San Martino (November 11), which extended until the end of the month and specialized in livestock trading – particularly fattening pigs (“magroni porcini”) – as well as cereals and haberdashery. These fairs, declared “free” (exempt from tolls), were a fundamental economic engine for Sarteano, placing it along the trade routes between Tuscany, Umbria, and Lazio.
+</p>
+<p>
+Nineteenth-century documents also mention a so-called “Mercatone” (big market) on the second Friday of September, mainly dedicated to cattle trading (Maremma cows), a sign that livestock breeding had economic importance alongside agriculture.
+</p>
+<p>
+In the 18th century, the Lorraine reforms (such as the liberalization of the grain trade promoted by Pietro Leopoldo) had beneficial effects on Sarteano’s countryside, encouraging cereal cultivation and improving the conditions of peasants. Also of great importance were the reclamation works of the Val di Chiana carried out first by the Medici and then by the Lorraines (under engineer Fossombroni): the progressive drainage of swamps up to the 19th century made the plains around Chiusi healthier and more arable, increasing the productive land available to Sarteano’s farmers and reducing the incidence of malaria. This environmental improvement contributed to agricultural and demographic growth in the area.
+</p>
+<p>
+From the mid-19th century onwards, the first attempts at local industrialization also began to appear. A notable case was the founding of a paper mill (Cartiera di Sarteano) by entrepreneur and publisher Giuseppe Civelli, active from the 1850s–60s. The paper factory made use of the area's abundant water and came to employ dozens of workers (about 70 according to some data, although other sources mention over 200 employees). Civelli’s paper mill did not reach the 300 workers initially projected, but it led to the development of a solid consumer cooperative among the workers themselves and collateral activities (such as a workers' café run by the employees).
+</p>
+<p>
+This episode marks the beginning of an economic transformation: alongside traditional agriculture, proto-industrial and manufacturing enterprises emerged, albeit on a small scale. Infrastructure also improved: the proximity to the Chiusi railway station (on the Florence-Rome line, opened in the 1860s) facilitated the transport of goods and people, integrating Sarteano into modern commercial circuits. By the end of the 19th century, the local economy remained centered on sharecropping agriculture, but with a growing presence of urban professions (notaries, pharmacists, teachers) and increased openness to external markets thanks to national communication routes.
+</p>
+
+  <h2>Social Structure and Demographic Dynamics</h2>
+
+<p>
+Between the 17th and 19th centuries, Sarteano’s society was characterized by a clear predominance of the rural and peasant class, organized according to the sharecropping system. Peasant families lived on farms surrounding the village, depending on stewards and landowners (often local nobles or religious institutions) to whom they gave half the harvest. In the village resided a small bourgeois and artisan class: shopkeepers, cobblers, tailors, blacksmiths, and other tradesmen, as well as professionals such as doctors, apothecaries, and notaries. There were also a few aristocratic families who owned most of the land and held positions of prestige, among them the Fanelli (owners of the castle since 1617), the Cennini, and later, the Bargagli (who purchased former ecclesiastical properties in the 19th century). These families made up the local ruling class, often also engaged in administrative roles (gonfaloniere, community priors, etc.).
+</p>
+<p>
+Demographically, Sarteano experienced a long phase of stagnation followed by growth in the 19th century. Statistical sources indicate that the population of the municipality was 2,121 inhabitants in 1640 and almost the same (2,123) in 1745. This stability, typical of the ancien régime, was due to the balance between high birth rates and high mortality (caused by endemic diseases, occasional famines, and poor hygiene). There were demographic crises: notably the plague outbreak of 1630–1633, which also affected the Sienese area, and periodic years of famine or epidemics (such as the cholera outbreak of 1855), events that decimated the population.
+</p>
+<p>
+However, during the 18th century, a slight increase was recorded thanks to improved food and sanitary conditions (especially after the reclamation of the Val di Chiana). In 1811, the population numbered 2,729, rising to 2,949 in 1833 and to 3,096 in 1840. Population growth became more marked in the second half of the 19th century: at the time of Italian unification, the municipal population increased rapidly, reaching 4,504 inhabitants in 1871. This leap can be explained by the general improvement of living conditions (vaccinations, end of major epidemics, the spread of more productive crops like maize and potatoes) and possibly by the enlargement of the municipality’s administrative boundaries. After 1871, the population continued to grow, nearing 5,000 residents in the early 20th century.
+</p>
+<p>
+As for the social structure, there remained deep differences between town and countryside. Most people lived off agriculture, often in modest but relatively stable conditions thanks to the sharecropping agreement, which guaranteed peasant families a farmhouse and basic subsistence. A small part of the population, made up of landowners and the local bourgeoisie, held wealth and power: they owned the farm-villas, the palaces in the center, and the public offices.
+</p>
+<p>
+Nevertheless, the Lorraine reforms of the late 18th century introduced some elements of mobility and participation: for example, from 1774, a certain number of sharecroppers and artisans were able to sit on the municipal council, albeit in a minority, alongside landowners. This indicates a (limited) institutional recognition of the role of direct cultivators and workers.
+</p>
+<p>
+Local charitable institutions helped mitigate inequalities: the small hospital (spedale) of Sarteano, for example, had income from four farms already in the late 17th century, with an annual revenue of 152 scudi—making it, in terms of wealth, second only to the major hospitals of Siena, Montalcino, and Torrita in the Sienese province. This hospital and the confraternities provided aid to the poor and sick, acting as an early form of social safety net.
+</p>
+<p>
+Toward the end of the 19th century, Sarteano also experienced phenomena common to post-unification Italy, such as the first waves of emigration to the Americas or to larger cities, in search of better living conditions. Although the bulk of emigration would occur in the 20th century, already in the 1880s–90s some Sarteanese families left their homeland.
+</p>
+<p>
+Overall, between the 17th and 19th centuries, Sarteano slowly evolved from a traditional, closed, and hierarchical peasant society into a more dynamic community, integrated into the unified state and (albeit cautiously) open to modern socio-economic changes.
+</p>
+
+  <h2>Religious Life and Ecclesiastical Institutions</h2>
+
+<p>
+Religious life in Sarteano during the modern and contemporary ages was very lively and played a central role in the community. From an ecclesiastical standpoint, the village depended on the Diocese of Chiusi (later Chiusi-Pienza, and in recent times Montepulciano-Chiusi-Pienza), but it had important local religious institutions of its own. The main parish church was the Collegiate Church of San Lorenzo Martire, located in the center of town. This building, originally medieval in structure, was renovated and expanded multiple times: notably, it was restored and reconsecrated around 1500 by Cardinal Francesco Todeschini Piccolomini (later Pope Pius III), as evidenced by a marble inscription inside. Later, the Collegiate was enlarged in 1514 and endowed with a chapter of canons; a plaque recalls that the “new” Collegiate was only inaugurated in 1758, after long disputes with the Gabrielli heirs over patronage rights.
+</p>
+<p>
+The Church of San Lorenzo houses valuable artworks, including two arched panels of the Annunciation (one attributed to Domenico Beccafumi, 1546) and other paintings of the Sienese school, reflecting centuries of devotion and local patronage. Alongside the Collegiate, a great number of churches and chapels dot the historic center, testifying to the deep religiosity of the community. Of great significance is the Church of San Francesco, located just outside the ancient city walls in what is now Piazza Bargagli. The original structure of San Francesco dates back to the 13th century, but the current façade was erected at the end of the 15th century by the aforementioned Cardinal Piccolomini (Pius III), as indicated by the rose window with papal insignia and the Piccolomini coat of arms on the front.
+</p>
+<p>
+Next to San Francesco stood a convent of the Friars Minor Observants, founded in the Middle Ages and remodeled several times. This convent also welcomed Saint Bernardino of Siena during his visits and, according to tradition, hosted Saint Francis of Assisi himself in the area known as Le Celle (hermit caves near Sarteano) in 1212. In 1595, a Capuchin convent was also built in the locality of San Bartolomeo, a sign of the desire of Sarteano’s people to have friars closer to town. The Franciscan presence was thus significant and diverse: the first settlement (San Francesco alle Celle) was replaced or complemented by the more centrally located convent, showing the harmony between the local population and the mendicant orders.
+</p>
+<p>
+Another cornerstone of religious life was the Monastery of Santa Chiara, a women’s convent of the Poor Clares founded in 1521 through the bequest of a wealthy local, Ser Benedetto di Bartolomeo Besti. The Santa Chiara convent, located in the upper part of town, remained active “until recent times” (according to Fanelli, 1892), likely up to the post-unification suppressions. The cloistered nuns of Santa Chiara played a significant spiritual and social role: they prayed for the community and ran a domestic school for girls from wealthy families, in keeping with the customs of the time. The 16th-century building, with its evocative inner cloister and central well, was converted to civil use after its suppression and today houses a hospitality facility, while preserving the quiet atmosphere of the old convent.
+</p>
+<p>
+Numerous lay confraternities were also active in the town, organizing the liturgical calendar with ceremonies and charitable works. One of the oldest was the *Societas pro Mortuis Tumulandis* (Company for the Burial of the Dead), founded in the 16th century (1584), and likely a forerunner of the Archconfraternity of Mercy; it took care of dignified burials and prayers for souls, reflecting the post-Tridentine popular piety. There was also the *Compagnia del Santissimo Sacramento*, tied to the Collegiate, which oversaw Corpus Domini celebrations and safeguarded the Eucharist, and the *Compagnia della Madonna del Rosario* at San Lorenzo. These confraternities involved broad segments of the population (artisans, peasants, notables) in devotional acts, processions, festivals, and mutual aid.
+</p>
+<p>
+Popular devotion was strongly centered around Marian shrines. The patron saint of Sarteano is the Madonna of Good Counsel, whose feast falls on April 26. This devotion spread in the 18th century: in 1761, a painting of the Madonna of Good Counsel by Francesco Bonichi of Lucignano was placed in town and soon became an object of veneration. Since then, the Madonna of Good Counsel has been invoked as Sarteano’s protector, and every year, on her feast day, a solemn procession winds through the village streets, with the participation of confraternities and clergy in festive garments, accompanied by a marching band. This Marian devotion complemented the traditional veneration of San Lorenzo Martire (patron of the parish) and other minor patron saints of the town’s districts (e.g., San Martino, Sant’Andrea, etc., after whom gates and neighborhoods were named).
+</p>
+<p>
+The Church’s influence on daily life was considerable: beyond religious functions, ecclesiastical institutions managed the hospitals of San Giacomo and Santa Maria (dedicated to caring for the sick and for pilgrims), ran informal elementary schools (the local priest often taught catechism and basic literacy), and registered civil records (births, marriages, deaths) until the introduction of the national registry in the 19th century.
+</p>
+<p>
+During the Lorraine period, Grand Duke Pietro Leopoldo pursued a policy of jurisdictionalism that also affected Sarteano: in 1786, for instance, the Synod of Pistoia was held, proposing ecclesiastical reforms (inspired by Jansenism) to limit Church privileges and property. In practice, this led in Sarteano to the suppression of certain “useless” religious orders and to a reduction in religious holidays, though the population remained strongly attached to Catholic traditions.
+</p>
+<p>
+After the unification of Italy (1861), the new secular state carried out the suppression of religious corporations in 1866: in Sarteano too, convent properties were seized and sold. The convent of San Francesco, for example, was acquired by the Bargagli family and converted into a rural residence in the 19th century; the Santa Chiara monastery was closed and repurposed. Despite this, religion continued to play a central role in the community: patronal feasts, confraternities (often refounded as lay associations), and Sunday Mass remained identity-defining moments for the people of Sarteano.
+</p>
+<p>
+In summary, between the 17th and 19th centuries, religious life in Sarteano was marked by devotional fervor, rich ecclesiastical institutions (parishes, convents, confraternities), and a leading role for the local Church both spiritually and in the realms of education and social welfare.
+</p>
+
+  <h2>Culture, Education, and Historical Figures</h2>
+
+<p>
+Despite the small size of the village, Sarteano boasted a lively local cultural life over the centuries and was the birthplace or setting of several notable figures. In the religious and cultural sphere, the most prominent figure—although prior to the period in question but still greatly venerated—was Blessed Alberto of Sarteano (1385–1450), a renowned Observant Franciscan preacher of the 15th century and companion of Saint Bernardino of Siena. The deeds of Blessed Alberto (who converted many in the East and took part in the Council of Florence) remained vivid in local memory, and his spiritual example continued to inspire the people of Sarteano in later times.
+</p>
+<p>
+Among the illustrious sons of Sarteano was also Francesco Todeschini Piccolomini, who became Pope Pius III in 1503. Though he reigned for only 26 days, he left a tangible mark on the town: he had a palace with a beautiful cloister built (the Piccolomini Palace) and embellished the Church of San Francesco. His birthplace on Via dei Goti is still marked by a plaque. The presence of this pope (nephew of Pius II) elevated the cultural and religious prestige of Sarteano as early as the late 15th century.
+</p>
+<p>
+In the period under consideration (17th–19th century), Sarteano's cultural life was mainly shaped by religious life and popular traditions, but there were also signs of intellectual openness. Parishes organized rudimentary elementary schools: already in the 18th century, following the reforms of Pietro Leopoldo, public schoolteachers paid by local communities were active (1789 documents mention teachers in Sarteano). Education remained a privilege of the few until well into the 19th century: most of the population was illiterate, but children from wealthy families could study privately or at the seminary in Chiusi.
+</p>
+<p>
+After the unification of Italy, thanks to the Casati Law and subsequent legislation, secular municipal schools were established: in Sarteano, a public primary school was created around the 1860s, marking progress in literacy. By the end of the century, there was also a circulating People’s Library, supported by donations from local nobles and the State, a sign of a slow but growing interest in education and reading.
+</p>
+<p>
+Sarteano's cultural vitality in the 19th century was also expressed through societies and events. In 1855, some local notables and young enthusiasts founded the *Accademia degli Arrischianti*, a theatrical and cultural society typical of Tuscan towns. The Academy set up a small civic theatre and organized prose and musical performances, becoming a point of reference for the community. Surviving records of the Academy allow us to trace more than 120 years of theatrical activity in Sarteano, from 1855 to the mid-20th century.
+</p>
+<p>
+The *Teatro degli Arrischianti* was inaugurated in the 19th century (around 1860) within a preexisting building and was enthusiastically frequented: its stage hosted comedies in dialect, adapted melodramas, and benefit evenings, helping to spread culture and entertainment. Around 1870, the local Philharmonic Society (the town’s band) was also founded and immediately gained importance: the band played at the inauguration of the Civelli Paper Mill and regularly accompanied processions and civic festivities, becoming another integral part of Sarteano’s cultural life.
+</p>
+<p>
+At the end of the 19th century, Sarteano could also count on passionate local historians and amateur archaeologists. A prominent figure was Fanello Fanelli (a descendant of the family that had owned the castle), who in 1892 published in Perugia the *Memorie storiche di Sarteano*, the first monographic work dedicated to the town’s history. This work—based on archival research and oral traditions—documented Sarteano’s major events and collected information on monuments, families, and customs, laying the foundation for local historiography.
+</p>
+<p>
+At the same time, Count Bargagli (a landowner who came to town in the 19th century) distinguished himself through his archaeological research: around 1840–50 he explored an Etruscan necropolis in the nearby locality of Solaia, uncovering urns, bronzes, and artifacts that formed a rich family collection. The Bargagli collection was even temporarily exhibited in the former convent-palace of San Francesco in Sarteano before being transferred to the Archaeological Museum of Siena. These activities show that, alongside religiosity, there was room for scholarly and scientific interest within the local cultural fabric.
+</p>
+<p>
+Finally, it is worth recalling that popular culture was expressed through deeply rooted festivals and traditions: in addition to the already mentioned fairs, Sarteano had (and still has) its own *Giostra del Saracino* or *Giostra dell’Anello*, perhaps derived from 19th-century knightly games, and district divisions (*contrade*—San Lorenzo, San Martino, Sant’Andrea, Santa Caterina) that have their roots in historical social organization. During the Grand Ducal and post-unification periods, these popular festivals and district rivalries fostered community identity and helped transmit intangible cultural heritage, including the local dialect (*Sarteanese*), proverbs, and religious and secular songs.
+</p>
+<p>
+In summary, 17th–19th-century Sarteano, though peripheral, had a notable cultural life: from theater to music, from local historiography to amateur archaeology, along with basic education and significant historical figures, the village demonstrated intellectual vitality and, in its own small way, was connected to Tuscany’s wider cultural ferment.
+</p>
+
+  <h2>Urban and Architectural Evolution</h2>
+
+<p>
+The urban fabric of Sarteano between the 17th and 19th centuries preserved its original medieval layout but underwent significant transformations, especially in the 19th century. The historic center developed around the massive medieval castle situated at the top of the hill: from there, narrow streets spiraled downward toward the town gates. Until the early 1800s, the village was still surrounded by walls with several entrance gates. Around the mid-19th century, however, in the context of urban renewal promoted during the Lorraine and then post-unification period, much of the city wall was dismantled to allow for expansion and improved urban circulation.
+</p>
+<p>
+Today, only a few stretches of wall and two ancient gates remain: Porta Umbra (also called Porta di Mezzo) and Porta Monalda. Both surviving gates bear layered coats of arms that recount the political history of Sarteano: the emblem of the Sienese she-wolf, the Medici symbol, and that of the Monaldeschi of Orvieto—reminders of the various ruling powers during the Middle Ages and Renaissance.
+</p>
+<p>
+The demolition of the walls in the 1800s opened the historic center to the outside and coincided with a period of urban reorganization. In particular, the town’s main square (now Piazza XXIV Giugno) was enlarged and regularized in the second half of the 19th century. Unfortunately, this led to the demolition of some medieval landmarks, including the ancient Romanesque church of San Martino in Foro, which once stood at the center of the square. This “destructive intervention” of the 19th century, though it erased some of the medieval character of the square, gave Sarteano a modern open public space, used for the market and as the site of the main civic buildings.
+</p>
+<p>
+Despite these changes, the town of Sarteano still preserves many valuable historic buildings—outcomes of architectural developments from the 17th to the 19th centuries. Just below the castle, for example, stands Palazzo Fanelli (formerly Palazzo Goti-Fanelli), an elegant 16th-century noble residence built around 1536 and later expanded, featuring an adjacent private chapel and richly frescoed interior ceilings.
+</p>
+<p>
+Facing Piazza San Lorenzo is Palazzo Cennini, once belonging to the local Cennini family. It features a sober and linear façade typical of the Tuscan Renaissance and a beautiful inner courtyard with porticoes—hallmarks of refined 16th-century architecture.
+</p>
+<p>
+At the heart of the town, in the current Piazza XXIV Giugno, stands the medieval Palazzo del Podestà (also known as the Town Hall), recognizable by a few 14th-century mullioned windows still visible on the façade. It was the seat of the town government since the time of the free commune (13th–14th century) and maintained its public function in the following centuries, undergoing restoration in the 19th century after damage caused by the remodeling of the square.
+</p>
+<p>
+Not far away is Palazzo Gabrielli, now home to the Civic Archaeological Museum. This building, in its current 16th-century form, conceals an original 13th-century structure, as evidenced by the presence of a typical "door of the dead" (a narrow, elevated, sealed door, symbolically used to carry out the deceased). Palazzo Gabrielli was adapted in the 16th–17th centuries into a noble residence by the Gabrielli family, and in the 1800s became public property, hosting the local archaeological collection (still open to visitors today as a museum).
+</p>
+<p>
+A building of particular historical and artistic relevance is Palazzo Piccolomini, also located near the Church of San Lorenzo. Built in the late 15th century by Cardinal Francesco Todeschini Piccolomini (Pius III), the palace features a remarkable Renaissance cloister and spacious interiors. It was one of the first examples of “modern” architecture in Sarteano, integrating both representative elements (such as noble coats of arms and mottos) and residential functions.
+</p>
+<p>
+During the 19th century, after the extinction of the Piccolomini-Tedeschini family (1783), the palace passed by inheritance to other noble families and underwent changes in use; however, it still preserves its original elegance and remains a notable point of interest in the town’s urban fabric. Directly facing Palazzo Piccolomini is the façade of the aforementioned Church of San Francesco, built by the same cardinal: this architectural ensemble (church and palace with cloister) significantly enriched the southwestern quarter of the village in the late 15th century, forming a kind of “Piccolomini quarter.”
+</p>
+<p>
+In the 19th century, the former convent of San Francesco was transformed into the Bargagli Palace-Farm: the Bargagli family established an agricultural residence there and temporarily housed their collection of Etruscan antiquities. The intervention involved some adaptations (such as the construction of granaries and cellars in the convent wings), but the 15th-century cloister—though damaged—remained partially visible, with its elegant mullioned windows now overlooking a rural courtyard. This case illustrates how, in the post-unification period, many religious buildings in Sarteano were repurposed as residences or farms, changing function but remaining integral to the built environment.
+</p>
+<p>
+In the extra moenia area (outside the city walls), two remarkable Romanesque structures deserve mention: the Church of Santa Vittoria and the Church of San Martino in Foro. Santa Vittoria stood just north of the walls and was a Romanesque parish church built in the early 12th century. Constructed in local stone (travertine) and likely erected on a site already sacred in ancient times (as suggested by the reuse of Roman and possibly Etruscan blocks), Santa Vittoria was partially abandoned over the course of the 19th century. Already in ruins by the mid-1800s, it was decided to preserve it as a “romantic ruin”: the roof collapsed, and the church remained open to the sky, but the perimeter walls were left intact as a historical memory.
+</p>
+<p>
+Today, Santa Vittoria—roofless but well-cleared—is used as a scenic open-air venue for summer performances, bearing witness to the charm of its millennia-old structures. San Martino in Foro, on the other hand, once stood within the town walls, approximately where today’s Piazza XXIV Giugno is located. It was a small Romanesque church, likely from the 12th century, which in the Middle Ages served as a meeting place (*in foro* indicating the market square). Unfortunately, this church was sacrificed as part of the 19th-century urban redevelopment: around the mid-1800s it was demolished to enlarge the main square, and with it, a significant fragment of Sarteano’s medieval past was lost. Only archival documents and a few sculptural fragments preserved in the local museum remain.
+</p>
+<p>
+During the 19th century, Sarteano also saw the development of new infrastructure and services: new out-of-town avenues were laid out (such as Viale della Peschiera to the east, lined with cypress trees), a new public water fountain was installed, and by the end of the century, buildings such as the Elementary School and the municipal theater (inside the Town Hall) were constructed. The village began to cautiously expand beyond the old city walls: farmhouses were built along the roads leading out of town, and the cemetery was relocated outside the settlement (along today’s Via del Cimitero), in accordance with Napoleonic laws prohibiting burials inside churches.
+</p>
+<p>
+Nevertheless, Sarteano’s urban layout remained compact and true to its original design: even today, from the keep of the castle, one can clearly observe the grid of medieval streets below and the town’s harmonious profile, dotted with bell towers. In summary, between the 17th and 19th centuries, Sarteano underwent an urban evolution characterized by both preservation and innovation: the fortified structure inherited from the Middle Ages was partly abandoned (with the 19th-century demolition of the walls and the opening of wider public spaces), while the architectural heritage was enriched with noble palaces, renewed religious buildings, and a few modern constructions.
+</p>
+<p>
+The result is a historic center which, by the end of the 19th century, appeared as a small treasure trove of art and history: a village with a predominantly medieval appearance—dominated by the imposing 14th-century castle—but adorned with Renaissance and Baroque touches in its palaces, and now projecting itself toward modernity with functional upgrades (squares, carriageable streets, public services). Sarteano thus offers an example of a community that knew how to adapt its urban space to the needs of the times, without renouncing continuity with the past, and indeed integrating it into its historical development.
+</p>
+
+  <h2>📚 Sources</h2>
+
+<p>
+The information presented above is drawn from documented historical sources and local studies. In particular, reference is made to <strong>Fanello Fanelli</strong>, <em>Memorie storiche di Sarteano</em> (Perugia, 1892), with notes edited by <strong>L. Aggravi</strong> (1996), rich in archival data on institutions and demographics.
+</p>
+<p>
+Additional useful references include the <em>Geographical, Physical and Historical Dictionary of Tuscany</em> by <strong>Emanuele Repetti</strong> (1833–1846) and 19th-century handwritten memoirs published in the <em>Bullettino Senese di Storia Patria</em>.
+</p>
+<p>
+For the architectural and artistic evolution of the village, see the contributions of <strong>Luca Aggravi</strong>, particularly on local churches and the Teatro degli Arrischianti.
+</p>
+<p>
+Concise but valuable information comes from the official website of the <strong>Municipality of Sarteano</strong> and from popular publications such as <em>Sarteano – a jewel village in the Lands of Siena</em>.
+</p>
+<p>
+The article on the Castle of Sarteano in the <em>“Castelli Toscani”</em> portal was used for details regarding the castle and the town walls.
+</p>
+<p>
+Finally, economic and social data (festivals, fairs, Civelli paper mill) are supported by specific studies published in academic journals.
+</p>
+
+  
+</section>
+  
+
+  <div class="back-home">
+    <a href="sarteano.html">Introduzione</a>
+  </div>
+
+  <footer>
+    &copy; Blog di Arthur Veo
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+
+//Può impedire l'accesso veloce a "Visualizza sorgente"
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+//Disabilita Ctrl+U con JavaScript:
+
+document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+        alert("Funzione disattivata.");
+      }
+    });
+
+
+  </script>
+</body>
+</html>
